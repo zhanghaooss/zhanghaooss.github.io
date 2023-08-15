@@ -305,7 +305,7 @@
   * [y-vue阶段面试题](webDoc/13-Vue基础/y-vue阶段面试题)
   * [y-elementui日常](webDoc/13-Vue基础/y-elementui日常)
   * [Vuex概述(2)](webDoc/13-Vue基础/Vuex概述(2))
-  * [](webDoc/13-Vue基础/Vue笔记)
+  * [Vue笔记](webDoc/13-Vue基础/Vue笔记)
   * [Vue开发积累](webDoc/13-Vue基础/Vue开发积累)
   * [Vue种组件的通信方式(1)](webDoc/13-Vue基础/Vue种组件的通信方式(1))
   * [Vue组件](webDoc/13-Vue基础/Vue组件)
