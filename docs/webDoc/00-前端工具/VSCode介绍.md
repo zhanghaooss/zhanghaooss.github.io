@@ -2,10 +2,6 @@
 title: 01-VS Code的使用
 ---
 
-[toc]
-
-
-
 ## 前言
 
 > 文章标题：《第一次使用 VS Code 时你应该知道的一切配置》。本文的最新内容，更新于 2021-10-09。大家完全不用担心这篇文章会过时，因为随着 VS Code 的版本更新和插件更新，本文也会随之更新。
@@ -42,7 +38,7 @@ VS Code 的全称是 Visual Studio Code，是一款开源的、免费的、跨�
 
 微软有两种软件：一种是 VS Code，一种是其他软件。
 
-在2015年4月29日的微软Build开发者大会上，微软宣布推出 VS Code之后，这个轻量级的编辑器成为全球无数开发者们最喜爱的开发工具。VS Code基于开源且跨平台的理念，每月都会进行迭代，并提供每天发布的 insider 版本（insider是微软的一种公测计划，类似于国内软件所说的内测版）。它拥有至少几万个插件，生态极为活跃和丰富。
+在 2015 年 4 月 29 日的微软 Build 开发者大会上，微软宣布推出 VS Code 之后，这个轻量级的编辑器成为全球无数开发者们最喜爱的开发工具。VS Code 基于开源且跨平台的理念，每月都会进行迭代，并提供每天发布的 insider 版本（insider 是微软的一种公测计划，类似于国内软件所说的内测版）。它拥有至少几万个插件，生态极为活跃和丰富。
 
 ### IDE 与 编辑器的对比
 
@@ -54,16 +50,16 @@ IDE 和编辑器是有区别的：
 
 需要注意的是，VS Code 的定位是**编辑器**，而非 IDE ，但 VS Code 又比一般的编辑器的功能要丰富许多。可以这样理解：VS Code 的体量是介于编辑器和 IDE 之间。VS Code 的使命，是让开发者在编辑器里拥有 IDE 那样的开发体验。
 
- VS Code流行起来之后，使用 Sublime Text、Atom 这类编辑器软件的人，自然就越来越少了。
+VS Code 流行起来之后，使用 Sublime Text、Atom 这类编辑器软件的人，自然就越来越少了。
 
 ### VS Code 的特点
 
 - 跨平台：支持 MacOS、Windows 和 Linux 等多个平台。在这多种平台下，拥有一致的用户界面和开发体验。
-- 开源：VS Code 的源代码以 MIT 协议开源。不仅代码开源，而且整个产品的开发计划和发布管理也都是开源的。VS Code团队每年都会在 GitHub 的Wiki上发布 [Roadmap](https://github.com/microsoft/vscode/wiki/Roadmap)，列出一整年的规划图。VS Code 软件的官方文档也托管在了 [GitHub](https://github.com/Microsoft/vscode-docs) 上。
+- 开源：VS Code 的源代码以 MIT 协议开源。不仅代码开源，而且整个产品的开发计划和发布管理也都是开源的。VS Code 团队每年都会在 GitHub 的 Wiki 上发布 [Roadmap](https://github.com/microsoft/vscode/wiki/Roadmap)，列出一整年的规划图。VS Code 软件的官方文档也托管在了 [GitHub](https://github.com/Microsoft/vscode-docs) 上。
 - 自带终端、图形化的调试工具、Git 版本控制。
-- 插件扩展：支持第三方插件，功能强大。既有中心化的插件市场，也可以直接在 VS Code里搜索你想要的插件。
+- 插件扩展：支持第三方插件，功能强大。既有中心化的插件市场，也可以直接在 VS Code 里搜索你想要的插件。
 - 生态：社区生态活跃且丰富，社区氛围浓厚。
-- 自带  emmet：支持代码自动补全，快速生成简单的语法结构。要知道，这个功能在 Sublime Text中，得先安装插件才行。
+- 自带 emmet：支持代码自动补全，快速生成简单的语法结构。要知道，这个功能在 Sublime Text 中，得先安装插件才行。
 - 语法支持：VS Code 自带了 JavaScript、TypeScript 和 Node.js 的**语法支持**，包括：**语法高亮、代码智能提示和补全、括号匹配、颜色区分、代码片段提示**等。也就是说，你在书写 JS 和 TS 时，这些语法支持都是自带的。其他的一些语言，你需要先安装相应的**扩展包**插件，就出现语法支持。
 - 在修改配置方面，既有图形化的配置界面，也有 基于 JSON 文件的配置方式，满足不同人群的使用习惯。
 
@@ -75,20 +71,20 @@ IDE 和编辑器是有区别的：
 
 - **内存占用情况**：根据我的观察，VS Code 是很占内存的（尤其是当你打开多个窗口的时候），但如果你的内存条够用，使用起来是不会有任何卡顿的感觉的。相比之下，IntelliJ IDEA 不仅非常占内存，而且还非常卡顿。如果你想换个既轻量级、又不占内存的编辑器，最好还是使用「Sublime Text」编辑器。
 
-- **使用比例**：当然是 VS Code 更胜一筹。先不说别的，我就拿数据说话，我目前所在的研发团队有 200 人左右（120个后台、80个前端），他们绝大部分人都在用 VS Code 编码，妥妥的。
+- **使用比例**：当然是 VS Code 更胜一筹。先不说别的，我就拿数据说话，我目前所在的研发团队有 200 人左右（120 个后台、80 个前端），他们绝大部分人都在用 VS Code 编码，妥妥的。
 
 所以，如果你以后还问这个问题，那就真有些掉底了。
 
 ### VS Code 的技术栈、核心组件
 
-了解 VS Code的技术栈和核心组件，可以让我们对 VS Code 有更深入的认识。此小段，了解即可。
+了解 VS Code 的技术栈和核心组件，可以让我们对 VS Code 有更深入的认识。此小段，了解即可。
 
-- 开发框架：Electron。Electron可以使用 Node.js + JS这样的技术栈开发桌面GUI应用程序。
+- 开发框架：Electron。Electron 可以使用 Node.js + JS 这样的技术栈开发桌面 GUI 应用程序。
 - 编辑器：Monaco Editor。Monaco Editor 是一款开源的在线代码编辑器，是 **VS Code 浏览器版本**的最核心组件。[#](https://zhuanlan.zhihu.com/p/88828576)
-- 编程语言：TypeScript。TypeScript 是  JavaScript的严格超集。TS 在JS的基础上添加了许多功能，引入了声明文件，而且支持类型扩展。TS 适合长期的、多人开发的大型项目开发。
-- 让编辑器支持语言功能：Language Server Protocol （LSP） 语言服务协议。LSP是编辑器/IDE 与语言服务器之间的一种协议，通过 JSON-PRC 传输消息，可以让编辑器嵌入并支持各种编程语言。开发者可以在编辑器中使用各种语言来编写程序。
-- 让编辑器支持调试功能：Debug Adapter Protocol（DAP）。DAP 是基于 JSON的协议，它抽象了开发工具与调试工具质检的通信。
-- 集成终端：Xterm.js。VS Code的集成终端是基于开源项目 [Xterm.js](https://github.com/xtermjs/xterm.js/) 进行开发的。Xterm.js 是一个使用 TS 开发的终端组件。另外，Xterm.js 并不是直接下来下来就能用的终端应用，它只是一个前端组件，可以与 bash这样的进程进行连接，然后让用户通过  Xterm.js 进行交互。
+- 编程语言：TypeScript。TypeScript 是 JavaScript 的严格超集。TS 在 JS 的基础上添加了许多功能，引入了声明文件，而且支持类型扩展。TS 适合长期的、多人开发的大型项目开发。
+- 让编辑器支持语言功能：Language Server Protocol （LSP） 语言服务协议。LSP 是编辑器/IDE 与语言服务器之间的一种协议，通过 JSON-PRC 传输消息，可以让编辑器嵌入并支持各种编程语言。开发者可以在编辑器中使用各种语言来编写程序。
+- 让编辑器支持调试功能：Debug Adapter Protocol（DAP）。DAP 是基于 JSON 的协议，它抽象了开发工具与调试工具质检的通信。
+- 集成终端：Xterm.js。VS Code 的集成终端是基于开源项目 [Xterm.js](https://github.com/xtermjs/xterm.js/) 进行开发的。Xterm.js 是一个使用 TS 开发的终端组件。另外，Xterm.js 并不是直接下来下来就能用的终端应用，它只是一个前端组件，可以与 bash 这样的进程进行连接，然后让用户通过 Xterm.js 进行交互。
 
 ### VS Code 的安装
 
@@ -100,7 +96,7 @@ VS Code 的安装很简单，直接去官网下载安装包，然后双击安装
 
 上图中，直接点击 download，一键下载安装即可。
 
-VS Code支持以下平台：
+VS Code 支持以下平台：
 
 ![](../../图床/qgyh/20210930_1930.png)
 
@@ -108,7 +104,7 @@ VS Code支持以下平台：
 
 ![](../../图床/qgyh/20211011_1703.png)
 
-VS  Code被分为以下五个区域：
+VS Code 被分为以下五个区域：
 
 - 编辑器
 - 侧边栏
@@ -116,9 +112,9 @@ VS  Code被分为以下五个区域：
 - 活动栏
 - 面板
 
-VS Code在功能上非常克制，只包含了大多数开发流程中所需要的基础模块，包括：编辑器、文件管理、窗口管理、首选项设置、终端等。
+VS Code 在功能上非常克制，只包含了大多数开发流程中所需要的基础模块，包括：编辑器、文件管理、窗口管理、首选项设置、终端等。
 
-你需要根据具体需要安装额外的组件或者插件。比如说，如果开发TS项目，则需要安装 TS编译器、ESLint、TSLint等编译工具。如果开发C语言项目，则需要安装gcc、Clang等编辑工具。
+你需要根据具体需要安装额外的组件或者插件。比如说，如果开发 TS 项目，则需要安装 TS 编译器、ESLint、TSLint 等编译工具。如果开发 C 语言项目，则需要安装 gcc、Clang 等编辑工具。
 
 ## 二、崭露锋芒：VS Code 快捷键
 
@@ -132,30 +128,30 @@ VS Code 用得熟不熟，首先就看你是否会用快捷键。以下列出的
 
 ### 1、工作区快捷键
 
-| Mac 快捷键             | Win 快捷键               | 作用                                          | 备注                 |
-| :--------------------- | :----------------------- | :-------------------------------------------- | :------------------- |
-| **Cmd + Shift + P**    | **Ctrl + Shift + P**，F1 | 显示命令面板                                  |                      |
-| **Cmd + B**            | **Ctrl + B**             | 显示/隐藏侧边栏                               | 很实用               |
-| `Cmd + \` | `Ctrl + \` | **拆分为多个编辑器**  | 【重要】抄代码利器                            |
-| **Cmd + 1、2**         | **Ctrl + 1、2**          | 聚焦到第 1、第 2 个编辑器                     | 同上重要             |
-| **Cmd + +、Cmd + -** | **ctrl + +、ctrl + -**  | 将工作区放大/缩小（包括代码字体、左侧导航栏） | 在投影仪场景经常用到 |
-| Cmd + J                | Ctrl + J                 | 显示/隐藏控制台                               |                      |
-| **Cmd + Shift + N**    | **Ctrl + Shift + N**     | 重新开一个软件的窗口                          | 很常用               |
-| Cmd + Shift + W        | Ctrl + Shift + W         | 关闭软件的当前窗口                            |                      |
-| Cmd + N                | Ctrl + N                 | 新建文件                                      |                      |
-| Cmd + W                | Ctrl + W                 | 关闭当前文件                                  |                      |
+| Mac 快捷键           | Win 快捷键               | 作用                                          | 备注                 |
+| :------------------- | :----------------------- | :-------------------------------------------- | :------------------- |
+| **Cmd + Shift + P**  | **Ctrl + Shift + P**，F1 | 显示命令面板                                  |                      |
+| **Cmd + B**          | **Ctrl + B**             | 显示/隐藏侧边栏                               | 很实用               |
+| `Cmd + \`            | `Ctrl + \`               | **拆分为多个编辑器**                          | 【重要】抄代码利器   |
+| **Cmd + 1、2**       | **Ctrl + 1、2**          | 聚焦到第 1、第 2 个编辑器                     | 同上重要             |
+| **Cmd + +、Cmd + -** | **ctrl + +、ctrl + -**   | 将工作区放大/缩小（包括代码字体、左侧导航栏） | 在投影仪场景经常用到 |
+| Cmd + J              | Ctrl + J                 | 显示/隐藏控制台                               |                      |
+| **Cmd + Shift + N**  | **Ctrl + Shift + N**     | 重新开一个软件的窗口                          | 很常用               |
+| Cmd + Shift + W      | Ctrl + Shift + W         | 关闭软件的当前窗口                            |                      |
+| Cmd + N              | Ctrl + N                 | 新建文件                                      |                      |
+| Cmd + W              | Ctrl + W                 | 关闭当前文件                                  |                      |
 
 ### 2、跳转操作
 
-| Mac 快捷键                                                         | Win 快捷键             | 作用                                 | 备注               |
-| :----------------------------------------------------------------- | :--------------------- | :----------------------------------- | :----------------- |
-| Cmd + ` | 没有 | 在同一个软件的**多个工作区**之间切换 | 使用很频繁 |
-| **Cmd + Option + 左右方向键**                                      | Ctrl + Pagedown/Pageup | 在已经打开的**多个文件**之间进行切换 | 非常实用           |
-| Ctrl + Tab                                                         | Ctrl + Tab             | 在已经打开的多个文件之间进行跳转     | 不如上面的快捷键快 |
-| Cmd + Shift + O                                                    | Ctrl + shift + O       | 在当前文件的各种**方法之间**（符号：Symbol）进行跳转 | 可以查看代码结构 |
-| Cmd + T | Ctrl + T | 在当前**工作区**的各种方法之间（符号：Symbol）进行跳转 | |
-| Ctrl + G                                                           | Ctrl + G               | 跳转到指定行                         |                    |
-| `Cmd+Shift+\` | `Ctrl+Shift+\`                                     | 跳转到匹配的括号       |                                      |
+| Mac 快捷键                    | Win 快捷键             | 作用                                                   | 备注               |
+| :---------------------------- | :--------------------- | :----------------------------------------------------- | :----------------- |
+| Cmd + `                       | 没有                   | 在同一个软件的**多个工作区**之间切换                   | 使用很频繁         |
+| **Cmd + Option + 左右方向键** | Ctrl + Pagedown/Pageup | 在已经打开的**多个文件**之间进行切换                   | 非常实用           |
+| Ctrl + Tab                    | Ctrl + Tab             | 在已经打开的多个文件之间进行跳转                       | 不如上面的快捷键快 |
+| Cmd + Shift + O               | Ctrl + shift + O       | 在当前文件的各种**方法之间**（符号：Symbol）进行跳转   | 可以查看代码结构   |
+| Cmd + T                       | Ctrl + T               | 在当前**工作区**的各种方法之间（符号：Symbol）进行跳转 |                    |
+| Ctrl + G                      | Ctrl + G               | 跳转到指定行                                           |                    |
+| `Cmd+Shift+\`                 | `Ctrl+Shift+\`         | 跳转到匹配的括号                                       |                    |
 
 ### 3、移动光标
 
@@ -185,10 +181,10 @@ VS Code 用得熟不熟，首先就看你是否会用快捷键。以下列出的
 
 另外再补充一点：将光标点击到某一行的任意位置时，默认就已经是**选中全行**了，此时可以直接**复制**或**剪切**，无需点击鼠标。这个非常实用，是所有的编辑操作中，使用得最频繁的。它可以有以下使用场景：
 
-- 场景1：假设光标现在处于第5行的**任意位置**，那么，直接依次按下 `Cmd + C` 和 `Cmd + V`，就会把这行代码复制到第6行。继续按 `Cmd + C` 和 `Cmd + V`，就会把这行代码复制到第7行。copy代码so easy。
-- 场景2：假设光标现在处于第5行，那么，先按下 `Cmd + C`，然后按两下`↑` 方向键，此时光标处于第3行；紧接着，继续按下`Cmd + V`，就会把刚刚那行代码复制到第3行，原本处于第3行的代码会整体**下移**。
+- 场景 1：假设光标现在处于第 5 行的**任意位置**，那么，直接依次按下 `Cmd + C` 和 `Cmd + V`，就会把这行代码复制到第 6 行。继续按 `Cmd + C` 和 `Cmd + V`，就会把这行代码复制到第 7 行。copy 代码 so easy。
+- 场景 2：假设光标现在处于第 5 行，那么，先按下 `Cmd + C`，然后按两下`↑` 方向键，此时光标处于第 3 行；紧接着，继续按下`Cmd + V`，就会把刚刚那行代码复制到第 3 行，原本处于第 3 行的代码会整体**下移**。
 
-你看到了没？上面的两个场景，我全程没有使用鼠标，只通过简单的复制粘贴和方向键，就做到了如此迅速的copy代码。你说是不是很高效？
+你看到了没？上面的两个场景，我全程没有使用鼠标，只通过简单的复制粘贴和方向键，就做到了如此迅速的 copy 代码。你说是不是很高效？
 
 ### 5、删除操作
 
@@ -206,21 +202,21 @@ VS Code 用得熟不熟，首先就看你是否会用快捷键。以下列出的
 
 多光标选择在编程的**提效**方面可谓立下了汗马功劳。因为比较难记住，所以你要时不时回来复习这一段。
 
-| Mac 快捷键                        | Win 快捷键                     | 作用                                                         | 备注                                     |
-| --------------------------------- | ------------------------------ | ------------------------------------------------------------ | ---------------------------------------- |
-| **Option + 鼠标连续点击任意位置** | **Alt + 鼠标连续点击任意位置** | 在任意位置，同时出现多个光标                                 | 很容易记住                               |
+| Mac 快捷键                        | Win 快捷键                     | 作用                                                                                                                 | 备注                                     |
+| --------------------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| **Option + 鼠标连续点击任意位置** | **Alt + 鼠标连续点击任意位置** | 在任意位置，同时出现多个光标                                                                                         | 很容易记住                               |
 | Cmd + D                           | Ctrl + D                       | 将光标放在某个单词的位置（或者先选中某个单词），然后反复按下「 **Cmd + D** 」键， 即可将下一个相同的词逐一加入选择。 | 较常用                                   |
-| **Cmd + Shift + L**               | **Ctrl + Shift + L**           | 将光标放在某个单词的位置（或者先选中某个单词），然后按下快捷键，则所有的相同内容处，都会出现光标。 | 很常用。比如变量重命名的时候，就经常用到 |
+| **Cmd + Shift + L**               | **Ctrl + Shift + L**           | 将光标放在某个单词的位置（或者先选中某个单词），然后按下快捷键，则所有的相同内容处，都会出现光标。                   | 很常用。比如变量重命名的时候，就经常用到 |
 
 ### 7、多列选择/多列编辑
 
 多列选择是更高效的多光标选择，所以单独列成一小段。
 
-| Mac 快捷键                | Win 快捷键             | 作用                                                         | 备注                 |
-| ------------------------- | ---------------------- | ------------------------------------------------------------ | -------------------- |
-| Cmd + Option + 上下键     | Ctrl + Alt + 上下键    | 在连续的多列上，同时出现多个光标                             | 较常用               |
+| Mac 快捷键                | Win 快捷键             | 作用                                                                                   | 备注                 |
+| ------------------------- | ---------------------- | -------------------------------------------------------------------------------------- | -------------------- |
+| Cmd + Option + 上下键     | Ctrl + Alt + 上下键    | 在连续的多列上，同时出现多个光标                                                       | 较常用               |
 | Option + Shift + 鼠标拖动 | Alt + Shift + 鼠标拖动 | 按住快捷键，然后把鼠标从区域的左上角拖至右下角，即可在选中区域的每一行末尾，出现光标。 | 很神奇的操作，较常用 |
-| **Option + Shift + i**    | **Alt + Shift + I**    | 选中一堆文本后，按下快捷键，既可在**每一行的末尾**都出现一个光标。 | 很常用               |
+| **Option + Shift + i**    | **Alt + Shift + I**    | 选中一堆文本后，按下快捷键，既可在**每一行的末尾**都出现一个光标。                     | 很常用               |
 
 ### 8、编程语言相关
 
@@ -262,16 +258,13 @@ VS Code 用得熟不熟，首先就看你是否会用快捷键。以下列出的
 
 ### 快捷键参考表（官方）
 
-VS Code官网提供了 PDF版本的键盘快捷键参考表，转需：
+VS Code 官网提供了 PDF 版本的键盘快捷键参考表，转需：
 
-- Windows版本：https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+- Windows 版本：https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 - Mac 版本：https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
-- Linux版本：https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf
+- Linux 版本：https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf
 
-我们在 VS  Code软件里通过菜单栏「帮助-->键盘快捷方式参考」也可以打开相应平台的快捷键大全（PDF版本）。
-
-
-
+我们在 VS Code 软件里通过菜单栏「帮助-->键盘快捷方式参考」也可以打开相应平台的快捷键大全（PDF 版本）。
 
 ## 三、高端访问：命令面板的使用
 
@@ -324,46 +317,38 @@ Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Sh
 
 备注：这种方法快捷简单，但是在电脑重启之后就失效了。稍后在第五段，我会介绍更常见的方法。
 
-
-
 ### 6、修改特定编程语言的设置项
 
 输入快捷键「Cmd + Shift + P 」打开命令面板，然后输入并执行 `Configure Language Specific Settings`即可。
 
 ![](../../图床/qgyh/20211012_1039.png)
 
-
-
 ## 四、私人订制：VS Code 的常见配置
 
 ### 0、设置项介绍
 
-在修改 VS Code配置之前，我们需要知道，在哪里可以找到设置项的入口。
+在修改 VS Code 配置之前，我们需要知道，在哪里可以找到设置项的入口。
 
-**方式1**：Mac用户选择菜单栏「Code--> 首选项-->设置」，即可打开配置项：
+**方式 1**：Mac 用户选择菜单栏「Code--> 首选项-->设置」，即可打开配置项：
 
 ![](../../图床/qgyh/20210930_2009.png)
 
-**方式2**：点击软件右下角的设置图标：
+**方式 2**：点击软件右下角的设置图标：
 
 ![](../../图床/qgyh/20210930_2016.png)
 
 ![](../../图床/qgyh/20211012_1017.png)
 
-如上图所示，VS Code提供两种不同范围的设置：
+如上图所示，VS Code 提供两种不同范围的设置：
 
 - **用户**设置：全局生效。
-- **工作区**设置：只针对当前项目生效。工作区设置会覆盖用户设置。适用于团队协作场景。工作区的设置文件是保存在当前项目根目录的`.vscode/settings.json`中，可以被提交到Git仓库，方便共享给项目组的其他成员。
+- **工作区**设置：只针对当前项目生效。工作区设置会覆盖用户设置。适用于团队协作场景。工作区的设置文件是保存在当前项目根目录的`.vscode/settings.json`中，可以被提交到 Git 仓库，方便共享给项目组的其他成员。
 
 操作技巧：
 
 （1）我们可以在设置面板的顶部搜索框，输入关键词，就能迅速定位到你想要的设置项。
 
-（2）上图中，点击右上角的icon，可以通过 json文件的形式修改设置项。
-
-
-
-
+（2）上图中，点击右上角的 icon，可以通过 json 文件的形式修改设置项。
 
 ### 1、修改主题
 
@@ -389,8 +374,6 @@ Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Sh
 
 ![20211013_1019](../../图床/qgyh/20211013_1019.png)
 
-
-
 或者在设置项里搜索`Workbench: Icon Theme`，进行修改。
 
 ### 2、面包屑（Breadcrumb）导航
@@ -406,8 +389,6 @@ Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Sh
 ![](../../图床/qgyh/20190415_2009.png)
 
 有了这个面包屑导航，我们可以点击它，在任意目录、任意文件之间随意跳转。使用频繁非常高。
-
-
 
 ### 3、是否显示代码的行号
 
@@ -448,16 +429,16 @@ VS Code 会在代码的右侧，默认显示缩略图。你可以在设置项里
 
 **方式一**：
 
-改完代码后，默认不会自动保存。你可以在设置项里搜索`files.autoSave`，修改参数值为`afterDelay`  ，即可自动保存。如下：
+改完代码后，默认不会自动保存。你可以在设置项里搜索`files.autoSave`，修改参数值为`afterDelay` ，即可自动保存。如下：
 
 ![](../../图床/qgyh/20211012_2000.png)
 
-files.autoSave的参数值有以下几种：
+files.autoSave 的参数值有以下几种：
 
 - off（默认值）：不自动保存。
-- afterDelay（建议配置）：文件修改超过一定时间（默认1秒）后，就自动保存。
+- afterDelay（建议配置）：文件修改超过一定时间（默认 1 秒）后，就自动保存。
 - onFocusChange：当前编辑器失去焦点时，则自动保存。如果我们将配置项修改为`onFocusChange`之后，那么，当光标离开该文件后，这个文件就会自动保存了。
-- onWindowChange：VS  Code软件失去焦点时，则自动保存。
+- onWindowChange：VS Code 软件失去焦点时，则自动保存。
 
 **方式二**：
 
@@ -465,10 +446,9 @@ files.autoSave的参数值有以下几种：
 
 ### 7、热退出
 
-当VS Code退出后，它可以记住未保存的文件。如果你希望达到这种效果，那么，你需要先将设置项`files.hotExit`的值改为 `onExitAndWindowClose`。这个配置项要不要改，看你个人需要。比如我自己平时设置的值是`onExit`。
+当 VS Code 退出后，它可以记住未保存的文件。如果你希望达到这种效果，那么，你需要先将设置项`files.hotExit`的值改为 `onExitAndWindowClose`。这个配置项要不要改，看你个人需要。比如我自己平时设置的值是`onExit`。
 
 ![20211012_2014](../../图床/qgyh/20211012_2014.png)
-
 
 ### 8、保存代码后，是否立即格式化
 
@@ -490,8 +470,6 @@ files.autoSave的参数值有以下几种：
 
 ![20211012_1053](../../图床/qgyh/20211012_1053.png)
 
-
-
 ### 11、空格 or 制表符
 
 VS Code 会根据你所打开的文件来决定该使用空格还是制表。也就是说，如果你的项目中使用的都是制表符，那么，当你在写新的代码时，按下 tab 键后，编辑器就会识别成制表符。
@@ -504,7 +482,7 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 
 这样做，是为了取消系统的自动缩进，建议自己手动格式化比较好。 参考链接：https://www.yisu.com/zixun/327399.html
 
-- **editor.insertSpaces**：按 Tab 键时插入空格（默认值为true）。截图如下：
+- **editor.insertSpaces**：按 Tab 键时插入空格（默认值为 true）。截图如下：
 
 ![](../../图床/qgyh/20190417_2207.png)
 
@@ -512,13 +490,9 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 
 ![](../../图床/qgyh/20190417_2209.png)
 
-
-
 （2）状态栏也会显示当前的缩进值。点击状态栏，可以直接修改 tabSize 缩进值：
 
 ![](../../图床/qgyh/20211009_1610.png)
-
-
 
 （3）另外，我们还可以安装 prettier 插件，设置代码在格式化时默认缩进值。prettier 是做代码格式化的最常见工具。
 
@@ -564,7 +538,7 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 
 ### 15、在新窗口打开文件/文件夹
 
-通过 `window.openFoldersInNewWindow`（默认值为off）和`window.openFilesInNewWindow`（默认值为default），可以配置在打开文件夹、打开文件时，是否开启一个新的窗口。我个人建议，把这两个配置项都设置为 on，避免旧的窗口被覆盖：
+通过 `window.openFoldersInNewWindow`（默认值为 off）和`window.openFilesInNewWindow`（默认值为 default），可以配置在打开文件夹、打开文件时，是否开启一个新的窗口。我个人建议，把这两个配置项都设置为 on，避免旧的窗口被覆盖：
 
 ![](../../图床/qgyh/20211012_1700.png)
 
@@ -577,46 +551,38 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 
 ![20211012_1704](../../图床/qgyh/20211012_1704.png)
 
-
-
 > 接下来，我们来讲一些更高级的操作。
-
-
 
 ## 五、纵享丝滑：常见操作和使用技巧
 
-### 1、快速生成HTML骨架
+### 1、快速生成 HTML 骨架
 
-先新建一个空的html文件，然后通过以下方式，可以快速生成html骨架。
+先新建一个空的 html 文件，然后通过以下方式，可以快速生成 html 骨架。
 
-**方式1**：输入`!`，然后按下`enter`键，即可生成html骨架。如下图：
+**方式 1**：输入`!`，然后按下`enter`键，即可生成 html 骨架。如下图：
 
 ![](../../图床/qgyh/20210623-2115.gif)
 
-
-
-**方式2**：输入`html:5`，然后按住 `Tab`键，即可生成html骨架。
+**方式 2**：输入`html:5`，然后按住 `Tab`键，即可生成 html 骨架。
 
 生成的骨架，内容如下：
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body></body>
 </html>
 ```
 
-有了上面的html骨架之后，我们就可以快乐地在里面插入CSS 代码和 JS 代码。
+有了上面的 html 骨架之后，我们就可以快乐地在里面插入 CSS 代码和 JS 代码。
 
-### 2、并排编辑：左右（上下）显示多个编辑器窗口（copy代码利器）
+### 2、并排编辑：左右（上下）显示多个编辑器窗口（copy 代码利器）
 
 > 并排编辑是所有的编辑操作中最常用的一个技巧，十分有用。比如我们在开发一个项目时，可能需要同时打开 HTML 文件和 CSS 文件，很常见。
 
@@ -644,18 +610,18 @@ Mac 用户按住快捷键 `Cmd + \`， Windows 用户按住快捷键`Ctrl + \`�
 
 - 通过拖拽，把当前文件移动到任意一侧。
 
-补充知识：通过配置项`worbench.editor.OpenSideBySideDirection`可以控制编辑器在并排打开时出现的默认位置（默认值为right，你也可以根据需要改为 down）。如下图所示：
+补充知识：通过配置项`worbench.editor.OpenSideBySideDirection`可以控制编辑器在并排打开时出现的默认位置（默认值为 right，你也可以根据需要改为 down）。如下图所示：
 
 ![20211012_1455](../../图床/qgyh/20211012_1455.png)
 
-### 3、从终端 code 命令启动 VS Code（Mac电脑）
+### 3、从终端 code 命令启动 VS Code（Mac 电脑）
 
-在终端输入`code`或者输入 `code + 指定项目的目录`，就可以启动 VS  Code，十分便捷。即：
+在终端输入`code`或者输入 `code + 指定项目的目录`，就可以启动 VS Code，十分便捷。即：
 
 - `code` 命令：启动 VS Code 软件。
 - `code pathName/fileName` 命令：通过 VS Code 软件打开指定目录/指定文件。
 
-为了达到目的，我们需要先将 VS Code的软件安装路径添加到环境变量，一劳永逸。具体操作如下：
+为了达到目的，我们需要先将 VS Code 的软件安装路径添加到环境变量，一劳永逸。具体操作如下：
 
 （1）打开 `bash_profile`文件：
 
@@ -682,24 +648,24 @@ source ~/.bash_profile
 
 大功告成。
 
-改完之后，如果没生效，那你把  `bash_profile`文件 换成 `zshrc`文件试试。
+改完之后，如果没生效，那你把 `bash_profile`文件 换成 `zshrc`文件试试。
 
 参考链接：
 
-- [mac通过终端code 命令打开vscode](https://blog.csdn.net/logan_LG/article/details/106800904)
+- [mac 通过终端 code 命令打开 vscode](https://blog.csdn.net/logan_LG/article/details/106800904)
 
-### 3、从终端 code 命令启动 VS Code（Windows电脑）
+### 3、从终端 code 命令启动 VS Code（Windows 电脑）
 
-在终端输入`code`或者输入 `code + 指定项目的目录`，就可以启动 VS  Code，十分便捷。即：
+在终端输入`code`或者输入 `code + 指定项目的目录`，就可以启动 VS Code，十分便捷。即：
 
 - `code` 命令：启动 VS Code 软件。
 - `code pathName/fileName` 命令：通过 VS Code 软件打开指定目录/指定文件。
 
-为了达到目的，我们需要先将 VS Code的软件安装路径添加到环境变量，一劳永逸。具体操作如下：
+为了达到目的，我们需要先将 VS Code 的软件安装路径添加到环境变量，一劳永逸。具体操作如下：
 
-（1）打开 VS Code 的安装位置，进入bin文件夹，复制路径。比如：`D:\Microsoft VS Code\bin`。
+（1）打开 VS Code 的安装位置，进入 bin 文件夹，复制路径。比如：`D:\Microsoft VS Code\bin`。
 
-（2）回到桌面，右键我的电脑-->高级系统设置-->环境变量-->编辑path值，在原来的path后面，追加内容`;D:\Microsoft VS Code\bin`（即英文的分号+VS  Code 的 bin 路径)
+（2）回到桌面，右键我的电脑-->高级系统设置-->环境变量-->编辑 path 值，在原来的 path 后面，追加内容`;D:\Microsoft VS Code\bin`（即英文的分号+VS Code 的 bin 路径)
 
 （3）重启电脑，大功告成。
 
@@ -707,7 +673,7 @@ source ~/.bash_profile
 
 参考链接：
 
-- [windows使用 code . 命令打开vscode](https://www.cnblogs.com/zyl-Tara/p/10642704.html)
+- [windows 使用 code . 命令打开 vscode](https://www.cnblogs.com/zyl-Tara/p/10642704.html)
 
 ### 4、在当前文件中搜索
 
@@ -737,7 +703,7 @@ source ~/.bash_profile
 
 ![20211012_1548](../../图床/qgyh/20211012_1548.png)
 
-上图中，你可以点击**红框**部分，展开更多的配置项。然后点击**红圈**部分，进行过滤搜索。注意，第二个红圈那里会经常用到，它可以在搜索时过滤掉  `.git`、`.node_modules`等忽略文件。
+上图中，你可以点击**红框**部分，展开更多的配置项。然后点击**红圈**部分，进行过滤搜索。注意，第二个红圈那里会经常用到，它可以在搜索时过滤掉 `.git`、`.node_modules`等忽略文件。
 
 上图中，我们还可以点击“在编辑器中打开”，在一个单独的文件中聚合展示搜索结果：
 
@@ -775,7 +741,7 @@ VS Code 自带的对比功能并不够强大，我们可以安装插件`comparei
 
 ![](../../图床/qgyh/20190329_1757.png)
 
-如果你安装了 GitLens 插件，还可以将两个git分支的代码进行比对，非常完美。
+如果你安装了 GitLens 插件，还可以将两个 git 分支的代码进行比对，非常完美。
 
 ### 9、查找某个函数在哪些地方被调用了
 
@@ -805,10 +771,10 @@ VS Code 自带的对比功能并不够强大，我们可以安装插件`comparei
 
 ### 12：终端配置
 
-VS Code软件自带了终端，但我个人认为不是很好用，而且VS Code 软件关了之后，终端也没了。建议大家使用其他的终端软件，专业的事情交给专业的人做。
+VS Code 软件自带了终端，但我个人认为不是很好用，而且 VS Code 软件关了之后，终端也没了。建议大家使用其他的终端软件，专业的事情交给专业的人做。
 
-- Windows平台的终端：推荐 PowerShell 软件。远程终端推荐 xshell 软件。
-- Mac平台的终端：推荐 [iTerm2 ](https://iterm2.com/)。 iTerm2 是Mac平台最好用的终端软件，没有之一。
+- Windows 平台的终端：推荐 PowerShell 软件。远程终端推荐 xshell 软件。
+- Mac 平台的终端：推荐 [iTerm2 ](https://iterm2.com/)。 iTerm2 是 Mac 平台最好用的终端软件，没有之一。
 
 **右键行为**：
 
@@ -820,7 +786,7 @@ VS Code软件自带了终端，但我个人认为不是很好用，而且VS Code
 
 ### 13、Git 版本管理
 
-在 VS Code中使用Git之前，需要你先安装 Git 环境。
+在 VS Code 中使用 Git 之前，需要你先安装 Git 环境。
 
 VS Code 自带了 Git 版本管理的功能，如下图所示：
 
@@ -828,7 +794,7 @@ VS Code 自带了 Git 版本管理的功能，如下图所示：
 
 上图中，我们可以在这里进行常见的 git 命令操作。如果你还不熟悉 **Git 版本管理**，可以先去补补课。
 
-我自己用的最多的功能是**diff 代码**和**合并冲突**，自从用上了  VS Code 的这两个功能，简直离不开它。
+我自己用的最多的功能是**diff 代码**和**合并冲突**，自从用上了 VS Code 的这两个功能，简直离不开它。
 
 我们先来看看 diff 代码的效果：
 
@@ -838,18 +804,18 @@ VS Code 自带了 Git 版本管理的功能，如下图所示：
 
 ![](../../图床/qgyh/20211013_1415.png)
 
-**Git状态栏**：
+**Git 状态栏**：
 
 ![20211013_1421](../../图床/qgyh/20211013_1421.png)
 
-在VS Code的左下角会显示Git状态栏。如果当前代码仓库配置了远程仓库，那么“同步更改”会显示以下信息：
+在 VS Code 的左下角会显示 Git 状态栏。如果当前代码仓库配置了远程仓库，那么“同步更改”会显示以下信息：
 
-- 左边的数字：表示远程分支比本地分支多了XX个 Git commit。
-- 右边的数字：表示本地分支比远程分支多了XX个 Git commit。
+- 左边的数字：表示远程分支比本地分支多了 XX 个 Git commit。
+- 右边的数字：表示本地分支比远程分支多了 XX 个 Git commit。
 
-点击“同步更改”按钮，会拉取（pull）远程分支到本地分支，并推送（push）本地的Git commit到远程分支。
+点击“同步更改”按钮，会拉取（pull）远程分支到本地分支，并推送（push）本地的 Git commit 到远程分支。
 
-如果当前代码仓库没有配置远程仓库，则会显示“发布更改”的按钮。点击“发布更改”按钮，会把当前分支push到远程仓库。
+如果当前代码仓库没有配置远程仓库，则会显示“发布更改”的按钮。点击“发布更改”按钮，会把当前分支 push 到远程仓库。
 
 ---
 
@@ -857,9 +823,9 @@ VS Code 自带了 Git 版本管理的功能，如下图所示：
 
 我还要补充一句：
 
-有人说，高手都是直接用命令行操作Git。然而，根据我多年的经验来看，如果你的代码仓库需要管理的分支特别多，与团队的其他成员需要经常协作，那么，我建议你**优先使用** GUI 图形化工具来操作Git，避免出错。
+有人说，高手都是直接用命令行操作 Git。然而，根据我多年的经验来看，如果你的代码仓库需要管理的分支特别多，与团队的其他成员需要经常协作，那么，我建议你**优先使用** GUI 图形化工具来操作 Git，避免出错。
 
-我推荐的GUI版的Git工具有：
+我推荐的 GUI 版的 Git 工具有：
 
 - [Tower](https://www.git-tower.com/)
 - [Sourcetree](https://www.sourcetreeapp.com/)
@@ -919,12 +885,12 @@ VS Code 自带 markdown 语法高亮。也就是说，如果你是用 markdown �
 
 ```html
 <ul>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
 </ul>
 ```
 
@@ -975,9 +941,9 @@ VS Code 默认对 JavaScript、TypeScript、JSON、HTML 提供了开箱即用的
 
 ### 21、智能提示 IntelliSense
 
-VS Code 默认对 JavaScript、TypeScript、JSON、HTML、CSS、SCSS、Less这7种语言（文件）提供了**智能提示**的支持。其他编程语言则需要先安装相应的插件才能支持。
+VS Code 默认对 JavaScript、TypeScript、JSON、HTML、CSS、SCSS、Less 这 7 种语言（文件）提供了**智能提示**的支持。其他编程语言则需要先安装相应的插件才能支持。
 
-在 VS Code插件职场中，下图是最受欢迎的8种[编程语言插件](https://marketplace.visualstudio.com/search?target=VSCode&category=Programming%20Languages&sortBy=Installs)：
+在 VS Code 插件职场中，下图是最受欢迎的 8 种[编程语言插件](https://marketplace.visualstudio.com/search?target=VSCode&category=Programming%20Languages&sortBy=Installs)：
 
 ![20211013_1120](../../图床/qgyh/20211013_1120.png)
 
@@ -985,9 +951,9 @@ VS Code 默认对 JavaScript、TypeScript、JSON、HTML、CSS、SCSS、Less这7�
 
 ### 22、调试与运行
 
-VS Code **内置**了对 Node.js 运行时的调试支持，可以直接调试  JavaScript 和 TypeScript。其他编程语言的调试，则需要先安装相应的插件才能支持。
+VS Code **内置**了对 Node.js 运行时的调试支持，可以直接调试 JavaScript 和 TypeScript。其他编程语言的调试，则需要先安装相应的插件才能支持。
 
-在 VS Code插件市场中，下图是最受欢迎的几种调试插件：
+在 VS Code 插件市场中，下图是最受欢迎的几种调试插件：
 
 ![](../../图床/qgyh/20211013_1650.png)
 
@@ -1015,33 +981,33 @@ VS Code **内置**了对 Node.js 运行时的调试支持，可以直接调试  
 
 ```json
 {
-  "host": "192.168.xxx.xxx", //服务器ip
-  "port": 22, //端口，sftp模式是22
-  "username": "", //用户名
-  "password": "", //密码
-  "protocol": "sftp", //模式
-  "agent": null,
-  "privateKeyPath": null,
-  "passphrase": null,
-  "passive": false,
-  "interactiveAuth": false,
-  "remotePath": "/root/node/build/", //服务器上的文件地址
-  "context": "./server/build", //本地的文件地址
+	"host": "192.168.xxx.xxx", //服务器ip
+	"port": 22, //端口，sftp模式是22
+	"username": "", //用户名
+	"password": "", //密码
+	"protocol": "sftp", //模式
+	"agent": null,
+	"privateKeyPath": null,
+	"passphrase": null,
+	"passive": false,
+	"interactiveAuth": false,
+	"remotePath": "/root/node/build/", //服务器上的文件地址
+	"context": "./server/build", //本地的文件地址
 
-  "uploadOnSave": true, //监听保存并上传
-  "syncMode": "update",
-  "watcher": {
-    //监听外部文件
-    "files": false, //外部文件的绝对路径
-    "autoUpload": false,
-    "autoDelete": false
-  },
-  "ignore": [
-    //忽略项
-    "**/.vscode/**",
-    "**/.git/**",
-    "**/.DS_Store"
-  ]
+	"uploadOnSave": true, //监听保存并上传
+	"syncMode": "update",
+	"watcher": {
+		//监听外部文件
+		"files": false, //外部文件的绝对路径
+		"autoUpload": false,
+		"autoDelete": false
+	},
+	"ignore": [
+		//忽略项
+		"**/.vscode/**",
+		"**/.git/**",
+		"**/.DS_Store"
+	]
 }
 ```
 
@@ -1051,15 +1017,15 @@ VS Code **内置**了对 Node.js 运行时的调试支持，可以直接调试  
 
 ### 24、沉浸模式/禅模式
 
-程序员写代码需要专注，有时需要进入一种心流。VS Code给我们提供了一种全屏下的沉浸模式，周围的面板都会被隐藏起来，只显示编辑器部分。
+程序员写代码需要专注，有时需要进入一种心流。VS Code 给我们提供了一种全屏下的沉浸模式，周围的面板都会被隐藏起来，只显示编辑器部分。
 
 操作方法：菜单栏选择「查看-外观-禅模式」即可；或者按下快捷键`Cmd + K`，放手，再按`Z`也可以达到目的。
 
 ### 25、弹出提示
 
-光标放在要键入的位置，按ctrl+i,可查看对应位置的可键入建议；vscode静态分析代码时候 ，不知道this是什么，所以无法提供准确的提示
+光标放在要键入的位置，按 ctrl+i,可查看对应位置的可键入建议；vscode 静态分析代码时候 ，不知道 this 是什么，所以无法提供准确的提示
 
-也可以利用标准化注释语法 告知vscode 变量的原型是什么，vscode才能给出准确的提示
+也可以利用标准化注释语法 告知 vscode 变量的原型是什么，vscode 才能给出准确的提示
 
 ```js
 /** @type {HTMLCanvasElement} */
@@ -1067,19 +1033,20 @@ VS Code **内置**了对 Node.js 运行时的调试支持，可以直接调试  
 
 ### 正则表达式批量删除字符串
 
-**需求**：将文本中的字符串`axxxxb`，批量替换为`ab`。其中，开头字符 a 和 结尾字符 b 固定，中间xxx长度不确定。
+**需求**：将文本中的字符串`axxxxb`，批量替换为`ab`。其中，开头字符 a 和 结尾字符 b 固定，中间 xxx 长度不确定。
 
-**解决**：传统查找替换无法胜任。可以使用VScode正则表达式功能，查找`a.*?b`替换为`ab`即可。其中`?`是禁止贪婪匹配，否则会误删很多内容。
+**解决**：传统查找替换无法胜任。可以使用 VScode 正则表达式功能，查找`a.*?b`替换为`ab`即可。其中`?`是禁止贪婪匹配，否则会误删很多内容。
 
 ---
 
-**拓展需求**：需求——将文本中的字符串`axxxx`，批量替换为`a`。其中，开头字符 a 固定，后面的xxx长度不确定。
+**拓展需求**：需求——将文本中的字符串`axxxx`，批量替换为`a`。其中，开头字符 a 固定，后面的 xxx 长度不确定。
 
-**解决**：传统查找替换无法胜任。可以使用VScode正则表达式功能，查找`a.*?\n`替换为`a\n`即可。
+**解决**：传统查找替换无法胜任。可以使用 VScode 正则表达式功能，查找`a.*?\n`替换为`a\n`即可。
 
 ## 六、三头六臂：VS Code 插件介绍 & 插件推荐
 
 VS Code 有一个很强大的功能就是支持插件扩展，让你的编辑器仿佛拥有了三头六臂。
+
 ### 安装插件
 
 ![](../../图床/qgyh/20191108_1553_2.png)
@@ -1090,20 +1057,21 @@ VS Code 有一个很强大的功能就是支持插件扩展，让你的编辑器
 
 另外，我们还可以访问官网的插件市场来安装插件：
 
--  VS Code插件市场（官方）：https://marketplace.visualstudio.com/vscode
+- VS Code 插件市场（官方）：https://marketplace.visualstudio.com/vscode
 
 **插件的安装目录**：
 
 - Windows：：`%USERPROFILE%\.vscode\extensions`
 - macOS：`~/.vscode/extensions`
 - macOS：`~/.vscode/extensions`
+
 ### 插件的类型
 
 ![20211013_1757_2](../../图床/qgyh/20211013_1757_2.png)
 
 插件市场的首页有四个模块，可以作为重要的信息来源：
 
-- Featured：由  VS Code团队精心推荐的插件。
+- Featured：由 VS Code 团队精心推荐的插件。
 - Trending：近期热门插件。
 - Most Popular：按总安装量排序的插件。
 - Recently Added：最新发布的插件。
@@ -1112,7 +1080,7 @@ VS Code 有一个很强大的功能就是支持插件扩展，让你的编辑器
 
 ![20211013_1955](../../图床/qgyh/20211013_1955.png)
 
-插件市场至少有17种类型的插件：（按照数量排序）
+插件市场至少有 17 种类型的插件：（按照数量排序）
 
 - Themes：主题插件
 - Programming Languages：编程语言插件
@@ -1132,9 +1100,10 @@ VS Code 有一个很强大的功能就是支持插件扩展，让你的编辑器
 - Testing：测试相关
 - Machine Learning：机器学习
 - Others：其他
+
 ### 插件的过滤显示
 
-在 VS  Code中打开插件管理视图，可以针对已安装的插件，进行过滤展示。
+在 VS Code 中打开插件管理视图，可以针对已安装的插件，进行过滤展示。
 
 1）点击插件视图右上角的`...`按钮，可以展示不同状态的插件：
 
@@ -1148,7 +1117,7 @@ VS Code 有一个很强大的功能就是支持插件扩展，让你的编辑器
 
 1）按大类搜：
 
-- `@builtin`：显示 VS Code内置的插件
+- `@builtin`：显示 VS Code 内置的插件
 - `@disabled`：显示被禁用的插件
 - `@enabled`：显示已启用的插件
 - `@installed`：显示已安装的插件
@@ -1156,7 +1125,7 @@ VS Code 有一个很强大的功能就是支持插件扩展，让你的编辑器
 
 2）精准搜索：
 
-- `@id`：按id显示插件
+- `@id`：按 id 显示插件
 - `@tag`：根据标签显示插件。
 
 3）对插件进行排序：
@@ -1192,17 +1161,17 @@ GitLens 在 Git 管理上有很多强大的功能，比如：
 - 可以将两个 commit 进行代码对比
 - 甚至可以将两个 branch 分支进行整体的代码对比。这一点，简直是 GitLens 最强大的功能。当我们在不同分支 review 代码的时候，就可以用到这一招。
 
-打开你的 Git仓库，未安装  GitLens 时是这样的：
+打开你的 Git 仓库，未安装 GitLens 时是这样的：
 
 ![](../../图床/qgyh/20211009_1400.png)
 
-安装了  GitLens 之后是这样的：
+安装了 GitLens 之后是这样的：
 
 ![](../../图床/qgyh/20211009_1430.png)
 
-上图中，红框部分就是  GitLens 的功能，诸君可以自由发挥。
+上图中，红框部分就是 GitLens 的功能，诸君可以自由发挥。
 
-补充一个有意思的趣事：Python插件、Ruby插件、GitLens插件、Vetur插件，这四个插件的开发者先后加入了微软。
+补充一个有意思的趣事：Python 插件、Ruby 插件、GitLens 插件、Vetur 插件，这四个插件的开发者先后加入了微软。
 
 #### Git History
 
@@ -1219,9 +1188,11 @@ GitLens 在 Git 管理上有很多强大的功能，比如：
 #### Vetur
 
 Vue 多功能集成插件，包括：语法高亮，智能提示，emmet，错误提示，格式化，自动补全，debugger。VS Code 官方钦定 Vue 插件，Vue 开发者必备。
+
 #### ES7 React/Redux/GraphQL/React-Native snippets
 
 React/Redux/react-router 的语法智能提示。
+
 #### JavaScript(ES6) code snippets
 
 ES6 语法智能提示，支持快速输入。
@@ -1260,7 +1231,6 @@ ES6 语法智能提示，支持快速输入。
 
 另外，还有个`Rainbow Brackets`插件，也可以突出显示成对的括号。
 
-
 #### highlight-icemode：选中相同的代码时，让高亮显示更加明显【荐】
 
 VSCode 自带的高亮显示，实在是不够显眼。用插件支持一下吧。
@@ -1271,11 +1241,9 @@ VSCode 自带的高亮显示，实在是不够显眼。用插件支持一下吧�
 
 参考链接：[vscode 选中后相同内容高亮插件推荐](https://blog.csdn.net/palmer_kai/article/details/79548164)
 
-
 #### vscode-icons
 
 vscode-icons 会根据文件的后缀名来显示不同的图标，让你更直观地知道每种文件是什么类型的。
-
 
 #### indent-rainbow：突出显示代码缩进
 
@@ -1284,7 +1252,6 @@ vscode-icons 会根据文件的后缀名来显示不同的图标，让你更直�
 安装完成后，效果如下图所示：
 
 ![](../../图床/qgyh/20190418_1958.png)
-
 
 #### TODO Highlight
 
@@ -1320,27 +1287,25 @@ Prettier 是一个代码格式化工具，**只关注格式化，但不具备校
 
 ```json
 {
-  "printWidth": 150,
-  "tabWidth": 4,
-  "semi": true,
-  "singleQuote": true,
-  "trailingComma": "es5",
-  "tslintIntegration": true,
-  "insertSpaceBeforeFunctionParenthesis": false
+	"printWidth": 150,
+	"tabWidth": 4,
+	"semi": true,
+	"singleQuote": true,
+	"trailingComma": "es5",
+	"tslintIntegration": true,
+	"insertSpaceBeforeFunctionParenthesis": false
 }
 ```
 
 上面的内容，是我自己的配置，你可以参考。更多配置，可见官方文档：<https://prettier.io/docs/en/options.html>
 
-
-（3）Mac用户按快捷键「Option + Shift + F」，Win 用户按快捷键「Alt + shift + F」，即可完成代码的格式化。如果你的VS Code 设置的是自动格式化代码，那么这一步可以忽略。
-
+（3）Mac 用户按快捷键「Option + Shift + F」，Win 用户按快捷键「Alt + shift + F」，即可完成代码的格式化。如果你的 VS Code 设置的是自动格式化代码，那么这一步可以忽略。
 
 #### ESLint：代码格式的校验
 
 日常开发中，建议用 Prettier 做**代码格式化**，然后用 eslint 做**格式校验**。很多人把这两个插件的功能弄混了。
 
-一般做法是：格式化建议是由程序员手动触发，格式校验由系统强制校验。通过 Prettier **手动**触发格式化，是为了让用户有感知；通过eslint 做**强制**校验之后，如果代码的格式不符合要求，系统就禁止你提交代码。
+一般做法是：格式化建议是由程序员手动触发，格式校验由系统强制校验。通过 Prettier **手动**触发格式化，是为了让用户有感知；通过 eslint 做**强制**校验之后，如果代码的格式不符合要求，系统就禁止你提交代码。
 
 #### Beautify
 
@@ -1354,9 +1319,7 @@ Prettier 是一个代码格式化工具，**只关注格式化，但不具备校
 
 #### JS-CSS-HTML Formatter【荐】
 
-保存文件时，自动格式化 HTML、CSS、JS代码。
-
-
+保存文件时，自动格式化 HTML、CSS、JS 代码。
 
 ### 6、图片相关插件
 
@@ -1378,9 +1341,7 @@ Prettier 是一个代码格式化工具，**只关注格式化，但不具备校
 
 图片预览。鼠标移动到图片 url 上的时候，会自动显示图片的预览和图片尺寸。
 
-
-
-### 7、CSS相关插件
+### 7、CSS 相关插件
 
 #### CSS Peek
 
@@ -1393,8 +1354,6 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 #### Color Info
 
 这个便捷的插件，将为你提供你在 CSS 中使用颜色的相关信息。你只需在颜色上悬停光标，就可以预览色块中色彩模型的（HEX、 RGB、HSL 和 CMYK）相关信息了。
-
-
 
 ### 8、Mardown 相关插件
 
@@ -1411,8 +1370,6 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 #### Markdown All in One
 
 这个插件将帮助你更高效地在 Markdown 中编写文档。
-
-
 
 ### 9、通用工具类插件
 
@@ -1431,7 +1388,6 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 #### open in browser
 
 安装`open in browser`插件后，在 HTML 文件中「右键选择 --> Open in Default Browser」，即可在浏览器中预览网页。
-
 
 #### Project Manager
 
@@ -1463,7 +1419,7 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 同步的详细操作，下一段会讲。
 
-另外，北京时间的[2020年8月14日](https://zhuanlan.zhihu.com/p/184868336)，微软发布 Visual Studio Code 1.48 稳定版。此版本**原生**支持用户同步 VS Code的配置，只需要登录微软账号或者 GitHub账号即可。
+另外，北京时间的[2020 年 8 月 14 日](https://zhuanlan.zhihu.com/p/184868336)，微软发布 Visual Studio Code 1.48 稳定版。此版本**原生**支持用户同步 VS Code 的配置，只需要登录微软账号或者 GitHub 账号即可。
 
 #### vscode-syncing
 
@@ -1475,18 +1431,11 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 小程序开发必备插件。
 
-
-
-
 #### Search node_modules
 
 `node_modules`模块里面的文件夹和模块实在是太多了，根本不好找。好在安装 `Search node_modules` 这个插件后，输入快捷键「Cmd + Shift + P」，然后输入 `node_modules`，在弹出的选项中选择 `Search node_modules`，即可搜索 node_modules 里的模块。
 
 ![](../../图床/qgyh/20200618_2100.png)
-
-
-
-
 
 #### RemoteHub
 
@@ -1544,15 +1493,13 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 - Horizon Theme：红色主题
 
-
-
 ## 七、无缝切换：VS Code 配置云同步
 
 我们可以将配置云同步，这样的话，当我们换个电脑时，即可将配置一键同步到本地，就不需要重新安装插件了，也不需要重新配置软件。
 
-下面讲的两个同步方法，都可以，看你自己需要。方法1是 VS Code自带的同步功能，操作简单。方法2 需要安装插件，支持更多的自定义配置。
+下面讲的两个同步方法，都可以，看你自己需要。方法 1 是 VS Code 自带的同步功能，操作简单。方法 2 需要安装插件，支持更多的自定义配置。
 
-### 方法1：使用 VS Code 自带的同步功能
+### 方法 1：使用 VS Code 自带的同步功能
 
 1、**配置同步**：
 
@@ -1560,19 +1507,15 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 ![](../../图床/qgyh/20211008_1713.png)
 
-
-
 （2）选择需要同步的配置：
 
 ![](../../图床/qgyh/20211008_1716.png)
 
-
-
-（3）通过Microsoft或者GitHub账号登录。 上图中，点击“登录并打开”，然后弹出如下界面：
+（3）通过 Microsoft 或者 GitHub 账号登录。 上图中，点击“登录并打开”，然后弹出如下界面：
 
 ![](../../图床/qgyh/20211008_1717.png)
 
-上图中，使用  微软账号或者 GitHub账号登录：
+上图中，使用 微软账号或者 GitHub 账号登录：
 
 ![](../../图床/qgyh/20211008_1718.png)
 
@@ -1590,11 +1533,11 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 参考链接：
 
-- [VS Code原生的配置同步功能——Settings Sync](https://blog.csdn.net/baidu_33340703/article/details/106967884)
+- [VS Code 原生的配置同步功能——Settings Sync](https://blog.csdn.net/baidu_33340703/article/details/106967884)
 
-### 方法2：使用插件 `settings-sync`
+### 方法 2：使用插件 `settings-sync`
 
-使用方法2，我们还可以把配置分享其他用户，也可以把其他用户的配置给自己用。
+使用方法 2，我们还可以把配置分享其他用户，也可以把其他用户的配置给自己用。
 
 1、**配置同步**：（将自己本地的配置云同步到 GitHub）
 
@@ -1641,16 +1584,18 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 > https://github.com/qianguyihao/Web
 
 一个超级详细和真诚的前端入门项目。
+
 ## todo
 
 - [issues 84](https://github.com/qianguyihao/Web/issues/84)
 
 ## 参考链接
-### 2021年
+
+### 2021 年
 
 - 中文版 Awesome VS Code：https://github.com/formulahendry/awesome-vscode-cn
 
-### 2020年
+### 2020 年
 
 - [VSCode 插件大全｜ VSCode 高级玩家之第二篇](https://juejin.im/post/5ea40c6751882573b219777d)
 

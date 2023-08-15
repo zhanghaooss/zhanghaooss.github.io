@@ -3,8 +3,6 @@ title: 12-HTML基础回顾
 ！！！：html常见面试题
 ---
 
-[TOC]
-
 本文主要内容
 
 - html 的常见元素
@@ -37,10 +35,10 @@ html 的常见元素主要分为两类：head 区域的元素、body 区域的�
 
 - base
 
-**base元素的介绍**：
+**base 元素的介绍**：
 
 ```html
-<base href="/">
+<base href="/" />
 ```
 
 base 标签用于指定基础的路径。指定之后，所有的 a 链接都是以这个路径为基准。
@@ -63,7 +61,7 @@ base 标签用于指定基础的路径。指定之后，所有的 a 链接都是
 
 - 表单元素：form、input、select、textarea、button
 
-div 是最常见的元素，大多数场景下，都可以用div（实在不行就多包几层div）。可见，**div 是比较通用的元素，这也决定了 div 的的语义并不是很明确**。
+div 是最常见的元素，大多数场景下，都可以用 div（实在不行就多包几层 div）。可见，**div 是比较通用的元素，这也决定了 div 的的语义并不是很明确**。
 
 **常见标签的重要属性**：
 
@@ -82,31 +80,30 @@ div 是最常见的元素，大多数场景下，都可以用div（实在不行�
 
 同样，html 网页也可以看成是一种文档，也有属于它的大纲。
 
-一个常见的html文档，它的结构可以是：
+一个常见的 html 文档，它的结构可以是：
 
 ```html
-    <section>
-        <h1>一级标题</h1>
+<section>
+	<h1>一级标题</h1>
 
-        <section>
-            <h2>二级标题</h2>
-            <p>段落内容</p>
-        </section>
+	<section>
+		<h2>二级标题</h2>
+		<p>段落内容</p>
+	</section>
 
-        <section>
-            <h2>二级标题</h2>
-            <p>段落内容</p>
-        </section>
+	<section>
+		<h2>二级标题</h2>
+		<p>段落内容</p>
+	</section>
 
-        <aside>
-            <p>广告内容</p>
-        </aside>
+	<aside>
+		<p>广告内容</p>
+	</aside>
+</section>
 
-    </section>
-
-    <footer>
-        <p>某某公司出品</p>
-    </footer>
+<footer>
+	<p>某某公司出品</p>
+</footer>
 ```
 
 ### 查看网页大纲的工具
@@ -168,17 +165,22 @@ CSS Tools: Reset CSS。链接：<https://meyerweb.com/eric/tools/css/reset/>
 我们可以直接通过 CDN 的方式引入：
 
 ```html
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+<link
+	rel="stylesheet"
+	type="text/css"
+	href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css"
+/>
 ```
+
 **方式三**：（比较有争议）
 
 ```css
-*{
-    margin: 0;
-    padding: 0;
+* {
+	margin: 0;
+	padding: 0;
 }
-
 ```
+
 上面何种写法，比较简洁，但也有争议。有争议的地方在于，可能会导致 css 选择器的性能问题。
 
 ### Normalize.css
@@ -197,13 +199,13 @@ CSS Tools: Reset CSS。链接：<https://meyerweb.com/eric/tools/css/reset/>
 
 - 让浏览器知道元素的合法性
 
-### HTML、XHTML、HTML5的区别
+### HTML、XHTML、HTML5 的区别
 
 - HTML 属于 SGML
 
 - XHTML 属于 XML，是 HTML 进行 XML 严格化的结果
 
-- HTML5 不属于SGML，也不属于 XML（HTML5有自己独立的一套规范），比 XHTML 宽松。
+- HTML5 不属于 SGML，也不属于 XML（HTML5 有自己独立的一套规范），比 XHTML 宽松。
 
 ### HTML5 有什么新的变化
 
@@ -211,7 +213,7 @@ CSS Tools: Reset CSS。链接：<https://meyerweb.com/eric/tools/css/reset/>
 
 - 表单增强
 
-- 新的API：离线、音视频、图形、实时通信、本地存储、设备能力等。
+- 新的 API：离线、音视频、图形、实时通信、本地存储、设备能力等。
 
 ### em 和 i 的区别
 
@@ -256,4 +258,3 @@ CSS Tools: Reset CSS。链接：<https://meyerweb.com/eric/tools/css/reset/>
 - 第三方库可以进行表单验证
 
 所以，如果我们是通过 Ajax 提交表单数据，也建议加上 form。
-

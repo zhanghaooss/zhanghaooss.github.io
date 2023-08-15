@@ -3,14 +3,9 @@ title: 04-Node.js模块化规范：CommonJS
 publish: true
 ---
 
-[TOC]
-
-
-
-
 ## 前言
 
-网站越来越复杂，js代码、js文件也越来越多，会遇到**一些问题**：
+网站越来越复杂，js 代码、js 文件也越来越多，会遇到**一些问题**：
 
 - 文件依赖
 
@@ -32,19 +27,15 @@ publish: true
 
 一次编写，多次使用，才是提高效率的核心。
 
-
-
-
 ## 模块化的理解
 
 ### 什么是模块化
-
 
 **概念**：将一个复杂的程序依据一定的规则（规范）封装成几个块（文件），并组合在一起。
 
 模块的内部数据、实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信。
 
-最早的时候，我们会把所有的代码都写在一个js文件里，那么，耦合性会很高（关联性强），不利于维护；而且会造成全局污染，很容易命名冲突。
+最早的时候，我们会把所有的代码都写在一个 js 文件里，那么，耦合性会很高（关联性强），不利于维护；而且会造成全局污染，很容易命名冲突。
 
 ### 模块化的好处
 
@@ -58,55 +49,49 @@ publish: true
 
 - 部署方便
 
-
-
-
 ## 模块化规范
 
 ### 模块化规范的引入
 
-假设我们引入模块化，首先可能会想到的思路是：在一个文件中引入多个js文件。如下：
+假设我们引入模块化，首先可能会想到的思路是：在一个文件中引入多个 js 文件。如下：
 
 ```html
 <body>
-    <script src="zepto.js"></script>
-    <script src="fastClick.js"></script>
-    <script src="util/login.js"></script>
-    <script src="util/base.js"></script>
-    <script src="util/city.js"></script>
+	<script src="zepto.js"></script>
+	<script src="fastClick.js"></script>
+	<script src="util/login.js"></script>
+	<script src="util/base.js"></script>
+	<script src="util/city.js"></script>
 </body>
 ```
 
 但是这样做会带来很多问题：
 
-- 请求过多：引入十个js文件，就有十次http请求。
+- 请求过多：引入十个 js 文件，就有十次 http 请求。
 
-- 依赖模糊：不同的js文件可能会相互依赖，如果改其中的一个文件，另外一个文件可能会报错。
+- 依赖模糊：不同的 js 文件可能会相互依赖，如果改其中的一个文件，另外一个文件可能会报错。
 
 以上两点，最终导致：**难以维护**。
 
 于是，这就引入了模块化规范。
 
-
-###  模块化的概念解读
+### 模块化的概念解读
 
 模块化起源于 Node.js。Node.js 中把很多 js 打包成 package，需要的时候直接通过 require 的方式进行调用（CommonJS），这就是模块化的方式。
 
 那如何把这种模块化思维应用到前端来呢？这就产生了两种伟大的 js：RequireJS 和 SeaJS。
 
-
 ### 模块化规范
 
 服务器端规范：
 
-- [**CommonJS规范**](http://www.commonjs.org/)：是 Node.js 使用的模块化规范。
+- [**CommonJS 规范**](http://www.commonjs.org/)：是 Node.js 使用的模块化规范。
 
 CommonJS 就是一套约定标准，不是技术。用于约定我们的代码应该是怎样的一种结构。
 
-
 浏览器端规范：
 
-- [**AMD规范**](https://github.com/amdjs/amdjs-api)：是 **[RequireJS](http://requirejs.org/)** 在推广过程中对模块化定义的规范化产出。
+- [**AMD 规范**](https://github.com/amdjs/amdjs-api)：是 **[RequireJS](http://requirejs.org/)** 在推广过程中对模块化定义的规范化产出。
 
 ```
 - 异步加载模块；
@@ -116,7 +101,7 @@ CommonJS 就是一套约定标准，不是技术。用于约定我们的代码�
 - define 定义模块：define([`require`,`foo`],function(){return});
 ```
 
-- **[CMD规范]()**：是 **[SeaJS](http://seajs.org/)** 在推广过程中对模块化定义的规范化产出。淘宝团队开发。
+- **[CMD 规范]()**：是 **[SeaJS](http://seajs.org/)** 在推广过程中对模块化定义的规范化产出。淘宝团队开发。
 
 ```
 
@@ -127,11 +112,9 @@ CommonJS 就是一套约定标准，不是技术。用于约定我们的代码�
   define 定义模块， export 导出：define(function(require, export, module){});
 ```
 
+PS：面试时，经常会问 AMD 和 CMD 的区别。
 
-PS：面试时，经常会问AMD 和 CMD 的区别。
-
-
-另外，还有ES6规范：import & export。
+另外，还有 ES6 规范：import & export。
 
 这篇文章，我们来讲一下`CommonJS`，它是 Node.js 使用的模块化规范。
 
@@ -151,12 +134,11 @@ CommonJS 规范规定：每个模块内部，module 变量代表当前模块。�
 
 ### 模块的暴露和引入
 
-Node.js 中只有模块级作用域，两个模块之间的变量、方法，默认是互不冲突，互不影响，这样就导致一个问题：模块 A 要怎样使用模块B中的变量&方法呢？这就需要通过 `exports` 关键字来实现。
+Node.js 中只有模块级作用域，两个模块之间的变量、方法，默认是互不冲突，互不影响，这样就导致一个问题：模块 A 要怎样使用模块 B 中的变量&方法呢？这就需要通过 `exports` 关键字来实现。
 
-Node.js中，每个模块都有一个 exports 接口对象，我们可以把公共的变量、方法挂载到这个接口对象中，其他的模块才可以使用。
+Node.js 中，每个模块都有一个 exports 接口对象，我们可以把公共的变量、方法挂载到这个接口对象中，其他的模块才可以使用。
 
 接下来详细讲一讲模块的暴露、模块的引入。
-
 
 ### 暴露模块的方式一： exports
 
@@ -166,14 +148,12 @@ Node.js中，每个模块都有一个 exports 接口对象，我们可以把公�
 
 ```js
 // 相当于是：给 exports 对象添加属性
-exports.xxx = value
+exports.xxx = value;
 ```
 
 这个 value 可以是任意的数据类型。
 
 **注意**：暴露的关键词是`exports`，不是`export`。其实，这里的 exports 类似于 ES6 中的 export 的用法，都是用来导出一个指定名字的对象。
-
-
 
 **代码举例**：
 
@@ -187,8 +167,6 @@ const foo = function (value) {
 exports.name = name;
 exports.foo = foo;
 ```
-
-
 
 ### 暴露模块的方式二： module.exports
 
@@ -211,45 +189,42 @@ module.exports.xxx = value;
 ```js
 // 方式1
 module.exports = {
-    name: '我是 module1',
-    foo(){
-        console.log(this.name);
-    }
-}
+	name: '我是 module1',
+	foo() {
+		console.log(this.name);
+	},
+};
 
 // 我们不能再继续写 module.exports = value2。因为重新赋值，会把 exports 对象 之前的赋值覆盖掉。
 
 // 方式2
 const age = 28;
 module.exports.age = age;
-
 ```
 
 `module.exports` 还可以修改模块的原始导出对象。比如当前模块原本导出的是一个对象，我们可以通过 module.exports 修改为导出一个函数。如下：
 
 ```js
 module.exports = function () {
-    console.log('hello world')
-}
+	console.log('hello world');
+};
 ```
 
 ### exports 和 module.exports 的区别
 
-
-
 最重要的区别：
 
-- **使用exports时，只能单个设置属性 `exports.a = a;**`
+- **使用 exports 时，只能单个设置属性 `exports.a = a;**`
 
-- **使用module.exports时，既单个设置属性 `module.exports.a`，也可以整个赋值 `module.exports = obj`。**
+- **使用 module.exports 时，既单个设置属性 `module.exports.a`，也可以整个赋值 `module.exports = obj`。**
 
 其他要点：
 
-- Node中每个模块的最后，都会执行 `return: module.exports`。
+- Node 中每个模块的最后，都会执行 `return: module.exports`。
 
-- Node中每个模块都会把 `module.exports`指向的对象赋值给一个变量 `exports`，也就是说 `exports = module.exports`。
+- Node 中每个模块都会把 `module.exports`指向的对象赋值给一个变量 `exports`，也就是说 `exports = module.exports`。
 
-- `module.exports = XXX`，表示当前模块导出一个单一成员，结果就是XXX。
+- `module.exports = XXX`，表示当前模块导出一个单一成员，结果就是 XXX。
 
 - 如果需要导出多个成员，则必须使用 `exports.add = XXX; exports.foo = XXX`。或者使用 `module.exports.add = XXX; module.export.foo = XXX`。
 
@@ -261,10 +236,9 @@ module.exports = function () {
 
 Node.js 中每个模块都有一个 module 对象，module 对象中的有一个 exports 属性称之为**接口对象**。我们需要把模块之间公共的方法或属性挂载在这个接口对象中，方便其他的模块使用。
 
-
 ### 引入模块的方式：require
 
-require函数用来在一个模块中引入另外一个模块。传入模块名，返回模块导出对象。
+require 函数用来在一个模块中引入另外一个模块。传入模块名，返回模块导出对象。
 
 **语法格式**：
 
@@ -274,12 +248,11 @@ const module1 = require('模块名');
 
 解释：
 
-- 内置模块：require的是**包名**。
+- 内置模块：require 的是**包名**。
 
-- 下载的第三方模块：require的是**包名**。
+- 下载的第三方模块：require 的是**包名**。
 
-- 自定义模块：require的是**文件路径**。文件路径既可以用绝对路径，也可以用相对路径。后缀名`.js`可以省略。
-
+- 自定义模块：require 的是**文件路径**。文件路径既可以用绝对路径，也可以用相对路径。后缀名`.js`可以省略。
 
 **代码举例**：
 
@@ -296,7 +269,6 @@ const module3 = require('Demo/src/main.js');
 - 执行导入的模块中的代码。
 
 - 返回导入模块中的接口对象。
-
 
 ### 主模块
 
@@ -345,9 +317,7 @@ console.log(addModule2.add());
 
 从打印结果中可以看出，`calModule.js`这个模块虽然被引用了两次，但只初始化了一次。
 
-
 ## CommonJS 在服务器端的实现举例
-
 
 ### 1、初始化项目
 
@@ -368,7 +338,6 @@ app.js
   npm init
 ```
 
-
 然后根据提示，依次输入如下内容：
 
 - **包名**：可以自己起包名，也可以用默认的包名。注意，包名里不能有中文，不能有大写。
@@ -383,19 +352,17 @@ app.js
 
 ```json
 {
-  "name": "commonjs_node",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "smyhvae",
-  "license": "ISC"
+	"name": "commonjs_node",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "smyhvae",
+	"license": "ISC"
 }
-
 ```
-
 
 ### 2、导入第三方包
 
@@ -409,24 +376,20 @@ app.js
 
 ![](../../图床/qgyh/20180410_1450.png)
 
-
-需要说明的是，我的node版本是 v8.10.0（v8以上），对应的 npm 版本是 v5.6.0，版本比较高，因此，当我输入完`npm install uniq`之后，`package.json`中就会自动添加`uniq`包的依赖：
+需要说明的是，我的 node 版本是 v8.10.0（v8 以上），对应的 npm 版本是 v5.6.0，版本比较高，因此，当我输入完`npm install uniq`之后，`package.json`中就会自动添加`uniq`包的依赖：
 
 ![](../../图床/qgyh/20180410_1855.png)
 
-
-如果有些童鞋的npm版本较低，就需要手动去添加依赖；另一种方式是，可以使用`npm install uniq --save`命令，这个多出来的`--save`就可以自动添加依赖。
-
+如果有些童鞋的 npm 版本较低，就需要手动去添加依赖；另一种方式是，可以使用`npm install uniq --save`命令，这个多出来的`--save`就可以自动添加依赖。
 
 我们去[官网](https://www.npmjs.com/package/uniq)看一下`uniq`的用法：
 
 ```javascript
-  let uniq = require('uniq');
+let uniq = require('uniq');
 
-  let arr = [1, 1, 2, 2, 3, 5];
-  uniq(arr);
-  console.log(arr);  //输出结果：[ 1, 2, 3, 5 ]
-
+let arr = [1, 1, 2, 2, 3, 5];
+uniq(arr);
+console.log(arr); //输出结果：[ 1, 2, 3, 5 ]
 ```
 
 可以看出，这个包可以起到数组去重的作用。
@@ -440,14 +403,13 @@ app.js
 
 //暴露一个对象出去
 module.exports = {
-    name: '我是 module1',
-    foo(){
-        console.log(this.name);
-    }
-}
+	name: '我是 module1',
+	foo() {
+		console.log(this.name);
+	},
+};
 
 //我们不能再继续写 module.exports = xxx。因为重新赋值，会把之前的赋值覆盖掉。
-
 ```
 
 （2）module2.js：
@@ -456,9 +418,9 @@ module.exports = {
 //暴露方式一：module.exports = value
 
 //暴露一个函数出去
-module.exports = function(){
-    console.log('我是 module2');
-}
+module.exports = function () {
+	console.log('我是 module2');
+};
 ```
 
 注意，此时暴露出去的 exports 对象 等价于整个函数。
@@ -470,16 +432,15 @@ module.exports = function(){
 
 //可以往 export 对象中不断地添加属性，进行暴露
 
-exports.foo1 = function(){
-    console.log('module3 中的 foo1 方法');
-}
+exports.foo1 = function () {
+	console.log('module3 中的 foo1 方法');
+};
 
-exports.foo2 = function(){
-    console.log('module3 中的 foo2 方法');
-}
+exports.foo2 = function () {
+	console.log('module3 中的 foo2 方法');
+};
 
-exports.arr = [1,1,2,2,3,5,11];
-
+exports.arr = [1, 1, 2, 2, 3, 5, 11];
 ```
 
 （4）app.js：（将其他模块汇集到主模块）
@@ -497,7 +458,7 @@ let module3 = require('./modules/module3');
 module1.foo();
 
 //调用module2的函数
-module2();  //注意，在定义时，module2对象等价于整个函数function。所以，module2()的意思是，直接调用了函数。
+module2(); //注意，在定义时，module2对象等价于整个函数function。所以，module2()的意思是，直接调用了函数。
 
 //调用module3中的属性
 module3.foo1();
@@ -520,9 +481,7 @@ module3 中的 foo2 方法
 
 ```
 
-
 ## CommonJS 基于浏览器端的实现举例
-
 
 ### 1、初始化项目
 
@@ -545,7 +504,6 @@ index.html    //因为CommonJS是基于浏览器端，js文件要跑在浏览器
   npm init
 ```
 
-
 然后根据提示，依次输入如下内容：
 
 - **包名**：可以自己起包名，也可以用默认的包名。注意，包名里不能有中文，不能有大写。
@@ -558,27 +516,23 @@ index.html    //因为CommonJS是基于浏览器端，js文件要跑在浏览器
 
 ```json
 {
-  "name": "commonjs_browser",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+	"name": "commonjs_browser",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC"
 }
-
-
 ```
-
 
 ### 2、下载第三方包：Browserify
 
 这里需要用到[Browserify](http://browserify.org/)这个工具进行编译打包。Browserify 称为 CommonJS 的浏览器端的打包工具。
 
 输入如下命令进行安装：（两个命令都要输入）
-
 
 ```javascript
     npm install browserify -g          //全局
@@ -591,7 +545,6 @@ index.html    //因为CommonJS是基于浏览器端，js文件要跑在浏览器
 
 - 运行依赖：当前这个包，是在生产环境下使用。
 
-
 ### 3、自定义模块 & 代码运行
 
 （1）module1.js：
@@ -601,14 +554,13 @@ index.html    //因为CommonJS是基于浏览器端，js文件要跑在浏览器
 
 //暴露一个对象出去
 module.exports = {
-    name: '我是 module1',
-    foo(){
-        console.log(this.name);
-    }
-}
+	name: '我是 module1',
+	foo() {
+		console.log(this.name);
+	},
+};
 
 //我们不能再继续写 module.exports = xxx。因为重新赋值，会把之前的赋值覆盖掉。
-
 ```
 
 （2）module2.js：
@@ -617,9 +569,9 @@ module.exports = {
 //暴露方式一：module.exports = value
 
 //暴露一个函数出去
-module.exports = function(){
-    console.log('我是 module2');
-}
+module.exports = function () {
+	console.log('我是 module2');
+};
 ```
 
 注意，此时暴露出去的 exports 对象 等价于整个函数。
@@ -631,19 +583,19 @@ module.exports = function(){
 
 //可以往export对象中不断地添加属性，进行暴露
 
-exports.foo1 = function(){
-    console.log('module3 中的 foo1 方法');
-}
+exports.foo1 = function () {
+	console.log('module3 中的 foo1 方法');
+};
 
-exports.foo2 = function(){
-    console.log('module3 中的 foo2 方法');
-}
+exports.foo2 = function () {
+	console.log('module3 中的 foo2 方法');
+};
 ```
 
 （4）app.js：（将其他模块汇集到主模块）
 
 ```javascript
-let module1 = require('./module1');  // ./ 指的是当前路径
+let module1 = require('./module1'); // ./ 指的是当前路径
 let module2 = require('./module2');
 let module3 = require('./module3');
 
@@ -655,54 +607,37 @@ module3.foo2();
 
 引入的路径解释：
 
-- `./`是相对路径，指的是当前路径（app.js的当前路径是src）
-
+- `./`是相对路径，指的是当前路径（app.js 的当前路径是 src）
 
 到此，我们的主要代码就写完了。
 
-但是，如果我们直接在index.html中，像下面这样写，是不行的：（因为浏览器不认识 require 关键字）
+但是，如果我们直接在 index.html 中，像下面这样写，是不行的：（因为浏览器不认识 require 关键字）
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <script src="./js/src/app.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script src="./js/src/app.js"></script>
+	</body>
 </html>
-
 ```
 
-为了能够让index.html引入app.js，我们需要输入如下命令：
+为了能够让 index.html 引入 app.js，我们需要输入如下命令：
 
-打包处理js:
+打包处理 js:
 
 ```
     browserify js/src/app.js -o js/dist/bundle.js
 ```
 
-然后在index.html中引入打包后的文件：
+然后在 index.html 中引入打包后的文件：
 
 ```html
-    <script type="text/javascript" src="js/dist/bundle.js"></script>
+<script type="text/javascript" src="js/dist/bundle.js"></script>
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

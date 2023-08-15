@@ -1,10 +1,8 @@
-[TOC]
-
 ## 前言
 
-路由：就是SPA（单页应用）的**路径管理器**。
+路由：就是 SPA（单页应用）的**路径管理器**。
 
-快捷生成代码片段 v+变量名 按一下tab 基础vue模板 vbase +tab
+快捷生成代码片段 v+变量名 按一下 tab 基础 vue 模板 vbase +tab
 
 ---
 
@@ -55,14 +53,14 @@
    ```shell
    npm install vue-router --save
    ```
-   
+
 2. 引入 Vue Router：在项目的入口文件（例如 main.js）中引入 Vue Router，代码如下：
 
    ```js
-   import Vue from 'vue'
-   import VueRouter from 'vue-router'
-   
-   Vue.use(VueRouter)
+   import Vue from 'vue';
+   import VueRouter from 'vue-router';
+
+   Vue.use(VueRouter);
    ```
 
    这里使用 `Vue.use` 方法来安装 Vue Router 插件，这会向 Vue 注册 `$router` 和 `$route` 两个全局变量。
@@ -70,21 +68,21 @@
 3. 定义路由表：在路由表中定义 URL 和视图之间的映射关系。可以在一个单独的文件中定义路由表，代码如下：
 
    ```js
-   import Home from './views/Home.vue'
-   import About from './views/About.vue'
-   
+   import Home from './views/Home.vue';
+   import About from './views/About.vue';
+
    const routes = [
-     {
-       path: '/',
-       name: 'home',
-       component: Home
-     },
-     {
-       path: '/about',
-       name: 'about',
-       component: About
-     }
-   ]
+   	{
+   		path: '/',
+   		name: 'home',
+   		component: Home,
+   	},
+   	{
+   		path: '/about',
+   		name: 'about',
+   		component: About,
+   	},
+   ];
    ```
 
    这里定义了两个路由，分别是 `'/'` 和 `'/about'`，对应的组件分别是 `Home` 和 `About`。
@@ -93,24 +91,24 @@
 
    ```js
    const router = new VueRouter({
-     routes
-   })
+   	routes,
+   });
    ```
 
 5. 在根组件中注册路由：在根组件中使用 `<router-view>` 标签来显示当前路由对应的视图，并使用 `$router` 变量来实现路由跳转，代码如下：
 
    ```html
    <template>
-     <div>
-       <router-view></router-view>
-     </div>
+   	<div>
+   		<router-view></router-view>
+   	</div>
    </template>
-   
+
    <script>
-   export default {
-     name: 'App',
-     router
-   }
+   	export default {
+   		name: 'App',
+   		router,
+   	};
    </script>
    ```
 
@@ -119,9 +117,8 @@
 6. 实现路由跳转：在组件中实现路由跳转需要使用 `$router` 变量来访问路由实例，例如：
 
    ```js
-   this.$router.push({ path: '/about' })
+   this.$router.push({ path: '/about' });
    ```
-   
 
 这里使用 `$router.push` 方法来进行路由跳转。
 
@@ -132,21 +129,21 @@
 1. 定义路由表：在路由表中定义 URL 和视图之间的映射关系。可以在一个单独的文件中定义路由表，代码如下：
 
    ```js
-   import Home from './views/Home.vue'
-   import About from './views/About.vue'
-   
+   import Home from './views/Home.vue';
+   import About from './views/About.vue';
+
    const routes = [
-     {
-       path: '/',
-       name: 'home',
-       component: Home
-     },
-     {
-       path: '/about',
-       name: 'about',
-       component: About
-     }
-   ]
+   	{
+   		path: '/',
+   		name: 'home',
+   		component: Home,
+   	},
+   	{
+   		path: '/about',
+   		name: 'about',
+   		component: About,
+   	},
+   ];
    ```
 
    这里定义了两个路由，分别是 `'/'` 和 `'/about'`，对应的组件分别是 `Home` 和 `About`。
@@ -155,60 +152,59 @@
 
    ```js
    const routes = [
-     {
-       path: '/user/:id',
-       name: 'user',
-       component: User
-     }
-   ]
+   	{
+   		path: '/user/:id',
+   		name: 'user',
+   		component: User,
+   	},
+   ];
    ```
 
    在这个路由中，`:id` 就是路由参数。可以通过 `$route.params` 来获取路由参数，例如：
 
    ```js
-   this.$route.params.id
+   this.$route.params.id;
    ```
-   
+
    这里使用 `$route.params.id` 来获取路由参数的值。
-   
+
 3. 路由跳转：可以使用 `$router.push` 方法来实现路由跳转，例如：
 
    ```js
    //这儿用的时编程式跳转
-   this.$router.push({ name: 'about' })
+   this.$router.push({ name: 'about' });
    ```
-   
 
 在这个例子中，使用 `$router.push` 方法并传入 `{ name: 'about' }` 参数来实现路由跳转。也可以直接使用路由的 path 来进行跳转，例如：
 
 ```js
-   this.$router.push('/about')
+this.$router.push('/about');
 ```
 
-   这里直接使用路由的 path 来进行跳转。
+这里直接使用路由的 path 来进行跳转。
 
 4. 嵌套路由：可以通过在路由表中定义嵌套的路由来实现嵌套路由的功能。嵌套路由就是将一个视图嵌套在另一个视图中，例如：
 
    ```js
    const routes = [
-     {
-       path: '/user/:id',
-       name: 'user',
-       component: User,
-       children: [
-         {
-           path: 'profile',
-           name: 'profile',
-           component: UserProfile
-         },
-         {
-           path: 'posts',
-           name: 'posts',
-           component: UserPosts
-         }
-       ]
-     }
-   ]
+   	{
+   		path: '/user/:id',
+   		name: 'user',
+   		component: User,
+   		children: [
+   			{
+   				path: 'profile',
+   				name: 'profile',
+   				component: UserProfile,
+   			},
+   			{
+   				path: 'posts',
+   				name: 'posts',
+   				component: UserPosts,
+   			},
+   		],
+   	},
+   ];
    ```
 
    在这个例子中，`User` 组件是一个嵌套路由的容器，它包含了两个子路由：`UserProfile` 和 `UserPosts`。
@@ -225,14 +221,14 @@
 
 ```js
 const router = new VueRouter({
-  routes: [
-    {
-      path: '/user/:id',
-      name: 'user',
-      component: User
-    }
-  ]
-})
+	routes: [
+		{
+			path: '/user/:id',
+			name: 'user',
+			component: User,
+		},
+	],
+});
 ```
 
 在这个路由定义中，`:id` 就是动态路由的占位符，可以匹配不同的用户 ID。当我们访问 `/user/123` 的时候，就会匹配到这个路由，同时将 ID 设置为 123，并渲染 User 组件。
@@ -241,7 +237,7 @@ const router = new VueRouter({
 
 ```js
 // User 组件中获取动态路由的参数
-this.$route.params.id
+this.$route.params.id;
 ```
 
 ![routes](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/routes.svg)
@@ -252,21 +248,21 @@ this.$route.params.id
 
 ```js
 const router = new VueRouter({
-  routes: [
-    {
-      path: '/user/:id',
-      name: 'user',
-      component: User,
-      children: [
-        {
-          path: 'orders', //二级路由不加'/''
-          name: 'userOrders',
-          component: UserOrders
-        }
-      ]
-    }
-  ]
-})
+	routes: [
+		{
+			path: '/user/:id',
+			name: 'user',
+			component: User,
+			children: [
+				{
+					path: 'orders', //二级路由不加'/''
+					name: 'userOrders',
+					component: UserOrders,
+				},
+			],
+		},
+	],
+});
 ```
 
 在这个路由定义中，User 组件是父级路由，UserOrders 组件是子级路由。当我们访问 `/user/123/orders` 的时候，就会匹配到这个路由，并渲染 UserOrders 组件。
@@ -276,8 +272,8 @@ const router = new VueRouter({
 ```html
 <!-- User 组件模板中 -->
 <div>
-  <h2>User {{ $route.params.id }}</h2>
-  <router-view></router-view>
+	<h2>User {{ $route.params.id }}</h2>
+	<router-view></router-view>
 </div>
 ```
 
@@ -285,23 +281,21 @@ const router = new VueRouter({
 
 ```js
 // User 组件中获取动态路由的参数
-this.$route.params.id
+this.$route.params.id;
 ```
 
 在子级组件中，也可以使用 `$route.params` 来获取动态路由的参数，例如：
 
 ```js
 // UserOrders 组件中获取动态路由的参数
-this.$route.params.id
+this.$route.params.id;
 ```
 
 通过掌握动态路由和嵌套路由的使用，我们可以更灵活地实现路由跳转，同时也可以更好地组织我们的代码结构。
 
 ## 5.路由传参：
 
-1. URL参数传递：可以通过在URL中添加参数来进行路由传参，例如在路由定义中使用 `path: '/user/:id'` 来定义路由，然后在跳转时使用 `$router.push('/user/123')` 的方式传递参数。在目标组件中可以通过 `$route.params.id` 的方式获取传递的参数。
-
-   
+1. URL 参数传递：可以通过在 URL 中添加参数来进行路由传参，例如在路由定义中使用 `path: '/user/:id'` 来定义路由，然后在跳转时使用 `$router.push('/user/123')` 的方式传递参数。在目标组件中可以通过 `$route.params.id` 的方式获取传递的参数。
 
 2. 路由参数传递：可以在路由定义中设置 props 为 true，然后在跳转时使用 `$router.push({ name: 'user', params: { id: 123 } })` 的方式传递参数。在目标组件中可以直接使用 props 来接收传递的参数，例如 `props: ['id']`。
 
@@ -361,19 +355,19 @@ router.afterEach((to, from) => {
 
 ```js
 const router = new VueRouter({
-  routes: [
-    {
-      path: '/admin',
-      component: Admin,
-      beforeEnter: (to, from, next) => {
-        // 在进入 /admin 路由前执行
-        // to: 要跳转的路由信息
-        // from: 当前的路由信息
-        // next: 用于控制路由跳转的方法
-      }
-    }
-  ]
-})
+	routes: [
+		{
+			path: '/admin',
+			component: Admin,
+			beforeEnter: (to, from, next) => {
+				// 在进入 /admin 路由前执行
+				// to: 要跳转的路由信息
+				// from: 当前的路由信息
+				// next: 用于控制路由跳转的方法
+			},
+		},
+	],
+});
 ```
 
 在这个例子中，`/admin` 路由有一个独享守卫，用于检查用户是否有管理员权限。如果没有权限，则可以在 `next` 方法中传
@@ -392,23 +386,20 @@ npm install --save-dev @babel/plugin-syntax-dynamic-import
 
 ```json
 {
-  "plugins": ["@babel/plugin-syntax-dynamic-import"]
+	"plugins": ["@babel/plugin-syntax-dynamic-import"]
 }
 ```
 
 3. 在路由配置中使用 `import()` 动态导入语法加载组件。
 
 ```js
-Foo = () => import('./Foo.vue')
-const Bar = () => import('./Bar.vue')
+Foo = () => import('./Foo.vue');
+const Bar = () => import('./Bar.vue');
 
 const routes = [
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
-]
+	{ path: '/foo', component: Foo },
+	{ path: '/bar', component: Bar },
+];
 ```
 
 这样就可以实现路由懒加载了。当访问 `/foo` 路由时，才会动态加载 `Foo.vue` 组件的代码。这种方式可以将路由代码按需加载，提高页面加载速度和性能。
-
-
-

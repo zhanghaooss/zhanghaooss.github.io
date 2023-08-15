@@ -2,18 +2,11 @@
 title: 01-数据库的基础知识
 ---
 
-[TOC]
-
-
-
-
-
 ## 全局对象
 
 ### global
 
 类似于客户端 JavaScript 运行环境中的 window。
-
 
 ## process
 
@@ -34,16 +27,14 @@ Node 中内置的 console 模块，提供操作控制台的输入输出功能，
 - clearTimeout(timer)
 
 - Buffer：Class
-	- 用于操作二进制数据
-	- 以后介绍
-
+  - 用于操作二进制数据
+  - 以后介绍
 
 ## Node 调试
 
 ### 最简单的调试
 
 最方便也是最简单的调试：console.log()
-
 
 ### Node 原生的调试
 
@@ -98,9 +89,7 @@ CommonJS 就是一套约定标准，不是技术。用于约定我们的代码�
 
 - `crypto`：提供加密和解密功能。
 
-
-总结：更多内容可以参考 api文档：<https://nodejs.org/api/>
-
+总结：更多内容可以参考 api 文档：<https://nodejs.org/api/>
 
 ## 文件系统操作
 
@@ -113,9 +102,3 @@ CommonJS 就是一套约定标准，不是技术。用于约定我们的代码�
 - readline：用于读取大文本文件，一行一行读
 
 - fs-extra（第三方）：<https://www.npmjs.com/package/fs-extra>
-
-
-
-
-
-

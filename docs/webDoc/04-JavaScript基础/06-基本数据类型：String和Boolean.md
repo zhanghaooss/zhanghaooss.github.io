@@ -3,8 +3,6 @@ title: 06-基本数据类型：String 和 Boolean
 date:12/15
 ---
 
-[TOC]
-
 今天这篇文章，我们详细讲一下基本数据类型。
 
 ## String 字符串
@@ -57,19 +55,19 @@ var str = 'hello";  // 报错：Uncaught SyntaxError: Invalid or unexpected toke
 
 在字符串中我们可以使用`\`作为转义字符，当表示一些特殊符号时可以使用`\`进行转义。
 
--   `\"` 表示 `"` 双引号
+- `\"` 表示 `"` 双引号
 
--   `\'` 表示 `'` 单引号
+- `\'` 表示 `'` 单引号
 
--   `\\` 表示`\`
+- `\\` 表示`\`
 
--   `\r` 表示回车
+- `\r` 表示回车
 
--   `\n` 表示换行。n 的意思是 newline。
+- `\n` 表示换行。n 的意思是 newline。
 
--   `\t` 表示缩进。t 的意思是 tab。
+- `\t` 表示缩进。t 的意思是 tab。
 
--   `\b` 表示空格。b 的意思是 blank。
+- `\b` 表示空格。b 的意思是 blank。
 
 举例：
 
@@ -109,11 +107,11 @@ console.log(str4.length); // 25
 
 由此可见，字符串的 length 属性，在判断字符串的长度时，会认为：
 
--   一个中文算一个字符，一个英文算一个字符
+- 一个中文算一个字符，一个英文算一个字符
 
--   一个标点符号（包括中文标点、英文标点）算一个字符
+- 一个标点符号（包括中文标点、英文标点）算一个字符
 
--   一个空格算一个字符
+- 一个空格算一个字符
 
 ### 字符串拼接
 
@@ -208,16 +206,16 @@ console.log(`我是${name},age:${age}`); //ES6 写法。注意语法格式
 
 参考链接：
 
--   [ES6 的 rest 参数和扩展运算符](https://segmentfault.com/a/1190000010222698)
+- [ES6 的 rest 参数和扩展运算符](https://segmentfault.com/a/1190000010222698)
 
 > #### ES6 的 rest 参数和扩展运算符
 >
-> **rest参数**和**扩展运算符**都是`ES6`新增的特性。
-> **rest参数**的形式为：`...变量名`；**扩展运算符**是三个点（`...`）。
+> **rest 参数**和**扩展运算符**都是`ES6`新增的特性。
+> **rest 参数**的形式为：`...变量名`；**扩展运算符**是三个点（`...`）。
 >
-> ==rest参数==
+> ==rest 参数==
 >
-> rest参数用于获取函数的多余参数，这样就不需要使用arguments对象了。rest参数搭配的变量是一个数组，该变量将多余的参数放入数组中。
+> rest 参数用于获取函数的多余参数，这样就不需要使用 arguments 对象了。rest 参数搭配的变量是一个数组，该变量将多余的参数放入数组中。
 >
 > ```actionscript
 > function add(...values) {
@@ -227,27 +225,27 @@ console.log(`我是${name},age:${age}`); //ES6 写法。注意语法格式
 >    }
 >    return sum;
 > }
-> 
+>
 > add(1, 2, 3) // 6
 > ```
 >
 > 传递给 add 函数的一组参数值，被整合成了数组 values。
 >
-> **rest参数和arguments对象的区别**
+> **rest 参数和 arguments 对象的区别**
 >
-> * rest参数只包含那些<u>没有对应形参的实参</u>；而 arguments 对象包含了传给函数的<u>所有实参</u>。
-> * arguments 对象不是一个真实的数组；而rest参数是真实的 Array 实例，也就是说你能够在它上面直接使用所有的数组方法。
-> * arguments 对象对象还有一些附加的属性 (比如callee属性)。
+> - rest 参数只包含那些<u>没有对应形参的实参</u>；而 arguments 对象包含了传给函数的<u>所有实参</u>。
+> - arguments 对象不是一个真实的数组；而 rest 参数是真实的 Array 实例，也就是说你能够在它上面直接使用所有的数组方法。
+> - arguments 对象对象还有一些附加的属性 (比如 callee 属性)。
 >
-> 另外，使用rest参数时应注意一下两点：
+> 另外，使用 rest 参数时应注意一下两点：
 >
-> * rest 参数之后不能再有其他参数（即只能是最后一个参数），否则会报错。
+> - rest 参数之后不能再有其他参数（即只能是最后一个参数），否则会报错。
 >
 > ```actionscript
 > function f(a, ...b, c) { ... } // 报错
 > ```
 >
-> * 函数的length属性，不包括 rest 参数。
+> - 函数的 length 属性，不包括 rest 参数。
 >
 > ```actionscript
 > (function(a) {}).length  // 1
@@ -263,76 +261,76 @@ console.log(`我是${name},age:${age}`); //ES6 写法。注意语法格式
 >
 > ```apache
 > console.log(...[1, 2, 3]) // 1 2 3
-> 
+>
 > console.log(1, ...[2, 3, 4], 5) //1 2 3 4 5
 > ```
 >
 > **扩展运算符的应用**
 >
-> * 普通的函数调用
+> - 普通的函数调用
 >
 > ```actionscript
 > function push(array, ...items) {
 > array.push(...items);
 > }
-> 
+>
 > function add(x, y) {
 > return x + y;
 > }
-> 
+>
 > var numbers = [4, 38];
 > add(...numbers) // 42
 > ```
 >
 > 上面代码中，`array.push(...items)`和`add(...numbers)`这两行，都是函数的调用，它们的都使用了扩展运算符。该运算符将一个数组，变为参数序列。
 >
-> * 替代 apply 方法调用函数
+> - 替代 apply 方法调用函数
 >
 > ```arcade
 > // ES5 的写法
 > Math.max.apply(null, [14, 3, 77])
-> 
+>
 > // ES6 的写法
 > Math.max(...[14, 3, 77])
-> 
+>
 > // 等同于
 > Math.max(14, 3, 77);
 > // ES5 的写法
 > var arr1 = [0, 1, 2];
 > var arr2 = [3, 4, 5];
 > Array.prototype.push.apply(arr1, arr2);
-> 
+>
 > // ES6 的写法
 > var arr1 = [0, 1, 2];
 > var arr2 = [3, 4, 5];
 > arr1.push(...arr2);
 > ```
 >
-> * 合并数组
+> - 合并数组
 >
 > ```awk
 > var arr1 = ['a', 'b'];
 > var arr2 = ['c'];
 > var arr3 = ['d', 'e'];
-> 
+>
 > // ES5的合并数组
 > arr1.concat(arr2, arr3)  // [ 'a', 'b', 'c', 'd', 'e' ]
-> 
+>
 > // ES6的合并数组
 > [...arr1, ...arr2, ...arr3]  // [ 'a', 'b', 'c', 'd', 'e' ]
 > ```
 >
-> * 与解构赋值结合
+> - 与解构赋值结合
 >
 > ```awk
 > const [first, ...rest] = [1, 2, 3, 4, 5];
 > first // 1
 > rest  // [2, 3, 4, 5]
-> 
+>
 > const [first, ...rest] = [];
 > first // undefined
 > rest  // []
-> 
+>
 > const [first, ...rest] = ["foo"];
 > first  // "foo"
 > rest   // []
@@ -342,20 +340,20 @@ console.log(`我是${name},age:${age}`); //ES6 写法。注意语法格式
 >
 > ```livecodeserver
 > const [...butLast, last] = [1, 2, 3, 4, 5];  // 报错
-> 
+>
 > const [first, ...middle, last] = [1, 2, 3, 4, 5];  // 报错
 > ```
 >
-> * 将字符串转为数组
+> - 将字符串转为数组
 >
 > ```awk
 > var str = 'hello';
-> 
-> // ES5  
-> var arr1 = str.split('');  // [ "h", "e", "l", "l", "o" ] 
-> 
-> // ES6  
-> var arr2 = [...str];  // [ "h", "e", "l", "l", "o" ] 
+>
+> // ES5
+> var arr1 = str.split('');  // [ "h", "e", "l", "l", "o" ]
+>
+> // ES6
+> var arr2 = [...str];  // [ "h", "e", "l", "l", "o" ]
 > ```
 
 ### 在模板字符串中插入表达式
@@ -394,9 +392,9 @@ not 20.
 
 ```js
 const result = {
-    name: 'qianguyihao',
-    age: 28,
-    sex: '男',
+	name: 'qianguyihao',
+	age: 28,
+	sex: '男',
 };
 
 // 模板字符串支持换行
@@ -421,7 +419,7 @@ console.log(html); // 打印结果也会换行
 
 ```js
 function getName() {
-    return 'qianguyihao';
+	return 'qianguyihao';
 }
 
 console.log(`www.${getName()}.com`); // 打印结果：www.qianguyihao.com
@@ -433,8 +431,8 @@ console.log(`www.${getName()}.com`); // 打印结果：www.qianguyihao.com
 const nameList = ['千古壹号', '许嵩', '解忧少帅'];
 
 function myTemplate() {
-    // join('') 的意思是，把数组里的内容合并成一个字符串
-    return `<ul>
+	// join('') 的意思是，把数组里的内容合并成一个字符串
+	return `<ul>
 	${nameList.map((item) => `<li>${item}</li>`).join('')}
 	</ul>`;
 }

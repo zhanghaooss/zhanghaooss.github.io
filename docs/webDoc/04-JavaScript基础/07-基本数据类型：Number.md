@@ -3,8 +3,6 @@ title: 07-基本数据类型：Number
 date:12/14
 ---
 
-[TOC]
-
 ## 数值型：Number
 
 在 JS 中所有的数值都是 Number 类型，包括整数和浮点数（小数）。
@@ -33,15 +31,15 @@ number
 
 由于内存的限制，ECMAScript 并不能保存世界上所有的数值。
 
--   最大值：`Number.MAX_VALUE`，这个值为： 1.7976931348623157e+308
+- 最大值：`Number.MAX_VALUE`，这个值为： 1.7976931348623157e+308
 
--   最小值：`Number.MIN_VALUE`，这个值为： 5e-324
+- 最小值：`Number.MIN_VALUE`，这个值为： 5e-324
 
 如果使用 Number 表示的变量超过了最大值，则会返回 Infinity。
 
--   无穷大（正无穷）：Infinity
+- 无穷大（正无穷）：Infinity
 
--   无穷小（负无穷）：-Infinity
+- 无穷小（负无穷）：-Infinity
 
 注意：`typeof Infinity`的返回结果是 number。
 
@@ -63,7 +61,7 @@ console.log('abc' * 'abcd'); //按理说，字符串相乘是没有结果的，�
 
 2. **Undefined 和任何数值计算的结果为 NaN。NaN 与任何值都不相等，包括 NaN 本身。**
 
-3. 关于 isNaN() 函数，可以看后续的文章《JavaScript基础/typeof和数据类型转换》。
+3. 关于 isNaN() 函数，可以看后续的文章《JavaScript 基础/typeof 和数据类型转换》。
 
 ### 连字符和加号的区别
 
@@ -135,7 +133,7 @@ console.log(a);
 
 虽然程序可以对`-`、`*`、`/`、`%``这几个符号自动进行“隐式转换”；<u>但作为程序员，我们最好自己完成转换</u>，方便程序的可读性。
 
-关于隐式转换的详细内容，可以看后续的文章《JavaScript基础/typeof和数据类型转换》。
+关于隐式转换的详细内容，可以看后续的文章《JavaScript 基础/typeof 和数据类型转换》。
 
 ## 浮点数的运算
 
@@ -160,9 +158,9 @@ console.log(a); //打印结果十分意外：0.30000000000000004
 
 在实战开发中，关于浮点数计算的精度问题，往往比较复杂。市面上有很多针对数学运算的开源库，比如[decimal.js](https://github.com/MikeMcl/decimal.js/)、 [Math.js](https://github.com/josdejong/mathjs)。这些开源库都比较成熟，我们可以直接拿来用。
 
--   Math.js：属于很全面的运算库，文件很大，压缩后的文件就有 500kb。如果你的项目涉及到大型的复杂运算，可以使用 Math.js。
+- Math.js：属于很全面的运算库，文件很大，压缩后的文件就有 500kb。如果你的项目涉及到大型的复杂运算，可以使用 Math.js。
 
--   decimal.js：属于轻量的运算库，压缩后的文件只有 32kb。大多数项目的数学运算，使用 decimal.js 足够了。
+- decimal.js：属于轻量的运算库，压缩后的文件只有 32kb。大多数项目的数学运算，使用 decimal.js 足够了。
 
 在使用这几个开源库时，既可以用 cdn 的方式引入，也可以用 npm 包的方式引入。
 
@@ -171,39 +169,39 @@ console.log(a); //打印结果十分意外：0.30000000000000004
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <script src="https://cdn.bootcdn.net/ajax/libs/decimal.js/10.2.0/decimal.min.js"></script>
-        <script>
-            console.log('加法：');
-            var a = 0.1;
-            var b = 0.2;
-            console.log(a + b);
-            console.log(new Decimal(a).add(new Decimal(b)).toNumber());
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script src="https://cdn.bootcdn.net/ajax/libs/decimal.js/10.2.0/decimal.min.js"></script>
+		<script>
+			console.log('加法：');
+			var a = 0.1;
+			var b = 0.2;
+			console.log(a + b);
+			console.log(new Decimal(a).add(new Decimal(b)).toNumber());
 
-            console.log('减法：');
-            var a = 1.0;
-            var b = 0.7;
-            console.log(a - b);
-            console.log(new Decimal(a).sub(new Decimal(b)).toNumber());
+			console.log('减法：');
+			var a = 1.0;
+			var b = 0.7;
+			console.log(a - b);
+			console.log(new Decimal(a).sub(new Decimal(b)).toNumber());
 
-            console.log('乘法：');
-            var a = 1.01;
-            var b = 1.003;
-            console.log(a * b);
-            console.log(new Decimal(a).mul(new Decimal(b)).toNumber());
+			console.log('乘法：');
+			var a = 1.01;
+			var b = 1.003;
+			console.log(a * b);
+			console.log(new Decimal(a).mul(new Decimal(b)).toNumber());
 
-            console.log('除法：');
-            var a = 0.029;
-            var b = 10;
-            console.log(a / b);
-            console.log(new Decimal(a).div(new Decimal(b)).toNumber());
-        </script>
-    </body>
+			console.log('除法：');
+			var a = 0.029;
+			var b = 10;
+			console.log(a / b);
+			console.log(new Decimal(a).div(new Decimal(b)).toNumber());
+		</script>
+	</body>
 </html>
 ```
 
@@ -229,9 +227,9 @@ console.log(a); //打印结果十分意外：0.30000000000000004
 
 参考链接：
 
--   <https://www.bloghome.com.cn/post/nodejsxue-xi-bi-ji-shi-qi-fu-dian-yun-suan-decimal-js.html>
+- <https://www.bloghome.com.cn/post/nodejsxue-xi-bi-ji-shi-qi-fu-dian-yun-suan-decimal-js.html>
 
--   <https://zhuanlan.zhihu.com/p/62381711>
+- <https://zhuanlan.zhihu.com/p/62381711>
 
 ## 变量值的传递（赋值）
 
@@ -344,5 +342,3 @@ console.log(a - b);
 ```
 1
 ```
-
-

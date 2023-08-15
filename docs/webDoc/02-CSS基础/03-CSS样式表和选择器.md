@@ -3,15 +3,13 @@ title: 03-CSS样式表和选择器
 date:2022/12/11
 ---
 
-[TOC]
-
 ## 本文主要内容
 
--   CSS 概述
--   CSS 和 HTML 结合的三种方式：`行内样式表`、`内嵌样式表`、`外部样式表`
--   CSS 四种基本选择器：`标签选择器`、`类选择器`、`ID选择器`、`通用选择器`
--   CSS 几种扩展选择器：`后代选择器`、`交集选择器`、`并集选择器`
--   CSS 样式优先级
+- CSS 概述
+- CSS 和 HTML 结合的三种方式：`行内样式表`、`内嵌样式表`、`外部样式表`
+- CSS 四种基本选择器：`标签选择器`、`类选择器`、`ID选择器`、`通用选择器`
+- CSS 几种扩展选择器：`后代选择器`、`交集选择器`、`并集选择器`
+- CSS 样式优先级
 
 ## 前言
 
@@ -50,30 +48,30 @@ css 的最新版本是 css3，**我们目前学习的是 css2.1**。 因为 css3
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Document</title>
-        <style>
-            p {
-                color: red;
-                font-size: 30px;
-                text-decoration: underline;
-                font-weight: bold;
-                text-align: center;
-                font-style: italic;
-            }
-            h1 {
-                color: blue;
-                font-size: 50px;
-                font-weight: bold;
-                background-color: pink;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>我是大标题</h1>
-        <p>我是内容</p>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<style>
+			p {
+				color: red;
+				font-size: 30px;
+				text-decoration: underline;
+				font-weight: bold;
+				text-align: center;
+				font-style: italic;
+			}
+			h1 {
+				color: blue;
+				font-size: 50px;
+				font-weight: bold;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>我是大标题</h1>
+		<p>我是内容</p>
+	</body>
 </html>
 ```
 
@@ -111,31 +109,31 @@ css 对换行不敏感，对空格也不敏感。但是一定要有标准的语�
 
 ```css
 选择器 {
-    k: v;
-    k: v;
-    k: v;
-    k: v;
+	k: v;
+	k: v;
+	k: v;
+	k: v;
 }
 选择器 {
-    k: v;
-    k: v;
-    k: v;
-    k: v;
+	k: v;
+	k: v;
+	k: v;
+	k: v;
 }
 ```
 
 **解释：**
 
--   选择器代表页面上的某类元素，选择器后一定是大括号。
--   属性名后必须用冒号隔开，属性值后用分号（最后一个属性可以不用分号，但最好还是加上分号）。
--   冒号和属性值之间可以留一个空格（编程习惯的经验）。
--   如果一个属性有多个值的话，那么多个值用**空格**隔开。
+- 选择器代表页面上的某类元素，选择器后一定是大括号。
+- 属性名后必须用冒号隔开，属性值后用分号（最后一个属性可以不用分号，但最好还是加上分号）。
+- 冒号和属性值之间可以留一个空格（编程习惯的经验）。
+- 如果一个属性有多个值的话，那么多个值用**空格**隔开。
 
 **举例：**
 
 ```css
 p {
-    color: red;
+	color: red;
 }
 ```
 
@@ -143,17 +141,17 @@ p {
 
 ```html
 <style type="text/css">
-    p {
-        font-weight: bold;
-        font-style: italic;
-        color: red;
-    }
+	p {
+		font-weight: bold;
+		font-style: italic;
+		color: red;
+	}
 </style>
 
 <body>
-    <p>洗白白</p>
-    <p>你懂得</p>
-    <p>我不会就这样轻易的狗带</p>
+	<p>洗白白</p>
+	<p>你懂得</p>
+	<p>我不会就这样轻易的狗带</p>
 </body>
 ```
 
@@ -167,15 +165,15 @@ p {
 
 ```html
 <style type="text/css">
-    /*
+	/*
 		具体的注释
 	*/
 
-    p {
-        font-weight: bold;
-        font-style: italic;
-        color: red;
-    }
+	p {
+		font-weight: bold;
+		font-style: italic;
+		color: red;
+	}
 </style>
 ```
 
@@ -302,16 +300,16 @@ CSS 的书写方式有三种：
 
 ```html
 <style type="text/css">
-    p {
-        font-weight: bold;
-        font-style: italic;
-        color: red;
-    }
+	p {
+		font-weight: bold;
+		font-style: italic;
+		color: red;
+	}
 </style>
 
 <body>
-    <p>洗白白</p>
-    <p style="color:blue">你懂得</p>
+	<p>洗白白</p>
+	<p style="color:blue">你懂得</p>
 </body>
 ```
 
@@ -321,9 +319,9 @@ CSS 的书写方式有三种：
 
 **引入样式表文件**的方式又分为两种：
 
--   （1）**采用`<link>`标签**。例如：`<link rel = "stylesheet" type = "text/css" href = "a.css"></link>`
+- （1）**采用`<link>`标签**。例如：`<link rel = "stylesheet" type = "text/css" href = "a.css"></link>`
 
--   （2）<u>**采用 import**，必须写在`<style>`标签中，并且必须是第一句</u>。例如：`@import url(a.css) ;`
+- （2）<u>**采用 import**，必须写在`<style>`标签中，并且必须是第一句</u>。例如：`@import url(a.css) ;`
 
 > <u>两种引入样式方式的区别：外部样式表中不能写<link>标签，但是可以写 import 语句。</u>
 
@@ -334,8 +332,8 @@ CSS 的书写方式有三种：
 
 ```css
 p {
-    border: 1px solid red;
-    font-size: 40px;
+	border: 1px solid red;
+	font-size: 40px;
 }
 ```
 
@@ -346,8 +344,8 @@ p {
 
 这里再讲一个补充的知识：**`<link>`标签的 rel 属性：**。其属性值有以下两种：
 
--   `stylesheet`：定义的样式表
--   `alternate stylesheet`：候选的样式表
+- `stylesheet`：定义的样式表
+- `alternate stylesheet`：候选的样式表
 
 看字面意思可能比较难理解，我们来举个例子，一下子就明白了。
 举例：
@@ -358,9 +356,9 @@ a.css：定义一个实线的黑色边框
 
 ```css
 div {
-    width: 200px;
-    height: 200px;
-    border: 3px solid black;
+	width: 200px;
+	height: 200px;
+	border: 3px solid black;
 }
 ```
 
@@ -368,9 +366,9 @@ b.css：蓝色的虚线边框
 
 ```css
 div {
-    width: 200px;
-    height: 200px;
-    border: 3px dotted blue;
+	width: 200px;
+	height: 200px;
+	border: 3px dotted blue;
 }
 ```
 
@@ -378,10 +376,10 @@ c.css：来个背景图片
 
 ```css
 div {
-    width: 200px;
-    height: 200px;
-    border: 3px solid red;
-    background-image: url('1.jpg');
+	width: 200px;
+	height: 200px;
+	border: 3px solid red;
+	background-image: url('1.jpg');
 }
 ```
 
@@ -405,10 +403,10 @@ CSS 的选择器分为两大类：基本选择器和扩展选择器。
 
 **基本选择器：**
 
--   标签选择器：针对**一类**标签
--   ID 选择器：针对某**一个**特定的标签使用
--   类选择器：针对**你想要的所有**标签使用
--   <u>通用选择器（通配符）：针对所有的标签都适用（不建议使用）</u>
+- 标签选择器：针对**一类**标签
+- ID 选择器：针对某**一个**特定的标签使用
+- 类选择器：针对**你想要的所有**标签使用
+- <u>通用选择器（通配符）：针对所有的标签都适用（不建议使用）</u>
 
 下面来分别讲一讲。
 
@@ -435,18 +433,18 @@ p{ font-size:14px; }
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Document</title>
-        <style type="text/css">
-            span {
-                color: red;
-            }
-        </style>
-    </head>
-    <body>
-        <p>千古壹号学完了安卓，继续学<span>前端</span>哟</p>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<style type="text/css">
+			span {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>千古壹号学完了安卓，继续学<span>前端</span>哟</p>
+	</body>
 </html>
 ```
 
@@ -476,9 +474,9 @@ id 选择器的选择符是“#”。
 
 任何的 HTML 标签都可以有 id 属性。表示这个标签的名字。这个标签的名字，可以任取，但是：
 
--   （1）只能有字母、数字、下划线。
--   （2）必须以字母开头。
--   （3）不能和标签同名。比如 id 不能叫做 body、img、a。
+- （1）只能有字母、数字、下划线。
+- （2）必须以字母开头。
+- （3）不能和标签同名。比如 id 不能叫做 body、img、a。
 
 另外，特别强调的是：**HTML 页面，不能出现相同的 id，哪怕他们不是一个类型**。比如页面上有一个 id 为 pp 的 p，一个 id 为 pp 的 div，是非法的！
 
@@ -513,9 +511,9 @@ css 中用`.`来表示类。举例如下：
 
 和 id 非常相似，任何的标签都可以携带 id 属性和 class 属性。class 属性的特点：
 
--   特性 1：类选择器可以被多种标签使用。
+- 特性 1：类选择器可以被多种标签使用。
 
--   特性 2：同一个标签可以使用多个类选择器。用**空格**隔开。举例如下：（正确）
+- 特性 2：同一个标签可以使用多个类选择器。用**空格**隔开。举例如下：（正确）
 
 ```html
 <h3 class="teshu  zhongyao">我是一个h3啊</h3>
@@ -539,15 +537,15 @@ css 中用`.`来表示类。举例如下：
 
 ```html
 <style type="text/css">
-    .lv {
-        color: green;
-    }
-    .da {
-        font-size: 30px;
-    }
-    .xian {
-        text-decoration: underline;
-    }
+	.lv {
+		color: green;
+	}
+	.da {
+		font-size: 30px;
+	}
+	.xian {
+		text-decoration: underline;
+	}
 </style>
 ```
 
@@ -581,9 +579,9 @@ css 中用`.`来表示类。举例如下：
 
 **上面这三种选择器的区别：**
 
--   标签选择器针对的是页面上的一类标签。
--   ID 选择器是只针对特定的标签(一个)，ID 是此标签在此页面上的唯一标识。
--   类选择器可以被多种标签使用。
+- 标签选择器针对的是页面上的一类标签。
+- ID 选择器是只针对特定的标签(一个)，ID 是此标签在此页面上的唯一标识。
+- 类选择器可以被多种标签使用。
 
 ### 4、通配符`*`：匹配任何标签
 
@@ -595,8 +593,8 @@ css 中用`.`来表示类。举例如下：
 
 ```css
 * {
-    margin-left: 0px;
-    margin-top: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
 }
 ```
 
@@ -608,10 +606,10 @@ css 中用`.`来表示类。举例如下：
 
 **高级选择器：**
 
--   后代选择器：用空格隔开
--   交集选择器：选择器之间紧密相连
--   并集选择器（分组选择器）：用逗号隔开
--   伪类选择器
+- 后代选择器：用空格隔开
+- 交集选择器：选择器之间紧密相连
+- 并集选择器（分组选择器）：用逗号隔开
+- 伪类选择器
 
 下面详细讲一下这几种高级（扩展）选择器。
 
@@ -629,9 +627,9 @@ css 中用`.`来表示类。举例如下：
 
 ```html
 <style type="text/css">
-    .div1 p {
-        color: red;
-    }
+	.div1 p {
+		color: red;
+	}
 </style>
 ```
 
@@ -643,9 +641,9 @@ css 中用`.`来表示类。举例如下：
 
 ```html
 <style type="text/css">
-    h3 b i {
-        color: red;
-    }
+	h3 b i {
+		color: red;
+	}
 </style>
 ```
 
@@ -671,26 +669,26 @@ css 中用`.`来表示类。举例如下：
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Document</title>
-        <style type="text/css">
-            div div p {
-                color: red;
-            }
-        </style>
-    </head>
-    <body>
-        <div>
-            <div class="div2">
-                <div class="div3">
-                    <div class="div4">
-                        <p>我是什么颜色？</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<style type="text/css">
+			div div p {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div class="div2">
+				<div class="div3">
+					<div class="div4">
+						<p>我是什么颜色？</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
 ```
 
@@ -716,7 +714,7 @@ css 中用`.`来表示类。举例如下：
 
 ```css
 h3.special {
-    color: red;
+	color: red;
 }
 ```
 
@@ -727,20 +725,20 @@ h3.special {
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>交集选择器测试</title>
-        <style type="text/css">
-            h3.special {
-                color: red;
-            }
-        </style>
-    </head>
-    <body>
-        <h3 class="special zhongyao">标题1</h3>
-        <h3 class="special">我也是标题</h3>
-        <p>我是段落</p>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>交集选择器测试</title>
+		<style type="text/css">
+			h3.special {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h3 class="special zhongyao">标题1</h3>
+		<h3 class="special">我也是标题</h3>
+		<p>我是段落</p>
+	</body>
 </html>
 ```
 
@@ -754,7 +752,7 @@ h3.special {
 
 ```css
 h3.special.zhongyao {
-    color: red;
+	color: red;
 }
 ```
 
@@ -767,8 +765,11 @@ h3.special.zhongyao {
 举例：
 
 ```css
-p,h1,.title1,#one {
-    color: red;
+p,
+h1,
+.title1,
+#one {
+	color: red;
 }
 ```
 
@@ -784,21 +785,21 @@ p,h1,.title1,#one {
 
 > 我们可以用`IETester`这个软件测一下 CSS 在各个版本 IE 浏览器上的显示效果。
 >
-> 截至2022/12月，目前只用考虑ie9以上的ie浏览器兼容性
+> 截至 2022/12 月，目前只用考虑 ie9 以上的 ie 浏览器兼容性
 
 IE： 微软的浏览器，随着操作系统安装的。所以每个 windows 都有 IE 浏览器。各版本如下：
 
--   windows xp 操作系统安装的 IE6
--   windows vista 操作系统安装的 IE7
--   windows 7 操作系统安装的 IE8
--   windows 8 操作系统安装的 IE9
--   windows10 操作系统安装的 edge
+- windows xp 操作系统安装的 IE6
+- windows vista 操作系统安装的 IE7
+- windows 7 操作系统安装的 IE8
+- windows 8 操作系统安装的 IE9
+- windows10 操作系统安装的 edge
 
 浏览器兼容问题，要出，就基本上就是出在 IE6、7 身上，这两个浏览器是非常低级的浏览器。
 
 为了测试浏览器 CSS 3 的兼容性，我们可以在网上搜"css3 机器猫"关键字，然后在不同的浏览器中打开如下链接：
 
--   <http://www1.pconline.com.cn/pcedu/specialtopic/css3-doraemon/>
+- <http://www1.pconline.com.cn/pcedu/specialtopic/css3-doraemon/>
 
 测试结果如下：
 
@@ -806,16 +807,16 @@ IE： 微软的浏览器，随着操作系统安装的。所以每个 windows �
 
 我们可以在[百度统计](http://tongji.baidu.com/data/)里查看浏览器的市场占有率：
 
--   IE9 5.94%
--   IE8 21.19%
--   IE7 4.79%
--   IE6 4.11%
+- IE9 5.94%
+- IE8 21.19%
+- IE7 4.79%
+- IE6 4.11%
 
 我们可以在<http://html5test.com/results/desktop.html>中查看
 
 ![](http://img.smyhvae.com/20170711_1948.png)
 
-我们要知道典型的 IE6 兼容问题（面试要问），但是做项目我们兼容到 IE9即可。不解决 IE9 以下的兼容问题，目的在于：培养更高的兴趣和眼光，别天天的跟 IE6 较劲。
+我们要知道典型的 IE6 兼容问题（面试要问），但是做项目我们兼容到 IE9 即可。不解决 IE9 以下的兼容问题，目的在于：培养更高的兴趣和眼光，别天天的跟 IE6 较劲。
 
 我们可以用「**<u>IETester</u>**」软件看看 css 在各个浏览器中的显示效果。
 
@@ -825,7 +826,7 @@ IE： 微软的浏览器，随着操作系统安装的。所以每个 windows �
 
 ```css
 div > p {
-    color: red;
+	color: red;
 }
 ```
 
@@ -835,7 +836,7 @@ div 的儿子 p。和 div 的后代 p 的截然不同。
 
 ```html
 <div>
-    <p>我是div的儿子</p>
+	<p>我是div的儿子</p>
 </div>
 ```
 
@@ -843,11 +844,11 @@ div 的儿子 p。和 div 的后代 p 的截然不同。
 
 ```html
 <div>
-    <ul>
-        <li>
-            <p>我是div的重孙子</p>
-        </li>
-    </ul>
+	<ul>
+		<li>
+			<p>我是div的重孙子</p>
+		</li>
+	</ul>
 </div>
 ```
 
@@ -859,9 +860,9 @@ div 的儿子 p。和 div 的后代 p 的截然不同。
 
 ```html
 <style type="text/css">
-    ul li:first-child {
-        color: red;
-    }
+	ul li:first-child {
+		color: red;
+	}
 </style>
 ```
 
@@ -869,7 +870,7 @@ div 的儿子 p。和 div 的后代 p 的截然不同。
 
 ```css
 ul li:last-child {
-    color: blue;
+	color: blue;
 }
 ```
 
@@ -879,24 +880,28 @@ ul li:last-child {
 
 ```html
 <ul>
-    <li class="first">项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li class="last">项目</li>
+	<li class="first">项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li class="last">项目</li>
 </ul>
 ```
 
 用类选择器来选择第一个或者最后一个：
 
 ```css
-ul li.first{ color:red; } 
-ul li.last{ color:blue; }
+ul li.first {
+	color: red;
+}
+ul li.last {
+	color: blue;
+}
 ```
 
 ### 3.下一个兄弟选择器
@@ -907,9 +912,9 @@ ul li.last{ color:blue; }
 
 ```html
 <style type="text/css">
-    h3 + p {
-        color: red;
-    }
+	h3 + p {
+		color: red;
+	}
 </style>
 ```
 

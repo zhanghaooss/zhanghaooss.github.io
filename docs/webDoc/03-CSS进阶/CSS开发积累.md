@@ -3,11 +3,9 @@ title: 认识Web和Web标准
 date:12/28
 ---
 
-[TOC]
+### 让 flex 盒子中的子元素们，居中
 
-### 让flex盒子中的子元素们，居中
-
-flex布局常用的三行代码：
+flex 布局常用的三行代码：
 
 ```
     display: flex;
@@ -24,7 +22,6 @@ flex布局常用的三行代码：
 
 ```
 
-
 ### 让文字最多只显示两行，超出后显示省略号
 
 ```
@@ -36,8 +33,6 @@ flex布局常用的三行代码：
 ```
 
 参考链接：<https://blog.csdn.net/NN_nan/article/details/55045562>
-
-
 
 ### 问题描述：文本内容里自带了换行，但是在前端没有展示出来
 
@@ -53,42 +48,38 @@ white-space: pre-wrap;
 white-space: pre-line;
 ```
 
+### 2019-11-12-CSS 的逗号和空格
 
-
-### 2019-11-12-CSS的逗号和空格
-
-<u>CSS的逗号一般写在()里。**不同属性值之间，用的是空格**，不是逗号</u>。比如：
+<u>CSS 的逗号一般写在()里。**不同属性值之间，用的是空格**，不是逗号</u>。比如：
 
 ```css
-	transform: translate(-50%, -50%);  /* 这种写逗号 */
-	transform: translate(-50%, -50%) scale(0.5);   /* 不同属性值之间，用的是空格 */
+transform: translate(-50%, -50%); /* 这种写逗号 */
+transform: translate(-50%, -50%) scale(0.5); /* 不同属性值之间，用的是空格 */
 
-	background-size: 100% 100%;  /* 这里是空格，不是逗号 */
+background-size: 100% 100%; /* 这里是空格，不是逗号 */
 ```
-
 
 ### 2019-11-01
 
 人民币价格中的羊角符号，有半角和全角之分：
 
-- ¥半角
+- ¥ 半角
 
 - ￥全角
 
 可以看出，半角的宽度更小。考虑到容器的空间一般比较紧张，所以推荐使用**半角**。
 
-
 ### 2019-11-19-鼠标悬停时，弹出提示文字
 
-参考链接：[css实现鼠标悬浮后的提示效果](https://www.cnblogs.com/zhaojian-08/p/10074660.html)
+参考链接：[css 实现鼠标悬浮后的提示效果](https://www.cnblogs.com/zhaojian-08/p/10074660.html)
 
-鼠标移动上去的元素和悬浮出来的元素一定要是嵌套关系，否则使用hover没有效果。而且被嵌套的内部元素一定要绝对定位脱离标准流，否则会影响标准流中元素的位置。
+鼠标移动上去的元素和悬浮出来的元素一定要是嵌套关系，否则使用 hover 没有效果。而且被嵌套的内部元素一定要绝对定位脱离标准流，否则会影响标准流中元素的位置。
 
 ### 2019-11-27-图片的宽度固定，高度自适应
 
-这个场景下，别用background。直接放img元素就好了，将图片的高度设置为`auto`。
+这个场景下，别用 background。直接放 img 元素就好了，将图片的高度设置为`auto`。
 
-### 2020-03-26-通过CSS扩大点击热区
+### 2020-03-26-通过 CSS 扩大点击热区
 
 ```css
 .button {
@@ -105,6 +96,7 @@ white-space: pre-line;
 	left: -10px;
 }
 ```
+
 注意，button 里面不要写 `overflow: hidden` 属性，否则扩大的热区无效。
 
 参考链接：<https://www.jianshu.com/p/b83fc87cb222>
@@ -128,12 +120,11 @@ white-space: pre-line;
 }
 ```
 
-注意，去掉滚动条的那行代码里，建议用`display: none;`，不要用`width: 0;`。因为，当你需要设置横向滚动的效果时，`display: none;`这个属性的效果更好，不会改变容器的size；`width: 0;`可能会改变容器的size。
+注意，去掉滚动条的那行代码里，建议用`display: none;`，不要用`width: 0;`。因为，当你需要设置横向滚动的效果时，`display: none;`这个属性的效果更好，不会改变容器的 size；`width: 0;`可能会改变容器的 size。
 
 参考链接：
 
-- [html设置局部区域上下滚动，不显示滚动条](https://blog.csdn.net/weixin_42157001/article/details/90176510)
-
+- [html 设置局部区域上下滚动，不显示滚动条](https://blog.csdn.net/weixin_42157001/article/details/90176510)
 
 ### 2021-05-06-设置页面的宽高，撑满屏幕
 
@@ -144,22 +135,21 @@ white-space: pre-line;
 	width: 100vw;
 	min-height: 100vh;
 }
-
 ```
 
-### 2021-09-13-JS中插入CSS
+### 2021-09-13-JS 中插入 CSS
 
 代码举例：
 
 ```js
-new_element = document.createElement("style");
-new_element.innerHTML =(".tucao-content p{font-size:18px;}");
+new_element = document.createElement('style');
+new_element.innerHTML = '.tucao-content p{font-size:18px;}';
 document.body.appendChild(new_element);
 ```
 
 参考链接：
 
-- js 插入公共css的方法：https://blog.csdn.net/u013970232/article/details/90578937
+- js 插入公共 css 的方法：https://blog.csdn.net/u013970232/article/details/90578937
 
 ### 宽高适配方案
 

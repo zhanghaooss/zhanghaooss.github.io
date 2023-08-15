@@ -1,9 +1,6 @@
 ---
 title: 02-CSS布局
-
 ---
-
-[TOC]
 
 ## 前言
 
@@ -33,7 +30,7 @@ title: 02-CSS布局
 
 1、**table 表格布局**：早期使用的布局，如今用得很少。
 
-2、**float 浮动 + margin**：为了兼容低版本的IE浏览器，很多网站（比如腾讯新闻、网易新闻、淘宝等）都会采用 float 布局。
+2、**float 浮动 + margin**：为了兼容低版本的 IE 浏览器，很多网站（比如腾讯新闻、网易新闻、淘宝等）都会采用 float 布局。
 
 3、**inline-block 布局**：对外的表现是行内元素（不会独占一行），对内的表现是块级元素（可以设置宽高）。
 
@@ -43,7 +40,7 @@ title: 02-CSS布局
 
 ![](http://img.smyhvae.com/20191005_1200.png)
 
-上图中可以看到， flex 布局不支持 IE9 及以下的版本。如果你的页面不需要处理 IE浏览器的兼容性问题，则可以放心大胆地使用 flex 布局。
+上图中可以看到， flex 布局不支持 IE9 及以下的版本。如果你的页面不需要处理 IE 浏览器的兼容性问题，则可以放心大胆地使用 flex 布局。
 
 flex 是一种现代的布局方式，是 W3C 第一次提供真正用于布局的 CSS 规范。
 
@@ -51,7 +48,7 @@ flex 是一种现代的布局方式，是 W3C 第一次提供真正用于布局�
 
 ==补充==
 
-inline-block可以根据内容自动改变宽高，也可以使用text-align:center;来居中内容
+inline-block 可以根据内容自动改变宽高，也可以使用 text-align:center;来居中内容
 
 ## float 布局
 
@@ -105,7 +102,7 @@ inline-block可以根据内容自动改变宽高，也可以使用text-align:cen
 
 - 从父级的布局中“消失”
 
-- 造成父级元素的高度塌陷：父级元素撑开 div1 之后（父级元素里没有其他元素的情况下），如果设置 div1 为 float 之后，会让父级元素的高度变为0。
+- 造成父级元素的高度塌陷：父级元素撑开 div1 之后（父级元素里没有其他元素的情况下），如果设置 div1 为 float 之后，会让父级元素的高度变为 0。
 
 ## inline-block 布局
 
@@ -118,48 +115,44 @@ inline-block可以根据内容自动改变宽高，也可以使用text-align:cen
 ```html
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		.container {
+			width: 300px;
+			height: 300px;
+			background: pink;
+		}
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<style>
-	.container{
-		width: 300px;
-		height: 300px;
-		background: pink;
-	}
+		.div1 {
+			width: 100px;
+			height: 100px;
+			background: green;
+			display: inline-block;
+		}
 
-	.div1{
-		width: 100px;
-		height: 100px;
-		background: green;
-		display: inline-block;
-	}
+		.div2 {
+			width: 100px;
+			height: 100px;
+			background: yellowgreen;
+			display: inline-block;
+		}
 
-	.div2{
-		width: 100px;
-		height: 100px;
-		background: yellowgreen;
-		display: inline-block;
-	}
+		.div3 {
+			background: yellow;
+		}
+	</style>
 
-	.div3{
-		background: yellow;
-	}
-</style>
-
-<body>
-	<div class="container">
-		<div class="div1">div1的inline-block 属性</div>
-		<div class="div2">div2的inline-block 属性</div>
-		<div class="div3">
-			琴棋书画不会，洗衣做饭嫌累。
+	<body>
+		<div class="container">
+			<div class="div1">div1的inline-block 属性</div>
+			<div class="div2">div2的inline-block 属性</div>
+			<div class="div3">琴棋书画不会，洗衣做饭嫌累。</div>
 		</div>
-	</div>
-</body>
-
+	</body>
 </html>
 ```
 
@@ -169,20 +162,19 @@ inline-block可以根据内容自动改变宽高，也可以使用text-align:cen
 
 **问题一**：如果设置`div2`的宽度为 200px 之后，`div2` 掉下来。
 
-**问题二**：`div1`和`div2`设置为 inline-block之后，这两个盒子之间存在了间隙。这是因为，此时的 `div1`和`div2` 已经被当成文本了。文本和文本之间，本身就会存在间隙。
+**问题二**：`div1`和`div2`设置为 inline-block 之后，这两个盒子之间存在了间隙。这是因为，此时的 `div1`和`div2` 已经被当成文本了。文本和文本之间，本身就会存在间隙。
 
 为了去掉这个间隙，可以有几种解决办法：
 
-办法1：设置父元素`container`的字体大小为0，即`font-size: 0`，然后设置子元素 `div1`、`div2`的字体`font-size: 12px`。
+办法 1：设置父元素`container`的字体大小为 0，即`font-size: 0`，然后设置子元素 `div1`、`div2`的字体`font-size: 12px`。
 
-办法2：在写法上，去掉`div1`和`div2`之间的换行。改为：
+办法 2：在写法上，去掉`div1`和`div2`之间的换行。改为：
 
 ```html
-<div class="div1">div1的inline-block 属性</div><div class="div2">div2的inline-block 属性</div>
+<div class="div1">div1的inline-block 属性</div>
+<div class="div2">div2的inline-block 属性</div>
 ```
 
 ## 响应式布局
 
 移动端用得较多，本文暂时先不讲。
-
-

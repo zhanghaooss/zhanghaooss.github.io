@@ -3,14 +3,11 @@ title: 01-Node.js介绍
 date:2022/12/23
 ---
 
-[TOC]
-
-
 ## todo
 
--   rpc 和 Node.js 的关系
+- rpc 和 Node.js 的关系
 
--   [《吊打面试官》系列 Node.js 全栈秒杀系统](https://mp.weixin.qq.com/s/uWeAsJ-P253je15A49uKIQ)
+- [《吊打面试官》系列 Node.js 全栈秒杀系统](https://mp.weixin.qq.com/s/uWeAsJ-P253je15A49uKIQ)
 
 ## 前言
 
@@ -18,13 +15,13 @@ Node 的重要性已经不言而喻，很多互联网公司都已经有大量的
 
 ### 前端同学为什么要学习后端/后端同学为什么要学习前端
 
--   了解前后端交互流程。
+- 了解前后端交互流程。
 
--   前端同学能够和后台开发的程序员更佳紧密地结合、更顺畅地沟通。
+- 前端同学能够和后台开发的程序员更佳紧密地结合、更顺畅地沟通。
 
--   当网站的业务逻辑需要前置时，前端人员需要学习一些后台开发的技术，以完成相应的任务；；反过来也一样。
+- 当网站的业务逻辑需要前置时，前端人员需要学习一些后台开发的技术，以完成相应的任务；；反过来也一样。
 
--   拓宽知识视野和技术栈，能够站在全局的角度审视整个项目。
+- 拓宽知识视野和技术栈，能够站在全局的角度审视整个项目。
 
 ### 前端同学为什么要学 Node.js
 
@@ -48,8 +45,7 @@ Node 的重要性已经不言而喻，很多互联网公司都已经有大量的
 
 [Node.js](https://nodejs.org/zh-cn/) 是一个基于 **Chrome V8 引擎**的 JavaScript 运行环境。Node.js 使用了一个**事件驱动**、**非阻塞式 I/O**的模型，使其轻量又高效。Node.js 的包管理工具 npm 是全球最大的开源库生态系统。
 
-Node.js 不是一门语言，也不是 JavaScript 的框架，也不是像Nginx一样的Web服务器 ，**Node.js 是 JavaScript 在服务器端的运行环境（平台）**。
-
+Node.js 不是一门语言，也不是 JavaScript 的框架，也不是像 Nginx 一样的 Web 服务器 ，**Node.js 是 JavaScript 在服务器端的运行环境（平台）**。
 
 ### Node.js 的组成
 
@@ -59,19 +55,19 @@ Node.js 不是一门语言，也不是 JavaScript 的框架，也不是像Nginx�
 
 我们知道，JavaScript 的组成分为三个部分：
 
--   ECMAScript
+- ECMAScript
 
--   DOM：标签元素相关的API
+- DOM：标签元素相关的 API
 
--   BOM：浏览器相关的API
+- BOM：浏览器相关的 API
 
 ECMAScript 是 JS 的语法；DOM 和 BOM 浏览器端为 JS 提供的 API。
 
 而 Node.js 的组成分为：
 
--   **ECMAScript**。ECMAScript 的所有语法在 Node 环境中都可以使用。
+- **ECMAScript**。ECMAScript 的所有语法在 Node 环境中都可以使用。
 
--   **Node 环境**提供的一些**附加 API**(包括文件、网络等相关的 API)。
+- **Node 环境**提供的一些**附加 API**(包括文件、网络等相关的 API)。
 
 如下图所示：
 
@@ -102,9 +98,9 @@ Node.js 内部采用 Google Chrome 的 V8 引擎，作为 JavaScript 语言解�
 
 Node.js 是 JavaScript 在服务器端的运行环境，在这个意义上，Node.js 的地位其实就是 JavaScript 在服务器端的虚拟机，类似于 Java 语言中的 Java 虚拟机。
 
--   [V8 引擎](https://v8.dev/) ：编译和执行 JS 代码、管理内存、垃圾回收。V8 给 JS 提供了运行环境，可以说是 JS 的虚拟机。V8 引擎本身是用 C++ 写的。
+- [V8 引擎](https://v8.dev/) ：编译和执行 JS 代码、管理内存、垃圾回收。V8 给 JS 提供了运行环境，可以说是 JS 的虚拟机。V8 引擎本身是用 C++ 写的。
 
--   [libuv](https://zh.wikipedia.org/wiki/Libuv)： libuv 是一个专注于异步 I/O 的跨平台类库，目前主要在 Node.js 上使用。它是 Node.js 最初的作者 Ryan Dahl 为 Node.js 写的底层类库，也可以称之为虚拟机。libuv 本身是用 C 写的。
+- [libuv](https://zh.wikipedia.org/wiki/Libuv)： libuv 是一个专注于异步 I/O 的跨平台类库，目前主要在 Node.js 上使用。它是 Node.js 最初的作者 Ryan Dahl 为 Node.js 写的底层类库，也可以称之为虚拟机。libuv 本身是用 C 写的。
 
 ### Java 虚拟机和 V8 引擎，是由同一人开发
 
@@ -122,15 +118,15 @@ V8 的性能优势使得用 JavaScript 写高性能后台服务程序成为可�
 
 ## Node 的发展历史
 
--   2008 年左右，随着 Ajax 的逐渐普及，Web 开发逐渐走向复杂化，系统化；
+- 2008 年左右，随着 Ajax 的逐渐普及，Web 开发逐渐走向复杂化，系统化；
 
--   Node.js 诞生于 2009 年，由 Joyent 的员工 Ryan Dahl 开发而成。2009 年 5 月，Ryan Dahl 在 GitHub 中开源了 Node 的最初版本，同年 11 月，在 JSConf 大会上展示了 Node 项目；
+- Node.js 诞生于 2009 年，由 Joyent 的员工 Ryan Dahl 开发而成。2009 年 5 月，Ryan Dahl 在 GitHub 中开源了 Node 的最初版本，同年 11 月，在 JSConf 大会上展示了 Node 项目；
 
--   2010 年 1 月，NPM 包管理工具诞生，使得程序员能够更方便地发布和分享 Node.js 的第三方库。
+- 2010 年 1 月，NPM 包管理工具诞生，使得程序员能够更方便地发布和分享 Node.js 的第三方库。
 
--   Node.js 最初只支持 Linux 和 Mac OS 操作系统。2011 年 7 月，微软参与合作，Node.js 终于支持了 Windows 平台。PS：不过，node 的生产环境基本是在 Linux 下。
+- Node.js 最初只支持 Linux 和 Mac OS 操作系统。2011 年 7 月，微软参与合作，Node.js 终于支持了 Windows 平台。PS：不过，node 的生产环境基本是在 Linux 下。
 
--   目前官网最新版本已经更新到 19.x.x 版本，最新稳定的是 18.14.2。
+- 目前官网最新版本已经更新到 19.x.x 版本，最新稳定的是 18.14.2。
 
 据 Node.js 创始人 Ryan Dahl 回忆，他最初希望采用 Ruby，但是 Ruby 的虚拟机效率不行。
 
@@ -148,9 +144,9 @@ BFF，即 Backend For Frontend（服务于前端的后端）。玉伯在《[从�
 
 在 Web 服务里，搭建一个中间层，前端访问中间层的接口，中间层再访问后台的 Java/C++ 服务。这类服务的特点是不需要太强的服务器运算能力，但对程序的灵活性有较高的要求。这两个特点，正好和 Node.js 的优势相吻合。Node.js 非常适合用来做 BFF 层，优势如下：
 
--   对于前端来说：让前端**有能力自由组装后台数据**，这样可以减少大量的业务沟通成本，加快业务的迭代速度；并且，前端同学能够**自主决定**与后台的通讯方式。
+- 对于前端来说：让前端**有能力自由组装后台数据**，这样可以减少大量的业务沟通成本，加快业务的迭代速度；并且，前端同学能够**自主决定**与后台的通讯方式。
 
--   对于后台和运维来说，好处是：安全性（不会把主服务器暴露在外面）、降低主服务器的复杂度等。
+- 对于后台和运维来说，好处是：安全性（不会把主服务器暴露在外面）、降低主服务器的复杂度等。
 
 ### 2、服务端渲染
 
@@ -164,17 +160,17 @@ BFF，即 Backend For Frontend（服务于前端的后端）。玉伯在《[从�
 
 参考链接：
 
--   [Vue 服务端渲染的概念](https://ssr.vuejs.org/zh/)
+- [Vue 服务端渲染的概念](https://ssr.vuejs.org/zh/)
 
--   <https://blog.csdn.net/u012036171/article/details/88833200>
+- <https://blog.csdn.net/u012036171/article/details/88833200>
 
--   <https://juejin.im/post/5c068fd8f265da61524d2abc>
+- <https://juejin.im/post/5c068fd8f265da61524d2abc>
 
--   [方应杭](https://www.zhihu.com/question/59578433/answer/326694511)
+- [方应杭](https://www.zhihu.com/question/59578433/answer/326694511)
 
 历史回顾：
 
-（1）一开始，页面很简单，html 是后端渲染的（比如PHP、ASP、JSP等方式）。后端发现页面中的 js 好麻烦（虽然简单，但是坑多），于是让公司招聘专门写 js 的人，简称「前端切图仔」。
+（1）一开始，页面很简单，html 是后端渲染的（比如 PHP、ASP、JSP 等方式）。后端发现页面中的 js 好麻烦（虽然简单，但是坑多），于是让公司招聘专门写 js 的人，简称「前端切图仔」。
 
 （2）随着 Node.js 和前端 MVC 的兴起，以及前端越来越复杂，慢慢演变成了「前后端分离」。
 
@@ -196,9 +192,9 @@ BFF，即 Backend For Frontend（服务于前端的后端）。玉伯在《[从�
 
 Electron 框架就是基于 Node.js 的，可以用来开发客户端软件。
 
-Electron 原名为 Atom Shell，是由 GitHub 开发的一个开源框架。Electron 以 Node.js 作为运行时（runtime），以  chromium 作为渲染引擎，使开发者可以使用 JS 这种前端技术栈开来发跨平台的桌面GUI应用程序。
+Electron 原名为 Atom Shell，是由 GitHub 开发的一个开源框架。Electron 以 Node.js 作为运行时（runtime），以 chromium 作为渲染引擎，使开发者可以使用 JS 这种前端技术栈开来发跨平台的桌面 GUI 应用程序。
 
-有一点你可能会感到惊讶：程序员们都在用的代码编辑器 VS Code 软件， 就是基于 Electron 框架来开发的。其他使用 Electron 进行开发的知名应用还有：Skype、GitHub Desktop、Slack、WhatsApp等。
+有一点你可能会感到惊讶：程序员们都在用的代码编辑器 VS Code 软件， 就是基于 Electron 框架来开发的。其他使用 Electron 进行开发的知名应用还有：Skype、GitHub Desktop、Slack、WhatsApp 等。
 
 还有一个例子是：电子游戏直播网站 [Twitch](https://www.twitch.tv/)，号称是国外游戏直播的鼻祖，它在 PC 端的客户端软件，就是用 Electron 框架的。你会发现，Twitch 的网站视觉，和 PC 端的视觉，几乎是一样的。如果两端都采用 JS 语言，就可以极大的复用现有的工程。
 
@@ -206,25 +202,25 @@ Electron 原名为 Atom Shell，是由 GitHub 开发的一个开源框架。Elec
 
 ![](../../图床/qgyh/20180301_2009.png)
 
--   express：Node.js 中著名的 web 服务框架。
+- express：Node.js 中著名的 web 服务框架。
 
--   Koa：下一代的 Node.js 的 Web 服务框架。所谓的“下一代”是相对于 Express 而言的。
+- Koa：下一代的 Node.js 的 Web 服务框架。所谓的“下一代”是相对于 Express 而言的。
 
--   [Egg](https://eggjs.org/zh-cn/)：2016 年，阿里巴巴研发了知名的 Egg.js 开源项目，号称企业级 Web 服务框架。Egg.js 是基于 Koa 开发的。
+- [Egg](https://eggjs.org/zh-cn/)：2016 年，阿里巴巴研发了知名的 Egg.js 开源项目，号称企业级 Web 服务框架。Egg.js 是基于 Koa 开发的。
 
-*   mocha：是现在最流行的 JavaScript 测试框架，在浏览器和 Node 环境都可以使用。
+* mocha：是现在最流行的 JavaScript 测试框架，在浏览器和 Node 环境都可以使用。
 
-*   PM2：node 多进程管理。
+* PM2：node 多进程管理。
 
-*   jade：非常优秀的模板引擎，不仅限于 js 语言。
+* jade：非常优秀的模板引擎，不仅限于 js 语言。
 
-*   CoffeeScript：用简洁的方式展示 JavaScript 优秀的部分。
+* CoffeeScript：用简洁的方式展示 JavaScript 优秀的部分。
 
-*   Atom：编辑器。
+* Atom：编辑器。
 
-*   VS Code：最酷炫的编辑器。
+* VS Code：最酷炫的编辑器。
 
-*   socket.io：实时通信框架。
+* socket.io：实时通信框架。
 
 ### 总结
 
@@ -247,5 +243,3 @@ Electron 原名为 Atom Shell，是由 GitHub 开发的一个开源框架。Elec
 对于个人而言，虽然全栈很难，但是 Node.js 的出现，**让 JS 语言实现了前后端语法的统一，让 JS 语言的技术栈更佳全面**。
 
 涉及到后台开发相关的技术，无论如何，也绕不开**框架设计、开发调试、数据库操作、高并发处理、大规模存储、性能优化、容灾方案、RPC 调用、进程管理、操作系统调度、网络安全、系统运维、日常维护、甚至是 Linux 内核、驱动开发**等过硬的知识技能和经验积累。等你亲身经历过这些，才算明白：语言只是一种工具。
-
-

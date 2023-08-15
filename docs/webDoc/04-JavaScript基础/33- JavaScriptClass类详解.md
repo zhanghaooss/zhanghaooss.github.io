@@ -3,13 +3,11 @@ title: 31- JavaScript Class类详解
 date:2023/2/24
 ---
 
-[TOC]
-
-> ECMAScript 6 提供了更接近传统语言的写法，新引入的[class](https://link.juejin.cn/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FClasses)关键字具有正式定义类的能力。类（class）是ECMAScript中新的基础性语法糖结构，虽然ECMAScript 6类表面上看起来可以支持正式的面向对象编程，但实际上它背后使用的仍然是**原型和构造函数**的概念，让对象原型的写法更加清晰、更像面向对象编程的语法。
+> ECMAScript 6 提供了更接近传统语言的写法，新引入的[class](https://link.juejin.cn/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FClasses)关键字具有正式定义类的能力。类（class）是 ECMAScript 中新的基础性语法糖结构，虽然 ECMAScript 6 类表面上看起来可以支持正式的面向对象编程，但实际上它背后使用的仍然是**原型和构造函数**的概念，让对象原型的写法更加清晰、更像面向对象编程的语法。
 
 ## 一、类的定义
 
-定义类也有两种主要方式：类声明和类表达式。这两种方式都使用class关键字加大括号：
+定义类也有两种主要方式：类声明和类表达式。这两种方式都使用 class 关键字加大括号：
 
 ```kotlin
 // 类声明
@@ -33,19 +31,19 @@ class Person {}
 
 ```javascript
 {
-    function FunctionDeclaration () {}
-    class ClassDeclaration {}
-    // 使用var 声明
-    var VarClass = class {}
-    // 使用let/const 声明
-    let LetClass = class {}
+	function FunctionDeclaration() {}
+	class ClassDeclaration {}
+	// 使用var 声明
+	var VarClass = class {};
+	// 使用let/const 声明
+	let LetClass = class {};
 }
 
-console.log(FunctionDeclaration) // FunctionDeclaration () {}
-console.log(ClassDeclaration) // ReferenceError: ClassDeclaration is not defined
-console.log(VarClass) // class {}
-console.log(LetClass) // ReferenceError: letClass is not defined
-复制代码
+console.log(FunctionDeclaration); // FunctionDeclaration () {}
+console.log(ClassDeclaration); // ReferenceError: ClassDeclaration is not defined
+console.log(VarClass); // class {}
+console.log(LetClass); // ReferenceError: letClass is not defined
+复制代码;
 ```
 
 class 类完全可以看成构造函数的另一种写法，这种写法可以让对象的原型属性和函数更加清晰。
@@ -53,16 +51,16 @@ class 类完全可以看成构造函数的另一种写法，这种写法可以�
 ```javascript
 class Person {}
 
-console.log(typeof Person) // function
-console.log(Person === Person.prototype.constructor) // true
-复制代码
+console.log(typeof Person); // function
+console.log(Person === Person.prototype.constructor); // true
+复制代码;
 ```
 
 上面代码表明，类的数据类型就是函数，类本身就指向构造函数。
 
 ## 二、类构造函数
 
-constructor 方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。通过 new 关键字生成对象实例时，自动会调用该方法。一个类只能拥有一个名为constructor构造函数，不能出现多个，如果定义了多个constructor构造函数，则将抛出 一个[SyntaxError](https://link.juejin.cn/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FSyntaxError)错误。如果没有定义constructor构造函数，class 会默认添加一个空的constructor构造函数。
+constructor 方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。通过 new 关键字生成对象实例时，自动会调用该方法。一个类只能拥有一个名为 constructor 构造函数，不能出现多个，如果定义了多个 constructor 构造函数，则将抛出 一个[SyntaxError](https://link.juejin.cn/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FSyntaxError)错误。如果没有定义 constructor 构造函数，class 会默认添加一个空的 constructor 构造函数。
 
 ```kotlin
 class Person {}
@@ -75,7 +73,7 @@ class Person {
 复制代码
 ```
 
-使用new操作符实例化Person的操作等于使用new调用其构造函数。唯一可感知的不同之处就是，JavaScript解释器知道使用new和类意味着应该使用constructor函数进行实例化。
+使用 new 操作符实例化 Person 的操作等于使用 new 调用其构造函数。唯一可感知的不同之处就是，JavaScript 解释器知道使用 new 和类意味着应该使用 constructor 函数进行实例化。
 
 类必须使用`new`调用，否则会报错。这是它跟普通构造函数的一个主要区别，后者不用`new`也可以执行。
 
@@ -86,11 +84,11 @@ Person() // TypeError: Class constructor Test1 cannot be invoked without 'new'
 复制代码
 ```
 
-使用new调用类的构造函数会执行如下操作。
+使用 new 调用类的构造函数会执行如下操作。
 
 1. 在内存中创建一个新对象；
-2. 这个新对象内部的[[Prototype]]指针被赋值为构造函数的prototype属性；
-3. 构造函数内部的this被赋值为这个新对象（即this指向新对象）；
+2. 这个新对象内部的[[Prototype]]指针被赋值为构造函数的 prototype 属性；
+3. 构造函数内部的 this 被赋值为这个新对象（即 this 指向新对象）；
 4. 执行构造函数内部的代码（给新对象添加属性）；
 5. 如果构造函数返回非空对象，则返回该对象；否则，返回刚创建的新对象；
 
@@ -100,66 +98,66 @@ Person() // TypeError: Class constructor Test1 cannot be invoked without 'new'
 class Person {}
 
 class Test1 {
-    constructor () {
-        console.log('Test1 初始化')
-    }
+	constructor() {
+		console.log('Test1 初始化');
+	}
 }
 
 class Test2 {
-    constructor () {
-        this.test = '通过初始化构造函数设置值'
-    }
+	constructor() {
+		this.test = '通过初始化构造函数设置值';
+	}
 }
 
 // 构造函数返回指定对象
-const dataObj = { n: '自定义实例对象' }
+const dataObj = { n: '自定义实例对象' };
 class Test3 {
-    constructor () {
-        this.test = '通过初始化构造函数设置值'
-        return dataObj
-    }
+	constructor() {
+		this.test = '通过初始化构造函数设置值';
+		return dataObj;
+	}
 }
 
 const a = new Person();
 const b = new Test1(); // Test1 初始化
 const c = new Test2();
-console.log(c.test) // 通过初始化构造函数设置值
+console.log(c.test); // 通过初始化构造函数设置值
 
 const d = new Test3();
 d instanceof Test3; // false
-console.log(d) // { n: '自定义实例对象' }
-复制代码
+console.log(d); // { n: '自定义实例对象' }
+复制代码;
 ```
 
 类实例化时传入的参数会用作构造函数的参数。如果不需要参数，则类名后面的括号也是可选的：
 
 ```javascript
 class Person {
-    constructor (...args) {
-        console.log(args.length)
-    }
+	constructor(...args) {
+		console.log(args.length);
+	}
 }
 
 class Test1 {
-    constructor (test) {
-        console.log(arguments.length)
-        this.test = test || '默认值'
-    }
+	constructor(test) {
+		console.log(arguments.length);
+		this.test = test || '默认值';
+	}
 }
 
 // 不传值 可以省略()
-const a = new Person // 0
-const b = new Person('1', '2') // 2
+const a = new Person(); // 0
+const b = new Person('1', '2'); // 2
 
-const c = new Test1() // 0
-console.log(c.test) // 默认值
+const c = new Test1(); // 0
+console.log(c.test); // 默认值
 
-const d = new Test1('传入值') // 1
-console.log(d.test) // 传入值
+const d = new Test1('传入值'); // 1
+console.log(d.test); // 传入值
 
-const d = new Test1('1', '2', '3') // 3
-console.log(d.test) // 1
-复制代码
+const d = new Test1('1', '2', '3'); // 3
+console.log(d.test); // 1
+复制代码;
 ```
 
 与立即调用函数表达式相似，类也可以立即实例化：
@@ -188,35 +186,38 @@ console.log(a); // Person
 
 ```javascript
 class Person {
-    constructor (x, y) {
-        this.text = new Number(1);
-        this.x = x
-        this.y = y
-        this.getText = () => {console.log(this.text)}
-    }
+	constructor(x, y) {
+		this.text = new Number(1);
+		this.x = x;
+		this.y = y;
+		this.getText = () => {
+			console.log(this.text);
+		};
+	}
 
-    toString () {
-        console.log(`${this.x}, ${this.y}`)
-    }
+	toString() {
+		console.log(`${this.x}, ${this.y}`);
+	}
 }
 
-const test1 = new Person('x', 'y'), test2 = new Person('x2', 'y2');
+const test1 = new Person('x', 'y'),
+	test2 = new Person('x2', 'y2');
 
-console.log(test1.getText()) // Number {1}
-console.log(test2.getText()) // Number {1}
-console.log(test1.x, test1.y) // x  y
-console.log(test2.x, test2.y) // x2  y2
+console.log(test1.getText()); // Number {1}
+console.log(test2.getText()); // Number {1}
+console.log(test1.x, test1.y); // x  y
+console.log(test2.x, test2.y); // x2  y2
 
 // console.log(test1.text === test2.text)  // false
 // console.log(test1.getText === test2.getText)  // false
 
-test1.text = '测试'
+test1.text = '测试';
 
-console.log(test1.getText()) // 测试
-console.log(test2.getText()) // Number {1}
+console.log(test1.getText()); // 测试
+console.log(test2.getText()); // Number {1}
 
-test1.toString() // x, y
-test2.toString() // x2, y2
+test1.toString(); // x, y
+test2.toString(); // x2, y2
 
 test1.hasOwnProperty('x'); // true
 test1.hasOwnProperty('y'); // true
@@ -225,20 +226,20 @@ test1.hasOwnProperty('toString'); // false
 test1.__proto__.hasOwnProperty('toString'); // true
 
 // 类的实例共享同一个原型对象
-console.log(test1.__proto__ === test2.__proto__) // true
+console.log(test1.__proto__ === test2.__proto__); // true
 
-// 也可以使用ES6提供的 Object.getPrototypeOf 来获取prototype 
-const test1Prototype = Object.getPrototypeOf(test1)
-test1.myName = '共享字段'
+// 也可以使用ES6提供的 Object.getPrototypeOf 来获取prototype
+const test1Prototype = Object.getPrototypeOf(test1);
+test1.myName = '共享字段';
 
 // test2 中也是能获取到
-console.log(test2.myName) // 共享字段
-复制代码
+console.log(test2.myName); // 共享字段
+复制代码;
 ```
 
-x、y、text和getText都是实例对象test1自身的属性，所以hasOwnProperty()方法返回true，而toString()是原型对象的属性（因为定义在Person类），所以hasOwnProperty()方法返回false，这些都与 ES5 的行为保持一致。
+x、y、text 和 getText 都是实例对象 test1 自身的属性，所以 hasOwnProperty()方法返回 true，而 toString()是原型对象的属性（因为定义在 Person 类），所以 hasOwnProperty()方法返回 false，这些都与 ES5 的行为保持一致。
 
-类的所有实例共享同一个原型对象。这也意味着，可以通过实例的`__proto__`属性或Object.getPrototypeOf方法获取原型为“类”添加方法，这将会出现共享情况，必须相当谨慎，不推荐使用，因为这会改变“类”的原始定义，影响到所有实例。
+类的所有实例共享同一个原型对象。这也意味着，可以通过实例的`__proto__`属性或 Object.getPrototypeOf 方法获取原型为“类”添加方法，这将会出现共享情况，必须相当谨慎，不推荐使用，因为这会改变“类”的原始定义，影响到所有实例。
 
 类方法等同于对象属性，因此可以使用字符串、符号或计算的值作为键：
 
@@ -297,14 +298,14 @@ p.prop // 2
 复制代码
 ```
 
-set函数和get函数是设置在属性的 Descriptor 对象上的,可以通过 Object.getOwnPrototyDescriptor 来获取指定属性的指定描述对象。
+set 函数和 get 函数是设置在属性的 Descriptor 对象上的,可以通过 Object.getOwnPrototyDescriptor 来获取指定属性的指定描述对象。
 
 ```javascript
-const descriptor = Object.getOwnPropertyDescriptor(Person.prototype, 'prop')
+const descriptor = Object.getOwnPropertyDescriptor(Person.prototype, 'prop');
 
-'get' in descriptor // true
-'set' in descriptor // true
-复制代码
+'get' in descriptor; // true
+'set' in descriptor; // true
+复制代码;
 ```
 
 ### Generator 方法
@@ -381,25 +382,25 @@ class Person {
 
 ```javascript
 class Person {
-    constructor() {
-        this.text = '1'
-    }
+	constructor() {
+		this.text = '1';
+	}
 
-    getText = () => {
-        console.log(this.text)
-    }
+	getText = () => {
+		console.log(this.text);
+	};
 }
-复制代码
+复制代码;
 ```
 
 箭头函数内部的 `this`总是指向定义时所在的对象。
 
-第三、使用proxy 在获取方法的时候自动绑定this:
+第三、使用 proxy 在获取方法的时候自动绑定 this:
 
 ```kotlin
 function classProxy (target) {
     const map = new Map()
-    
+
     // 读取拦截配置, 只需要配置 get
     const hanlder = {
         get(target, key) {
@@ -441,44 +442,44 @@ getText() // test
 
 静态方法、静态属性及静态代码块([proposal-class-static-block](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Ftc39%2Fproposal-class-static-block))都是使用 `static`关键字定义的属性、方法或块只能 class 自己用，不能通过实例继承。
 
-静态方法中的this 指向的是 当前类，而不是指向实例对象。静态属性是当前类自身的属性。
+静态方法中的 this 指向的是 当前类，而不是指向实例对象。静态属性是当前类自身的属性。
 
 ```javascript
 class Person {
-    static staticProp = 'Person静态属性'
+	static staticProp = 'Person静态属性';
 
-    constructor () {
-        // 通过 类名 获取
-        console.log(`output: ${Person.staticProp}`)
+	constructor() {
+		// 通过 类名 获取
+		console.log(`output: ${Person.staticProp}`);
 
-        // 也可以通过 构造函数的属性
-        this.constructor.staticFun1()
-    }
+		// 也可以通过 构造函数的属性
+		this.constructor.staticFun1();
+	}
 
-    static staticFun1 () {
-        this.staticFun2()
-        console.log(`output: 静态方法staticFun1,获取Person静态属性 ==> ${Person.staticProp}`)
-    }
+	static staticFun1() {
+		this.staticFun2();
+		console.log(`output: 静态方法staticFun1,获取Person静态属性 ==> ${Person.staticProp}`);
+	}
 
-    static staticFun2 () {
-        console.log(`output: 静态方法staticFun2,获取静态属性 ==> ${this.staticProp}`)
-    }
+	static staticFun2() {
+		console.log(`output: 静态方法staticFun2,获取静态属性 ==> ${this.staticProp}`);
+	}
 }
 
-Person.staticProp // 静态属性
+Person.staticProp; // 静态属性
 
-Person.staticFun1() 
+Person.staticFun1();
 // output: 静态方法staticFun2,获取静态属性 Person静态属性
 // output: 静态方法staticFun1,获取Person静态属性 ==> Person静态属性
 
-const a = new Person() // output: Person静态属性
-a.staticProp // undefined
-a.staticFun1 // undefined
-a.staticFun2 // undefined
+const a = new Person(); // output: Person静态属性
+a.staticProp; // undefined
+a.staticFun1; // undefined
+a.staticFun2; // undefined
 // 通过其原型构造函数还是能获取到 这些静态属性及方法 不推荐使用
 // a.__proto__.constructor.staticProp
 // a.__proto__.constructor.staticFun1()
-复制代码
+复制代码;
 ```
 
 ### 静态代码块：
@@ -492,7 +493,7 @@ class Person {
     static staticProp = '静态属性'
     static staticPropArr = []
     static staticPropObj = {}
-    
+
     static getStatic (name) {
         console.log(`获取：${name}`, name && this[name])
         return name && this[name]
@@ -533,36 +534,36 @@ class Person {
 
 上面代码中可以看出，`static` 关键字后面不跟变量，而是直接跟一个代码块，就是 class static block 语法的特征，在这个代码块内部，可以通过 `this` 访问 Class 所有成员变量，包括 `#` 私有变量。
 
-在这里提前使用一下私有变量，理论上 class 私有变量外部是访问不了的，但是有了静态代码块( ****class-static-block*** *)之后，我们可以将私有属性暴露给外部变量：
+在这里提前使用一下私有变量，理论上 class 私有变量外部是访问不了的，但是有了静态代码块( \***_class-static-block_** \*)之后，我们可以将私有属性暴露给外部变量：
 
 ```javascript
-let privateValue
+let privateValue;
 
 export class Person {
-  #value
-  constructor(x) {
-    this.#value = x
-  }
+	#value;
+	constructor(x) {
+		this.#value = x;
+	}
 
-  static {
-    privateValue = (obj) => obj.#x;
-  }
+	static {
+		privateValue = (obj) => obj.#x;
+	}
 }
 
-export function getPrivateValue (obj) {
-  return privateValue(obj)
+export function getPrivateValue(obj) {
+	return privateValue(obj);
 }
 
-// 在另一个文件中 
-import { Person, getPrivateValue } from 'xxx'
+// 在另一个文件中
+import { Person, getPrivateValue } from 'xxx';
 
-const a = new Person('私有变量')
+const a = new Person('私有变量');
 
-getPrivateValue(a) // 私有变量
-复制代码
+getPrivateValue(a); // 私有变量
+复制代码;
 ```
 
-其实class-static-block本质上并没有增加新功能，我们完全可以用普通静态变量代替，只是写起来很不自然，所以这个特性可以理解为对缺陷的补充，或者是语法完善，个人认为现在越来越像java。
+其实 class-static-block 本质上并没有增加新功能，我们完全可以用普通静态变量代替，只是写起来很不自然，所以这个特性可以理解为对缺陷的补充，或者是语法完善，个人认为现在越来越像 java。
 
 ## 五、私有属性和私有方法
 
@@ -574,7 +575,7 @@ getPrivateValue(a) // 私有变量
 class Person {
     #privateVar1;
     #privateVar2 = '默认值';
-    
+
     constructor (text) {
         this.#privateVar1 = text || '--'
         console.log(this.#privateVar1)
@@ -587,9 +588,9 @@ class Person {
     }
 
     static staticGetPrivateData (person, key) {
-        console.log('静态方法获取私有变量：', person.#privateVar2, person.#privateVar1)                     
+        console.log('静态方法获取私有变量：', person.#privateVar2, person.#privateVar1)
         // 下面是获取不到
-        console.log('静态方法传入key来获取私有变量：', person[key]) 
+        console.log('静态方法传入key来获取私有变量：', person[key])
     }
 }
 
@@ -607,16 +608,16 @@ Person.staticGetPrivateData(a, '#privateVar1')
 复制代码
 ```
 
-从上面代码中我们可以看到，私有变量是只能内部读取或写入，不能通过动态key读取（外部调用就会报错）
+从上面代码中我们可以看到，私有变量是只能内部读取或写入，不能通过动态 key 读取（外部调用就会报错）
 
-注意：在class 中 公共属性 test 与 #test 是两个完全不同的值；
+注意：在 class 中 公共属性 test 与 #test 是两个完全不同的值；
 
 私有方法：
 
 ```arduino
 class Person {
     #private;
-    
+
     constructor () {
         this.#private = '私有变量'
         this.#methods() // 调用私有方法
@@ -644,7 +645,7 @@ class Person {
             console.log('使用传入实例')
             Person.#staticMethods(person)
         }
-       
+
     }
 }
 
@@ -675,42 +676,42 @@ a.init2(a)
 
 ```javascript
 class Person {
-    num = 1
-    text = 'person'
+	num = 1;
+	text = 'person';
 
-    getNum = () => console.log(this.num, this)
+	getNum = () => console.log(this.num, this);
 
-    addNum () {
-        console.log(++this.num, this)
-    }
+	addNum() {
+		console.log(++this.num, this);
+	}
 }
 
 // 继承
 class Child extends Person {
-    constructor () {
-        super()
-        this.getText()
-    }
+	constructor() {
+		super();
+		this.getText();
+	}
 
-    getText = () => console.log(this.text, this)
+	getText = () => console.log(this.text, this);
 }
 
-const a = new Child() // output: person  Child {}
+const a = new Child(); // output: person  Child {}
 
-console.log(a instanceof Child) // output: true
-console.log(a instanceof Person) // output: true
+console.log(a instanceof Child); // output: true
+console.log(a instanceof Person); // output: true
 
-a.getText() // output: person Child {}
-a.getNum() // output: 1 Child {}
-a.addNum() // output: 2 Child {}
-a.getNum() // output: 2 Child {}
+a.getText(); // output: person Child {}
+a.getNum(); // output: 1 Child {}
+a.addNum(); // output: 2 Child {}
+a.getNum(); // output: 2 Child {}
 
-a.text // person
-a.num // 2
-复制代码
+a.text; // person
+a.num; // 2
+复制代码;
 ```
 
-从上面代码中，我们可以看出Child 类 继承了 Person 的属性及方法，在Child 中也是可以调用Person的方法及属性，注意 this 的值会反映调用相应方法的实例或者类。子类中（Child）如果设置了 constructor 方法 就必须调用 super() ，否则就会出现新建实例时报错，如果没有 constructor 构造函数，在实例化继承类时会调用 super() ，而且会传入所有传给继承类的参数（后面会详细讲解）。
+从上面代码中，我们可以看出 Child 类 继承了 Person 的属性及方法，在 Child 中也是可以调用 Person 的方法及属性，注意 this 的值会反映调用相应方法的实例或者类。子类中（Child）如果设置了 constructor 方法 就必须调用 super() ，否则就会出现新建实例时报错，如果没有 constructor 构造函数，在实例化继承类时会调用 super() ，而且会传入所有传给继承类的参数（后面会详细讲解）。
 
 ```arduino
 class Person {
@@ -750,7 +751,7 @@ Person.staticMethods1(a)
 
 使用表达式格式 也是可以使用 extends 继承，类 的静态方法与属性是可以继承的，其私有属性及方法是不能继承的，可以从继承的共有方法与静态方法 中获取其私有属性或调用其私有方法。
 
-**super** 关键字可以作函数使用，也可以作对象使用，但是其只能在继承类中使用，且只能在继承类的constructor 构造函数、实例方法和静态方法中使用。作为函数时是在 继承类的constructor 构造函数中使用，根据要求如果继承类中定义了constructor构造函数就必须要调用super方法(调用父类的constructor)，否则就会报错。
+**super** 关键字可以作函数使用，也可以作对象使用，但是其只能在继承类中使用，且只能在继承类的 constructor 构造函数、实例方法和静态方法中使用。作为函数时是在 继承类的 constructor 构造函数中使用，根据要求如果继承类中定义了 constructor 构造函数就必须要调用 super 方法(调用父类的 constructor)，否则就会报错。
 
 ```scala
 class Person {}
@@ -758,53 +759,53 @@ class Person {}
 class Child extends Person {
     constructor () {
         // 如果不调用 super() 就会报错
-        // ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor  
+        // ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
         super() // 调用父级的constructor
-        console.log(this) // Child {}  
+        console.log(this) // Child {}
     }
 }
 复制代码
 ```
 
-注意： constructor() 中必须super() 顶部首段执行代码，否则也是一样报错；
+注意： constructor() 中必须 super() 顶部首段执行代码，否则也是一样报错；
 
 在使用 super() 时应该注意下面几个问题：
 
-1. super只能在继承类构造函数和静态方法中使用。
+1. super 只能在继承类构造函数和静态方法中使用。
 
    ```javascript
    class Person {
-       constructor () { 
-           // 在非继承类 的constructor 中使用super 会报错
-           super() //  SyntaxError: 'super' keyword unexpected here
-       }
-   
-       methods () {
-           console.log(super.text) // undefined
-       }
-   
-       static staticMethods () {
-           console.log(super.text) // undefined
-       }
+   	constructor() {
+   		// 在非继承类 的constructor 中使用super 会报错
+   		super(); //  SyntaxError: 'super' keyword unexpected here
+   	}
+
+   	methods() {
+   		console.log(super.text); // undefined
+   	}
+
+   	static staticMethods() {
+   		console.log(super.text); // undefined
+   	}
    }
-   复制代码
+   复制代码;
    ```
 
-2. 不能单独引用super关键字，要么用它调用构造函数，要么用它引用静态方法。
+2. 不能单独引用 super 关键字，要么用它调用构造函数，要么用它引用静态方法。
 
    ```scala
    class Person {}
-   
+
    class Child extends Person {
-       
+
        constructor () {
            super // SyntaxError: 'super' keyword unexpected here
        }
-   
+
        methods () {
            console.log(super) // SyntaxError: 'super' keyword unexpected here
        }
-   
+
        static staticMethods () {
            console.log(super) // SyntaxError: 'super' keyword unexpected here
        }
@@ -812,7 +813,7 @@ class Child extends Person {
    复制代码
    ```
 
-3. 调用super()会调用父类构造函数，并将返回的实例赋值给this
+3. 调用 super()会调用父类构造函数，并将返回的实例赋值给 this
 
    ```scala
    class Person {}
@@ -822,7 +823,7 @@ class Child extends Person {
            console.log(this instanceof Person) // output: true
        }
    }
-   
+
    new Child()
    复制代码
    ```
@@ -835,21 +836,21 @@ class Child extends Person {
            this.text = text
        }
    }
-   
+
    class Child extends Person {
        constructor (text) {
            super(text)
        }
    }
-   
+
    // 这里注意 其text 会设置到Child 中
    const a = new Child('设置 text') // Child { text: '设置 text' }
-   
+
    console.log(a.text) // output: 设置 text
    复制代码
    ```
 
-5. 如果没有定义类构造函数，在实例化继承类时会调用super()，而且会传入所有传给继承类的参数。
+5. 如果没有定义类构造函数，在实例化继承类时会调用 super()，而且会传入所有传给继承类的参数。
 
    ```scala
    class Person {
@@ -857,44 +858,44 @@ class Child extends Person {
            this.text = text
        }
    }
-   
+
    class Child extends Person {}
-   
+
    const a = new Child('设置 text'); // Child { text: '设置 text' }
-   
+
    // 上面提到过 会默认 生成 constructor (...arge) {super(...arge)}
    复制代码
    ```
 
-6. 在类构造函数中，不能在调用super()之前引用this，文章上面已经有案例及说明。
+6. 在类构造函数中，不能在调用 super()之前引用 this，文章上面已经有案例及说明。
 
-7. 如果在继承类中显式定义了构造函数，则要么必须在其中调用super()，要么必须在其中返回一个对象。
+7. 如果在继承类中显式定义了构造函数，则要么必须在其中调用 super()，要么必须在其中返回一个对象。
 
    ```scala
    class Person {
        methods () {}
    }
-   
+
    class Child1 extends Person {}
-   
+
    class Child2 extends Person {
        constructor () {
            super()
        }
    }
-   
+
    class Child3 extends Person {
        constructor () {
            return {}
        }
    }
-   
+
    const a = new Child1() // Child1 {}
-   
+
    const b = new Child2() // Child2 {}
-   
-   const c = new Child3() // {} 指向 实例函数 返回的对象 
+
+   const c = new Child3() // {} 指向 实例函数 返回的对象
    复制代码
    ```
 
-   关于JS Class 相关就介绍到这里，当然还有 Class的 [mix-ins](https://link.juejin.cn/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FClasses%23mix-ins_%E6%B7%B7%E5%85%A5) 混入及其他class相关知识，这边就不详细介绍了，有兴趣的同学可以自己去了解一下。
+   关于 JS Class 相关就介绍到这里，当然还有 Class 的 [mix-ins](https://link.juejin.cn/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FClasses%23mix-ins_%E6%B7%B7%E5%85%A5) 混入及其他 class 相关知识，这边就不详细介绍了，有兴趣的同学可以自己去了解一下。

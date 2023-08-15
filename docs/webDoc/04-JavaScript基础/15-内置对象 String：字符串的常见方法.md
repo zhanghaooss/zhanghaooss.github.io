@@ -4,35 +4,31 @@ date:12/18
 desc:search方法参数一般是正则表达式
 ---
 
-[TOC]
-
 ## 内置对象简介
 
-> JavaScript 中的对象分为3种：自定义对象、内置对象、浏览器对象。
+> JavaScript 中的对象分为 3 种：自定义对象、内置对象、浏览器对象。
 
-> 前面两种对象：是JS的基础内容，属于 ECMAScript； 第三个浏览器对象：属于JS独有，即 JS 内置的API。
+> 前面两种对象：是 JS 的基础内容，属于 ECMAScript； 第三个浏览器对象：属于 JS 独有，即 JS 内置的 API。
 
 **内置对象**：就是指这个语言自带的一些对象，供开发者使用，这些对象提供了一些常用或者基本而必要的功能（属性和方法）。
 
 内置对象最大的优点就是帮助我们快速开发。
 
-**JavaScript的内置对象**：
+**JavaScript 的内置对象**：
 
-| 内置对象 | 对象说明 |
-|:-------------|:-------------|
-|  Arguments | 函数参数集合|
-|  Array | 数组|
-|  Boolean | 布尔对象|
-|  Math | 数学对象|
-|  Date | 日期时间|
-|  Error | 异常对象|
-|  Function | 函数构造器|
-|  Number | 数值对象|
-|  Object | 基础对象|
-|  RegExp | 正则表达式对象|
-|  String | 字符串对象|
-
-
+| 内置对象  | 对象说明       |
+| :-------- | :------------- |
+| Arguments | 函数参数集合   |
+| Array     | 数组           |
+| Boolean   | 布尔对象       |
+| Math      | 数学对象       |
+| Date      | 日期时间       |
+| Error     | 异常对象       |
+| Function  | 函数构造器     |
+| Number    | 数值对象       |
+| Object    | 基础对象       |
+| RegExp    | 正则表达式对象 |
+| String    | 字符串对象     |
 
 ## 字符串前言
 
@@ -48,7 +44,6 @@ desc:search方法参数一般是正则表达式
 
 > 这个方法，是使用频率最高的一个方法。
 
-
 **语法 1**：
 
 ```javascript
@@ -61,9 +56,9 @@ desc:search方法参数一般是正则表达式
 
 因此可以得出一个重要技巧：
 
--   **如果获取的索引值为 0，说明字符串是以查询的参数为开头的**。
+- **如果获取的索引值为 0，说明字符串是以查询的参数为开头的**。
 
--   如果获取的索引值为-1，说明这个字符串中没有指定的内容。
+- 如果获取的索引值为-1，说明这个字符串中没有指定的内容。
 
 举例 1：(查找单个字符)
 
@@ -128,9 +123,9 @@ var str = 'qianguyihao';
 var index = str.indexOf('a');
 var num = 0;
 while (index !== -1) {
-    console.log(index);
-    num++; // 每打印一次，就计数一次
-    index = str.indexOf('a', index + 1);
+	console.log(index);
+	num++; // 每打印一次，就计数一次
+	index = str.indexOf('a', index + 1);
 }
 
 console.log('a 出现的次数是: ' + num);
@@ -143,13 +138,11 @@ console.log('a 出现的次数是: ' + num);
 ```javascript
 索引值 = str.search(想要查找的字符串);
 索引值 = str.search(正则表达式);
-
 ```
 
 备注：<u>`search()` 方法里的参数，既可以传字符串，也可以传正则表达式。</u>
 
 **解释**：可以检索一个字符串中是否含有指定内容。如果字符串中含有该内容，则会返回其**第一次出现**的索引；如果没有找到指定的内容，则返回 -1。
-
 
 举例：
 
@@ -160,7 +153,7 @@ console.log(name.search('yi')); // 打印结果：6
 console.log(name.search(/yi/i)); // 打印结果：6
 ```
 
-备注：上方的`/yi/i`采用的是正则表达式的写法，意思是，让 name去匹配字符`yi`，忽略大小写。*我们在后面会专门介绍正则表达式。*
+备注：上方的`/yi/i`采用的是正则表达式的写法，意思是，让 name 去匹配字符`yi`，忽略大小写。_我们在后面会专门介绍正则表达式。_
 
 ### 3、includes()：字符串中是否包含指定的内容
 
@@ -172,7 +165,7 @@ console.log(name.search(/yi/i)); // 打印结果：6
 
 **解释**：判断一个字符串中是否含有指定内容。如果字符串中含有该内容，<u>则会返回 true；否则返回 false。</u>
 
-参数中的 `position`：如果不指定，则默认为0；如果指定，则规定了检索的起始位置。
+参数中的 `position`：如果不指定，则默认为 0；如果指定，则规定了检索的起始位置。
 
 ```js
 const name = 'qianguyihao';
@@ -180,9 +173,8 @@ const name = 'qianguyihao';
 console.log(name.includes('yi')); // 打印结果：true
 console.log(name.includes('haha')); // 打印结果：false
 
-console.log(name.includes('yi',7)); // 打印结果：false
+console.log(name.includes('yi', 7)); // 打印结果：false
 ```
-
 
 ### 4、startsWith()：字符串是否以指定的内容开头
 
@@ -194,9 +186,9 @@ console.log(name.includes('yi',7)); // 打印结果：false
 
 **解释**：判断一个字符串是否以指定的子字符串开头。如果是，则返回 true；否则返回 false。
 
-**参数中的position**：
+**参数中的 position**：
 
-- 如果不指定，则默认为0。
+- 如果不指定，则默认为 0。
 
 - 如果指定，则规定了**检索的起始位置**。检索的范围包括：这个指定位置开始，直到字符串的末尾。即：[position, str.length)
 
@@ -209,8 +201,8 @@ console.log(name.startsWith('a')); // 打印结果：true
 console.log(name.startsWith('b')); // 打印结果：false
 
 // 因为指定了起始位置为3，所以是在 defg 这个字符串中检索。
-console.log(name.startsWith('d',3)); // 打印结果：true
-console.log(name.startsWith('c',3)); // 打印结果：false
+console.log(name.startsWith('d', 3)); // 打印结果：true
+console.log(name.startsWith('c', 3)); // 打印结果：false
 ```
 
 ### 5、endsWith()：字符串是否以指定的内容结尾
@@ -223,13 +215,13 @@ console.log(name.startsWith('c',3)); // 打印结果：false
 
 **解释**：判断一个字符串是否以指定的子字符串结尾。如果是，则返回 true；否则返回 false。
 
-**参数中的position**：
+**参数中的 position**：
 
 - 如果不指定，则默认为 str.length。
 
 - 如果指定，则规定了**检索的结束位置**。检索的范围包括：从第一个字符串开始，直到这个指定的位置。即：[0, position)
 
-- 或者你可以这样简单理解：endsWith() 方法里的position，表示**检索的长度**。
+- 或者你可以这样简单理解：endsWith() 方法里的 position，表示**检索的长度**。
 
 注意：startsWith() 和 endsWith()这两个方法，他们的 position 的含义是不同的，请仔细区分。
 
@@ -270,7 +262,7 @@ console.log(name.endsWith('d', 3)); // 打印结果：false
 var str = new String('smyhvae');
 
 for (var i = 0; i < str.length; i++) {
-    console.log(str.charAt(i));
+	console.log(str.charAt(i));
 }
 ```
 
@@ -306,30 +298,30 @@ for (var i = 0; i < str.length; i++) {
 
 ```html
 <script>
-    //    sort();   底层用到了charCodeAt();
+	//    sort();   底层用到了charCodeAt();
 
-    var str = 'I love my country!我爱你中国！';
+	var str = 'I love my country!我爱你中国！';
 
-    //需求：求一个字符串占有几个字符位。
-    //思路；如果是英文，站一个字符位，如果不是英文占两个字符位。
-    //技术点：判断该字符是否在0-127之间。（在的话是英文，不在是非英文）
-    alert(getZFWlength(str));
-    alert(str.length);
+	//需求：求一个字符串占有几个字符位。
+	//思路；如果是英文，站一个字符位，如果不是英文占两个字符位。
+	//技术点：判断该字符是否在0-127之间。（在的话是英文，不在是非英文）
+	alert(getZFWlength(str));
+	alert(str.length);
 
-    //定义方法：字符位
-    function getZFWlength(string) {
-        //定义一个计数器
-        var count = 0;
-        for (var i = 0; i < string.length; i++) {
-            //对每一位字符串进行判断，如果Unicode编码在0-127，计数器+1；否则+2
-            if (string.charCodeAt(i) < 128 && string.charCodeAt(i) >= 0) {
-                count++;
-            } else {
-                count += 2;
-            }
-        }
-        return count;
-    }
+	//定义方法：字符位
+	function getZFWlength(string) {
+		//定义一个计数器
+		var count = 0;
+		for (var i = 0; i < string.length; i++) {
+			//对每一位字符串进行判断，如果Unicode编码在0-127，计数器+1；否则+2
+			if (string.charCodeAt(i) < 128 && string.charCodeAt(i) >= 0) {
+				count++;
+			} else {
+				count += 2;
+			}
+		}
+		return count;
+	}
 </script>
 ```
 
@@ -348,9 +340,7 @@ for (var i = 0; i < str.length; i++) {
 
 ### 1、slice()
 
-
 > <u>slice() 方法用的最多。</u>
-
 
 语法：
 
@@ -410,9 +400,7 @@ for (var i = 0; i < str.length; i++) {
 
 备注：ECMAscript 没有对 `substr()` 方法进行标准化，因此不建议使用它。
 
-
-
-## String.fromCharCode()根据Unicode 编码获取字符
+## String.fromCharCode()根据 Unicode 编码获取字符
 
 `String.fromCharCode()`：根据字符的 Unicode 编码获取字符。
 
@@ -477,7 +465,7 @@ console.log(array); // 打印结果是数组：["qian", " gu", " yi", " hao"]
 //split()方法：字符串变数组
 var str3 = '千古壹号|qianguyihao|许嵩';
 
-console.log('结果1：' +str3.split()); // 无参数，表示：把整个字符串作为一个元素添加到数组中。
+console.log('结果1：' + str3.split()); // 无参数，表示：把整个字符串作为一个元素添加到数组中。
 
 console.log(str3.split('')); // 参数为空字符串，则表示：分隔字符串中每一个字符，分别添加到数组中
 
@@ -489,10 +477,6 @@ console.log(str3.split('许')); // 同上
 打印结果：（都是数组）
 
 ![](http://img.smyhvae.com/20200611_2050.png)
-
-
-
-
 
 ## replace()替换字符片段
 
@@ -527,7 +511,7 @@ newStr = str.repeat(重复的次数);
 
 解释：将字符串重复指定的次数。会返回新的值，不会修改原字符串。
 
-举例1：
+举例 1：
 
 ```js
 const name = 'qianguyihao';
@@ -535,7 +519,7 @@ const name = 'qianguyihao';
 console.log(name.repeat(2)); // 打印内容：qianguyihaoqianguyihao
 ```
 
-举例2：（模糊字符串的后四位）
+举例 2：（模糊字符串的后四位）
 
 ```js
 const telephone = '13088889999';
@@ -544,10 +528,6 @@ const mix_telephone = telephone.slice(0, -4) + '*'.repeat(4); // 模糊电话号
 console.log(telephone); // 打印结果：13088889999
 console.log(mix_telephone); // 打印结果：1308888****
 ```
-
-
-
-
 
 ## trim()去除字符串前后的空白
 
@@ -568,7 +548,7 @@ console.log(str.trim().length);
 ```js
 //去除中间的空格，只保留一个空格
 let str = '北            京';
-console.log(str.replace(/\s+/,''))
+console.log(str.replace(/\s+/, ''));
 ```
 
 打印结果：
@@ -591,7 +571,7 @@ console.log(str.toUpperCase());
 
 ## html 方法
 
-**这个太6了**
+**这个太 6 了**
 
 - **anchor() 创建 a 链接**
 
@@ -631,11 +611,11 @@ console.log(str.bold());
 ```javascript
 var str2 = 'smyhvaevaesmyh';
 for (var i = 0; i < str2.length; i++) {
-    //如果指定位置的符号=== "o"
-    //str2[i]
-    if (str2.charAt(i) === 'm') {
-        console.log(i);
-    }
+	//如果指定位置的符号=== "o"
+	//str2[i]
+	if (str2.charAt(i) === 'm') {
+		console.log(i);
+	}
 }
 ```
 
@@ -643,43 +623,41 @@ for (var i = 0; i < str2.length; i++) {
 
 ```html
 <script>
-    var str2 = 'smyhvaevaesmyhvae';
+	var str2 = 'smyhvaevaesmyhvae';
 
-    //定义一个json，然后判断json中是够有该属性，如果有该属性，那么值+1;否则创建一个该属性，并赋值为1；
-    var json = {};
-    for (var i = 0; i < str2.length; i++) {
-        //判断：如果有该属性，那么值+1;否则创建一个该属性，并赋值为1；
-        var key = str2.charAt(i);
-        if (json[key] === undefined) {
-            json[key] = 1;
-        } else {
-            json[key] += 1;
-        }
-    }
-    console.log(json);
+	//定义一个json，然后判断json中是够有该属性，如果有该属性，那么值+1;否则创建一个该属性，并赋值为1；
+	var json = {};
+	for (var i = 0; i < str2.length; i++) {
+		//判断：如果有该属性，那么值+1;否则创建一个该属性，并赋值为1；
+		var key = str2.charAt(i);
+		if (json[key] === undefined) {
+			json[key] = 1;
+		} else {
+			json[key] += 1;
+		}
+	}
+	console.log(json);
 
-    console.log('----------------');
-    //获取json中属性值最大的选项
-    var maxKey = '';
-    var maxValue = 0;
-    for (var k in json) {
-        //        if(maxKey == ""){
-        //            maxKey = k;
-        //            maxValue = json[k];
-        //        }else{
-        if (json[k] > maxValue) {
-            maxKey = k;
-            maxValue = json[k];
-        }
-        //        }
-    }
-    console.log(maxKey);
-    console.log(maxValue);
+	console.log('----------------');
+	//获取json中属性值最大的选项
+	var maxKey = '';
+	var maxValue = 0;
+	for (var k in json) {
+		//        if(maxKey == ""){
+		//            maxKey = k;
+		//            maxValue = json[k];
+		//        }else{
+		if (json[k] > maxValue) {
+			maxKey = k;
+			maxValue = json[k];
+		}
+		//        }
+	}
+	console.log(maxKey);
+	console.log(maxValue);
 </script>
 ```
 
 打印结果：
 
 ![](../../图床/qgyh/20180202_1540.png)
-
-

@@ -3,8 +3,6 @@ title: 01-Bootstrap入门
 date:12/13
 ---
 
-[TOC]
-
 ## 前言
 
 范式即规范。MySQL 范式的作用是：
@@ -33,8 +31,6 @@ date:12/13
 
 不符合第一范式的实例：
 
-
-
 ![img](https:////upload-images.jianshu.io/upload_images/4807654-eab3b56930c4f552.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/587/format/webp)
 
 `第一范式1.PNG`
@@ -42,9 +38,7 @@ date:12/13
 存在问题:
 
 最后一条记录和第一条重复（不唯一，没有主键）
- 联系方式字段可以再分，不是原子性的
-
-
+联系方式字段可以再分，不是原子性的
 
 ![img](https:////upload-images.jianshu.io/upload_images/4807654-03cb8c62dabb930c.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/585/format/webp)
 
@@ -58,15 +52,11 @@ date:12/13
 
 实例：
 
-
-
 ![img](https:////upload-images.jianshu.io/upload_images/4807654-b922f9c1d1814859.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/586/format/webp)
 
 `二1.PNG`
 
 确定主键：
-
-
 
 ![img](https:////upload-images.jianshu.io/upload_images/4807654-b94e4f8adcc2f9cd.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/586/format/webp)
 
@@ -75,8 +65,6 @@ date:12/13
 以上虽然确定了主键，但此表会出现大量的冗余，主要涉及到的冗余字段为“学生姓名”和“教师姓名”，出现冗余的原因在于，学生姓名部分依赖了主键的一个字段学生编号，而没有依赖教师编号，而教师姓名部分依赖了主键的一个字段教师编号，这就是第二范式部分依赖。
 
 解决：
-
-
 
 ![img](https:////upload-images.jianshu.io/upload_images/4807654-ef1c439e3cd7e13b.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/580/format/webp)
 
@@ -90,15 +78,11 @@ date:12/13
 
 建立在第二范式基础上的，非主键字段不能传递依赖于主键字段（不要产生传递依赖）
 
-
-
 ![img](https:////upload-images.jianshu.io/upload_images/4807654-c906d1f0cf0c4227.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/586/format/webp)
 
 `三1.PNG`
 
 上表中，班级名称字段存在冗余，因为班级名称字段没有直接依赖于主键，班级名称字段依赖于班级编号，班级编号依赖于学生编号，这就是传递依赖，解决的办法就是将冗余字段单独拿出来建立表：
-
-
 
 ![img](https:////upload-images.jianshu.io/upload_images/4807654-a6b47b46a606682f.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/593/format/webp)
 
@@ -129,13 +113,9 @@ date:12/13
 在学生选课表中存储学生和课程的关系信息
 ```
 
-
-
 ![img](https:////upload-images.jianshu.io/upload_images/4807654-85473b90ab1feee7.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/528/format/webp)
 
 `共享主键.PNG`
-
-
 
 ![img](https:////upload-images.jianshu.io/upload_images/4807654-13ec5e1d12a119b0.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/323/format/webp)
 
@@ -146,11 +126,3 @@ date:12/13
 作者：我可能是个假开发
 
 链接：https://www.jianshu.com/p/3e97c2a1687b
-
-
-
-
-
-
-
-

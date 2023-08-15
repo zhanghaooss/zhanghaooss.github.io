@@ -3,59 +3,51 @@ title: 15-Sass入门
 DATE:12/27
 ---
 
-[TOC]
-
-
-## Sass简介
+## Sass 简介
 
 大家都知道，js 中可以自定义变量，css 仅仅是一个标记语言，不是编程语言，因此不可以自定义变量、不可以引用等等。
 
 面对这些问题，我们现在来引入 Sass，简单的说，他是 css 的升级版，可以自定义变量，可以有 if 语句，还可以嵌套等等，很神奇吧！那下面我们就来介绍返个神奇的 Sass。
 
-Sass比Less的功能更强大，也更复杂。
+Sass 比 Less 的功能更强大，也更复杂。
 
 ### Sass 的定义
 
 Sass：英文是 Syntactically Awesome Stylesheets Sass。最早由 Hampton Catlin 开发和设计。 一种帮助你简化 CSS 工作流程的方式，帮助你更容易维护和开发 CSS 内容。
 
-
 官网是：<https://sass-lang.com/>
 
 Sass 是这个世界上最成熟、稳定和强大的专业级 CSS 扩展语言。
 
-Sass专注的是怎样创建优雅的样式表，而不是内容。
+Sass 专注的是怎样创建优雅的样式表，而不是内容。
 
-
-### Sass、Compass与CSS
+### Sass、Compass 与 CSS
 
 **关系：**
 
-- Less/Sass是语法、Compass是框架、CSS是目标。
+- Less/Sass 是语法、Compass 是框架、CSS 是目标。
 
-**Sass&Compass的好处**：
+**Sass&Compass 的好处**：
 
-- 写出更优秀的CSS。
+- 写出更优秀的 CSS。
 
-- 解决CSS编写过程中的痛点问题，比如精灵图合图、属性的浏览器前缀处理等。
+- 解决 CSS 编写过程中的痛点问题，比如精灵图合图、属性的浏览器前缀处理等。
 
 - 有效组织样式、图片、字体等项目元素。
 
-
 **受众群体：**
 
-- 重构的同学，写很多CSS，不知如何自动化。
+- 重构的同学，写很多 CSS，不知如何自动化。
 
 - 希望在项目周期内更好地组织项目内容。
 
+## Sass 的安装
 
+sass 引擎是用 Ruby 语言开发的（但是两者的语法没有关系），因此在安装 Sass 前，需要先安装 Ruby（mac 下自带 Ruby 无需再安装 Ruby）。
 
-## Sass的安装
+下面来讲一下 Windows 下的安装 Sass 的步骤。
 
-sass引擎是用Ruby语言开发的（但是两者的语法没有关系），因此在安装 Sass 前，需要先安装Ruby（mac下自带Ruby无需再安装Ruby）。
-
-下面来讲一下 Windows 下的安装Sass的步骤。
-
-### 第一步：安装Ruby（windows环境）
+### 第一步：安装 Ruby（windows 环境）
 
 下载地址：<http://rubyinstaller.org/downloads/>
 
@@ -65,26 +57,25 @@ sass引擎是用Ruby语言开发的（但是两者的语法没有关系），因
 
 ![](http://img.smyhvae.com/20180407_2022.png)
 
-安装完ruby之后，在命令行中输入`ruby -v`，查看ruby的的版本：
+安装完 ruby 之后，在命令行中输入`ruby -v`，查看 ruby 的的版本：
 
 ![](http://img.smyhvae.com/20180407_2039.png)
 
+### 关于 Mac 下的 Ruby
 
-### 关于Mac下的Ruby
-
-刚刚说了，Mac下自带Ruby，但是版本肯定很老：
+刚刚说了，Mac 下自带 Ruby，但是版本肯定很老：
 
 ![](http://img.smyhvae.com/20180407_2145.png)
 
-有的时候，我们可能需要使用特定版本的ruby，或者在不同的ruby版本之间进行切换，所以，大家可以尝试安装`rvm`，它是ruby的版本管理工具。官网是：<https://rvm.io>
+有的时候，我们可能需要使用特定版本的 ruby，或者在不同的 ruby 版本之间进行切换，所以，大家可以尝试安装`rvm`，它是 ruby 的版本管理工具。官网是：<https://rvm.io>
 
 ### 第二步：安装 Sass
 
-安装完ruby之后，在开始菜单中，找到刚才我们安装的ruby，打开Start Command Prompt with Ruby。输入`gem install sass`安装Sass。
+安装完 ruby 之后，在开始菜单中，找到刚才我们安装的 ruby，打开 Start Command Prompt with Ruby。输入`gem install sass`安装 Sass。
 
-PS：Ruby 是使用 gem 来管理它的各种包（比如Sass）。我们安装好ruby之后，gem会自动安装上；类似于，我们安装完node之后，npm也自动安装好了。
+PS：Ruby 是使用 gem 来管理它的各种包（比如 Sass）。我们安装好 ruby 之后，gem 会自动安装上；类似于，我们安装完 node 之后，npm 也自动安装好了。
 
-但是，由于访问网络受限，我们可以先切换到淘宝的镜像，再安装Sass。步骤如下：
+但是，由于访问网络受限，我们可以先切换到淘宝的镜像，再安装 Sass。步骤如下：
 
 （1）移除默认的镜像，添加淘宝的镜像：
 
@@ -94,7 +85,7 @@ PS：Ruby 是使用 gem 来管理它的各种包（比如Sass）。我们安装�
 	gem sources -a https://ruby.taobao.org/  //注意：如果你系统不支持https，请将淘宝源更换成：gem sources -a http://gems.ruby-china.org
 ```
 
-PS：我测试了一下，Win 7 不支持https，Mac支持https。
+PS：我测试了一下，Win 7 不支持 https，Mac 支持 https。
 
 （2）查看当前使用的是哪个镜像：
 
@@ -104,23 +95,23 @@ PS：我测试了一下，Win 7 不支持https，Mac支持https。
 
 ![](http://img.smyhvae.com/20180407_2050.png)
 
-（3）安装sass：
+（3）安装 sass：
 
-紧接着，输入如下命令安装Sass：
+紧接着，输入如下命令安装 Sass：
 
 ```
 	gem install sass        // 如果mac下输入这个命令时没有权限，则需要在前面加上 sudo
 ```
 
-系统会自动安装上最新版本的Sass。
+系统会自动安装上最新版本的 Sass。
 
-查看sass版本的命令为:
+查看 sass 版本的命令为:
 
 ```
 	sass -v
 ```
 
-升级sass版本的命令为：
+升级 sass 版本的命令为：
 
 ```
 	gem update sass
@@ -138,7 +129,7 @@ PS：我测试了一下，Win 7 不支持https，Mac支持https。
 
 ## Compass 简介和安装
 
-安装完sass之后，我们在main.scss中写一些代码，然后输入如下命令，就可以将`scss文件`转化为`css文件`：
+安装完 sass 之后，我们在 main.scss 中写一些代码，然后输入如下命令，就可以将`scss文件`转化为`css文件`：
 
 ```
 	sass main.scss main.css
@@ -150,7 +141,7 @@ PS：我测试了一下，Win 7 不支持https，Mac支持https。
 
 官网是：<http://compass-style.org/>。
 
-Compass 是开源的CSS书写框架。
+Compass 是开源的 CSS 书写框架。
 
 ### Compass 安装
 
@@ -168,12 +159,11 @@ Compass 是开源的CSS书写框架。
 
 ![](http://img.smyhvae.com/20180407_2208.png)
 
-compass可以直接用来搭建前端项目的样式部分，但并不是常用的方法。
+compass 可以直接用来搭建前端项目的样式部分，但并不是常用的方法。
 
-### Compass的简单使用
+### Compass 的简单使用
 
 通过 Compass 创建工程目录：
-
 
 ```
 cd workspace //你的项目名
@@ -184,20 +174,20 @@ compass create CompassDemo
 文件结构如下：
 
 - /sass
-	- ie.scss
-	- print.scss
-	- screen.scss
+
+  - ie.scss
+  - print.scss
+  - screen.scss
 
 - /stylesheets
-	- ie.css
-	- print.css
-	- screen.css
+
+  - ie.css
+  - print.css
+  - screen.css
 
 - config.rb
 
-
-
-为了能够让文件实时编译，我们可以通过 copass watch 监听sass文件的变化：
+为了能够让文件实时编译，我们可以通过 copass watch 监听 sass 文件的变化：
 
 ```
 	cd CompassDemo
@@ -205,11 +195,9 @@ compass create CompassDemo
 	compass watch
 ```
 
-当.scss文件改动时，会自动生成对应的.css文件。
+当.scss 文件改动时，会自动生成对应的.css 文件。
 
-
-
-## Sass的语法
+## Sass 的语法
 
 ### 两种后缀名（两种语法）
 
@@ -225,11 +213,9 @@ h1
 	background: #fff
 ```
 
-这种语法是类ruby的语法，和CSS的语法相比，相差较大。所以，在3.0版本中就引入了`.scss`的语法。
+这种语法是类 ruby 的语法，和 CSS 的语法相比，相差较大。所以，在 3.0 版本中就引入了`.scss`的语法。
 
-
-
-（2）`.scss`：是css语法的超集，可以使用大括号和分号。
+（2）`.scss`：是 css 语法的超集，可以使用大括号和分号。
 
 比如：
 
@@ -240,9 +226,7 @@ h1 {
 }
 ```
 
-
 注意：一个项目中可以混合使用两种语法，但是一个文件中不能同时使用两种语法。
-
 
 **两种格式之间的转换：**
 
@@ -261,7 +245,6 @@ h1 {
 	sass-convert main.scss main.sass
 ```
 
-
 打开生成的`main.sass`，内容如下：
 
 ```
@@ -270,7 +253,6 @@ h1 {
   padding: 0
 
 ```
-
 
 ### 变量语法
 
@@ -288,8 +270,7 @@ $font1: Braggadocio, Arial, Verdana, Helvetica, sans-serif;
 $font2: Arial, Verdana, Helvetica, sans-serif;
 ```
 
-
-（2）新建文件main.scss，在里面引入步骤（1）中的变量文件：
+（2）新建文件 main.scss，在里面引入步骤（1）中的变量文件：
 
 ```
 @import "variables";    // 引入变量文件
@@ -309,21 +290,20 @@ $font2: Arial, Verdana, Helvetica, sans-serif;
 
 - 同一目录下，局部文件和非局部文件不能重名。
 
-对应生成的main.css文件如下：
+对应生成的 main.css 文件如下：
 
 main.css
 
 ```css
 /* line 9, ../sass/main.scss */
 .div1 {
-  font-family: Braggadocio, Arial, Verdana, Helvetica, sans-serif;
+	font-family: Braggadocio, Arial, Verdana, Helvetica, sans-serif;
 }
 
 /* line 13, ../sass/main.scss */
 .div2 {
-  font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
 }
-
 ```
 
 **选择器中的变量**
@@ -332,15 +312,14 @@ main.css
 $liebiao: list;
 
 .#{$liebiao}-item {
-    border-bottom: 1px solid #000;
- }
-
+	border-bottom: 1px solid #000;
+}
 ```
 
 ```css
 //效果
 .mydiv .list-item {
-  border-bottom: 1px solid #000;
+	border-bottom: 1px solid #000;
 }
 ```
 
@@ -362,63 +341,61 @@ $liebiao: list;
 
 ```
 
-
-
-二者的区别是：单行注释不会出现在自动生成的css文件中。
+二者的区别是：单行注释不会出现在自动生成的 css 文件中。
 
 ### 混合指令
 
 ```css
 //混合指令
 @mixin fangkuai100 {
-  width: 100px;
-  height: 100px;
+	width: 100px;
+	height: 100px;
 }
 //定义可以传参数的混合指令
 @mixin bc_color($c) {
-  background-color: $c;
+	background-color: $c;
 }
 ```
 
 ```css
 //使用指令
 .box1 {
-    @include fangkuai100;
-    background-color: #f00;
+	@include fangkuai100;
+	background-color: #f00;
 }
 .box2 {
-    @include fangkuai100;
-    @include bc_color(#ff0);
+	@include fangkuai100;
+	@include bc_color(#ff0);
 }
 ```
 
 ### 选择器的继承
 
 ```css
-.box1{
-    width:100px;
-    height:100px;
+.box1 {
+	width: 100px;
+	height: 100px;
 }
-.box2{
-    //表示.box2想要使用.box1的全部样式
-    //注意：这里写的选择器，别忘了加.
-    @extend .box1,[.box2];//[]可以多个
-    //公共部分呢在编译成css后会使用群组选择器包含公共样式
-    background:#fff;
+.box2 {
+	//表示.box2想要使用.box1的全部样式
+	//注意：这里写的选择器，别忘了加.
+	@extend .box1, [.box2]; //[]可以多个
+	//公共部分呢在编译成css后会使用群组选择器包含公共样式
+	background: #fff;
 }
 ```
 
 **占位符选择器**
 
 ```scss
-%jvxing{
-    //这个不会被编译到css文件中
-    width:120px;
-    height:40px;
+%jvxing {
+	//这个不会被编译到css文件中
+	width: 120px;
+	height: 40px;
 }
 
-.box5{
-    @extend %jvxing;
+.box5 {
+	@extend %jvxing;
 }
 ```
 
@@ -426,23 +403,24 @@ $liebiao: list;
 
 ```scss
 //根据按钮的大小，加不同的阴影
-@mixin btn($w,$h){
-    width:$w;
-    height:$h;
-    backgroud:#fff;
-    border-radius:5px;
-    @if($w>100px and $h>50px){ //and表示&，or表示|
-        box-shadow:5px 5px 5px #666;
-    }@else{
-        box-shadow:2px 2px 2px #666;
-    }
+@mixin btn($w, $h) {
+	width: $w;
+	height: $h;
+	backgroud: #fff;
+	border-radius: 5px;
+	@if ($w>100px and $h>50px) {
+		//and表示&，or表示|
+		box-shadow: 5px 5px 5px #666;
+	} @else {
+		box-shadow: 2px 2px 2px #666;
+	}
 }
-.btn1{
-    @inckude btn(120px,60px);
+.btn1 {
+	@inckude btn(120px,60px);
 }
-.btn2{
-    @include btn(80px,30px);
+.btn2 {
+	@include btn(80px, 30px);
 }
 ```
 
-sass中文文档<https://sass.bootcss.com/documentation/>
+sass 中文文档<https://sass.bootcss.com/documentation/>

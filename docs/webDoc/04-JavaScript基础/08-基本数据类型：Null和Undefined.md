@@ -3,15 +3,13 @@ title: 08-基本数据类型：Null 和 Undefined
 date:12/14
 ---
 
-[TOC]
-
 很多其他的语言中，只有 null；但 JS 语言中，既有 null，又有 undefined。很多人会弄混，由此觉得 JS 语言很麻烦。其实不然，学习完这篇文章后，你会发现 null 和 undefined 的区别很容易理解。
 
 ## Null：空对象
 
 null 专门用来定义一个**空对象**。例如：`let a = null`，又例如 `Object.create(null)`.
 
-如果你想定义一个变量用来保存引用类型，但是还没想好放什么内容，这个时候，可以在初始化时将其设置为 null。你可以把 null 理解为：**null 虽然是一个单独的数据类型，但null 相当于是一个 object，只不过地址为空（空指针）而已**。
+如果你想定义一个变量用来保存引用类型，但是还没想好放什么内容，这个时候，可以在初始化时将其设置为 null。你可以把 null 理解为：**null 虽然是一个单独的数据类型，但 null 相当于是一个 object，只不过地址为空（空指针）而已**。
 
 比如：
 
@@ -22,9 +20,9 @@ cosole.log(typeof myObj); // 打印结果：object
 
 补充：
 
--   Null 类型的值只有一个，就是 null。比如 `let a = null`。
+- Null 类型的值只有一个，就是 null。比如 `let a = null`。
 
--   从语义上讲，null表示一个空对象，所以使用 typeof 检查一个 null 值时，会返回 object。
+- 从语义上讲，null 表示一个空对象，所以使用 typeof 检查一个 null 值时，会返回 object。
 
 ## undefined：未定义类型
 
@@ -40,9 +38,9 @@ console.log(typeof name); // 打印结果：undefined
 
 补充：
 
--   Undefined 类型的值只有一个，就是 undefind。比如 `let a = undefined`。
+- Undefined 类型的值只有一个，就是 undefind。比如 `let a = undefined`。
 
--   使用 typeof 检查一个 undefined 值时，会返回 undefined。
+- 使用 typeof 检查一个 undefined 值时，会返回 undefined。
 
 ### case2：变量未声明（未定义）时
 
@@ -75,7 +73,7 @@ console.log(foo()); // 打印结果：undefined
 
 ```js
 function foo(name) {
-    console.log(name);
+	console.log(name);
 }
 
 foo(); // 调用函数时，未传参。执行函数后的打印结果：undefined
@@ -85,7 +83,7 @@ foo(); // 调用函数时，未传参。执行函数后的打印结果：undefin
 
 ```js
 function foo(name) {
-    name = name || 'qianguyihao';
+	name = name || 'qianguyihao';
 }
 
 foo();
@@ -103,8 +101,6 @@ foo();
 > let n1 = 2 && 3; //第一个true,设置第二个为n1的值；
 > let n2 = 0 && 2; //第一个false，n2的值为0；
 > ```
->
-> 
 
 ## 其他区别
 
@@ -112,14 +108,12 @@ undefined 实际上是由 null 衍生出来的，所以`null == undefined`的结
 
 但是 `null === undefined` 的结果是 false。它们虽然相似，但还是有区别的，其中一个区别是，和数字运算时：
 
--   10 + null 结果为 10。
+- 10 + null 结果为 10。
 
--   10 + undefined 结果为 NaN。
+- 10 + undefined 结果为 NaN。
 
 规律总结：
 
 - 任何值和 null 运算，null 可看做 0 运算。
 
--   任何数据类型和 undefined 运算都是 NaN。
-
-
+- 任何数据类型和 undefined 运算都是 NaN。

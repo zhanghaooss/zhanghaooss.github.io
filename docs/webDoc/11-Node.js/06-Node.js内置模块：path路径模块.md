@@ -3,20 +3,16 @@ title: 06-Node.js内置模块：path路径模块
 publish: true
 ---
 
-[TOC]
-
-
-
 ## path 路径模块
 
-Node.js 通过`path`这个内置模块，提供了一些路径操作的API，具体可以参考官方的api文档。这里列举一些常用的API。
+Node.js 通过`path`这个内置模块，提供了一些路径操作的 API，具体可以参考官方的 api 文档。这里列举一些常用的 API。
 
 ### path.extname() 获取文件/路径的扩展名
 
 语法格式：
 
 ```js
- path.extname(myPath);
+path.extname(myPath);
 ```
 
 代码解释：
@@ -34,16 +30,15 @@ path.extname('hello.txt'); // 返回 '.txt'
 
 path.extname('www.qianguyihao.com'); // 返回 '.com'
 
-path.extname('index.coffee.md');  // 返回 '.md'
+path.extname('index.coffee.md'); // 返回 '.md'
 
-path.extname('index.');  // 返回 '.'
+path.extname('index.'); // 返回 '.'
 
-path.extname('index');  // 返回 ''
+path.extname('index'); // 返回 ''
 
-path.extname('.index');  // 返回 ''
+path.extname('.index'); // 返回 ''
 
-path.extname('.index.md');  // 返回 '.md'
-
+path.extname('.index.md'); // 返回 '.md'
 ```
 
 ### path.resolve() 生成完成的绝对路径
@@ -51,7 +46,7 @@ path.extname('.index.md');  // 返回 '.md'
 语法格式：
 
 ```js
-path.resolve([...myPaths])
+path.resolve([...myPaths]);
 ```
 
 解释：
@@ -80,8 +75,7 @@ console.log(result2); // 打印结果：/qianguyihao/foo3
 
 - `__filename`：这是一个常量。表示：当前执行文件的**完整目录 + 文件名**。
 
-- `process.cwd`：获取当前执行 Node命令 时的目录名。
-
+- `process.cwd`：获取当前执行 Node 命令 时的目录名。
 
 代码举例：
 
@@ -111,7 +105,6 @@ $ node app.js
 
 ```js
 path.join([...paths]);
-
 ```
 
 解释：使用平台特定的分隔符作为定界符将所有给定的 path 片段连接在一起，然后规范化生成的路径。
@@ -133,10 +126,4 @@ console.log(result3); // 返回：/foo1/foo2/foo3
 
 ## OS 系统模块
 
-
 - os.networkInterfaces() 查看网络地址
-
-
-
-
-

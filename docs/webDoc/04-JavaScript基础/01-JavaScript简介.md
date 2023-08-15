@@ -3,17 +3,15 @@ title: 01-JavaScript简介
 date:12/14
 ---
 
-[TOC]
-
 ## JavaScript 历史和发展
 
 Web 前端有三层：
 
--   HTML：从语义的角度，描述页面**结构**
+- HTML：从语义的角度，描述页面**结构**
 
--   CSS：从审美的角度，描述**样式**（美化页面）
+- CSS：从审美的角度，描述**样式**（美化页面）
 
--   JavaScript（简称 JS）：从交互的角度，描述**行为**（实现业务逻辑和页面控制）
+- JavaScript（简称 JS）：从交互的角度，描述**行为**（实现业务逻辑和页面控制）
 
 ### JavaScript 的历史
 
@@ -41,7 +39,7 @@ Web 前端有三层：
 
 推荐阅读链接：
 
--   [网道 | JavaScript 语言的历史](https://wangdoc.com/javascript/basic/history.html)
+- [网道 | JavaScript 语言的历史](https://wangdoc.com/javascript/basic/history.html)
 
 ###JavaScript 的发展：蒸蒸日上
 
@@ -81,11 +79,11 @@ JavaScript 的发展，正在大放异彩，正如周爱民的《JavaScript 语�
 
 ### JavaScript 入门易学性
 
--   JavaScript 对初学者比较友好。可以使用任何文本编辑工具编写，只需要浏览器就可以执行程序。
+- JavaScript 对初学者比较友好。可以使用任何文本编辑工具编写，只需要浏览器就可以执行程序。
 
--   JavaScript 是有界面效果的（相比之下，C 语言只有白底黑字）。
+- JavaScript 是有界面效果的（相比之下，C 语言只有白底黑字）。
 
--   JavaScript 的入门较简单（进阶不易）。比如，JS 是**弱变量类型**的语言，变量只需要用 var/let/const 来声明。而 Java 中变量的声明，要根据变量的类型来定义。
+- JavaScript 的入门较简单（进阶不易）。比如，JS 是**弱变量类型**的语言，变量只需要用 var/let/const 来声明。而 Java 中变量的声明，要根据变量的类型来定义。
 
 Java 中需要这样定义变量：
 
@@ -120,11 +118,11 @@ let a;
 
 JavaScript 基础分为三个部分：
 
--   **ECMAScript**：JavaScript 的**语法标准**。包括变量、表达式、运算符、函数、if 语句、for 语句等。
+- **ECMAScript**：JavaScript 的**语法标准**。包括变量、表达式、运算符、函数、if 语句、for 语句等。
 
--   **DOM**：Document Object Model（文档对象模型），JS 操作**页面上的元素**（标签）的 API。比如让盒子移动、变色、改变大小、轮播图等等。
+- **DOM**：Document Object Model（文档对象模型），JS 操作**页面上的元素**（标签）的 API。比如让盒子移动、变色、改变大小、轮播图等等。
 
--   **BOM**：Browser Object Model（浏览器对象模型），JS 操作**浏览器部分功能**的 API。通过 BOM 可以操作浏览器窗口，比如弹框、控制浏览器跳转、获取浏览器分辨率等等。
+- **BOM**：Browser Object Model（浏览器对象模型），JS 操作**浏览器部分功能**的 API。通过 BOM 可以操作浏览器窗口，比如弹框、控制浏览器跳转、获取浏览器分辨率等等。
 
 通俗理解就是：ECMAScript 是 JS 的语法；DOM 和 BOM 是浏览器运行环境为 JS 提供的 API。
 
@@ -154,27 +152,27 @@ ECMAScript 在 2015 年 6 月，发布了 ECMAScript 6 版本（ES6），语言�
 
 ECMA 赋予了 JavaScript 新的能力和活力。
 
-## javascript的学习路线
+## javascript 的学习路线
 
 JavaScript 学习路线
 
-了解JavaScript的基础，包括：
+了解 JavaScript 的基础，包括：
 
-JavaScript的历史和发展
+JavaScript 的历史和发展
 
-JavaScript语言的基本概念
+JavaScript 语言的基本概念
 
-JavaScript语法
+JavaScript 语法
 
 数据类型、函数、对象
 
-学习HTML和CSS，掌握网页开发的基本技能
+学习 HTML 和 CSS，掌握网页开发的基本技能
 
-学习DOM（文档对象模型）
+学习 DOM（文档对象模型）
 
-了解JavaScript的客户端API，包括：
+了解 JavaScript 的客户端 API，包括：
 
-HTML的表单控件
+HTML 的表单控件
 
 浏览器和窗口
 
@@ -182,11 +180,11 @@ HTML的表单控件
 
 事件
 
-客户端存储和cookie
+客户端存储和 cookie
 
-学习Ajax（异步JavaScript和XML），使用Ajax开发动态网页
+学习 Ajax（异步 JavaScript 和 XML），使用 Ajax 开发动态网页
 
-学习JavaScript的高级话题，例如：
+学习 JavaScript 的高级话题，例如：
 
 单页应用（SPA）
 
@@ -200,4 +198,4 @@ WebGL 等
 
 学习前端框架，如：React、Vue、Angular 等
 
-学习Node.js，掌握服务器端开发
+学习 Node.js，掌握服务器端开发

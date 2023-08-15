@@ -3,12 +3,7 @@ title: 14-CSS3属性详解：Web字体
 date:12/27
 ---
 
-[TOC]
-
-
-
 ## 前言
-
 
 开发人员可以为自已的网页指定特殊的字体（将指定字体提前下载到站点中），无需考虑用户电脑上是否安装了此特殊字体。从此，把特殊字体处理成图片的方式便成为了过去。
 
@@ -18,48 +13,43 @@ date:12/27
 
 > 不同浏览器所支持的字体格式是不一样的，我们有必要了解一下字体格式的知识。
 
-#### TureTpe格式：(**.ttf**)
+#### TureTpe 格式：(**.ttf**)
 
-.ttf 字体是Windows和Mac的最常见的字体，是一种RAW格式。
+.ttf 字体是 Windows 和 Mac 的最常见的字体，是一种 RAW 格式。
 
-支持这种字体的浏览器有IE9+、Firefox3.5+、Chrome4+、Safari3+、Opera10+、iOS Mobile、Safari4.2+。
+支持这种字体的浏览器有 IE9+、Firefox3.5+、Chrome4+、Safari3+、Opera10+、iOS Mobile、Safari4.2+。
 
+#### OpenType 格式：(**.otf**)
 
+.otf 字体被认为是一种原始的字体格式，其内置在 TureType 的基础上。
 
-#### OpenType格式：(**.otf**)
+支持这种字体的浏览器有 Firefox3.5+、Chrome4.0+、Safari3.1+、Opera10.0+、iOS Mobile、Safari4.2+。
 
-.otf 字体被认为是一种原始的字体格式，其内置在TureType的基础上。
+#### Web Open Font Format 格式：(**.woff**)
 
-支持这种字体的浏览器有Firefox3.5+、Chrome4.0+、Safari3.1+、Opera10.0+、iOS Mobile、Safari4.2+。
+woff 字体是 Web 字体中最佳格式，他是一个开放的 TrueType/OpenType 的压缩版本，同时也支持元数据包的分离。
 
+支持这种字体的浏览器有 IE9+、Firefox3.5+、Chrome6+、Safari3.6+、Opera11.1+。
 
-#### Web Open Font Format格式：(**.woff**)
+#### Embedded Open Type 格式：(**.eot**)
 
-woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType的压缩版本，同时也支持元数据包的分离。
+.eot 字体是 IE 专用字体，可以从 TrueType 创建此格式字体，支持这种字体的浏览器有 IE4+。
 
-支持这种字体的浏览器有IE9+、Firefox3.5+、Chrome6+、Safari3.6+、Opera11.1+。
+#### SVG 格式：(**.svg**)
 
-#### Embedded Open Type格式：(**.eot**)
+.svg 字体是基于 SVG 字体渲染的一种格式。
 
-.eot字体是IE专用字体，可以从TrueType创建此格式字体，支持这种字体的浏览器有IE4+。
-
-#### SVG格式：(**.svg**)
-
-.svg字体是基于SVG字体渲染的一种格式。
-
-支持这种字体的浏览器有Chrome4+、Safari3.1+、Opera10.0+、iOS Mobile Safari3.2+。
+支持这种字体的浏览器有 Chrome4+、Safari3.1+、Opera10.0+、iOS Mobile Safari3.2+。
 
 **总结：**
 
 了解了上面的知识后，**我们就需要为不同的浏览器准备不同格式的字体**。通常我们会通过字体生成工具帮我们生成各种格式的字体，因此无需过于在意字体格式之间的区别。
-
 
 下载字体的网站推荐：
 
 - <http://www.zhaozi.cn/>
 
 - <http://www.youziku.com/>
-
 
 ## WebFont 的使用步骤
 
@@ -75,39 +65,41 @@ woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType�
 
 ![](http://img.smyhvae.com/20180220_1336.png)
 
-上图中， 我们把箭头处的html文件打开，里面告诉了我们 webfont 的**使用步骤**：
+上图中， 我们把箭头处的 html 文件打开，里面告诉了我们 webfont 的**使用步骤**：
 
 ![](http://img.smyhvae.com/20180220_1338.png)
 
-（1）第一步：使用font-face声明字体
+（1）第一步：使用 font-face 声明字体
 
 ```css
-@font-face {font-family: 'webfont';
-    src: url('webfont.eot'); /* IE9*/
-    src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('webfont.woff') format('woff'), /* chrome、firefox */
-    url('webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+@font-face {
+	font-family: 'webfont';
+	src: url('webfont.eot'); /* IE9*/
+	src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('webfont.woff')
+			format('woff'), /* chrome、firefox */ url('webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+			url('webfont.svg#webfont') format('svg'); /* iOS 4.1- */
 }
 ```
 
-
-（2）第二步：定义使用webfont的样式
+（2）第二步：定义使用 webfont 的样式
 
 ```css
-.web-font{
-    font-family:"webfont" !important;
-    font-size:16px;font-style:normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;}
+.web-font {
+	font-family: 'webfont' !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
 ```
-
 
 （3）第三步：为文字加上对应的样式
 
 ```html
-<i class="web-font">这一分钟，你和我在一起，因为你，我会记得那一分钟。从现在开始，我们就是一分钟的朋友。这是事实，你改变不了，因为已经完成了。</i>
+<i class="web-font"
+	>这一分钟，你和我在一起，因为你，我会记得那一分钟。从现在开始，我们就是一分钟的朋友。这是事实，你改变不了，因为已经完成了。</i
+>
 ```
 
 **举例：**
@@ -117,48 +109,45 @@ woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType�
 ```html
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
+	<head lang="en">
+		<meta charset="UTF-8" />
+		<title></title>
+		<style>
+			p {
+				font-size: 30px;
+			}
 
-        p{
-            font-size:30px;
-        }
-
-        /*  如果要在网页中使用web字体（用户电脑上没有这种字体）*/
-        /* 第一步：声明字体*/
-        /* 告诉浏览器 去哪找这个字体*/
-        @font-face {font-family: 'my-web-font';
-            src: url('font/webfont.eot'); /* IE9*/
-            src: url('font/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-            url('font/webfont.woff') format('woff'), /* chrome、firefox */
-            url('font/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-            url('font/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
-        }
-        /* 第二步：定义一个类名，谁加这类名，就会使用 webfont 字体*/
-        .webfont{
-            font-family: 'my-web-font';
-        }
-    </style>
-</head>
-<body>
-    <!-- 第三步：引用 webfont 字体 -->
-    <p class="webfont">生命壹号，永不止步</p>
-</body>
+			/*  如果要在网页中使用web字体（用户电脑上没有这种字体）*/
+			/* 第一步：声明字体*/
+			/* 告诉浏览器 去哪找这个字体*/
+			@font-face {
+				font-family: 'my-web-font';
+				src: url('font/webfont.eot'); /* IE9*/
+				src: url('font/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+						url('font/webfont.woff') format('woff'),
+					/* chrome、firefox */ url('font/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+						url('font/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+			}
+			/* 第二步：定义一个类名，谁加这类名，就会使用 webfont 字体*/
+			.webfont {
+				font-family: 'my-web-font';
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 第三步：引用 webfont 字体 -->
+		<p class="webfont">生命壹号，永不止步</p>
+	</body>
 </html>
 ```
-
 
 代码解释：
 
 （1）`my-web-font`这个名字是随便起的，只要保证第一步和第二步中的名字一样就行。
 
-（2）因为我把字体文件单独放在了font文件夹中，所以在src中引用字体资源时，写的路径是 `font/...`
+（2）因为我把字体文件单独放在了 font 文件夹中，所以在 src 中引用字体资源时，写的路径是 `font/...`
 
-工程文件：[2018-02-20-WebFont举例.zip](https://github.com/qianguyihao/web-resource/blob/main/project/2018-02-20-WebFont%E4%B8%BE%E4%BE%8B.zip)
-
-
+工程文件：[2018-02-20-WebFont 举例.zip](https://github.com/qianguyihao/web-resource/blob/main/project/2018-02-20-WebFont%E4%B8%BE%E4%BE%8B.zip)
 
 ## 字体图标（阿里的 iconfont 网站举例）
 
@@ -178,60 +167,59 @@ woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType�
 
 ![](http://img.smyhvae.com/20180220_1750.png)
 
-压缩包下载之后，解压，打开里面的demo.html，里面告诉了我们怎样引用这些图标。
+压缩包下载之后，解压，打开里面的 demo.html，里面告诉了我们怎样引用这些图标。
 
 ![](http://img.smyhvae.com/20180220_1755.png)
 
-**举例1**：（图标字体引用）
+**举例 1**：（图标字体引用）
 
 ```html
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-        /*申明字体*/
-        @font-face {font-family: 'iconfont';
-            src: url('font/iconfont.eot'); /* IE9*/
-            src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-            url('font/iconfont.woff') format('woff'), /* chrome、firefox */
-            url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-            url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
-        }
+	<head lang="en">
+		<meta charset="UTF-8" />
+		<title></title>
+		<style>
+			/*申明字体*/
+			@font-face {
+				font-family: 'iconfont';
+				src: url('font/iconfont.eot'); /* IE9*/
+				src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+						url('font/iconfont.woff') format('woff'),
+					/* chrome、firefox */ url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+						url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+			}
 
-        .iconfont{
-            font-family: iconfont;
-        }
+			.iconfont {
+				font-family: iconfont;
+			}
 
-        p{
-            width: 200px;
-            border: 1px solid #000;
-            line-height: 60px;
-            font-size:30px;
-            margin:100px auto;
-            text-align: center;
-        }
+			p {
+				width: 200px;
+				border: 1px solid #000;
+				line-height: 60px;
+				font-size: 30px;
+				margin: 100px auto;
+				text-align: center;
+			}
 
-        p span{
-            color:red;
-        }
-    </style>
-</head>
-<body>
-    <!-- 【重要】编码代表图标 -->
-    <p><span class="iconfont">&#xe628;</span>扫码付款</p>
-</body>
+			p span {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 【重要】编码代表图标 -->
+		<p><span class="iconfont">&#xe628;</span>扫码付款</p>
+	</body>
 </html>
-
 ```
 
 效果如下：
 
 ![](http://img.smyhvae.com/20180220_1800.png)
 
-
-**举例2**：（伪元素的方式使用图标字体）
+**举例 2**：（伪元素的方式使用图标字体）
 
 如果想要在文字的前面加图标字体，我们更习惯采用**伪元素**的方式进行添加。
 
@@ -240,66 +228,60 @@ woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType�
 ```html
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-        /*申明字体*/
-        @font-face {font-family: 'iconfont';
-            src: url('font/iconfont.eot'); /* IE9*/
-            src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-            url('font/iconfont.woff') format('woff'), /* chrome、firefox */
-            url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-            url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
-        }
+	<head lang="en">
+		<meta charset="UTF-8" />
+		<title></title>
+		<style>
+			/*申明字体*/
+			@font-face {
+				font-family: 'iconfont';
+				src: url('font/iconfont.eot'); /* IE9*/
+				src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+						url('font/iconfont.woff') format('woff'),
+					/* chrome、firefox */ url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+						url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+			}
 
+			p {
+				width: 200px;
+				border: 1px solid #000;
+				line-height: 60px;
+				font-size: 30px;
+				margin: 100px auto;
+				text-align: center;
+				position: relative;
+			}
 
+			.icon::before {
+				/*&#xe628;*/
+				content: '\e628';
+				/*position: absolute;*/
+				/*left:10px;*/
+				/*top:0px;*/
+				font-family: iconfont;
+				color: red;
+			}
 
-        p{
-            width: 200px;
-            border: 1px solid #000;
-            line-height: 60px;
-            font-size:30px;
-            margin:100px auto;
-            text-align: center;
-            position: relative;
-        }
-
-        .icon::before{
-            /*&#xe628;*/
-            content:"\e628";
-            /*position: absolute;*/
-            /*left:10px;*/
-            /*top:0px;*/
-            font-family: iconfont;
-            color:red;
-        }
-
-        span{
-            position: relative;
-
-        }
-
-
-    </style>
-</head>
-<body>
-    <p class="icon">扫码付款</p>
-    <span class="icon" >我是span</span>
-    <div class="icon">divvvvvvvvvvv</div>
-</body>
+			span {
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="icon">扫码付款</p>
+		<span class="icon">我是span</span>
+		<div class="icon">divvvvvvvvvvv</div>
+	</body>
 </html>
-
 ```
 
 效果如下：
 
 ![](http://img.smyhvae.com/20180220_1815.png)
 
-
 ~工程文件~：
 
-- 2018-02-20-图标字体demo.zip
+- 2018-02-20-图标字体 demo.zip
 
 - 下载链接暂无。
 
@@ -313,16 +295,15 @@ woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType�
 
 - <https://icomoon.io/>
 
-SVG素材：
+SVG 素材：
 
 - <https://www.iconfont.cn/>
 
-这里涉及到：jQuery fullPage   全屏滚动插件。
+这里涉及到：jQuery fullPage 全屏滚动插件。
 
 - 中文网址:http://www.dowebok.com
 
 - 相关说明:http://www.dowebok.com/77.html
-
 
 ## 使用 Bootstrap 网站的图标字体
 
@@ -338,41 +319,27 @@ SVG素材：
 
 （1）如图只是想要字体的话，可以把`css`和`font`这两个文件夹拷贝到项目里。
 
-（2）在html文档中的 <head> 标签里，引入 font-awesome.min.css 文件：
+（2）在 html 文档中的 <head> 标签里，引入 font-awesome.min.css 文件：
 
 ```html
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css" />
 ```
 
-（3）想在哪个标签里用这个图标，直接在这个标签里加className就行（className都在[网站](http://www.bootcss.com/p/font-awesome/)上列出来了）。
-
+（3）想在哪个标签里用这个图标，直接在这个标签里加 className 就行（className 都在[网站](http://www.bootcss.com/p/font-awesome/)上列出来了）。
 
 完整版代码如下：
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <style>
-
-    </style>
-</head>
-<body>
-    <span class="icon-play">播放</span>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Title</title>
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<style></style>
+	</head>
+	<body>
+		<span class="icon-play">播放</span>
+	</body>
 </html>
 ```
-
-
-
-
-
-
-
-
-
-
-

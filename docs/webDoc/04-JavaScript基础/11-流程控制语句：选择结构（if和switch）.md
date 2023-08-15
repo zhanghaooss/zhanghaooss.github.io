@@ -10,8 +10,6 @@ if-else 替换为 if return(配合函数)；
 switch穿透，case语句是从符合条件的一条语句往后执行的，有break就跳过该case'
 ---
 
-[TOC]
-
 ## 代码块
 
 用`{}`包围起来的代码，就是代码块。
@@ -20,9 +18,9 @@ switch穿透，case语句是从符合条件的一条语句往后执行的，有b
 
 ```javascript
 {
-    var a = 2;
-    alert('qianguyihao');
-    console.log('千古壹号');
+	var a = 2;
+	alert('qianguyihao');
+	console.log('千古壹号');
 }
 
 console.log('a = ' + a);
@@ -41,11 +39,11 @@ a = 2
 
 ### 流程控制语句分类
 
--   顺序结构
+- 顺序结构
 
--   选择结构：if 语句、switch 语句
+- 选择结构：if 语句、switch 语句
 
--   循环结构：while 语句、for 语句
+- 循环结构：while 语句、for 语句
 
 ## 顺序结构
 
@@ -59,11 +57,11 @@ if 语句有以下三种形式。
 
 ### if 语句的三种形式
 
-形式1：（条件成立才执行。如果条件不成立，那就什么都不做）
+形式 1：（条件成立才执行。如果条件不成立，那就什么都不做）
 
 ```javascript
 if (条件表达式) {
-    // 条件为真时，做的事情
+	// 条件为真时，做的事情
 }
 ```
 
@@ -73,29 +71,29 @@ if (条件表达式) {
 
 ```javascript
 if (条件表达式) {
-    // 条件为真时，做的事情
+	// 条件为真时，做的事情
 } else {
-    // 条件为假时，做的事情
+	// 条件为假时，做的事情
 }
 ```
 
-形式3：（多分支的 if 语句）
+形式 3：（多分支的 if 语句）
 
 ```javascript
 if (条件表达式1) {
-    // 条件1为真时，做的事情
+	// 条件1为真时，做的事情
 } else if (条件表达式2) {
-    // 条件1不满足，条件2满足时，做的事情
+	// 条件1不满足，条件2满足时，做的事情
 } else if (条件表达式3) {
-    // 条件1、2不满足，条件3满足时，做的事情
+	// 条件1、2不满足，条件3满足时，做的事情
 } else {
-    // 条件1、2、3都不满足时，做的事情
+	// 条件1、2、3都不满足时，做的事情
 }
 ```
 
 <u>以上所有的语句体中，只执行其中一个。</u>
 
-* **条件表达式可以为普通变量，null,undefined,' ',0,NaN都是false，其余的都是true**
+- **条件表达式可以为普通变量，null,undefined,' ',0,NaN 都是 false，其余的都是 true**
 
 ### 做个题目
 
@@ -129,15 +127,15 @@ const weight = parseFloat(prompt('请输入体重，单位是公斤'));
 const BMI = weight / Math.pow(height, 2);
 //第三步，if语句来判断
 if (BMI < 18.5) {
-    alert('偏瘦');
+	alert('偏瘦');
 } else if (BMI < 25) {
-    alert('正常');
+	alert('正常');
 } else if (BMI < 28) {
-    alert('过重');
+	alert('过重');
 } else if (BMI <= 32) {
-    alert('肥胖');
+	alert('肥胖');
 } else {
-    alert('非常肥胖');
+	alert('非常肥胖');
 }
 ```
 
@@ -151,15 +149,15 @@ const weight = parseFloat(prompt('请输入体重，单位是公斤'));
 const BMI = weight / Math.pow(height, 2);
 //第三步，if语句来判断
 if (BMI > 32) {
-    alert('非常肥胖');
+	alert('非常肥胖');
 } else if (BMI >= 28) {
-    alert('肥胖');
+	alert('肥胖');
 } else if (BMI >= 25) {
-    alert('过重');
+	alert('过重');
 } else if (BMI >= 18.5) {
-    alert('正常');
+	alert('正常');
 } else {
-    alert('偏瘦');
+	alert('偏瘦');
 }
 ```
 
@@ -185,21 +183,21 @@ const sheng = parseFloat(prompt('您想加多少升？'));
 
 //第二步，判断
 if (bianhao == 92) {
-    //编号是92的时候做的事情
-    if (sheng >= 20) {
-        const price = sheng * 5.9;
-    } else {
-        const price = sheng * 6;
-    }
+	//编号是92的时候做的事情
+	if (sheng >= 20) {
+		const price = sheng * 5.9;
+	} else {
+		const price = sheng * 6;
+	}
 } else if (bianhao == 97) {
-    //编号是97的时候做的事情
-    if (sheng >= 30) {
-        const price = sheng * 6.95;
-    } else {
-        const price = sheng * 7;
-    }
+	//编号是97的时候做的事情
+	if (sheng >= 30) {
+		const price = sheng * 6.95;
+	} else {
+		const price = sheng * 7;
+	}
 } else {
-    alert('不好意思，没有这个编号的汽油！');
+	alert('不好意思，没有这个编号的汽油！');
 }
 
 alert('价格是' + price);
@@ -246,10 +244,10 @@ switch(表达式) {
 
 ### switch 语句的结束条件【非常重要】
 
--   情况 a：遇到 break 就结束（而不是遇到 default 就结束）。因为 break 在此处的作用是，立即结束并退出整个 switch 语句。
--   情况 b：执行到程序的末尾就结束。
+- 情况 a：遇到 break 就结束（而不是遇到 default 就结束）。因为 break 在此处的作用是，立即结束并退出整个 switch 语句。
+- 情况 b：执行到程序的末尾就结束。
 
-我们稍后讲 case穿透的时候，你就会明白其中的奥妙了。
+我们稍后讲 case 穿透的时候，你就会明白其中的奥妙了。
 
 ### 注意点
 
@@ -257,7 +255,7 @@ switch(表达式) {
 
 <u>case 后面的值可以是变量、常量、表达式。</u>
 
-2、<u>**case的判断逻辑是`===`，不是`==`**。因此，字符串`'6'`和 数字 `6` 是不一样的。</u>
+2、<u>**case 的判断逻辑是`===`，不是`==`**。因此，字符串`'6'`和 数字 `6` 是不一样的。</u>
 
 举例 1：
 
@@ -265,18 +263,18 @@ switch(表达式) {
 let msg = 'notice';
 
 switch (msg) {
-    case 'notice':
-        console.log('提示');
-        break;
-    case 'warning':
-        console.log('警告');
-        break;
-    case 'error':
-        console.log('错误');
-        break;
-    default:
-        console.log('默认文案');
-        break;
+	case 'notice':
+		console.log('提示');
+		break;
+	case 'warning':
+		console.log('警告');
+		break;
+	case 'error':
+		console.log('错误');
+		break;
+	default:
+		console.log('默认文案');
+		break;
 }
 ```
 
@@ -286,24 +284,24 @@ switch (msg) {
 let age = 28;
 
 switch (true) {
-    case age < 18:
-        console.log('未成年人');
-        break;
-    case age >= 18 && age <= 65:
-        console.log('还能干活儿');
-        break;
-    case age > 65:
-        console.log('该退休了');
-        break;
-    default:
-        console.log('默认文案');
-        break;
+	case age < 18:
+		console.log('未成年人');
+		break;
+	case age >= 18 && age <= 65:
+		console.log('还能干活儿');
+		break;
+	case age > 65:
+		console.log('该退休了');
+		break;
+	default:
+		console.log('默认文案');
+		break;
 }
 ```
 
 上方代码解释：由于 switch 里的值是 true，所以，在众多的 case 语句中，会去匹配第一个符合 `case true`的语句，然后命中这条语句。
 
-3、<u>default不一定要写在最后面。 switch 中的 default 无论放到什么位置，都会等到所有case 都不匹配再执行。default 也可以省略</u>。
+3、<u>default 不一定要写在最后面。 switch 中的 default 无论放到什么位置，都会等到所有 case 都不匹配再执行。default 也可以省略</u>。
 
 ### case 穿透
 
@@ -318,30 +316,30 @@ const num = 4;
 
 //switch判断语句
 switch (num) {
-    case 1:
-        console.log('星期一');
-        break;
-    case 2:
-        console.log('星期二');
-        break;
-    case 3:
-        console.log('星期三');
-        break;
-    case 4:
-        console.log('星期四');
-    //break;
-    case 5:
-        console.log('星期五');
-    //break;
-    case 6:
-        console.log('星期六');
-        break;
-    case 7:
-        console.log('星期日');
-        break;
-    default:
-        console.log('你输入的数据有误');
-        break;
+	case 1:
+		console.log('星期一');
+		break;
+	case 2:
+		console.log('星期二');
+		break;
+	case 3:
+		console.log('星期三');
+		break;
+	case 4:
+		console.log('星期四');
+	//break;
+	case 5:
+		console.log('星期五');
+	//break;
+	case 6:
+		console.log('星期六');
+		break;
+	case 7:
+		console.log('星期日');
+		break;
+	default:
+		console.log('你输入的数据有误');
+		break;
 }
 ```
 
@@ -362,18 +360,18 @@ switch (num) {
 const number = 5;
 
 switch (number) {
-    default:
-        console.log('我是defaul语句');
-    // break;
-    case 2:
-        console.log('第二个呵呵:' + number);
-    //break;
-    case 3:
-        console.log('第三个呵呵:' + number);
-        break;
-    case 4:
-        console.log('第四个呵呵:' + number);
-        break;
+	default:
+		console.log('我是defaul语句');
+	// break;
+	case 2:
+		console.log('第二个呵呵:' + number);
+	//break;
+	case 3:
+		console.log('第三个呵呵:' + number);
+		break;
+	case 4:
+		console.log('第四个呵呵:' + number);
+		break;
 }
 ```
 
@@ -399,24 +397,24 @@ switch (number) {
 let retCode = 1003; // 返回码 retCode 的值可能有很多种情况
 
 if (retCode == 0) {
-    alert('接口联调成功');
+	alert('接口联调成功');
 } else if (retCode == 101) {
-    alert('活动不存在');
+	alert('活动不存在');
 } else if (retCode == 103) {
-    alert('活动未开始');
+	alert('活动未开始');
 } else if (retCode == 104) {
-    alert('活动已结束');
+	alert('活动已结束');
 } else if (retCode == 1001) {
-    alert('参数错误');
+	alert('参数错误');
 } else if (retCode == 1002) {
-    alert('接口频率限制');
+	alert('接口频率限制');
 } else if (retCode == 1003) {
-    alert('未登录');
+	alert('未登录');
 } else if (retCode == 1004) {
-    alert('（风控用户）提示 活动太火爆啦~军万马都在挤，请稍后再试');
+	alert('（风控用户）提示 活动太火爆啦~军万马都在挤，请稍后再试');
 } else {
-    // 其他异常返回码
-    alert('系统君失联了，请稍候再试');
+	// 其他异常返回码
+	alert('系统君失联了，请稍候再试');
 }
 ```
 
@@ -432,49 +430,49 @@ handleRetCode(retCode);
 
 // 方法：根据接口不同的返回码，处理前端不同的显示状态
 function handleRetCode(retCode) {
-    if (retCode == 0) {
-        alert('接口联调成功');
-        return;
-    }
+	if (retCode == 0) {
+		alert('接口联调成功');
+		return;
+	}
 
-    if (retCode == 101) {
-        alert('活动不存在');
-        return;
-    }
+	if (retCode == 101) {
+		alert('活动不存在');
+		return;
+	}
 
-    if (retCode == 103) {
-        alert('活动未开始');
-        return;
-    }
+	if (retCode == 103) {
+		alert('活动未开始');
+		return;
+	}
 
-    if (retCode == 104) {
-        alert('活动已结束');
-        return;
-    }
+	if (retCode == 104) {
+		alert('活动已结束');
+		return;
+	}
 
-    if (retCode == 1001) {
-        alert('参数错误');
-        return;
-    }
+	if (retCode == 1001) {
+		alert('参数错误');
+		return;
+	}
 
-    if (retCode == 1002) {
-        alert('接口频率限制');
-        return;
-    }
+	if (retCode == 1002) {
+		alert('接口频率限制');
+		return;
+	}
 
-    if (retCode == 1003) {
-        alert('未登录');
-        return;
-    }
+	if (retCode == 1003) {
+		alert('未登录');
+		return;
+	}
 
-    if (retCode == 1004) {
-        alert('（风控用户）提示 活动太火爆啦~军万马都在挤，请稍后再试');
-        return;
-    }
+	if (retCode == 1004) {
+		alert('（风控用户）提示 活动太火爆啦~军万马都在挤，请稍后再试');
+		return;
+	}
 
-    // 其他异常返回码
-    alert('系统君失联了，请稍候再试');
-    return;
+	// 其他异常返回码
+	alert('系统君失联了，请稍候再试');
+	return;
 }
 ```
 
@@ -488,41 +486,41 @@ function handleRetCode(retCode) {
 let retCode = 1003; // 返回码 retCode 的值可能有很多种情况
 
 switch (retCode) {
-    case 0:
-        alert('接口联调成功');
-        break;
-    case 101:
-        alert('活动不存在');
-        break;
+	case 0:
+		alert('接口联调成功');
+		break;
+	case 101:
+		alert('活动不存在');
+		break;
 
-    case 103:
-        alert('活动未开始');
-        break;
+	case 103:
+		alert('活动未开始');
+		break;
 
-    case 104:
-        alert('活动已结束');
-        break;
+	case 104:
+		alert('活动已结束');
+		break;
 
-    case 1001:
-        alert('参数错误');
-        break;
+	case 1001:
+		alert('参数错误');
+		break;
 
-    case 1002:
-        alert('接口频率限制');
-        break;
+	case 1002:
+		alert('接口频率限制');
+		break;
 
-    case 1003:
-        alert('未登录');
-        break;
+	case 1003:
+		alert('未登录');
+		break;
 
-    case 1004:
-        alert('（风控用户）提示 活动太火爆啦~军万马都在挤，请稍后再试');
-        break;
+	case 1004:
+		alert('（风控用户）提示 活动太火爆啦~军万马都在挤，请稍后再试');
+		break;
 
-    // 其他异常返回码
-    default:
-        alert('系统君失联了，请稍候再试');
-        break;
+	// 其他异常返回码
+	default:
+		alert('系统君失联了，请稍候再试');
+		break;
 }
 ```
 
@@ -536,36 +534,36 @@ switch (retCode) {
 let day = 2;
 
 switch (day) {
-    case 1:
-        console.log('work');
-        break;
+	case 1:
+		console.log('work');
+		break;
 
-    case 2:
-        console.log('work');
-        break;
+	case 2:
+		console.log('work');
+		break;
 
-    case 3:
-        console.log('work');
-        break;
+	case 3:
+		console.log('work');
+		break;
 
-    case 4:
-        console.log('work');
-        break;
+	case 4:
+		console.log('work');
+		break;
 
-    case 5:
-        console.log('work');
-        break;
+	case 5:
+		console.log('work');
+		break;
 
-    case 6:
-        console.log('relax');
-        break;
+	case 6:
+		console.log('relax');
+		break;
 
-    case 7:
-        console.log('relax');
-        break;
+	case 7:
+		console.log('relax');
+		break;
 
-    default:
-        break;
+	default:
+		break;
 }
 ```
 
@@ -579,21 +577,21 @@ switch (day) {
 let day = 2;
 
 switch (day) {
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-        console.log('work');
-        break; // 在这里放一个 break
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+	case 5:
+		console.log('work');
+		break; // 在这里放一个 break
 
-    case 6:
-    case 7:
-        console.log('relax');
-        break; // 在这里放一个 break
+	case 6:
+	case 7:
+		console.log('relax');
+		break; // 在这里放一个 break
 
-    default:
-        break;
+	default:
+		break;
 }
 ```
 
@@ -603,9 +601,9 @@ switch (day) {
 
 ## 补充
 
-### if 和 switch如何选择
+### if 和 switch 如何选择
 
-<u>如果是对区间进行判断，则建议用 if。如果是对几个固定的值进行判断，那么，数量少的话用 if，数量多的话用switch。</u>
+<u>如果是对区间进行判断，则建议用 if。如果是对几个固定的值进行判断，那么，数量少的话用 if，数量多的话用 switch。</u>
 
 ### 用 return 代替 if else
 
@@ -613,25 +611,25 @@ switch (day) {
 
 我们在实战业务中涉及到调接口时，一般会这样做：
 
--   接口返回码为 0 时，前端 resolve。
+- 接口返回码为 0 时，前端 resolve。
 
--   接口返回未登录时，前端跳转到登录页面。
+- 接口返回未登录时，前端跳转到登录页面。
 
--   接口返回其他情况，或者无返回时，前端 reject。
+- 接口返回其他情况，或者无返回时，前端 reject。
 
 写法 1、if else 的写法：（不推荐）
 
 ```js
 if (res) {
-    if (+res.retCode == 0) {
-        resolve(res);
-    } else if (+res.retCode == 8888) {
-        goLogin();
-    } else {
-        reject(res);
-    }
+	if (+res.retCode == 0) {
+		resolve(res);
+	} else if (+res.retCode == 8888) {
+		goLogin();
+	} else {
+		reject(res);
+	}
 } else {
-    reject();
+	reject();
 }
 ```
 
@@ -639,16 +637,15 @@ if (res) {
 
 ```js
 if (!res || +res.retCode !== 0) {
-    if (+res.retCode === 8888) {
-        // 未登录
-        goLogin();
-        return;
-    }
-    reject(res);
-    return;
+	if (+res.retCode === 8888) {
+		// 未登录
+		goLogin();
+		return;
+	}
+	reject(res);
+	return;
 }
 resolve(res);
 ```
 
 备注：如果你没学过 Promise，这个例子可以先不看。等以后学了 Promise 再回来看就很容易明白了。
-

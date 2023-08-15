@@ -3,9 +3,6 @@ title: 03-Node.js开发环境安装
 publish: true
 ---
 
-[TOC]
-
-
 ## Node.js 版本常识
 
 - 偶数版本为稳定版（0.6.x ，8.10.x）
@@ -32,15 +29,13 @@ publish: true
 
 **通过 Node.js 安装包产生的问题**：
 
--   安装新版本时，需要覆盖就版本；而且以前版本安装的很多全局工具包，需要重新安装。
--   无法回滚到之前的旧版本。
--   无法在多个版本之间切换（很多时候，不同的项目需要使用特定版本。或者，我想临时尝鲜一下新版本的特性）
+- 安装新版本时，需要覆盖就版本；而且以前版本安装的很多全局工具包，需要重新安装。
+- 无法回滚到之前的旧版本。
+- 无法在多个版本之间切换（很多时候，不同的项目需要使用特定版本。或者，我想临时尝鲜一下新版本的特性）
 
 ![1677591509564](../../图床/1677591509564.png)
 
 因此，我们暂时先不用安装 Node.js，稍后用 NVM 的方式来安装 Node.js。通过 NVM 的方式，可以让多个版本的 Node.js 共存，并灵活切换。
-
-
 
 ## Node.js 运行环境安装：通过 NVM（推荐）
 
@@ -73,21 +68,21 @@ proxy
 
 上方内容的解释：
 
--   root 配置为：当前 nvm.exe 所在的目录
+- root 配置为：当前 nvm.exe 所在的目录
 
--   path 配置为：node 快捷方式所在的目录
+- path 配置为：node 快捷方式所在的目录
 
--   arch 配置为：当前操作系统的位数（32/64）
+- arch 配置为：当前操作系统的位数（32/64）
 
--   proxy 不用配置
+- proxy 不用配置
 
 （3）配置环境变量：
 
--   `NVM_HOME` = `D:\web\nvm`（当前 nvm.exe 所在目录）
+- `NVM_HOME` = `D:\web\nvm`（当前 nvm.exe 所在目录）
 
--   `NVM_SYMLINK` = `D:\web\nodejs` （node 快捷方式所在的目录）
+- `NVM_SYMLINK` = `D:\web\nodejs` （node 快捷方式所在的目录）
 
--   PATH += `;%NVM_HOME%;%NVM_SYMLINK%`
+- PATH += `;%NVM_HOME%;%NVM_SYMLINK%`
 
 配置成功后，重启资源管理器。
 
@@ -102,7 +97,6 @@ proxy
 （3）输入 `nvm -v`，查看 已安装的 nvm 版本。
 
 （4）输入 `node -v`，查看正在使用的 node 版本。
-
 
 如果 Node 安装失败，可以参考上面这个链接。
 
@@ -144,17 +138,15 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 ![](../../图床/qgyh/20180302_2126.png)
 
-完成后，nvm 就被安装在了`~/.nvm`下。我们可以点开 home目录，然后按快捷键「Cmd + Shift + .」，看看 `.nvm`这个文件夹在不在。
+完成后，nvm 就被安装在了`~/.nvm`下。我们可以点开 home 目录，然后按快捷键「Cmd + Shift + .」，看看 `.nvm`这个文件夹在不在。
 
-问题1、如果安装时提示 `Failed to connect to raw.githubusercontent.com port 443: Connection refused`。解决办法：我们直接访问 https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh ，将安装文件保存到本地，然后`bash install.sh` 执行这个本地文件，即可安装成功。
+问题 1、如果安装时提示 `Failed to connect to raw.githubusercontent.com port 443: Connection refused`。解决办法：我们直接访问 https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh ，将安装文件保存到本地，然后`bash install.sh` 执行这个本地文件，即可安装成功。
 
-问题2、如果发现安装失败：
+问题 2、如果发现安装失败：
 
 ![](../../图床/qgyh/20180302_2111.png)
 
 原因：Xcode 软件进行过更新。解决办法：打开 Xcode 软件，同意相关内容即可。
-
-
 
 （2）配置环境变量：
 
@@ -176,8 +168,6 @@ export NVM_DIR="$HOME/.nvm"
 PS：NVM 现在已经不支持 Homebrew 的方式来安装了。
 
 参考链接：<https://www.jianshu.com/p/a3f8778bc0a1>
-
-
 
 参考链接：<https://blog.csdn.net/science_Lee/article/details/79214127>
 
@@ -216,7 +206,7 @@ nvm install 12.18.0
 
 在 `~/.bash_profile` 中配置好环境变量后，发现每次重启终端后，配置都会失效，需要重新执行 `source ~/.bash_profile` 命令。
 
-原因是，zsh加载的是 `~/.zshrc`文件，而 `.zshrc` 文件中并没有定义任务环境变量。
+原因是，zsh 加载的是 `~/.zshrc`文件，而 `.zshrc` 文件中并没有定义任务环境变量。
 
 解决办法：打开 `~/.zshrc` 文件，在文件的末尾，添加如下内容即可：
 
@@ -265,19 +255,17 @@ nvm uninstall 版本号
 nvm use 版本号
 ```
 
-**设置node的默认版本**：
+**设置 node 的默认版本**：
 
 ```bash
 nvm alias default 版本号
 ```
 
-
-**查看全局npm包的安装路径**：
+**查看全局 npm 包的安装路径**：
 
 ```
 npm root -g
 ```
-
 
 查看远程服务器端的所有 Node 版本：
 
@@ -345,9 +333,9 @@ Node 本身并没有太多的功能性 API，所以市面上涌现出大量的�
 
 如果 Node 中自带的包和第三方的包名冲突了，该怎么处理呢？原则是：
 
--   先在系统核心（优先级最高）的模块中找；
+- 先在系统核心（优先级最高）的模块中找；
 
--   然后到当前项目中 node_modules 目录中找。
+- 然后到当前项目中 node_modules 目录中找。
 
 比如说：
 
@@ -367,9 +355,9 @@ Node.js 发展到现在，已经形成了一个非常庞大的生态圈。包的
 
 随着时间的发展，NPM 出现了两层概念：
 
--   一层含义是 Node 的开放式模块登记和管理系统，亦可以说是一个生态圈，一个社区。
+- 一层含义是 Node 的开放式模块登记和管理系统，亦可以说是一个生态圈，一个社区。
 
--   另一层含义是 Node 默认的模块管理器，是一个命令行下的软件，用来安装和管理 Node 模块。
+- 另一层含义是 Node 默认的模块管理器，是一个命令行下的软件，用来安装和管理 Node 模块。
 
 ### NPM 的安装（不需要单独安装）
 
@@ -405,26 +393,26 @@ NPM 默认安装到当前正在使用 Node 版本所在目录下。我们建议�
 
 ![](../../图床/qgyh/20180302_1210.png)
 
-### NPM包的版本管理
+### NPM 包的版本管理
 
-<u>NPM包的管理都是通过项目根目录的 `package.json`文件实现</u>。
+<u>NPM 包的管理都是通过项目根目录的 `package.json`文件实现</u>。
 
 当你使用 npm 安装一个包或者更新一个包的时候，package.json 里会自动添加**包名和包的版本**。npm 默认安装**符合条件**的最新版本，然后在版本号之前添加`^`符号。
 
-NPM包的版本号，是用三位数表示。版本号前面的符号，代表开发者想要更新的的最新版本条件：
+NPM 包的版本号，是用三位数表示。版本号前面的符号，代表开发者想要更新的的最新版本条件：
 
-- 符号`^`：固定第一位数。表示主版本固定的情况下，可更新至最新版。例如 `vue: "^2.6.0"` 表示 2.6.0及其以上的2.x.x 都是满足的。
-- 符号`~`：固定前两位数。表示次版本固定的情况下，可更新至最新版。例如 `vuex: "~2.6.0"`，2.6.0及其以上的2.6.x都是满足的。
+- 符号`^`：固定第一位数。表示主版本固定的情况下，可更新至最新版。例如 `vue: "^2.6.0"` 表示 2.6.0 及其以上的 2.x.x 都是满足的。
+- 符号`~`：固定前两位数。表示次版本固定的情况下，可更新至最新版。例如 `vuex: "~2.6.0"`，2.6.0 及其以上的 2.6.x 都是满足的。
 - 无符号：三位数都固定。无符号表示固定版本号。例如 `vue: "2.6.0"`，此时一定是安装`2.6.0`版本。
 - ![1677635245822](../../图床/1677635245822.png)
 
 参考链接：
 
-- [请将你的npm依赖版本锁定](https://juejin.cn/post/6960928446826741796)
+- [请将你的 npm 依赖版本锁定](https://juejin.cn/post/6960928446826741796)
 
 ## NPM 的常用命令
 
-npm命令参考网址<https://www.npmjs.cn/>
+npm 命令参考网址<https://www.npmjs.cn/>
 
 **命令行指向下载位置**；
 
@@ -465,11 +453,11 @@ npm install [package]
 
 > `package.json`记录当前下载的主包
 >
-> `npm install` 自动下载安装`package.json`记录的包，在文件互传时候删掉node_modules文件夹，再执行此命令下回来
+> `npm install` 自动下载安装`package.json`记录的包，在文件互传时候删掉 node_modules 文件夹，再执行此命令下回来
 >
 > ![1677652655537](../../图床/1677652655537.png)
 >
-> 产生的`package-lock.json`记录node_modules的所有包
+> 产生的`package-lock.json`记录 node_modules 的所有包
 
 在全局安装指定的包：
 
@@ -573,17 +561,15 @@ npm root -g
 
 切换镜像源，有下面这几种方式：
 
--   方式 1：临时切换镜像源。
+- 方式 1：临时切换镜像源。
 
--   方式 2：切换镜像源
+- 方式 2：切换镜像源
 
--   方式 3：通过 NRM 切换镜像源（最为推荐的方式）。
+- 方式 3：通过 NRM 切换镜像源（最为推荐的方式）。
 
--   方式 4：cnpm。
+- 方式 4：cnpm。
 
 下面来分别讲一下。
-
-
 
 **查看镜像源**
 
@@ -617,9 +603,9 @@ npm set registry https://registry.npmmirror.com
 
 **NRM**：Node Registry Manager。作用是：**切换和管理 npm 包的镜像源**。
 
--   项目地址：<https://www.npmjs.com/package/nrm>
+- 项目地址：<https://www.npmjs.com/package/nrm>
 
--   GitHub 地址： <https://github.com/Pana/nrm>
+- GitHub 地址： <https://github.com/Pana/nrm>
 
 **安装 NRM**：
 
@@ -647,7 +633,7 @@ nrm use taobao
 
 ## 方式 4：安装 cnpm
 
--   项目地址：<https://npm.taobao.org/>
+- 项目地址：<https://npm.taobao.org/>
 
 安装`cnpm`替换 npm（npm 由于源服务器在国外，下载包的速度较慢，cnpm 会使用国内镜像）：
 
@@ -677,4 +663,3 @@ cnpm install vue
 ```
 
 就可以执行这个 js 程序，直接在命令行查看运行结果。
-

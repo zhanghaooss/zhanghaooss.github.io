@@ -3,10 +3,6 @@ title: 03-MySQL的基本操作
 date:12/13
 ---
 
-[TOC]
-
-
-
 ## SQL 的一些简单语法规则
 
 ### 结束符
@@ -17,15 +13,15 @@ SQL 指令需要语句结束符，默认是英文分号`;`。
 
 - `\g` 与英文分号`;`等效。
 
-- `\G`：将查到的结构旋转90度变成纵向。
+- `\G`：将查到的结构旋转 90 度变成纵向。
 
 ### 反引号``
 
-SQL语句中如果用到了关键字或者保留字，需要使用反引号``（Tab键上面的符号）来包裹，让系统忽略。
+SQL 语句中如果用到了关键字或者保留字，需要使用反引号``（Tab 键上面的符号）来包裹，让系统忽略。
 
 ## MySQL 数据库的操作分类
 
-根据数据库的对象层级，可以将**SQL的基础操作分为四类**：
+根据数据库的对象层级，可以将**SQL 的基础操作分为四类**：
 
 - 数据库（DB）操作。
 
@@ -68,7 +64,6 @@ create database 数据库名称 [数据库选项];
 create database db_qianguyihao1;
 ```
 
-
 创建一个指定字符集的数据库：
 
 ```mysql
@@ -80,7 +75,6 @@ create database db_qianguyihao2 charset utf8MB4;
 ```mysql
 create database db_qianguyihao3 charset utf8MB4 collate utf8mb4_general_ci
 ```
-
 
 ### 2、查看数据库
 
@@ -98,7 +92,6 @@ show create database db_qianguyihao1;
 
 备注：由于系统会加工，所以看到的结果不一定是真实的创建指令。
 
-
 ### 3、使用指定的数据库
 
 使用指定的数据库：（也可以理解成：进入指定的数据库）
@@ -112,7 +105,6 @@ use db_qianguyihao;
 ```
 
 假设当前服务器连接中有很多个数据库（db_qianguyihao1、db_qianguyihao2），此时，我输入 `use db_qianguyihao2`则代表我想使用 `db_qianguyihao2` 这个数据库。
-
 
 ### 4、修改数据库的参数
 
@@ -128,21 +120,19 @@ use db_qianguyihao;
 alter database 数据库名称 [库选项]
 ```
 
-举例1、修改数据库的字符集为gbk：
+举例 1、修改数据库的字符集为 gbk：
 
 ```mysql
 alter database db_qianguyihao1 charset gbk;
 ```
 
-举例2、修改数据库的校对集：
+举例 2、修改数据库的校对集：
 
 ```sql
 alter database db_qianguyihao2 charset gbk collate gbk_chinese_ci;
 ```
 
 备注：<u>因为校对集是和字符集有关的，所以上方指令是在修改字符集的同时，修改校对集</u>。
-
-
 
 ### 5、删除指定的数据库
 
@@ -153,7 +143,6 @@ drop database 数据库名称;
 ```
 
 备注：删除数据库时，会清空当前数据库里的所有数据表，所以删除数据库的操作一定要谨慎。
-
 
 ## 二、数据表（Table）的基本操作
 
@@ -182,7 +171,7 @@ CREATE TABLE table_qiangu1 (
 );
 ```
 
-2、在当前数据库中创建数据表 `t_student1`，并新增 name、age这两个字段：
+2、在当前数据库中创建数据表 `t_student1`，并新增 name、age 这两个字段：
 
 ```sql
 create table t_student1(
@@ -194,7 +183,6 @@ create table t_student1(
 ```
 
 3、在指定的数据库 `db_2` 中创建数据表 `t_student2`：
-
 
 ```sql
 create table db_2.t_student2(
@@ -212,19 +200,19 @@ create table t_student3(
 )engine Innodb charset utf8MB4;
 ```
 
-举例4中的代码涉及到存储引擎，这里解释一下：
+举例 4 中的代码涉及到存储引擎，这里解释一下：
 
-**存储引擎**是指数据存储和管理的方式，MySQL中提供了多种存储引擎，一般使用默认存储引擎 InnoDB。
+**存储引擎**是指数据存储和管理的方式，MySQL 中提供了多种存储引擎，一般使用默认存储引擎 InnoDB。
 
 - InnoDB：默认存储引擎；支持事务处理和外键；数据统一管理。
 
-- MyIsam：不支持事务和外键；数据、表结构、索引独立管理；MySQL5.6以后不再维护。
+- MyIsam：不支持事务和外键；数据、表结构、索引独立管理；MySQL5.6 以后不再维护。
 
-6、扩展：如果想创建一个与已有表一样的数据表，MySQL提供了一种便捷的复制模式
+6、扩展：如果想创建一个与已有表一样的数据表，MySQL 提供了一种便捷的复制模式
 
 ### 2、复制数据表
 
-如果想创建一个与已有表一样的数据表，MySQL提供了一种便捷的**复制**模式。
+如果想创建一个与已有表一样的数据表，MySQL 提供了一种便捷的**复制**模式。
 
 **语法格式**：（复制现有的表 `table_xx1` 到 `table_xx2`）
 
@@ -235,7 +223,6 @@ create table table_xx1 like 数据库名.table_xx2;
 注意，这种复制模式，`table_xx2` 只会复制表 `table_xx1` 中的字段，不会复制表`table_xx1`中的数据。
 
 **举例**：
-
 
 ```sql
 # 在当前数据库下，复制现有的表`t_qianguyihao1` 到表 `t_qianguyihao2`
@@ -264,8 +251,6 @@ show tables from db_qianguyihao1;
 ```mysql
 show create table t_qianguyihao1; # 备注：由于系统会加工，所以看到的结果不一定是真实的创建指令。
 ```
-
-
 
 ### 4、查询（查找）数据表的名称
 
@@ -335,7 +320,6 @@ rename table 原表名 to 新表名;
 
 指定某个数据库，然后修改数据表的表名称：
 
-
 ```sql
 rename table 数据库名.原表名 to 数据库名.新表名;
 ```
@@ -353,7 +337,6 @@ alter table table1 charset gbk;
 ```sql
 drop table 数据表名称;
 ```
-
 
 ## 三、字段（Field）的基本操作
 
@@ -390,7 +373,6 @@ alter table table_qiangu1 add name varchar(255);
 alter table table_qiangu1 add age int;
 ```
 
-
 ### 2、新增字段时，设置字段的位置（顺序）
 
 在新增字段时，它的顺序是默认放在最后面的，当然，我们也可以人工指定它的顺序。
@@ -407,8 +389,7 @@ alter table table_qiangu1 add age int;
 alter table 表名 add 新字段名 字段类型 字段位置;
 ```
 
-
-**举例1**：
+**举例 1**：
 
 在 `name`字段的后面，新增一个 `sex` 字段：
 
@@ -416,19 +397,15 @@ alter table 表名 add 新字段名 字段类型 字段位置;
 alter table t_qiangu1 add sex varchar(255) default null comment '性别' after name;
 ```
 
-注意，上方举例中，如果是新建 varchar 类型的字段，一定要指定 varchar 的长度（比如255），否则报错。
+注意，上方举例中，如果是新建 varchar 类型的字段，一定要指定 varchar 的长度（比如 255），否则报错。
 
-**举例2**：
-
+**举例 2**：
 
 新增一个 `id` 字段，放到最前面：
 
 ```sql
 alter table t_qiangu1 add id int first;
 ```
-
-
-
 
 ### 3、change：修改现有字段的字段名
 
@@ -450,7 +427,6 @@ alter table 表名 change 原字段名 新字段名 字段类型 [字段属性] 
 
 - 虽然 change 关键字也可以修改现有字段的字段属性、字段位置，但我们一般是通过 modify 关键字来做（下面会讲）。
 
-
 **举例**：
 
 修改字段名 `sex` 为 `sexy`：
@@ -467,7 +443,7 @@ alter table t_qiangu2 change sex sexy varchar(255);
 alter table 表名 modify 现有字段的字段名 现有字段的字段类型 [字段属性] [位置]；
 ```
 
-**举例1**、针对现有的字段 `name` 和 `age`，更换这两个字段的顺序：
+**举例 1**、针对现有的字段 `name` 和 `age`，更换这两个字段的顺序：
 
 ```sql
 # 注意，这里的 age 后面一定要跟上它的字段类型，否则执行失败
@@ -483,9 +459,10 @@ alter table 表名 alter column 字段名 drop default;
 # 若本身不存在则可以直接设定
 alter table 表名 alter column 字段名 set default 默认值;
 ```
+
 ### 5、删除字段
 
->  删除字段的同时，会删除字段对应的数据。删除字段的操作不可逆，请谨慎操作。
+> 删除字段的同时，会删除字段对应的数据。删除字段的操作不可逆，请谨慎操作。
 
 语法格式：
 
@@ -499,12 +476,11 @@ alter table 表名 drop 字段名;
 alter table t_qiangu1 drop age;
 ```
 
-
 ## 四、数据的基本操作
 
 ### 1、新增数据
 
-**方式1、全字段插入**：
+**方式 1、全字段插入**：
 
 语法格式：
 
@@ -513,7 +489,7 @@ insert into 表名 values(值1, 值2, ... 最后一个值);
 
 ```
 
-**尽量不要用以下这种写法**，null会被当成0，破坏了一些约束规则。
+**尽量不要用以下这种写法**，null 会被当成 0，破坏了一些约束规则。
 
 ```sql
 insert into 表名 values(值1, 值2, ... 最后一个值),(值1, 值2, ... 最后一个值); -- 一下写多个
@@ -530,7 +506,7 @@ insert into 表名 values(值1, 值2, ... 最后一个值),(值1, 值2, ... 最�
 insert into t_qiangu1 values(3, 'qianguyihao', 28);
 ```
 
-**方式1、部分字段插入**：
+**方式 1、部分字段插入**：
 
 语法格式：
 
@@ -552,7 +528,7 @@ insert into t_qiangu1 (id, name) values(4, 'xusong');
 
 ### 2、查询数据
 
-> 查询数据的操作，占sql日常操作的95%以上。
+> 查询数据的操作，占 sql 日常操作的 95%以上。
 
 **语法格式**：
 
@@ -582,7 +558,6 @@ select * from t_qiangu3 where id = 2;
 
 ### 3、修改数据
 
-
 **语法格式**：
 
 ```sql
@@ -594,7 +569,6 @@ update 表名 set (字段1 = 新值1, 字段2 = 新值2) [where 条件筛选];
 - 我们通常是结合 where 条件语句来修改数据。
 
 - **修改数据之前，要先保证表里面有数据**。如果这张表是空表，那么，执行这个命令后，等于没执行。
-
 
 **举例**：
 

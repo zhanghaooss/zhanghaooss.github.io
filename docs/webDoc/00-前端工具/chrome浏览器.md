@@ -2,8 +2,6 @@
 title: chrome浏览器
 ---
 
-[toc]
-
 ## 控制台的使用
 
 页面展示
@@ -12,8 +10,8 @@ title: chrome浏览器
 
 ```js
 //console.log() 用于输出一般信息和调试日志，而 console.dir() 则用于显示对象的详细信息，包括属性和方法。在开发和调试过程中，根据需要选择适当的方法来输出所需的信息。
-console.log(document.body)
-console.dir(document.body)
+console.log(document.body);
+console.dir(document.body);
 ```
 
 <img src="https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/image-20230323172818575.png" alt="image-20230322222843827" style="zoom:60%;" />
@@ -35,4 +33,3 @@ console.dir(document.body)
 4. 验证设计和实现：显示 Shadow DOM 可以帮助设计师和开发者验证组件的设计和实现是否符合预期。您可以检查样式、布局和内容的外观，确保它们与设计规范一致。
 
    需要注意的是，Shadow DOM 通常是为了封装组件的内部实现细节而设计的，它的目的是提供隔离和封装的能力。因此，显示 Shadow DOM 可能并不适用于所有情况，具体取决于开发者和设计者的需求。
-

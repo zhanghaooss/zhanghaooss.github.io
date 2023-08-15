@@ -4,14 +4,11 @@ date:2022/12/5-12/8
 outline:"h5语义标签，兼容处理 新增表单标签元素属性事件，video,audio,dom操作，tab切换"
 ---
 
-[TOC]
-
-## HTML5的介绍
+## HTML5 的介绍
 
 ### Web 技术发展时间线
 
 - 1991 HTML
-
 
 - 1994 HTML2
 
@@ -21,7 +18,7 @@ outline:"h5语义标签，兼容处理 新增表单标签元素属性事件，vi
 
 - 1998 CSS2
 
-- 2000 XHTML1（严格的html）
+- 2000 XHTML1（严格的 html）
 
 - 2002 Tableless Web Design（表格布局）
 
@@ -31,31 +28,25 @@ outline:"h5语义标签，兼容处理 新增表单标签元素属性事件，vi
 
 - 2014 HTML5 Finalized
 
+2002 年的表格布局逐渐被淘汰，是因为：表格是用来承载数据的，并不是用来划分网页结构的。
 
-2002年的表格布局逐渐被淘汰，是因为：表格是用来承载数据的，并不是用来划分网页结构的。
+2009 年就已经推出了 HTML5 的草案，但直到 2014 年才有定稿，是因为有移动端的推动。
 
+H5 草案的前身是叫：Web Application，最早是由[WHATWG](https://baike.baidu.com/item/WHATWG/5803339?fr=aladdin)这个组织在 2004 年提出的。
 
-2009年就已经推出了HTML5的草案，但直到2014年才有定稿，是因为有移动端的推动。
-
-
-H5草案的前身是叫：Web Application，最早是由[WHATWG](https://baike.baidu.com/item/WHATWG/5803339?fr=aladdin)这个组织在2004年提出的。
-
-2007年被 W3C 组织接纳，并在 2008-01-22 发布 HTML5 的第一个草案。
-
+2007 年被 W3C 组织接纳，并在 2008-01-22 发布 HTML5 的第一个草案。
 
 ### 什么是 HTML5
 
-HTML5并不仅仅只是做为HTML标记语言的一个最新版本，更重要的是它**制定了Web应用开发的一系列标准**，成为第一个将Web做为应用开发平台的HTML语言。
+HTML5 并不仅仅只是做为 HTML 标记语言的一个最新版本，更重要的是它**制定了 Web 应用开发的一系列标准**，成为第一个将 Web 做为应用开发平台的 HTML 语言。
 
-HTML5定义了一系列新元素，如新语义标签、智能表单、多媒体标签等，可以帮助开发者创建富互联网应用，还提供了一些Javascript API，如地理定位、重力感应、硬件访问等，可以在浏览器内实现类原生应用。我们甚至可以结合 Canvas 开发网页版游戏。
+HTML5 定义了一系列新元素，如新语义标签、智能表单、多媒体标签等，可以帮助开发者创建富互联网应用，还提供了一些 Javascript API，如地理定位、重力感应、硬件访问等，可以在浏览器内实现类原生应用。我们甚至可以结合 Canvas 开发网页版游戏。
 
-
-**`HTML5`的广义概念**：HTML5代表浏览器端技术的一个发展阶段。在这个阶段，浏览器的呈现技术得到了飞跃发展和广泛支持，它包括：HTML5、CSS3、Javascript API在内的一套技术组合。
+**`HTML5`的广义概念**：HTML5 代表浏览器端技术的一个发展阶段。在这个阶段，浏览器的呈现技术得到了飞跃发展和广泛支持，它包括：HTML5、CSS3、Javascript API 在内的一套技术组合。
 
 `HTML5`不等于 `HTML next version`。`HTML5` 包含： `HTML`的升级版、`CSS`的升级版、`JavaScript API`的升级版。
 
-**总结**：`HTML5`是新一代开发 **Web 富客户端**应用程序整体**解决方案**。包括：HTML5，CSS3，Javascript API在内的一套**技术组合**。
-
+**总结**：`HTML5`是新一代开发 **Web 富客户端**应用程序整体**解决方案**。包括：HTML5，CSS3，Javascript API 在内的一套**技术组合**。
 
 **富客户端**：具有很强的**交互性**和体验的客户端程序。比如说，浏览博客，是比较简单的客户端；一个在线听歌的网站、即时聊天网站就是富客户端。
 
@@ -63,19 +54,19 @@ HTML5定义了一系列新元素，如新语义标签、智能表单、多媒体
 
 单纯地从技术的角度讲，兼容性问题只会让开发者徒增烦恼。
 
-如果网页端的程序能做到PC客户端的体验，就会对后者构成威胁。
+如果网页端的程序能做到 PC 客户端的体验，就会对后者构成威胁。
 
 ### HTML5 的应用场景
 
-列举几个HTML5 的应用场景：
+列举几个 HTML5 的应用场景：
 
 （1）极具表现力的网页：内容简约而不简单。
 
 （2）网页应用程序：
 
-- 代替PC端的软件：iCloud、百度脑图、Office 365等。
+- 代替 PC 端的软件：iCloud、百度脑图、Office 365 等。
 
-- APP端的网页：淘宝、京东、美团等。
+- APP 端的网页：淘宝、京东、美团等。
 
 - 微信端：公众号、小程序等。
 
@@ -91,7 +82,6 @@ HTML5定义了一系列新元素，如新语义标签、智能表单、多媒体
 
 ![](../../图床/qgyh/20180206_1541.png)
 
-
 ## 语义化的标签
 
 ### 语义化的作用
@@ -104,74 +94,65 @@ HTML5定义了一系列新元素，如新语义标签、智能表单、多媒体
 
 - 更好地搜索引擎优化。
 
-总结：<u>HTML的职责是描述一块内容是什么（或其意义），而不是它长什么样子；它的外观应该由CSS来决定</u>。
+总结：<u>HTML 的职责是描述一块内容是什么（或其意义），而不是它长什么样子；它的外观应该由 CSS 来决定</u>。
 
-### H5在语义上的改进
+### H5 在语义上的改进
 
-在此基础上，HTML5 增加了大量有意义的语义标签，更有利于搜索引擎或辅助设备理解 HTML 页面内容。HTML5会让HTML代码的内容更结构化、标签更语义化。
+在此基础上，HTML5 增加了大量有意义的语义标签，更有利于搜索引擎或辅助设备理解 HTML 页面内容。HTML5 会让 HTML 代码的内容更结构化、标签更语义化。
 
 我们常见的 css+div 布局是：
 
-
 ![](../../图床/qgyh/20180206_1546.png)
 
-在html5中，我们可以这样写：
+在 html5 中，我们可以这样写：
 
 ![](../../图床/qgyh/20180206_1550.png)
 
-传统的做法中，我们通过增加类名如`class="header"`、`class="footer"`，使HTML页面具有语义性，但是不具有通用性。
+传统的做法中，我们通过增加类名如`class="header"`、`class="footer"`，使 HTML 页面具有语义性，但是不具有通用性。
 
 HTML5 则是通过新增语义标签的形式来解决这个问题，例如`<header></header>`、`<footer></footer>`等，这样就可以使其具有通用性。
 
-
 **传统网页布局：**
-
 
 ```html
 <!-- 头部 -->
 <div class="header">
-    <ul class="nav"></ul>
+	<ul class="nav"></ul>
 </div>
 
 <!-- 主体部分 -->
 <div class="main">
-    <!-- 文章 -->
-    <div class="article"></div>
-    <!-- 侧边栏 -->
-    <div class="aside"></div>
+	<!-- 文章 -->
+	<div class="article"></div>
+	<!-- 侧边栏 -->
+	<div class="aside"></div>
 </div>
 
 <!-- 底部 -->
-<div class="footer">
-
-</div>
+<div class="footer"></div>
 ```
-
-
 
 **H5 的经典网页布局：**
 
 ```html
 <!-- 头部 -->
 <header>
-    <ul class="nav"></ul>
+	<ul class="nav"></ul>
 </header>
 
 <!-- 主体部分 -->
 <div class="main">
-    <!-- 文章 -->
-    <article></article>
-    <!-- 侧边栏 -->
-    <aside></aside>
+	<!-- 文章 -->
+	<article></article>
+	<!-- 侧边栏 -->
+	<aside></aside>
 </div>
 
 <!-- 底部 -->
-<footer>
-
-</footer>
+<footer></footer>
 ```
 
-## H5中新增的语义标签
+## H5 中新增的语义标签
 
 - `<section>` 表示区块
 
@@ -193,8 +174,7 @@ HTML5 则是通过新增语义标签的形式来解决这个问题，例如`<hea
 
 - `<time>` 表示日期
 
-本质上新语义标签与`<div>`、`<span>`没有区别，只是其具有表意性，使用时除了在HTML结构上需要注意外，其它和普通标签的使用无任何差别，<u>可以理解成`<div class="nav">` 相当于`<nav></u>`。
-
+本质上新语义标签与`<div>`、`<span>`没有区别，只是其具有表意性，使用时除了在 HTML 结构上需要注意外，其它和普通标签的使用无任何差别，<u>可以理解成`<div class="nav">` 相当于`<nav></u>`。
 
 PS：单标签不用写关闭符号。
 
@@ -202,46 +182,45 @@ PS：单标签不用写关闭符号。
 
 <u>IE8 及以下版本的浏览器不支持 H5 和 CSS3。解决办法：引入`html5shiv.js`文件。</u>
 
-引入时，需要做if判断，具体代码如下：
+引入时，需要做 if 判断，具体代码如下：
 
 ```html
-    <!--  条件注释 只有ie能够识别-->
+<!--  条件注释 只有ie能够识别-->
 
-    <!--[if lte ie 8]>
-        <script src="html5shiv.min.js"></script>
-    <![endif]-->
+<!--[if lte ie 8]>
+	<script src="html5shiv.min.js"></script>
+<![endif]-->
 ```
 
-上方代码是**条件注释**：虽然是注释，但是IE浏览器可以识别出来。解释一下：
+上方代码是**条件注释**：虽然是注释，但是 IE 浏览器可以识别出来。解释一下：
 
 - l：less 更小
 
 - t：than 比
 
-- e：equal等于
+- e：equal 等于
 
 - g：great 更大
 
+PS:我们在测试 IE 浏览器的兼容的时候，可以使用软件 ietest，模拟 IE6-IE11。
 
-PS:我们在测试 IE 浏览器的兼容的时候，可以使用软件 ietest，模拟IE6-IE11。
+<u>==在不支持 HTML5 新标签的浏览器，会将这些新的标签解析成行内元素(inline)对待，所以我们只需要将其转换成块元素==</u>(block)即可使用。
 
-<u>==在不支持HTML5新标签的浏览器，会将这些新的标签解析成行内元素(inline)对待，所以我们只需要将其转换成块元素==</u>(block)即可使用。
+但是在 IE9 版本以下，并不能正常解析这些新标签，但是可以识别通过 document.createElement('tagName')创建的自定义标签。于是我们的解决方案就是：将 HTML5 的新标签全部通过 document.createElement('tagName')来创建一遍，这样 IE 低版本也能正常解析 HTML5 新标签了。
 
-但是在IE9版本以下，并不能正常解析这些新标签，但是可以识别通过document.createElement('tagName')创建的自定义标签。于是我们的解决方案就是：将HTML5的新标签全部通过document.createElement('tagName')来创建一遍，这样IE低版本也能正常解析HTML5新标签了。
+<u>当然，在实际开发中我们更多采用的办法是：检测 IE 浏览器的版本，来加载第三方的 JS 库来解决兼容问题</u>（如上方代码所示）。
 
-<u>当然，在实际开发中我们更多采用的办法是：检测IE浏览器的版本，来加载第三方的JS库来解决兼容问题</u>（如上方代码所示）。
+## H5 中的表单
 
-## H5中的表单
+传统的 Web 表单已经越来越不能满足开发的需求，HTML5 在 Web 表单方向做了很大的改进，如拾色器、日期/时间组件等，使表单处理更加高效。
 
-传统的Web表单已经越来越不能满足开发的需求，HTML5 在 Web 表单方向做了很大的改进，如拾色器、日期/时间组件等，使表单处理更加高效。
+### H5 中新增的表单类型
 
-### H5中新增的表单类型
-
-- `email` 只能输入email格式。自动带有验证功能。
+- `email` 只能输入 email 格式。自动带有验证功能。
 
 - `tel` 手机号码。
 
-- `url` 只能输入url格式。
+- `url` 只能输入 url 格式。
 
 - `number` 只能输入数字。
 
@@ -251,7 +230,7 @@ PS:我们在测试 IE 浏览器的兼容的时候，可以使用软件 ietest，
 
 - `color` 拾色器
 
-- `time`	时间
+- `time` 时间
 
 - `date` 日期
 
@@ -268,89 +247,64 @@ PS:我们在测试 IE 浏览器的兼容的时候，可以使用软件 ietest，
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>表单类型</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #F7F7F7;
-        }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<title>表单类型</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: #f7f7f7;
+			}
 
-        form {
-            max-width: 500px;
-            width: 100%;
-            margin: 32px auto 0;
-            font-size: 16px;
-        }
+			form {
+				max-width: 500px;
+				width: 100%;
+				margin: 32px auto 0;
+				font-size: 16px;
+			}
 
-        label {
-            display: block;
-            margin: 10px 0;
-        }
+			label {
+				display: block;
+				margin: 10px 0;
+			}
 
-        input {
-            width: 100%;
-            height: 25px;
-            margin-top: 2px;
-            display: block;
-        }
-
-    </style>
-</head>
-<body>
-<form action="">
-    <fieldset>
-        <legend>表单类型</legend>
-        <label for="">
-            email: <input type="email" name="email" required>
-        </label>
-        <label for="">
-            color: <input type="color" name="color">
-        </label>
-        <label for="">
-            url: <input type="url" name='url'>
-        </label>
-        <label for="">
-            number: <input type="number" step="3" name="number" max="30" min="10">
-        </label>
-        <label for="">
-            range: <input type="range" name="range" value="100">
-        </label>
-        <label for="">
-            search: <input type="search" name="search">
-        </label>
-        <label for="">
-            tel: <input type="tel" name="tel">
-        </label>
-        <label for="">
-            time: <input type="time" name="time">
-        </label>
-        <label for="">
-            date: <input type="date" name="date">
-        </label>
-        <label for="">
-            datetime: <input type="datetime">
-        </label>
-        <label for="">
-            week: <input type="week" name="week">
-        </label>
-        <label for="">
-            month: <input type="month" name="month">
-        </label>
-        <label for="">
-            datetime-local: <input type="datetime-local" name="datetime-local">
-        </label>
-        <input type="submit">
-    </fieldset>
-</form>
-</body>
+			input {
+				width: 100%;
+				height: 25px;
+				margin-top: 2px;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<fieldset>
+				<legend>表单类型</legend>
+				<label for=""> email: <input type="email" name="email" required /> </label>
+				<label for=""> color: <input type="color" name="color" /> </label>
+				<label for=""> url: <input type="url" name="url" /> </label>
+				<label for="">
+					number: <input type="number" step="3" name="number" max="30" min="10" />
+				</label>
+				<label for=""> range: <input type="range" name="range" value="100" /> </label>
+				<label for=""> search: <input type="search" name="search" /> </label>
+				<label for=""> tel: <input type="tel" name="tel" /> </label>
+				<label for=""> time: <input type="time" name="time" /> </label>
+				<label for=""> date: <input type="date" name="date" /> </label>
+				<label for=""> datetime: <input type="datetime" /> </label>
+				<label for=""> week: <input type="week" name="week" /> </label>
+				<label for=""> month: <input type="month" name="month" /> </label>
+				<label for="">
+					datetime-local: <input type="datetime-local" name="datetime-local" />
+				</label>
+				<input type="submit" />
+			</fieldset>
+		</form>
+	</body>
 </html>
 ```
-
-
 
 ### 表单元素（标签）
 
@@ -358,17 +312,16 @@ PS:我们在测试 IE 浏览器的兼容的时候，可以使用软件 ietest，
 
 **1、`<datalist>` 数据列表：**
 
-
 ```html
-<input type="text" list="myData">
+<input type="text" list="myData" />
 <datalist id="myData">
-    <option>本科</option>
-    <option>研究生</option>
-    <option>不明</option>
+	<option>本科</option>
+	<option>研究生</option>
+	<option>不明</option>
 </datalist>
 ```
 
-上方代码中，input里的list属性和 datalist 的id进行了绑定。
+上方代码中，input 里的 list 属性和 datalist 的 id 进行了绑定。
 
 效果：
 
@@ -399,44 +352,42 @@ keygen 元素是密钥对生成器（key-pair generator）。当提交表单时�
 举例：
 
 ```javascript
-	<meter  value="81"    min="0" max="100"  low="60"  high="80"/>
+<meter value="81" min="0" max="100" low="60" high="80" />
 ```
 
-**拓展mdn**
+**拓展 mdn**
 
 ---
 
-
-
-* [**value**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-value)
+- [**value**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-value)
 
   当前的数值。如果设置了最小值和最大值（分别由 min 属性和 max 属性定义），它必须介于最小值和最大值之间。如果没有指定或者格式有误，值即为 0。如果给定的值不在最小值和最大值之间，它的值就等于它最接近的一端的值。**备注：** 除非值域在 0 到 1（闭区间）, 否则最小值和最大值属性需要定义，以保证 value 属性在值域范围内。换言之，默认的 min 和 max 值分别为 0 和 1。
 
-* [**min**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-min)
+- [**min**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-min)
 
   值域的最小边界值。如果设置了，它必须比最大值要小。如果没设置，默认为 0。
 
-* [**max**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-max)
+- [**max**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-max)
 
   值域的上限边界值。如果设置了，它必须比最小值要大。如果没设置，默认为 1。
 
-* [**low**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-low)
+- [**low**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-low)
 
   定义了低值区间的上限值（译者注：如果 value 介于 min 和 low 之间，该元素就会表现出低值的视觉效果，value 落在 [min,low]、[high,max] 等不同的区间会使浏览器渲染该元素时出不同的视觉效果）。如果设置了，它必须比最小值属性大，并且不能超过 high 值和最大值。未设置或者比最小值还要小时，其值即为最小值。
 
-* [**high**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-high)
+- [**high**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-high)
 
   定义了高值区间的下限值。如果设置了，它必须小于最大值，同时必须大于 low 值和最小值。如果没有设置，或者比最大值还大，其值即为最大值。
 
-* [**optimum**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-optimum)
+- [**optimum**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-optimum)
 
   这个属性用来指示最优/最佳取值。它必须在正确的值域内（由最小值属性和最大值属性定义）。当使用了 low 和 high 属性时，它指明哪一个取值范围是更好的。例如，假设它介于最小值和 low 之间，那么 lower 区间就被认为是更佳的取值范围。
 
-* [**form**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-form)
+- [**form**](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#attr-form)
 
   该属性将本元素与对应的 form 元素关联。例如，一个计量器可能用来显示某个数值输入框（input 元素，number 类型）的范围。只有当计量器元素被用作表单关联的元素时，该属性才应当被使用；即便如此，如果它作为表单的后代元素出现，它仍然有可能被省略。
 
- [简单例子](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#简单例子)
+[简单例子](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#简单例子)
 
 **HTML content**
 
@@ -445,32 +396,26 @@ keygen 元素是密钥对生成器（key-pair generator）。当提交表单时�
   value="350">350 degrees</meter>.</p>
 ```
 
-
-
 **输出**
 
 <iframe class="sample-code-frame" title="简单例子" id="frame_simple_example" width="300" height="60" src="https://yari-demos.prod.mdn.mozit.cloud/zh-CN/docs/Web/HTML/Element/meter/_sample_.simple_example.html" loading="lazy" style="box-sizing: content-box; border: 1px solid var(--border-primary); max-width: 100%; width: calc((100% - 2rem) - 2px); background: rgb(255, 255, 255); border-radius: var(--elem-radius); padding: 1rem;"></iframe>
 
- [高低值区间示例](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#高低值区间示例)
+[高低值区间示例](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter#高低值区间示例)
 
 注意本例中 min 属性被省略，这是允许的，默认值为 0。
 
- **HTML content**
+**HTML content**
 
 ```
 <p>He got a <meter low="69" high="80" max="100"
   value="84">B</meter> on the exam.</p>
 ```
 
-
-
 **输出**
 
 <iframe class="sample-code-frame" title="高低值区间示例" id="frame_high_and_low_range_example" width="300" height="60" src="https://yari-demos.prod.mdn.mozit.cloud/zh-CN/docs/Web/HTML/Element/meter/_sample_.high_and_low_range_example.html" loading="lazy" style="box-sizing: content-box; border: 1px solid var(--border-primary); max-width: 100%; width: calc((100% - 2rem) - 2px); background: rgb(255, 255, 255); border-radius: var(--elem-radius); padding: 1rem;"></iframe>
 
 ---
-
-
 
 ### 表单属性
 
@@ -482,9 +427,9 @@ keygen 元素是密钥对生成器（key-pair generator）。当提交表单时�
 
 - `autocomplete` 自动完成（填充的）。on 开启（默认），off 取消。用于表单元素，也可用于表单自身(on/off)
 
-- `form` 指定表单项属于哪个form，处理复杂表单时会需要
+- `form` 指定表单项属于哪个 form，处理复杂表单时会需要
 
-- `novalidate` 关闭默认的验证功能（只能加给form） 点击提交不会验证各表单项是否填了必填字段，电话号是否符合正则表达式之类
+- `novalidate` 关闭默认的验证功能（只能加给 form） 点击提交不会验证各表单项是否填了必填字段，电话号是否符合正则表达式之类
 
 - `required` 表示必填项
 
@@ -495,54 +440,55 @@ keygen 元素是密钥对生成器（key-pair generator）。当提交表单时�
 ```html
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-        form {
-            width: 100%;
-            /* 最大宽度*/
-            max-width: 640px;
-            /* 最小宽度*/
-            min-width: 320px;
-            margin: 0 auto;
-            font-family: "Microsoft Yahei";
-            font-size: 20px;
-        }
+	<head lang="en">
+		<meta charset="UTF-8" />
+		<title></title>
+		<style>
+			form {
+				width: 100%;
+				/* 最大宽度*/
+				max-width: 640px;
+				/* 最小宽度*/
+				min-width: 320px;
+				margin: 0 auto;
+				font-family: 'Microsoft Yahei';
+				font-size: 20px;
+			}
 
-        input {
-            display: block;
-            width: 100%;
-            height: 30px;
-            margin: 10px 0;
-        }
-    </style>
-</head>
-<body>
+			input {
+				display: block;
+				width: 100%;
+				height: 30px;
+				margin: 10px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<fieldset>
+				<legend>表单属性</legend>
+				<label for="">
+					用户名：<input
+						type="text"
+						placeholder="例如：smyhvae"
+						autofocus
+						name="userName"
+						autocomplete="on"
+						required
+					/>
+				</label>
 
-<form action="">
-    <fieldset>
-        <legend>表单属性</legend>
-        <label for="">
-            用户名：<input type="text" placeholder="例如：smyhvae" autofocus name="userName" autocomplete="on" required/>
-        </label>
+				<label for=""> 电话：<input type="tel" pattern="1\d{10}" /> </label>
 
-        <label for="">
-            电话：<input type="tel" pattern="1\d{10}"/>
-        </label>
+				<label for=""> multiple的表单: <input type="file" multiple /> </label>
 
-        <label for="">
-            multiple的表单: <input type="file" multiple>
-        </label>
+				<!-- 上传文件-->
+				<input type="file" name="file" multiple />
 
-        <!-- 上传文件-->
-        <input type="file" name="file" multiple/>
-
-        <input type="submit"/>
-    </fieldset>
-</form>
-
-</body>
+				<input type="submit" />
+			</fieldset>
+		</form>
+	</body>
 </html>
 ```
 
@@ -552,67 +498,62 @@ keygen 元素是密钥对生成器（key-pair generator）。当提交表单时�
 
 - <u>`oninvalid()`：验证不通过时触发。比如，如果验证不通过时，想弹出一段提示文字，就可以用到它。</u>
 
-
 举例：
 
 ```html
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-        form {
-            width: 100%;
-            /* 最大宽度*/
-            max-width: 400px;
-            /* 最小宽度*/
-            min-width: 200px;
-            margin: 0 auto;
-            font-family: "Microsoft Yahei";
-            font-size: 20px;
-        }
+	<head lang="en">
+		<meta charset="UTF-8" />
+		<title></title>
+		<style>
+			form {
+				width: 100%;
+				/* 最大宽度*/
+				max-width: 400px;
+				/* 最小宽度*/
+				min-width: 200px;
+				margin: 0 auto;
+				font-family: 'Microsoft Yahei';
+				font-size: 20px;
+			}
 
-        input {
-            display: block;
-            width: 100%;
-            height: 30px;
-            margin: 10px 0;
-        }
-    </style>
-</head>
-<body>
-<form action="">
-    <fieldset>
-        <legend>表单事件</legend>
-        <label for="">
-            邮箱：<input type="email" name="" id="txt1"/>
-        </label>
-        <label for="">
-            输入的次数统计：<input type="text" name="" id="txt2"/>
-        </label>
+			input {
+				display: block;
+				width: 100%;
+				height: 30px;
+				margin: 10px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<fieldset>
+				<legend>表单事件</legend>
+				<label for=""> 邮箱：<input type="email" name="" id="txt1" /> </label>
+				<label for=""> 输入的次数统计：<input type="text" name="" id="txt2" /> </label>
 
-        <input type="submit"/>
-    </fieldset>
-</form>
-<script>
+				<input type="submit" />
+			</fieldset>
+		</form>
+		<script>
+			var txt1 = document.getElementById('txt1');
+			var txt2 = document.getElementById('txt2');
+			var num = 0;
 
-    var txt1 = document.getElementById('txt1');
-    var txt2 = document.getElementById('txt2');
-    var num = 0;
+			txt1.oninput = function () {
+				//用户输入时触发
 
-    txt1.oninput = function () {  //用户输入时触发
-
-        num++;  //用户每输入一次，num自动加 1
-        //将统计数显示在txt2中
-        txt2.value = num;
-    }
-    txt1.oninvalid = function () {  //验证不通过时触发
-        this.setCustomValidity('亲，请输入正确哦');  //设置验证不通过时的提示文字
-    }
-
-</script>
-</body>
+				num++; //用户每输入一次，num自动加 1
+				//将统计数显示在txt2中
+				txt2.value = num;
+			};
+			txt1.oninvalid = function () {
+				//验证不通过时触发
+				this.setCustomValidity('亲，请输入正确哦'); //设置验证不通过时的提示文字
+			};
+		</script>
+	</body>
 </html>
 ```
 
@@ -622,18 +563,18 @@ keygen 元素是密钥对生成器（key-pair generator）。当提交表单时�
 
 ## 多媒体
 
-在HTML5之前，在网页上播放音频/视频的通用方法是利用Flash来播放。但是大多情况下，并非所有用户的浏览器都安装了Flash插件，由此使得音频、视频播放的处理变得非常复杂；并且移动设备的浏览器并不支持Flash插件。
+在 HTML5 之前，在网页上播放音频/视频的通用方法是利用 Flash 来播放。但是大多情况下，并非所有用户的浏览器都安装了 Flash 插件，由此使得音频、视频播放的处理变得非常复杂；并且移动设备的浏览器并不支持 Flash 插件。
 
-H5里面提供了视频和音频的标签。
+H5 里面提供了视频和音频的标签。
 
 ### 音频
 
-HTML5通过`<audio>`标签来解决音频播放的问题。
+HTML5 通过`<audio>`标签来解决音频播放的问题。
 
 使用举例：
 
 ```html
-	<audio src="music/yinyue.mp3" autoplay controls> </audio>
+<audio src="music/yinyue.mp3" autoplay controls></audio>
 ```
 
 效果如下：
@@ -661,27 +602,24 @@ HTML5通过`<audio>`标签来解决音频播放的问题。
 ```html
 <!--推荐的兼容写法：-->
 <audio controls loop>
-    <source src="music/yinyue.mp3"/>
-    <source src="music/yinyue.ogg"/>
-    <source src="music/yinyue.wav"/>
-    抱歉，你的浏览器暂不支持此音频格式
+	<source src="music/yinyue.mp3" />
+	<source src="music/yinyue.ogg" />
+	<source src="music/yinyue.wav" />
+	抱歉，你的浏览器暂不支持此音频格式
 </audio>
 ```
 
 代码解释：如果识别不出音频格式，就弹出那句“抱歉”。
 
-
 ### 视频
 
-
-HTML5通过`<video>`标签来解决视频播放的问题。
+HTML5 通过`<video>`标签来解决视频播放的问题。
 
 使用举例：
 
 ```html
-	<video src="video/movie.mp4" controls autoplay></video>
+<video src="video/movie.mp4" controls autoplay></video>
 ```
-
 
 我们可以通过附加属性，来更友好地控制视频的播放，如：
 
@@ -706,228 +644,221 @@ HTML5通过`<video>`标签来解决视频播放的问题。
 兼容性写法：
 
 ```html
-    <!--<video src="video/movie.mp4" controls  autoplay ></video>-->
-    <!--  行内块 display:inline-block -->
-    <video controls autoplay>
-        <source src="video/movie.mp4"/>
-        <source src="video/movie.ogg"/>
-        <source src="video/movie.webm"/>
-        抱歉，不支持此视频
-    </video>
+<!--<video src="video/movie.mp4" controls  autoplay ></video>-->
+<!--  行内块 display:inline-block -->
+<video controls autoplay>
+	<source src="video/movie.mp4" />
+	<source src="video/movie.ogg" />
+	<source src="video/movie.webm" />
+	抱歉，不支持此视频
+</video>
 ```
 
 ## DOM 操作
 
 ### 获取元素
 
-- document.querySelector("selector") 通过CSS选择器获取符合条件的第一个元素。
+- document.querySelector("selector") 通过 CSS 选择器获取符合条件的第一个元素。
 
-- document.querySelectorAll("selector")  通过CSS选择器获取符合条件的所有元素，以类数组形式存在。
+- document.querySelectorAll("selector") 通过 CSS 选择器获取符合条件的所有元素，以类数组形式存在。
 
 ### 类名操作
 
-- Node.classList.add("class") 添加class
+- Node.classList.add("class") 添加 class
 
-- Node.classList.remove("class") 移除class
+- Node.classList.remove("class") 移除 class
 
-- Node.classList.toggle("class") 切换class，有则移除，无则添加
+- Node.classList.toggle("class") 切换 class，有则移除，无则添加
 
-- Node.classList.contains("class") 检测是否存在class
+- Node.classList.contains("class") 检测是否存在 class
 
 ### 自定义属性
 
-js 里可以通过 `box1.index=100;`  `box1.title` 来自定义属性和获取属性。
+js 里可以通过 `box1.index=100;` `box1.title` 来自定义属性和获取属性。
 
-H5可以直接在标签里添加自定义属性，**但必须以 `data-` 开头**。
+H5 可以直接在标签里添加自定义属性，**但必须以 `data-` 开头**。
 
 举例：
 
 ```html
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-<!-- 给标签添加自定义属性 必须以data-开头 -->
-<div class="box" title="盒子" data-my-name="smyhvae" data-content="我是一个div">div</div>
-<script>
-    var box = document.querySelector('.box');
+	<head lang="en">
+		<meta charset="UTF-8" />
+		<title></title>
+	</head>
+	<body>
+		<!-- 给标签添加自定义属性 必须以data-开头 -->
+		<div class="box" title="盒子" data-my-name="smyhvae" data-content="我是一个div">div</div>
+		<script>
+			var box = document.querySelector('.box');
 
-    //自定义的属性 需要通过 dateset[]方式来获取
-    console.log(box.dataset["content"]);  //打印结果：我是一个div
-    console.log(box.dataset["myName"]);    //打印结果：smyhvae
+			//自定义的属性 需要通过 dateset[]方式来获取
+			console.log(box.dataset['content']); //打印结果：我是一个div
+			console.log(box.dataset['myName']); //打印结果：smyhvae
 
-    //设置自定义属性的值
-    var num = 100;
-    num.index = 10;
-    box.index = 100;
-    box.dataset["content"] = "aaaa";
-
-</script>
-</body>
+			//设置自定义属性的值
+			var num = 100;
+			num.index = 10;
+			box.index = 100;
+			box.dataset['content'] = 'aaaa';
+		</script>
+	</body>
 </html>
 ```
 
-### 举例：鼠标点击时，tab栏切换
+### 举例：鼠标点击时，tab 栏切换
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Tab 标签</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: #f7f7f7;
+			}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Tab 标签</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #F7F7F7;
-        }
+			.tabs {
+				width: 400px;
+				margin: 30px auto;
+				background-color: #fff;
+				border: 1px solid #c0dcc0;
+				box-sizing: border-box;
+			}
 
-        .tabs {
-            width: 400px;
-            margin: 30px auto;
-            background-color: #FFF;
-            border: 1px solid #C0DCC0;
-            box-sizing: border-box;
-        }
+			.tabs nav {
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				overflow: hidden;
+				background-color: #c0dcc0;
+				display: flex;
+			}
 
-        .tabs nav {
-            height: 40px;
-            text-align: center;
-            line-height: 40px;
-            overflow: hidden;
-            background-color: #C0DCC0;
-            display: flex;
-        }
+			nav a {
+				display: block;
+				width: 100px;
+				border-right: 1px solid #fff;
+				color: #000;
+				text-decoration: none;
+			}
 
-        nav a {
-            display: block;
-            width: 100px;
-            border-right: 1px solid #FFF;
-            color: #000;
-            text-decoration: none;
-        }
+			nav a:last-child {
+				border-right: 0 none;
+			}
 
-        nav a:last-child {
-            border-right: 0 none;
-        }
+			nav a.active {
+				background-color: #9baf9b;
+			}
 
-        nav a.active {
-            background-color: #9BAF9B;
-        }
+			.cont {
+				overflow: hidden;
+				display: none;
+			}
 
-        .cont {
-            overflow: hidden;
-            display: none;
-        }
+			.cont ol {
+				line-height: 30px;
+			}
+		</style>
+	</head>
 
-        .cont ol {
-            line-height: 30px;
-        }
-    </style>
-</head>
+	<body>
+		<div class="tabs">
+			<nav>
+				<a href="javascript:;" data-cont="local">国内新闻</a>
+				<a href="javascript:;" data-cont="global">国际新闻</a>
+				<a href="javascript:;" data-cont="sports">体育新闻</a>
+				<a href="javascript:;" data-cont="funny">娱乐新闻</a>
+			</nav>
+			<section class="cont" id="local">
+				<ol>
+					<li>国内新闻1</li>
+					<li>国内新闻2</li>
+					<li>国内新闻3</li>
+					<li>国内新闻4</li>
+					<li>国内新闻5</li>
+					<li>国内新闻6</li>
+					<li>国内新闻7</li>
+				</ol>
+			</section>
+			<section class="cont" id="global">
+				<ol>
+					<li>国内新闻1</li>
+					<li>国际新闻2</li>
+					<li>国际新闻3</li>
+					<li>国际新闻4</li>
+					<li>国际新闻5</li>
+					<li>国际新闻6</li>
+				</ol>
+			</section>
+			<section class="cont" id="sports">
+				<ol>
+					<li>体育新闻1</li>
+					<li>体育新闻2</li>
+					<li>体育新闻3</li>
+					<li>体育新闻4</li>
+					<li>体育新闻5</li>
+					<li>体育新闻6</li>
+					<li>体育新闻7</li>
+				</ol>
+			</section>
+			<section class="cont" id="funny">
+				<ol>
+					<li>娱乐新闻1</li>
+					<li>娱乐新闻2</li>
+					<li>娱乐新闻3</li>
+					<li>娱乐新闻4</li>
+					<li>娱乐新闻5</li>
+					<li>娱乐新闻6</li>
+					<li>娱乐新闻7</li>
+				</ol>
+			</section>
+		</div>
+		<script>
+			// 目标： 默认显示一个 当前的样式
+			// 点击导航，实现切换
+			// key 表示的当前显示的是第几个
 
-<body>
-    <div class="tabs">
-        <nav>
-            <a href="javascript:;" data-cont="local">国内新闻</a>
-            <a href="javascript:;" data-cont="global">国际新闻</a>
-            <a href="javascript:;" data-cont="sports">体育新闻</a>
-            <a href="javascript:;" data-cont="funny">娱乐新闻</a>
-        </nav>
-        <section class="cont" id="local">
-            <ol>
-                <li>国内新闻1</li>
-                <li>国内新闻2</li>
-                <li>国内新闻3</li>
-                <li>国内新闻4</li>
-                <li>国内新闻5</li>
-                <li>国内新闻6</li>
-                <li>国内新闻7</li>
-            </ol>
-        </section>
-        <section class="cont" id="global">
-            <ol>
-                <li>国内新闻1</li>
-                <li>国际新闻2</li>
-                <li>国际新闻3</li>
-                <li>国际新闻4</li>
-                <li>国际新闻5</li>
-                <li>国际新闻6</li>
-            </ol>
-        </section>
-        <section class="cont" id="sports">
-            <ol>
-                <li>体育新闻1</li>
-                <li>体育新闻2</li>
-                <li>体育新闻3</li>
-                <li>体育新闻4</li>
-                <li>体育新闻5</li>
-                <li>体育新闻6</li>
-                <li>体育新闻7</li>
-            </ol>
-        </section>
-        <section class="cont" id="funny">
-            <ol>
-                <li>娱乐新闻1</li>
-                <li>娱乐新闻2</li>
-                <li>娱乐新闻3</li>
-                <li>娱乐新闻4</li>
-                <li>娱乐新闻5</li>
-                <li>娱乐新闻6</li>
-                <li>娱乐新闻7</li>
-            </ol>
-        </section>
-    </div>
-    <script>
-        // 目标： 默认显示一个 当前的样式
-        // 点击导航，实现切换
-        // key 表示的当前显示的是第几个
+			(function (key) {
+				// 获取所有的导航
+				var navs = document.querySelectorAll('nav a');
+				// 遍历 给导航 绑定事件，并且添加当前样式
+				for (var i = 0; i < navs.length; i++) {
+					// 如果是用户指定的当前样式
+					if (key == i) {
+						navs[i].classList.add('active');
+						// 拿到要显示内容section的id
+						var secId = navs[i].dataset['cont'];
+						// 获取对应的section标签
+						document.querySelector('#' + secId).style.display = 'block';
+					}
 
-        (function (key) {
-            // 获取所有的导航
-            var navs = document.querySelectorAll('nav a');
-            // 遍历 给导航 绑定事件，并且添加当前样式
-            for (var i = 0; i < navs.length; i++) {
-                // 如果是用户指定的当前样式
-                if (key == i) {
-                    navs[i].classList.add('active');
-                    // 拿到要显示内容section的id
-                    var secId = navs[i].dataset['cont'];
-                    // 获取对应的section标签
-                    document.querySelector('#' + secId).style.display = 'block';
-                }
+					// 给每一个导航绑定点击事件
+					navs[i].onclick = function () {
+						// 排他
+						// 之前有active样式的清除, 之前显示的section 隐藏
+						var currentNav = document.querySelector('.active');
+						// 获取对应的内容区域 ，让其隐藏
+						var currentId = currentNav.dataset['cont'];
+						// 去掉导航的active 样式
+						currentNav.classList.remove('active');
+						// 对应的内容区域
+						document.querySelector('#' + currentId).style.display = 'none';
 
-                // 给每一个导航绑定点击事件
-                navs[i].onclick = function () {
-                    // 排他
-                    // 之前有active样式的清除, 之前显示的section 隐藏
-                    var currentNav = document.querySelector('.active');
-                    // 获取对应的内容区域 ，让其隐藏
-                    var currentId = currentNav.dataset['cont'];
-                    // 去掉导航的active 样式
-                    currentNav.classList.remove('active');
-                    // 对应的内容区域
-                    document.querySelector('#' + currentId).style.display = 'none';
-
-                    // 突出显示自己 导航添加样式  对应的section 显示
-                    // 给自己添加active样式
-                    this.classList.add('active');
-                    // 对应的section模块显示出来
-                    var myId = this.dataset['cont'];
-                    document.querySelector('#' + myId).style.display = 'block';
-                }
-            }
-
-        })(0);
-
-
-    </script>
-</body>
-
+						// 突出显示自己 导航添加样式  对应的section 显示
+						// 给自己添加active样式
+						this.classList.add('active');
+						// 对应的section模块显示出来
+						var myId = this.dataset['cont'];
+						document.querySelector('#' + myId).style.display = 'block';
+					};
+				}
+			})(0);
+		</script>
+	</body>
 </html>
 ```
-

@@ -3,8 +3,6 @@ title: 05-MySQL数据库的常用命令
 12/13
 ---
 
-[TOC]
-
 ## MySQL 的一些简单命令
 
 我们可以在 Navicat Premium 软件中，创建数据库和表，然后输入查询命令来查询数据。选择菜单栏「查询->新建查询->输入 sql 命令->运行」即可，效果如下：
@@ -213,7 +211,7 @@ select * from qianguyihao_table where name is not NULL;
 | 6   | 206    | 数学之美   | 12       |
 | 7   | 777    | 设计心理学 | 99       |
 
-注意，表2中的每本图书都有对应的 authorId，这个 authorId 就是对应表1中的 authorId。**通过 authorId 把两张表关联起来**。
+注意，表 2 中的每本图书都有对应的 authorId，这个 authorId 就是对应表 1 中的 authorId。**通过 authorId 把两张表关联起来**。
 
 通过联表查询上面的两张表，我们来对比一下查询结果。
 
@@ -225,9 +223,7 @@ SELECT * FROM author INNER JOIN book;
 
 查询结果：
 
-
 ![](https://github.com/qianguyihao/Web/blob/master/img/20200418_2300.png)
-
 
 上面这种查询，没有意义，因为没有加任何查询条件。
 
@@ -240,7 +236,6 @@ SELECT * FROM author INNER JOIN book ON author.authorId = book.authorId;
 查询结果：
 
 ![](https://github.com/qianguyihao/Web/blob/master/img/20200418_2305.png)
-
 
 上面这行命令，跟下面这行命令等价：
 
@@ -279,9 +274,3 @@ SELECT * FROM author RIGHT JOIN book ON author.authorId = book.authorId;
 ## 子查询
 
 当一个查询结果是另一个查询的条件时，这个查询称之为子查询。
-
-
-
-
-
-

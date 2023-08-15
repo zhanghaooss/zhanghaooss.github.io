@@ -3,9 +3,6 @@ title: 25-this指向
 date:2/15
 ---
 
-[TOC]
-
-
 ## 执行期上下文
 
 当**函数执行**时（准确来说，是在函数发生预编译的前一刻），会创建一个执行期上下文的内部对象。一个执行期上下文定义了一个函数执行时的环境。
@@ -22,7 +19,7 @@ date:2/15
 
 我们在《JavaScript 基础/函数.md》这篇文章讲过，函数的调用有**六种**形式。
 
-在ES5语法中，根据函数的调用方式的不同，this 会指向不同的对象：
+在 ES5 语法中，根据函数的调用方式的不同，this 会指向不同的对象：
 
 1、以函数的形式（包括普通函数、定时器函数、立即执行函数）调用时，this 的指向永远都是 window。比如`fun();`相当于`window.fun();`
 
@@ -38,18 +35,18 @@ date:2/15
 
 ```javascript
 function fun() {
-    console.log(this);
-    console.log(this.name);
+	console.log(this);
+	console.log(this.name);
 }
 
 var obj1 = {
-    name: 'smyh',
-    sayName: fun,
+	name: 'smyh',
+	sayName: fun,
 };
 
 var obj2 = {
-    name: 'vae',
-    sayName: fun,
+	name: 'vae',
+	sayName: fun,
 };
 
 var name = '全局的name属性';
@@ -71,18 +68,18 @@ fun(); //可以理解成 window.fun()
 
 ```javascript
 function fun() {
-    console.log(this);
-    console.log(this.name);
+	console.log(this);
+	console.log(this.name);
 }
 
 var obj1 = {
-    name: 'smyh',
-    sayName: fun,
+	name: 'smyh',
+	sayName: fun,
 };
 
 var obj2 = {
-    name: 'vae',
-    sayName: fun,
+	name: 'vae',
+	sayName: fun,
 };
 
 var name = '全局的name属性';
@@ -108,8 +105,6 @@ ES6 中的箭头函数并不使用上面的准则，**而是会继承外层函�
 
 JS 专门为我们提供了一些方法来改变函数内部的 this 指向。常见的方法有 call()、apply()、bind() 方法。继续往下看。
 
-
-
 ## call()
 
 ### call() 方法的作用
@@ -124,7 +119,7 @@ call() 方法的另一个应用：**可以实现继承**。之所以能实现继
 fn1.call(想要将this指向哪里, 函数实参1, 函数实参2);
 ```
 
-备注：第一个参数中，如果不需要改变 this 指向，则传 null，fn1里面没有this，第一个参数随便，`1`也可以。
+备注：第一个参数中，如果不需要改变 this 指向，则传 null，fn1 里面没有 this，第一个参数随便，`1`也可以。
 
 ### call() 方法举例
 
@@ -132,12 +127,12 @@ fn1.call(想要将this指向哪里, 函数实参1, 函数实参2);
 
 ```js
 const obj1 = {
-    nickName: 'qianguyihao',
-    age: 28,
+	nickName: 'qianguyihao',
+	age: 28,
 };
 function fn1() {
-    console.log(this);
-    console.log(this.nickName);
+	console.log(this);
+	console.log(this.nickName);
 }
 fn1.call(this); // this的指向并没有被改变，此时相当于 fn1();
 ```
@@ -155,14 +150,14 @@ undefined
 
 ```js
 var obj1 = {
-    nickName: 'qianguyihao',
-    age: 28,
+	nickName: 'qianguyihao',
+	age: 28,
 };
 
 function fn1(a, b) {
-    console.log(this);
-    console.log(this.nickName);
-    console.log(a + b);
+	console.log(this);
+	console.log(this.nickName);
+	console.log(a + b);
 }
 
 fn1.call(obj1, 2, 4); // 先将 this 指向 obj1，然后执行 fn1() 函数
@@ -181,14 +176,14 @@ qianguyihao
 ```js
 // 给 Father 增加 name 和 age 属性
 function Father(myName, myAge) {
-    this.name = myName;
-    this.age = myAge;
+	this.name = myName;
+	this.age = myAge;
 }
 
 function Son(myName, myAge) {
-    // 【下面这一行，重要代码】
-    // 通过这一步，将 father 里面的 this 修改为 Son 里面的 this；另外，给 Son 加上相应的参数，让 Son 自动拥有 Father 里的属性。最终实现继承
-    Father.call(this, myName, myAge);
+	// 【下面这一行，重要代码】
+	// 通过这一步，将 father 里面的 this 修改为 Son 里面的 this；另外，给 Son 加上相应的参数，让 Son 自动拥有 Father 里的属性。最终实现继承
+	Father.call(this, myName, myAge);
 }
 
 const son1 = new Son('千古壹号', 28);
@@ -227,14 +222,14 @@ fn1.apply(想要将this指向哪里, [函数实参1, 函数实参2]);
 
 ```js
 var obj1 = {
-    nickName: 'qianguyihao',
-    age: 28,
+	nickName: 'qianguyihao',
+	age: 28,
 };
 
 function fn1(a) {
-    console.log(this);
-    console.log(this.nickName);
-    console.log(a);
+	console.log(this);
+	console.log(this.nickName);
+	console.log(a);
 }
 
 fn1.apply(obj1, ['hello']); // 先将 this 指向 obj1，然后执行 fn1() 函数
@@ -282,8 +277,7 @@ console.log(minValue);
 
 bind() 方法**不会调用函数**，但是可以改变函数内部的 this 指向。
 
-把call()、apply()、bind()这三个方法做一下对比，你会发现：实际开发中， bind() 方法使用得最为频繁。如果有些函数，我们不需要立即调用，但是又想改变这个函数内部的this指向，此时用 bind() 是最为合适的。
-
+把 call()、apply()、bind()这三个方法做一下对比，你会发现：实际开发中， bind() 方法使用得最为频繁。如果有些函数，我们不需要立即调用，但是又想改变这个函数内部的 this 指向，此时用 bind() 是最为合适的。
 
 语法：
 
@@ -293,9 +287,8 @@ bind() 方法**不会调用函数**，但是可以改变函数内部的 this 指
 
 参数：
 
-- 第一个参数：在 fn1 函数运行时，指定 fn1 函数的this 指向。如果不需要改变 this 指向，则传 null。
+- 第一个参数：在 fn1 函数运行时，指定 fn1 函数的 this 指向。如果不需要改变 this 指向，则传 null。
 
 - 其他参数：fn1 函数的实参。
 
-解释：它不会调用 fn1 函数，但会返回 由指定this 和指定实参的**原函数拷贝**。可以看出， bind() 方法是有返回值的。
-
+解释：它不会调用 fn1 函数，但会返回 由指定 this 和指定实参的**原函数拷贝**。可以看出， bind() 方法是有返回值的。

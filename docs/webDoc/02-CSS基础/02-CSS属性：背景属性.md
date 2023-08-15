@@ -3,30 +3,28 @@ title: 02-CSS属性：背景属性
 date:2022/12/10
 ---
 
-[TOC]
-
-
 ## background 的常见背景属性
 
 **css2.1** 中，常见的背景属性有以下几种：（经常用到，要记住）
 
-- `background-color:#ff99ff;`  设置元素的背景颜色。
+- `background-color:#ff99ff;` 设置元素的背景颜色。
 
 - `background-image:url(images/2.gif);` 将图像设置为背景。
 
--  `background-repeat: no-repeat;`  设置背景图片是否重复及如何重复，默认平铺满。（重要）
-	- `no-repeat`不要平铺；
-	- `repeat-x`横向平铺；
-	- `repeat-y`纵向平铺。
+- `background-repeat: no-repeat;` 设置背景图片是否重复及如何重复，默认平铺满。（重要）
+
+  - `no-repeat`不要平铺；
+  - `repeat-x`横向平铺；
+  - `repeat-y`纵向平铺。
 
 - `background-position:center top;` 设置背景图片在当前容器中的位置。
 
 - `background-attachment:scroll;` 设置背景图片是否跟着滚动条一起移动。
-属性值可以是：`scroll`（与fixed属性相反，默认属性）、`fixed`（背景就会被固定住，不会被滚动条滚走）。
+  属性值可以是：`scroll`（与 fixed 属性相反，默认属性）、`fixed`（背景就会被固定住，不会被滚动条滚走）。
 
 - 另外还有一个综合属性叫做`background`，它的作用是：将上面的多个属性写在一个声明中。
 
-**CSS3** 中，新增了一些background属性：
+**CSS3** 中，新增了一些 background 属性：
 
 - background-origin
 
@@ -40,52 +38,53 @@ date:2022/12/10
 
 ## background-color：背景颜色的表示方法
 
-css2.1 中，颜色的表示方法有三种：单词、rgb表示法、十六进制表示法。
+css2.1 中，颜色的表示方法有三种：单词、rgb 表示法、十六进制表示法。
 
 比如红色可以有下面的三种表示方法：
 
 ```css
-	background-color: red;
-	background-color: rgb(255,0,0);
-	background-color: #ff0000;
+background-color: red;
+background-color: rgb(255, 0, 0);
+background-color: #ff0000;
 ```
 
-CSS3 中，有一种新的表示颜色的方式：RGBA或者HSLA。
+CSS3 中，有一种新的表示颜色的方式：RGBA 或者 HSLA。
 
-RGBA、HSLA可应用于**所有**使用颜色的地方。
+RGBA、HSLA 可应用于**所有**使用颜色的地方。
 
 下面分别介绍。
 
 ### 用英语单词表示
 
-能够用英语单词来表述的颜色，都是简单颜色，比如red、green、blue、orange、gray等。代码举例：
+能够用英语单词来表述的颜色，都是简单颜色，比如 red、green、blue、orange、gray 等。代码举例：
 
 ```css
 background-color: red;
 /*transparent透明色*/
 ```
+
 ### RGB 表示法
 
 RGB 表示三原色“红”red、“绿”green、“蓝”blue。
 
-光学显示器中，每个像素都是由三原色的发光原件组成的，靠明亮度不同调成不同的颜色的。r、g、b的值，每个值的取值范围0~255，一共256个值。
+光学显示器中，每个像素都是由三原色的发光原件组成的，靠明亮度不同调成不同的颜色的。r、g、b 的值，每个值的取值范围 0~255，一共 256 个值。
 
 比如红色：
 
 ```css
-background-color: rgb(255,0,0);
+background-color: rgb(255, 0, 0);
 ```
 
 黑色：
 
 ```css
-background-color: rgb(0,0,0);
+background-color: rgb(0, 0, 0);
 ```
 
 颜色可以叠加，比如黄色就是红色和绿色的叠加：
 
 ```css
-background-color: rgb(255,255,0);
+background-color: rgb(255, 255, 0);
 ```
 
 ### RGBA 表示法
@@ -102,13 +101,13 @@ background-color: rgb(255,255,0);
 
 - R、G、B 的取值范围是：0~255；透明度的取值范围是 0~1。
 
-**RGB色彩模式：**
+**RGB 色彩模式：**
 
- - 自然界中绝大部分颜色都可以用红、绿、蓝(RGB)这三种颜色波长的不同强度组合而得，这就是人们常说的三原色原理。
- - RGB三原色也叫加色模式，这是因为当我们把不同光的波长加到一起的时候，可以得到不同的混合色。例：红+绿=黄色，红+蓝＝紫色，绿+蓝=青。
- - RGB各有256级(0-255)亮度，256级的RGB色彩总共能组合出约1678万种色彩，即256×256×256=16777216。
+- 自然界中绝大部分颜色都可以用红、绿、蓝(RGB)这三种颜色波长的不同强度组合而得，这就是人们常说的三原色原理。
+- RGB 三原色也叫加色模式，这是因为当我们把不同光的波长加到一起的时候，可以得到不同的混合色。例：红+绿=黄色，红+蓝＝紫色，绿+蓝=青。
+- RGB 各有 256 级(0-255)亮度，256 级的 RGB 色彩总共能组合出约 1678 万种色彩，即 256×256×256=16777216。
 
- 在数字视频中，对RGB三基色各进行8位编码就构成了大约1678万种颜色，这就是我们常说的真彩色。所有显示设备都采用的是RGB色彩模式。
+在数字视频中，对 RGB 三基色各进行 8 位编码就构成了大约 1678 万种颜色，这就是我们常说的真彩色。所有显示设备都采用的是 RGB 色彩模式。
 
 ### 十六进制表示法
 
@@ -118,23 +117,23 @@ background-color: rgb(255,255,0);
 background-color: #ff0000;
 ```
 
-所有用`#`开头的色值，都是16进制的。
+所有用`#`开头的色值，都是 16 进制的。
 
-这里，我们就要学会16进制与10进制之间的转换。下面举几个例子。
+这里，我们就要学会 16 进制与 10 进制之间的转换。下面举几个例子。
 
-问：16进制中的28等于10进制的多少？
-答：2*16+8 = 40。
+问：16 进制中的 28 等于 10 进制的多少？
+答：2\*16+8 = 40。
 
-16进制中的af等于10进制的多少？
-答：10 * 16 + 15 = 175
+16 进制中的 af 等于 10 进制的多少？
+答：10 \* 16 + 15 = 175
 
 以此类推：
 
-- #ff0000等于rgb(255,0,0)。
+- #ff0000 等于 rgb(255,0,0)。
 
 - `background-color: #123456;`等价于`background-color: rgb(18,52,86);`
 
-**十六进制可以简化为3位，所有#aabbcc的形式，能够简化为#abc**。举例如下：
+**十六进制可以简化为 3 位，所有#aabbcc 的形式，能够简化为#abc**。举例如下：
 
 比如：
 
@@ -193,7 +192,7 @@ background-color: #ff0000;
 
 解释：
 
-- `H` 色调，取值范围 0~360。0或360表示红色、120表示绿色、240表示蓝色。
+- `H` 色调，取值范围 0~360。0 或 360 表示红色、120 表示绿色、240 表示蓝色。
 
 - `S` 饱和度，取值范围 0%~100%。值越大，越鲜艳。
 
@@ -227,7 +226,7 @@ background-color: #ff0000;
 
 ![](http://img.smyhvae.com/2015-10-03-css-19.png)
 
-PS：padding的区域也是有背景图的。
+PS：padding 的区域也是有背景图的。
 
 （2）属性值为`no-repeat`（不要平铺）时：
 
@@ -237,7 +236,7 @@ PS：padding的区域也是有背景图的。
 
 ![](http://img.smyhvae.com/2015-10-03-css-21.png)
 
-其实这种属性的作用还是很广的。举个例子，设计师设计一张宽度只有1px、颜色纵向渐变的图片，然后我们通过这个属性将其进行水平方向的平铺，就可以看到整个页面都是渐变的了。
+其实这种属性的作用还是很广的。举个例子，设计师设计一张宽度只有 1px、颜色纵向渐变的图片，然后我们通过这个属性将其进行水平方向的平铺，就可以看到整个页面都是渐变的了。
 
 在搜索引擎上搜“**平铺背景**”，就可以发现，**周期性的图片**可以采用此种方法进行平铺。
 
@@ -265,7 +264,6 @@ PS：padding的区域也是有背景图的。
 
 ![](http://img.smyhvae.com/20170812_1643.png)
 
-
 ![](http://img.smyhvae.com/20170812_1645.png)
 
 **2、用单词描述属性值：**
@@ -285,17 +283,17 @@ PS：padding的区域也是有背景图的。
 
 位置属性有很多使用场景的。我们来举两个例子。
 
-场景1：（大背景图）
+场景 1：（大背景图）
 
-打开“暗黑3 台湾”的官网<https://tw.battle.net/d3/zh/>，可以看到官网的效果是比较炫的：
+打开“暗黑 3 台湾”的官网<https://tw.battle.net/d3/zh/>，可以看到官网的效果是比较炫的：
 
 ![](http://img.smyhvae.com/20170812_1945.jpg)
 
-检查网页后，找到网站背景图片的url：<https://tw.battle.net/d3/static/images/layout/bg-repeat.jpg>。背景图如下：
+检查网页后，找到网站背景图片的 url：<https://tw.battle.net/d3/static/images/layout/bg-repeat.jpg>。背景图如下：
 
 ![](http://img.smyhvae.com/20170812_1950.jpg)
 
-实际上，我们是通过把这张图片作为网站的背景图来达到显示效果的。只需要给body标签加如下属性即可：
+实际上，我们是通过把这张图片作为网站的背景图来达到显示效果的。只需要给 body 标签加如下属性即可：
 
 ```
         body{
@@ -307,34 +305,34 @@ PS：padding的区域也是有背景图的。
 
 上方代码中，如果没加`background-position`这个属性，背景图会默认处于浏览器的左上角（显得很丑）；加了此属性之后，图片在水平方向就位于浏览器的中间了。
 
-场景2：（通栏banner）
+场景 2：（通栏 banner）
 
-很多网站的首页都会有banner图（网站最上方的全屏大图叫做「**通栏banner**」），这种图要求横向的宽度特别大。比如说，设计师给你一张1920*465的超大banner图，如果我们把这个banner图作为img标签直接插入网页中，会有问题的：首先，图片不在网页的中间；其次，肯定会出现横向滚动条。如下图所示：
+很多网站的首页都会有 banner 图（网站最上方的全屏大图叫做「**通栏 banner**」），这种图要求横向的宽度特别大。比如说，设计师给你一张 1920\*465 的超大 banner 图，如果我们把这个 banner 图作为 img 标签直接插入网页中，会有问题的：首先，图片不在网页的中间；其次，肯定会出现横向滚动条。如下图所示：
 
 ![](http://img.smyhvae.com/20170813_1102.gif)
 
-<u>正确的做法是，将banner图作为div的背景图，这样的话，背景图超出div的部分，会自动移溢出</u>。需要给div设置的属性如下：
+<u>正确的做法是，将 banner 图作为 div 的背景图，这样的话，背景图超出 div 的部分，会自动移溢出</u>。需要给 div 设置的属性如下：
 
 ```css
-        div{
-            height: 465px;
-            background-image: url(http://img.smyhvae.com/20170813_1053.jpg);
-            background-position: center top;
-            background-repeat: no-repeat;
-        }
+div {
+	height: 465px;
+	background-image: url(http://img.smyhvae.com/20170813_1053.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+}
 ```
 
-上方代码中，我们给div设置height（高度为banner图的高度），不需要设置宽度（因为宽度会自动霸占整行）。效果如下：
+上方代码中，我们给 div 设置 height（高度为 banner 图的高度），不需要设置宽度（因为宽度会自动霸占整行）。效果如下：
 
 ![](http://img.smyhvae.com/20170813_1119.gif)
 
-上图可以看出，将banner图作为div的背景后，banner图会永远处于网页的正中间（水平方向来看）。
+上图可以看出，将 banner 图作为 div 的背景后，banner 图会永远处于网页的正中间（水平方向来看）。
 
 ## background-attachment 属性
 
 - `background-attachment:scroll;` 设置背景图片是否固定。属性值可以是：
-	- `fixed`（背景就会被固定住，不会被滚动条滚走）。
-	- `scroll`（与fixed属性相反，默认属性）
+  - `fixed`（背景就会被固定住，不会被滚动条滚走）。
+  - `scroll`（与 fixed 属性相反，默认属性）
 
 `background-attachment:fixed;`的效果如下：
 
@@ -342,22 +340,22 @@ PS：padding的区域也是有背景图的。
 
 ### background 综合属性
 
-background属性和border一样，是一个综合属性，可以将多个属性写在一起。(在[盒子模型](http://www.cnblogs.com/smyhvae/p/7256371.html)这篇文章中专门讲到border)
+background 属性和 border 一样，是一个综合属性，可以将多个属性写在一起。(在[盒子模型](http://www.cnblogs.com/smyhvae/p/7256371.html)这篇文章中专门讲到 border)
 
-举例1:
+举例 1:
 
 ```css
-	background:red url(1.jpg) no-repeat 100px 100px fixed;
+background: red url(1.jpg) no-repeat 100px 100px fixed;
 ```
 
 等价于：
 
 ```css
-	background-color:red;
-	background-image:url(1.jpg);
-	background-repeat:no-repeat;
-	background-position:100px 100px;
-	background-attachment:fixed;
+background-color: red;
+background-image: url(1.jpg);
+background-repeat: no-repeat;
+background-position: 100px 100px;
+background-attachment: fixed;
 ```
 
 以后，我们可以用小属性层叠掉大属性。
@@ -367,7 +365,7 @@ background属性和border一样，是一个综合属性，可以将多个属性�
 比如说，对于下面这样的属性：
 
 ```css
-	background: blue url(images/变态男.jpg) no-repeat 100px 100px;
+background: blue url(images/变态男.jpg) no-repeat 100px 100px;
 ```
 
 效果如下：
@@ -402,46 +400,43 @@ background属性和border一样，是一个综合属性，可以将多个属性�
 
 - `contain`：将图片**完整地**显示在容器中，且保证**长宽比不变**。可能会导致容器的部分区域留白。
 
-代码举例：（这张图片本身的尺寸是 1080 * 1350）
+代码举例：（这张图片本身的尺寸是 1080 \* 1350）
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.img_wrap {
+				display: flex;
+			}
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<style>
-		.img_wrap {
-			display: flex;
-		}
+			.img {
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+				background: url(http://img.smyhvae.com/20191006_1330.jpg) no-repeat;
+				margin-right: 20px;
+			}
 
-		.img {
-			width: 200px;
-			height: 200px;
-			border:1px solid red;
-			background: url(http://img.smyhvae.com/20191006_1330.jpg) no-repeat;
-			margin-right: 20px;
-		}
+			.div1 {
+				background-size: cover;
+			}
+			.div2 {
+				background-size: contain;
+			}
+		</style>
+	</head>
 
-		.div1 {
-			background-size: cover;
-		}
-		.div2{
-			background-size: contain;
-		}
-	</style>
-</head>
-
-<body>
-	<section class="img_wrap">
-		<div class="img div1"></div>
-		<div class="img div2"></div>
-
-	</section>
-</body>
-
+	<body>
+		<section class="img_wrap">
+			<div class="img div1"></div>
+			<div class="img div2"></div>
+		</section>
+	</body>
 </html>
 ```
 
@@ -482,13 +477,13 @@ background属性和border一样，是一个综合属性，可以将多个属性�
 
 格式举例：
 
-`background-clip: content-box;`   超出的部分，将裁剪掉。属性值可以是：
+`background-clip: content-box;` 超出的部分，将裁剪掉。属性值可以是：
 
- - `border-box` 超出 border-box 的部分，将裁剪掉
+- `border-box` 超出 border-box 的部分，将裁剪掉
 
- - `padding-box` 超出 padding-box 的部分，将裁剪掉
+- `padding-box` 超出 padding-box 的部分，将裁剪掉
 
- - `content-box` 超出 content-box 的部分，将裁剪掉
+- `content-box` 超出 content-box 的部分，将裁剪掉
 
 假设现在有这样的属性设置：
 
@@ -509,26 +504,24 @@ background属性和border一样，是一个综合属性，可以将多个属性�
 ```html
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-        .box {
-            height: 416px;
-            border: 1px solid #000;
-            margin: 100px auto;
-            /* 给盒子加多个背景，按照背景语法格式书写，多个背景使用逗号隔开 */
-            background: url(images/bg1.png) no-repeat left top,
-            url(images/bg2.png) no-repeat right top,
-            url(images/bg3.png) no-repeat right bottom,
-            url(images/bg4.png) no-repeat left bottom,
-            url(images/bg5.png) no-repeat center;
-        }
-    </style>
-</head>
-<body>
-<div class="box"></div>
-</body>
+	<head lang="en">
+		<meta charset="UTF-8" />
+		<title></title>
+		<style>
+			.box {
+				height: 416px;
+				border: 1px solid #000;
+				margin: 100px auto;
+				/* 给盒子加多个背景，按照背景语法格式书写，多个背景使用逗号隔开 */
+				background: url(images/bg1.png) no-repeat left top, url(images/bg2.png) no-repeat right top,
+					url(images/bg3.png) no-repeat right bottom, url(images/bg4.png) no-repeat left bottom,
+					url(images/bg5.png) no-repeat center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
 </html>
 ```
 
@@ -540,7 +533,7 @@ background属性和border一样，是一个综合属性，可以将多个属性�
 
 ## 渐变：background-image
 
-渐变是CSS3当中比较丰富多彩的一个特性，通过渐变我们可以实现许多炫丽的效果，有效的减少图片的使用数量，并且具有很强的适应性和可扩展性。
+渐变是 CSS3 当中比较丰富多彩的一个特性，通过渐变我们可以实现许多炫丽的效果，有效的减少图片的使用数量，并且具有很强的适应性和可扩展性。
 
 渐变分为：
 
@@ -567,94 +560,89 @@ background属性和border一样，是一个综合属性，可以将多个属性�
 
 参数解释：
 
-- 方向可以是：`to left`、`to right`、`to top`、`to bottom`、角度`30deg`（指的是顺时针方向30°）。
+- 方向可以是：`to left`、`to right`、`to top`、`to bottom`、角度`30deg`（指的是顺时针方向 30°）。
 
 格式举例：
 
 ```html
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-        div {
-            width: 500px;
-            height: 100px;
-            margin: 10px auto;
-            border: 1px solid #000;
-        }
+	<head lang="en">
+		<meta charset="UTF-8" />
+		<title></title>
+		<style>
+			div {
+				width: 500px;
+				height: 100px;
+				margin: 10px auto;
+				border: 1px solid #000;
+			}
 
-        /* 语法：
+			/* 语法：
             linear-gradient(方向，起始颜色，终止颜色);
             方向：to left   to right  to top   to bottom 　角度　30deg
             起始颜色
             终止颜色
         */
-        div:nth-child(1) {
-            background-image: linear-gradient(to right, yellow, green);
-        }
+			div:nth-child(1) {
+				background-image: linear-gradient(to right, yellow, green);
+			}
 
-        /* 不写方向，表示默认的方向是：从上往下 */
-        div:nth-child(2) {
-            background-image: linear-gradient(yellow, green);
-        }
+			/* 不写方向，表示默认的方向是：从上往下 */
+			div:nth-child(2) {
+				background-image: linear-gradient(yellow, green);
+			}
 
-        /* 方向可以指定角度 */
-        div:nth-child(3) {
-            width: 100px;
-            height: 100px;
-            background-image: linear-gradient(135deg, yellow, green);
-        }
+			/* 方向可以指定角度 */
+			div:nth-child(3) {
+				width: 100px;
+				height: 100px;
+				background-image: linear-gradient(135deg, yellow, green);
+			}
 
-        /* 0%的位置开始出现黄色，40%的位置开始出现红色的过度。70%的位置开始出现绿色的过度，100%的位置开始出现蓝色 */
-        div:nth-child(4) {
-            background-image: linear-gradient(to right,
-            yellow 0%,
-            red 40%,
-            green 70%,
-            blue 100%);
+			/* 0%的位置开始出现黄色，40%的位置开始出现红色的过度。70%的位置开始出现绿色的过度，100%的位置开始出现蓝色 */
+			div:nth-child(4) {
+				background-image: linear-gradient(to right, yellow 0%, red 40%, green 70%, blue 100%);
+			}
 
-        }
+			/* 颜色之间，出现突变 */
+			div:nth-child(5) {
+				background-image: linear-gradient(
+					45deg,
+					yellow 0%,
+					yellow 25%,
+					blue 25%,
+					blue 50%,
+					red 50%,
+					red 75%,
+					green 75%,
+					green 100%
+				);
+			}
 
-        /* 颜色之间，出现突变 */
-        div:nth-child(5) {
-            background-image: linear-gradient(45deg,
-            yellow 0%,
-            yellow 25%,
-            blue 25%,
-            blue 50%,
-            red 50%,
-            red 75%,
-            green 75%,
-            green 100%
-            );
-        }
-
-        div:nth-child(6) {
-            background-image: linear-gradient(to right,
-            #000 0%,
-            #000 25%,
-            #fff 25%,
-            #fff 50%,
-            #000 50%,
-            #000 75%,
-            #fff 75%,
-            #fff 100%
-            );
-
-        }
-
-    </style>
-</head>
-<body>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-</body>
+			div:nth-child(6) {
+				background-image: linear-gradient(
+					to right,
+					#000 0%,
+					#000 25%,
+					#fff 25%,
+					#fff 50%,
+					#000 50%,
+					#000 75%,
+					#fff 75%,
+					#fff 100%
+				);
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
 </html>
 ```
 
@@ -667,58 +655,54 @@ background属性和border一样，是一个综合属性，可以将多个属性�
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CSS3 渐变</title>
-    <style>
-        html, body {
-            height: 100%;
-        }
+	<head>
+		<meta charset="UTF-8" />
+		<title>CSS3 渐变</title>
+		<style>
+			html,
+			body {
+				height: 100%;
+			}
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f8fcd4;
-        }
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: #f8fcd4;
+			}
 
-        .nav {
-            width: 800px;
-            text-align: center;
-            padding-top: 50px;
-            margin: 0 auto;
-        }
+			.nav {
+				width: 800px;
+				text-align: center;
+				padding-top: 50px;
+				margin: 0 auto;
+			}
 
-        /*设置按钮基本样式*/
-        .nav a {
-            display: inline-block;
-            width: 100px;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-            font-size: 14px;
-            color: #fff;
-            text-decoration: none;
-            border: 1px solid #e59500;
-            background-color: #FFB700;
-            background-image: linear-gradient(
-                    to bottom,
-                    #FFB700 0%,
-                    #FF8C00 100%
-            );
-        }
-
-    </style>
-</head>
-<body>
-<div class="nav">
-    <a href="javascript:;">导航1</a>
-    <a href="javascript:;">导航2</a>
-    <a href="javascript:;">导航3</a>
-    <a href="javascript:;">导航4</a>
-    <a href="javascript:;">导航5</a>
-    <a href="javascript:;">导航6</a>
-</div>
-</body>
+			/*设置按钮基本样式*/
+			.nav a {
+				display: inline-block;
+				width: 100px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				font-size: 14px;
+				color: #fff;
+				text-decoration: none;
+				border: 1px solid #e59500;
+				background-color: #ffb700;
+				background-image: linear-gradient(to bottom, #ffb700 0%, #ff8c00 100%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<a href="javascript:;">导航1</a>
+			<a href="javascript:;">导航2</a>
+			<a href="javascript:;">导航3</a>
+			<a href="javascript:;">导航4</a>
+			<a href="javascript:;">导航5</a>
+			<a href="javascript:;">导航6</a>
+		</div>
+	</body>
 </html>
 ```
 
@@ -737,70 +721,71 @@ background属性和border一样，是一个综合属性，可以将多个属性�
 
 ```
 
-解释：围绕中心点做渐变，半径是150px，从黄色到绿色做渐变。
+解释：围绕中心点做渐变，半径是 150px，从黄色到绿色做渐变。
 
-中心点的位置可以是：at  left  right  center bottom  top。如果以像素为单位，则中心点参照的是盒子的左上角。
+中心点的位置可以是：at left right center bottom top。如果以像素为单位，则中心点参照的是盒子的左上角。
 
 当然，还有其他的各种参数。格式举例：
 
 ```html
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-        div {
-            width: 250px;
-            height: 250px;
-            border: 1px solid #000;
-            margin: 20px;
-            float: left;
-        }
+	<head lang="en">
+		<meta charset="UTF-8" />
+		<title></title>
+		<style>
+			div {
+				width: 250px;
+				height: 250px;
+				border: 1px solid #000;
+				margin: 20px;
+				float: left;
+			}
 
-        /*
+			/*
             径向渐变：
             radial-gradient（辐射的半径大小 空格 中心的位置，起始颜色，终止颜色）;
             中心点位置：at  left  right  center bottom  top
         */
 
-        /*辐射半径为100px，中心点在中间*/
-        div:nth-child(1) {
-            background-image: radial-gradient(100px at center, yellow, green);
-        }
+			/*辐射半径为100px，中心点在中间*/
+			div:nth-child(1) {
+				background-image: radial-gradient(100px at center, yellow, green);
+			}
 
-        /*中心点在左上角*/
-        div:nth-child(3) {
-            background-image: radial-gradient(at left top, yellow, green);
-        }
+			/*中心点在左上角*/
+			div:nth-child(3) {
+				background-image: radial-gradient(at left top, yellow, green);
+			}
 
-        div:nth-child(2) {
-            background-image: radial-gradient(at 50px 50px, yellow, green);
-        }
+			div:nth-child(2) {
+				background-image: radial-gradient(at 50px 50px, yellow, green);
+			}
 
-        /*设置不同的颜色渐变*/
-        div:nth-child(4) {
-            background-image: radial-gradient(100px at center,
-            yellow 0%,
-            green 30%,
-            blue 60%,
-            red 100%);
-        }
+			/*设置不同的颜色渐变*/
+			div:nth-child(4) {
+				background-image: radial-gradient(
+					100px at center,
+					yellow 0%,
+					green 30%,
+					blue 60%,
+					red 100%
+				);
+			}
 
-        /*如果辐射半径的宽高不同，那就是椭圆*/
-        div:nth-child(5) {
-            background-image: radial-gradient(100px 50px at center, yellow, green);
-        }
-
-    </style>
-</head>
-<body>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-</body>
+			/*如果辐射半径的宽高不同，那就是椭圆*/
+			div:nth-child(5) {
+				background-image: radial-gradient(100px 50px at center, yellow, green);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</body>
 </html>
 ```
 
@@ -810,41 +795,39 @@ background属性和border一样，是一个综合属性，可以将多个属性�
 
 **举例：**利用径向渐变和边框圆角的属性，生成按钮。代码如下：
 
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CSS3 渐变</title>
-    <style>
+	<head>
+		<meta charset="UTF-8" />
+		<title>CSS3 渐变</title>
+		<style>
+			div:nth-child(1) {
+				width: 200px;
+				height: 200px;
+				margin: 40px auto;
+				border-radius: 100px;
+				background-color: yellowgreen;
+			}
 
-        div:nth-child(1) {
-            width: 200px;
-            height: 200px;
-            margin: 40px auto;
-            border-radius: 100px;
-            background-color: yellowgreen;
-        }
-
-        div:nth-child(2) {
-            width: 200px;
-            height: 200px;
-            margin: 40px auto;
-            border-radius: 100px;
-            background-color: yellowgreen;
-            background-image: radial-gradient(
-                    200px at 100px 100px,
-                    rgba(0, 0, 0, 0),
-                    rgba(0, 0, 0, 0.5)
-            );
-        }
-    </style>
-</head>
-<body>
-<div></div>
-<div></div>
-</body>
+			div:nth-child(2) {
+				width: 200px;
+				height: 200px;
+				margin: 40px auto;
+				border-radius: 100px;
+				background-color: yellowgreen;
+				background-image: radial-gradient(
+					200px at 100px 100px,
+					rgba(0, 0, 0, 0),
+					rgba(0, 0, 0, 0.5)
+				);
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+	</body>
 </html>
 ```
 
@@ -852,7 +835,7 @@ background属性和border一样，是一个综合属性，可以将多个属性�
 
 ![](http://img.smyhvae.com/20180208_1133.png)
 
-上图中，给第二个div设置的透明度是从0到0.5。如果设置的透明度是从0到0，则样式无变化，和第一个div一样。如果设置的透明度是从1到1，则盒子是全黑的。
+上图中，给第二个 div 设置的透明度是从 0 到 0.5。如果设置的透明度是从 0 到 0，则样式无变化，和第一个 div 一样。如果设置的透明度是从 1 到 1，则盒子是全黑的。
 
 ## clip-path：裁剪出元素的部分区域做展示
 
@@ -863,31 +846,28 @@ background属性和border一样，是一个综合属性，可以将多个属性�
 举例：（鼠标悬停时，放大裁剪的区域）
 
 ```css
-    .div1 {
-        width: 320px;
-        height: 320px;
-        border: 1px solid red;
-        background: url(http://img.smyhvae.com/20191006_1410.png) no-repeat;
-        background-size: cover;
+.div1 {
+	width: 320px;
+	height: 320px;
+	border: 1px solid red;
+	background: url(http://img.smyhvae.com/20191006_1410.png) no-repeat;
+	background-size: cover;
 
-        /* 裁剪出圆形区域 */
-        clip-path: circle(50px at 100px 100px);
-        /*参数 (半径 at x y)*/
-        transition: clip-path .4s;
-    }
-    .div1:hover{
-        /* 鼠标悬停时，裁剪出更大的圆形 */
-        clip-path: circle(80px at 100px 100px);
-    }
+	/* 裁剪出圆形区域 */
+	clip-path: circle(50px at 100px 100px);
+	/*参数 (半径 at x y)*/
+	transition: clip-path 0.4s;
+}
+.div1:hover {
+	/* 鼠标悬停时，裁剪出更大的圆形 */
+	clip-path: circle(80px at 100px 100px);
+}
 ```
 
-`clip-path`属性的好处是，即使做了任何裁剪，**容器的占位大小是不变的**。比如上方代码中，容器的占位大小一直都是 320px * 320px。这样的话，也方便我们做一些动画效果。
+`clip-path`属性的好处是，即使做了任何裁剪，**容器的占位大小是不变的**。比如上方代码中，容器的占位大小一直都是 320px \* 320px。这样的话，也方便我们做一些动画效果。
 
 `clip-path: polygon()`举例：
 
 ![](http://img.smyhvae.com/20191006_1430.png)
 
-另外，通过 `clip-path: (svg)` 可以导入svg矢量图，实现 iOS图标的圆角。这里就不详细展开了。
-
-
-
+另外，通过 `clip-path: (svg)` 可以导入 svg 矢量图，实现 iOS 图标的圆角。这里就不详细展开了。

@@ -3,8 +3,6 @@ title: 02-开始写JavaScript：hello world
 date:12/14
 ---
 
-[TOC]
-
 ## 开始写第一行 JavaScript：hello world
 
 JS 代码的书写位置在哪里呢？这个问题，也可以理解成：引入 JS 代码，有哪几种方式？有三种方式：（和 CSS 的引入方式类似）
@@ -28,24 +26,24 @@ JS 代码的书写位置在哪里呢？这个问题，也可以理解成：引�
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <input type="button" value="点我点我" onclick="alert('千古壹号 Hello 方式1')" />
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<input type="button" value="点我点我" onclick="alert('千古壹号 Hello 方式1')" />
+	</body>
 </html>
 ```
 
 **分析**：
 
--   可以将单行或少量 JS 代码写在 HTML 标签的事件属性中（以 on 开头的属性），比如放在上面的 `onclick`点击事件中。
+- 可以将单行或少量 JS 代码写在 HTML 标签的事件属性中（以 on 开头的属性），比如放在上面的 `onclick`点击事件中。
 
--   这种书写方式，不推荐使用，原因是：可读性差，尤其是需要编写大量 JS 代码时，很难维护；引号多层嵌套时，也容易出错。
+- 这种书写方式，不推荐使用，原因是：可读性差，尤其是需要编写大量 JS 代码时，很难维护；引号多层嵌套时，也容易出错。
 
--   关于代码中的「引号」，在 HTML 标签中，我们推荐使用双引号，JS 中我们推荐使用单引号。
+- 关于代码中的「引号」，在 HTML 标签中，我们推荐使用双引号，JS 中我们推荐使用单引号。
 
 ### 方式 2、内嵌式（内联式）
 
@@ -54,49 +52,49 @@ JS 代码的书写位置在哪里呢？这个问题，也可以理解成：引�
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Document</title>
-    </head>
-    <body>
-        <script type="text/javascript">
-            // 在这里写 js 代码
-            alert('千古壹号 hello 方式2');
-            console.log('qianguyihao hello 方式2');
-        </script>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 在这里写 js 代码
+			alert('千古壹号 hello 方式2');
+			console.log('qianguyihao hello 方式2');
+		</script>
+	</body>
 </html>
 ```
 
 **分析**：
 
--   text 表示纯文本，因为 JavaScript 代码本身就是纯文本。
+- text 表示纯文本，因为 JavaScript 代码本身就是纯文本。
 
--   可以将多行 JS 代码写到 `<script>` 标签中。
+- 可以将多行 JS 代码写到 `<script>` 标签中。
 
--   内嵌式 JS 是学习时常用的方式。
+- 内嵌式 JS 是学习时常用的方式。
 
 ### 方式 3：外链式
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Document</title>
-    </head>
-    <body>
-        <!-- 外链式：引入外部的 js 文件：这个 utils.js 文件与当前的 html 文件，处于同一级目录 -->
-        <script src="utils.js"></script>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- 外链式：引入外部的 js 文件：这个 utils.js 文件与当前的 html 文件，处于同一级目录 -->
+		<script src="utils.js"></script>
+	</body>
 </html>
 ```
 
 **分析**：
 
--   上面这段代码，依然是放到 body 标签里，可以和内嵌的 JS 代码并列。
--   上方代码的 script 标签已经引入了外部 JS 文件，所以这个标签里面，不可以再写 JS 代码。
--   body里的script标签只要加上src属性 不管有没有属性值，里面再写js代码就没有用了
+- 上面这段代码，依然是放到 body 标签里，可以和内嵌的 JS 代码并列。
+- 上方代码的 script 标签已经引入了外部 JS 文件，所以这个标签里面，不可以再写 JS 代码。
+- body 里的 script 标签只要加上 src 属性 不管有没有属性值，里面再写 js 代码就没有用了
 
 **总结**：
 
@@ -114,10 +112,7 @@ JS 代码的书写位置在哪里呢？这个问题，也可以理解成：引�
 
 ```html
 <head>
-  window.onload = function(){
-    // 这里可以写操作界面元素的JS代码，等页面加载完毕后再执行
-    ...
-  }
+	window.onload = function(){ // 这里可以写操作界面元素的JS代码，等页面加载完毕后再执行 ... }
 </head>
 ```
 
@@ -137,8 +132,8 @@ JS 代码的书写位置在哪里呢？这个问题，也可以理解成：引�
 
 ```html
 <script type="text/javascript">
-    alert('今天蓝天白云');
-    alert('我很高兴');
+	alert('今天蓝天白云');
+	alert('我很高兴');
 </script>
 ```
 
@@ -146,7 +141,8 @@ JS 代码的书写位置在哪里呢？这个问题，也可以理解成：引�
 
 ```html
 <script type="text/javascript">
-    alert('今天蓝天白云');alert('我很高兴');
+	alert('今天蓝天白云');
+	alert('我很高兴');
 </script>
 ```
 
@@ -198,12 +194,12 @@ JS 代码的书写位置在哪里呢？这个问题，也可以理解成：引�
 
 ```html
 <style type="text/css">
-    /* 我是 CSS 注释 */
-    p {
-        font-weight: bold;
-        font-style: italic;
-        color: red;
-    }
+	/* 我是 CSS 注释 */
+	p {
+		font-weight: bold;
+		font-style: italic;
+		color: red;
+	}
 </style>
 ```
 
@@ -248,7 +244,7 @@ VS Code --> 首选项 --> 键盘快捷方式 --> 查找“注释”这两个字 
 
 推荐阅读：
 
--   开发者代码审查 review 指南：https://jimmysong.io/eng-practices/docs/review/
+- 开发者代码审查 review 指南：https://jimmysong.io/eng-practices/docs/review/
 
 ## JavaScript 输出语句
 
@@ -261,16 +257,16 @@ VS Code --> 首选项 --> 键盘快捷方式 --> 查找“注释”这两个字 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <script>
-            alert('千古壹号');
-        </script>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			alert('千古壹号');
+		</script>
+	</body>
 </html>
 ```
 
@@ -320,8 +316,8 @@ console.log(a);
 
 **alert()和 prompt()的区别：**
 
--   alert() 语句中可以输出数字和字符串，如果要输出字符串，则必须用引号括起来；prompt()语句中，用户不管输入什么内容，都是字符串。
--   prompt() 会返回用户输入的内容。我们可以用一个变量，来接收用户输入的内容。
+- alert() 语句中可以输出数字和字符串，如果要输出字符串，则必须用引号括起来；prompt()语句中，用户不管输入什么内容，都是字符串。
+- prompt() 会返回用户输入的内容。我们可以用一个变量，来接收用户输入的内容。
 
 ### 网页内容区域输出：document.write()语句
 
