@@ -125,7 +125,7 @@ sessionStorage 的 API 举例：
 
 效果如下：
 
-![](../../图床/qgyh/20180224_2200.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180224_2200.gif)
 
 如上图所示，我们可以在 Storage 选项卡中查看 Session Storage 和 Local Storage。
 
@@ -285,7 +285,7 @@ HTML5 中我们可以轻松的构建一个离线（无网络状态）应用，�
 
 格式举例 1：
 
-![](../../图床/qgyh/20180224_2240.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180224_2240.png)
 
 格式举例 2：
 

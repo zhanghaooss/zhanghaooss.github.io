@@ -45,7 +45,7 @@ vue-resource 依赖于 Vue。所以，我们要按照先后顺序，导入vue.js
 
 现规定，获取品牌数据的 api 接口说明如下：
 
-![](../../图床/qgyh/20180422_2140.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180422_2140.png)
 
 
 ```html
@@ -150,11 +150,11 @@ vue-resource 依赖于 Vue。所以，我们要按照先后顺序，导入vue.js
 
 运行的结果如下：
 
-![](../../图床/qgyh/20180422_2152.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180422_2152.png)
 
 如果我直接在浏览器中输入请求的url，获取的json数据如下：（可以看到，这种方式获取的是相同的数据）
 
-![](../../图床/qgyh/20180422_2150.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180422_2150.png)
 
 
 ### post请求
@@ -180,7 +180,7 @@ vue-resource 依赖于 Vue。所以，我们要按照先后顺序，导入vue.js
 
 现规定，添加品牌数据的 api 接口说明如下：
 
-![](../../图床/qgyh/20180422_1720.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180422_1720.png)
 
 
 代码如下：（在上一段代码的基础之上，添加代码）
@@ -441,7 +441,7 @@ vue-resource 依赖于 Vue。所以，我们要按照先后顺序，导入vue.js
 
 ### jsonp
 
-![](../../图床/qgyh/20180420_2250.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180420_2250.png)
 
 
 **格式举例**：
@@ -459,7 +459,7 @@ vue-resource 依赖于 Vue。所以，我们要按照先后顺序，导入vue.js
 
 请求结果：
 
-![](../../图床/qgyh/20180420_2256.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180420_2256.png)
 
 
 ## JSONP的实现原理

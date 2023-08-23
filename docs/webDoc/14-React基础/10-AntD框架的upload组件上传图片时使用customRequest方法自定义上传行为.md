@@ -21,15 +21,15 @@ publish: true
 
 （1）上传中：
 
-![](../../图床/qgyh/20190302_1335-1670926678561.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20190302_1335-1670926678561.png)
 
 （2）上传成功：
 
-![](../../图床/qgyh/20190302_1336-1670926681508.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20190302_1336-1670926681508.png)
 
 （3）图片预览：
 
-![](../../图床/qgyh/20190302_1331-1670926684267.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20190302_1331-1670926684267.png)
 
 ## 代码实现
 
@@ -38,11 +38,11 @@ publish: true
 
 好在 AntD 的 upload 组件给我们提供了 `customRequest`这个方法：
 
-![](../../图床/qgyh/20200611_1543.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20200611_1543.png)
 
 关于customRequest 这个方法， AntD 官方并没有给出示例，他们只是在 GitHub 上给出了这样一个简短的介绍：
 
-![](../../图床/qgyh/20200611_1536.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20200611_1536.png)
 
 
 但这个方法怎么用呢？用的时候，会遇到什么问题呢？AntD 官方没有说。我在网上搜了半天，也没看到比较完整的、切实可行的 Demo。我天朝地大物博，网络资料浩如烟海，AntD 可是口口声声被人们号称是天朝最好用的管理后台的样式框架。可如今，却面临这样的局面。我看着你们，满怀羡慕。
@@ -60,9 +60,9 @@ import React, { PureComponent } from 'react';
 import { Button, Card, Form, message, Upload, Icon, Modal, Row, Col } from 'antd';
 import { connect } from 'dva';
 import { queryMyData, submitData } from '../api';
-import { uploadImage } from '../../utils/wq.img.upload';
+import { uploadImage } from ' D:/html5_folder/my-webdoc/utils/wq.img.upload';
 
-import styles from '../../utils/form.less';
+import styles from ' D:/html5_folder/my-webdoc/utils/form.less';
 
 const FormItem = Form.Item;
 

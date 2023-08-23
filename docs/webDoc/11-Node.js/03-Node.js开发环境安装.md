@@ -17,7 +17,7 @@ publish: true
 
 去 Node.js 的[官网](https://nodejs.org/en/)下载安装包：
 
-![1677589755718](../../图床/1677589755718.png)
+![1677589755718]( D:/html5_folder/my-webdoc/图床/1677589755718.png)
 
 我们也可以在<https://nodejs.org/en/download/releases/> 里下载历史版本。
 
@@ -33,7 +33,7 @@ publish: true
 - 无法回滚到之前的旧版本。
 - 无法在多个版本之间切换（很多时候，不同的项目需要使用特定版本。或者，我想临时尝鲜一下新版本的特性）
 
-![1677591509564](../../图床/1677591509564.png)
+![1677591509564]( D:/html5_folder/my-webdoc/图床/1677591509564.png)
 
 因此，我们暂时先不用安装 Node.js，稍后用 NVM 的方式来安装 Node.js。通过 NVM 的方式，可以让多个版本的 Node.js 共存，并灵活切换。
 
@@ -51,11 +51,11 @@ Windows 和 Mac 下安装的 Node.js 的步骤如下。
 
 （1）我们去 <https://github.com/coreybutler/nvm-windows/releases> 下载 NVM 的安装包：
 
-![](../../图床/qgyh/20180301_1603.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180301_1603.png)
 
 下载下来后，直接解压到 `D:\web`目录下：
 
-![](../../图床/qgyh/20180301_1610.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180301_1610.png)
 
 （2）在上面的目录中，新建一个`settings.txt`文件，里面的内容填充如下：
 
@@ -90,7 +90,7 @@ proxy
 
 （1）输入`nvm`命令查看环境变量是否配置成功：
 
-![](../../图床/qgyh/20180301_1645.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180301_1645.png)
 
 （2）输入 `nvm ls`，查看已安装的所有 node 版本。
 
@@ -136,7 +136,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 安装成功的界面：
 
-![](../../图床/qgyh/20180302_2126.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180302_2126.png)
 
 完成后，nvm 就被安装在了`~/.nvm`下。我们可以点开 home 目录，然后按快捷键「Cmd + Shift + .」，看看 `.nvm`这个文件夹在不在。
 
@@ -144,7 +144,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 问题 2、如果发现安装失败：
 
-![](../../图床/qgyh/20180302_2111.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180302_2111.png)
 
 原因：Xcode 软件进行过更新。解决办法：打开 Xcode 软件，同意相关内容即可。
 
@@ -194,7 +194,7 @@ nvm install 12.18.0
 
 网速有点慢，要稍等。
 
-![](../../图床/qgyh/20180302_2148.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180302_2148.png)
 
 输入 `node -v`，查看当前使用的 node 版本。
 
@@ -314,7 +314,7 @@ $ node
 
 REPL 的全称：Read、Eval、 Print、Loop。类似于浏览器的控制台。
 
-![](../../图床/qgyh/20180301_1900.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180301_1900.png)
 
 如果要退出 REPL 环境，可以输入`.exit` 或 `process.exit()`。
 
@@ -363,19 +363,19 @@ Node.js 发展到现在，已经形成了一个非常庞大的生态圈。包的
 
 NPM 不需要单独安装。默认在安装 Node 的时候，会连带一起安装 NPM：
 
-![](../../图床/qgyh/20180302_1105.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180302_1105.png)
 
 NVM、Node、NPM 安装之后，目录分布如下：
 
-![](../../图床/qgyh/20180302_1134.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180302_1134.png)
 
-![](../../图床/qgyh/20180302_1137.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180302_1137.png)
 
-![](../../图床/qgyh/20180302_1138.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180302_1138.png)
 
 输入 `npm -v`，查看 npm 的版本：
 
-![](../../图床/qgyh/20180302_1139.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180302_1139.png)
 
 如果上方命令无效，可能是之前的 node 并没有完全安装成功。解决办法：<https://segmentfault.com/a/1190000011114680>
 
@@ -391,7 +391,7 @@ NPM 默认安装到当前正在使用 Node 版本所在目录下。我们建议�
 
 输入`npm config ls`，查看：
 
-![](../../图床/qgyh/20180302_1210.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180302_1210.png)
 
 ### NPM 包的版本管理
 
@@ -404,7 +404,7 @@ NPM 包的版本号，是用三位数表示。版本号前面的符号，代表�
 - 符号`^`：固定第一位数。表示主版本固定的情况下，可更新至最新版。例如 `vue: "^2.6.0"` 表示 2.6.0 及其以上的 2.x.x 都是满足的。
 - 符号`~`：固定前两位数。表示次版本固定的情况下，可更新至最新版。例如 `vuex: "~2.6.0"`，2.6.0 及其以上的 2.6.x 都是满足的。
 - 无符号：三位数都固定。无符号表示固定版本号。例如 `vue: "2.6.0"`，此时一定是安装`2.6.0`版本。
-- ![1677635245822](../../图床/1677635245822.png)
+- ![1677635245822]( D:/html5_folder/my-webdoc/图床/1677635245822.png)
 
 参考链接：
 
@@ -441,7 +441,7 @@ npm init --yes
 
 **安装包**
 
-![1677652318597](../../图床/1677652318597.png)
+![1677652318597]( D:/html5_folder/my-webdoc/图床/1677652318597.png)
 
 只在当前工程下安装指定的包：
 
@@ -449,13 +449,13 @@ npm init --yes
 npm install [package]
 ```
 
-![1677652171656](../../图床/1677652171656.png)
+![1677652171656]( D:/html5_folder/my-webdoc/图床/1677652171656.png)
 
 > `package.json`记录当前下载的主包
 >
 > `npm install` 自动下载安装`package.json`记录的包，在文件互传时候删掉 node_modules 文件夹，再执行此命令下回来
 >
-> ![1677652655537](../../图床/1677652655537.png)
+> ![1677652655537]( D:/html5_folder/my-webdoc/图床/1677652655537.png)
 >
 > 产生的`package-lock.json`记录 node_modules 的所有包
 
@@ -613,7 +613,7 @@ npm set registry https://registry.npmmirror.com
 	npm install -g nrm
 ```
 
-![](../../图床/qgyh/20180302_1208.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180302_1208.png)
 
 **NRM 的常用命令：**
 
@@ -627,7 +627,7 @@ nrm use taobao
 
 效果如下：
 
-![](../../图床/qgyh/20180302_1215.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180302_1215.png)
 
 推荐的国内加速镜像淘宝：<https://npm.taobao.org/>
 

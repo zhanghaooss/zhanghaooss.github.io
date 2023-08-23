@@ -27,25 +27,25 @@ function getFirstNode(ele){
 
 （3）打断点：
 
-![](../../图床/qgyh/20180124_2035.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180124_2035.png)
 
 然后刷新页面。
 
 （4）一步步调试，每点击一次，执行一步：
 
-![](../../图床/qgyh/20180124_2036.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180124_2036.png)
 
 （5）监视变量：
 
 当然，也可以添加变量或者表达式到监视窗口。操作如下：
 
-![](../../图床/qgyh/20180124_2037.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180124_2037.png)
 
 上图中，选择变量或表达式，然后右键add to watch.
 
 然后监视窗口：
 
-![](../../图床/qgyh/20180124_2038.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180124_2038.png)
 
 
 ### 2019-05-20-给数组、对象赋值

@@ -326,15 +326,15 @@ body {
 
 （1）在 less 官网下载 less.js 文件：
 
-![](../../图床/qgyh/20180226_2131.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180226_2131.png)
 
 把下载好的文件放在工程文件的lib文件夹里：
 
-![](../../图床/qgyh/20180226_2143.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180226_2143.png)
 
 （2）在 index.html 中引入 less.js 和我们自己写的  main.less。位置如下：
 
-![](../../图床/qgyh/20180226_2145.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180226_2145.png)
 
 copy 红框那部分的代码如下：
 
@@ -344,7 +344,7 @@ copy 红框那部分的代码如下：
 
 我们可以在打开的网页中，通过控制台看到效果：
 
-![](../../图床/qgyh/20180226_2150.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180226_2150.png)
 
 注意，我们要在服务器中打开 html 文件，否则，看不到效果。
 
@@ -375,7 +375,7 @@ less 的编译，依赖于 NodeJS 环境。因此，我们需要先安装 NodeJS
 
 去 [Node.js](https://nodejs.org/zh-cn/)的官网下载安装包：
 
-![](../../图床/qgyh/20180226_2153.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180226_2153.png)
 
 一路 next 进行安装。
 
@@ -391,11 +391,11 @@ PS：我发现，我安装的 node.js v8.9.4 版本，已经自动添加了环�
 
 将 [npm.zip](http://download.csdn.net/download/smyhvae/10260414) 解压，将解压后的文件拷贝到路径`C:\Users\smyhvae\AppData\Roaming\npm`下：
 
-![](../../图床/qgyh/20180226_2212.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180226_2212.png)
 
 然后重启资源管理器（或者重启电脑）。在 cmd 中输入 `lessc`，如果能看到下面的效果，说明 less编译环境安装成功：
 
-![](../../图床/qgyh/20180226_2217.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180226_2217.png)
 
 如果你用的是 linux 系统，可以输入下面的命令安装：
 

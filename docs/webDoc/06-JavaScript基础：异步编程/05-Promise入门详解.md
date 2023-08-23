@@ -552,7 +552,7 @@ try {
 
 需要注意的是，上面的写法 3 是错误的。运行之后，控制台会报如下错误：
 
-![](../../图床/qgyh/20210430_1553.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20210430_1553.png)
 
 [解释如下](https://blog.csdn.net/xiaoluodecai/article/details/107297404)：
 

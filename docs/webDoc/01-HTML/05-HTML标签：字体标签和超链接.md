@@ -37,11 +37,11 @@ outline:'a标签 锚链接'
 
 正确的效果如下：
 
-![Paste_Image.png](../../图床/qgyh/2015-10-01-cnblogs_html_11.png)
+![Paste_Image.png]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-01-cnblogs_html_11.png)
 
 错误的效果如下：
 
-![Paste_Image.png](../../图床/qgyh/2015-10-01-cnblogs_html_12.png)
+![Paste_Image.png]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-01-cnblogs_html_12.png)
 
 <u>其实我们只要记住前三个符号就行了，其他的在需要的时候查一下就行了</u>。而且，[EditPlus](https://www.editplus.com/)软件中是可以直接点击这些符号进行选择的.
 
@@ -74,11 +74,11 @@ outline:'a标签 锚链接'
 
 效果：
 
-![Paste_Image.png](../../图床/qgyh/2015-10-01-cnblogs_html_15.png)
+![Paste_Image.png]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-01-cnblogs_html_15.png)
 
 上面的这几个标签，常用于做一些小装饰、小图标。比如：
 
-![](../../图床/qgyh/20180118_2340.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180118_2340.png)
 
 这张图中，我们通过查看京东网站的代码发现，箭头处的小图标都是用的标签`<i>`。
 
@@ -86,7 +86,7 @@ outline:'a标签 锚链接'
 
 效果：
 
-![Paste_Image.png](../../图床/qgyh/2015-10-01-cnblogs_html_14.png)
+![Paste_Image.png]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-01-cnblogs_html_14.png)
 
 ### 字体标签`<font>`（已废弃）
 
@@ -107,7 +107,7 @@ outline:'a标签 锚链接'
 
 效果：
 
-![Paste_Image.png](../../图床/qgyh/2015-10-01-cnblogs_html_10.png)
+![Paste_Image.png]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-01-cnblogs_html_10.png)
 
 ### 上标`<sup>` 下标`<sub>`
 
@@ -120,7 +120,7 @@ O<sup>2</sup> 5<sub>3</sub>
 
 效果：
 
-![Paste_Image.png](../../图床/qgyh/2015-10-01-cnblogs_html_16.png)
+![Paste_Image.png]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-01-cnblogs_html_16.png)
 
 ## 三、超链接
 
@@ -140,7 +140,7 @@ href（hypertext reference）：超文本地址。读作“喝瑞夫”，不要
 
 效果：
 
-![Paste_Image.png](../../图床/qgyh/2015-10-01-cnblogs_html_17.png)
+![Paste_Image.png]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-01-cnblogs_html_17.png)
 
 当然，我们也可以直接点进链接，访问一个网址。代码举例如下：
 
@@ -154,7 +154,7 @@ href（hypertext reference）：超文本地址。读作“喝瑞夫”，不要
 
 <u>首先我们要创建一个**锚点**，也就是说，使用`name`属性或者`id`属性给那个特定的位置起个名字</u>。效果如下：
 
-![Paste_Image.png](../../图床/qgyh/2015-10-01-cnblogs_html_18.png)
+![Paste_Image.png]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-01-cnblogs_html_18.png)
 
 上图中解释：
 
@@ -203,7 +203,7 @@ href（hypertext reference）：超文本地址。读作“喝瑞夫”，不要
 
 效果如下：
 
-![](../../图床/qgyh/20170630_1415.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20170630_1415.png)
 
 `target`属性举例：
 

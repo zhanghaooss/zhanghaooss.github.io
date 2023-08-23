@@ -260,7 +260,7 @@ define(function (require) {
 
 打印结果：
 
-![](../../图床/qgyh/20180412_1955.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180412_1955.png)
 
 
 
@@ -288,13 +288,13 @@ GitHub：<https://github.com/seajs/seajs>
 
 - 自然直观的代码组织方式。
 
-![](../../图床/qgyh/20180303_2107.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180303_2107.png)
 
 ### RequireJS（AMD）、SeaJS（CDM）、CommonJS、ES6 的对比
 
 1、RequireJS 和 AMD：
 
-![](../../图床/qgyh/20180303_1653.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180303_1653.png)
 
 异步模块定义，特点是依赖前置。
 
@@ -317,7 +317,7 @@ GitHub：<https://github.com/seajs/seajs>
 
 3、CommonJS：
 
-![](../../图床/qgyh/20180303_1701.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180303_1701.png)
 
 以上三个都是 ES5里面的规范。
 
@@ -325,6 +325,6 @@ GitHub：<https://github.com/seajs/seajs>
 
 ES6的特性：export/import
 
-![](../../图床/qgyh/20180303_1704.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180303_1704.png)
 
 

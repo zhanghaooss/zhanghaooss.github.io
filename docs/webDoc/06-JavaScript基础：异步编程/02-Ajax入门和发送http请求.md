@@ -284,7 +284,7 @@ myAjax('a.json', (res) => {
 
 效果如下：
 
-![](../../图床/qgyh/20180228_1605.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180228_1605.gif)
 
 ### Ajax 多个接口的嵌套请求
 

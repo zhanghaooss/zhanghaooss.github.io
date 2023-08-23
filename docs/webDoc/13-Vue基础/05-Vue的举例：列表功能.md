@@ -105,7 +105,7 @@ publish: true
 
 代码解释：`colspan="4"`指的是让当前这个`<td>`横跨4个单元格的位置。如下：
 
-![](../../图床/qgyh/20180401_1535.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180401_1535.png)
 
 ### 步骤 3：item的添加
 

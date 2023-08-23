@@ -71,7 +71,7 @@ ECMAScript 是 JS 的语法；DOM 和 BOM 浏览器端为 JS 提供的 API。
 
 如下图所示：
 
-![](../../图床/qgyh/20200409_1545.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20200409_1545.png)
 
 ### 补充
 
@@ -88,7 +88,7 @@ JS 语言非常灵活，使得它在严谨性方面不如 Java 等传统的静�
 
 Node.js 的架构如下：
 
-![](../../图床/qgyh/20180301_1540.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180301_1540.png)
 
 Node.js 内部采用 Google Chrome 的 V8 引擎，作为 JavaScript 语言解释器；同时结合自行开发的 libuv 库，**扩展了 JS 在后端的能力（比如 I/O 操作、文件读写、数据库操作等）**。使得 JS 既可以在前端进行 DOM 操作（浏览器前端），又可以在后端调用操作系统资源，是目前最简单的全栈式语言。
 
@@ -106,7 +106,7 @@ Node.js 是 JavaScript 在服务器端的运行环境，在这个意义上，Nod
 
 Chrome 浏览器成功的背后，离不开 JS 的 V8 引擎。作为虚拟机，V8 的性能表现优异，它的开发者是 Lars Bak。在 Lars 的工作履历里，绝大部分都是与虚拟机相关的工作。在开发 V8 之前，他曾经在 Sun 公司工作，担任 HotSpot 团队的技术领导，主要致力于开发高性能的 Java 虚拟机。在这之前，他也曾为 Self、Smalltalk 语言开发过高性能虚拟机。这些无与伦比的经历让 V8 一出世就超越了当时所有的 JS 虚拟机。
 
-![](../../图床/qgyh/20200617_1120.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20200617_1120.png)
 
 V8 的性能优势使得用 JavaScript 写高性能后台服务程序成为可能。在这样的契机下，Ryan Dahl 选择了 JavaScript，选择了 V8，在事件驱动、非阻塞 I/O 模型的设计下实现了 Node。
 
@@ -200,7 +200,7 @@ Electron 原名为 Atom Shell，是由 GitHub 开发的一个开源框架。Elec
 
 ### 知名度较高的 Node.js 开源项目
 
-![](../../图床/qgyh/20180301_2009.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180301_2009.png)
 
 - express：Node.js 中著名的 web 服务框架。
 

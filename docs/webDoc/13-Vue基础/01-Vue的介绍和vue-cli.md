@@ -104,7 +104,7 @@ Vue框架中，没有控制器。
 
 - Vue2下载地址：<https://cdn.jsdelivr.net/npm/vue/>
 
-![](../../图床/qgyh/20180302_1658.png)
+![](D:/html5_folder/my-webdoc/图床/qgyh/20180302_1658.png)
 
 上方截图的时间：2018-03-02。
 
@@ -116,7 +116,7 @@ Vue框架中，没有控制器。
 
 渐进式框架图：
 
-![](../../图床/qgyh/20180302_1701.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180302_1701.png)
 
 ### Vue框架的特点
 
@@ -227,7 +227,7 @@ $ npm install -g @vue/cli
 
 输入上方命令后，会弹出一个选项：
 
-![](../../图床/qgyh/20190624_163626.png)
+![](D:/html5_folder/my-webdoc/图床/qgyh/20190624_163626.png)
 
 如果是初学者，直接选`default`就行。之后会自动生成一个空的初始化项目，包含了项目目录、以及项目依赖的脚本。
 
@@ -249,7 +249,7 @@ $ npm install -g @vue/cli
 
 浏览器输入`http://localhost:8080/`，就可以让这个空的项目在本地跑起来：
 
-![](../../图床/qgyh/20190624_160229.png)
+![](D:/html5_folder/my-webdoc/图床/qgyh/20190624_160229.png)
 
 备注：我们在 GitHub上下载的任何Vue有关的项目，第一步都是要首先执行 npm install，安装依赖的 mode_modules，然后再运行。我们发给同事的工程文件，建议不要包含 `node_modules`。
 
@@ -261,11 +261,11 @@ $ npm install -g @vue/cli
 $ vue create vuedemo2
 ```
 
-![](../../图床/qgyh/20190624_163726.png)
+![](D:/html5_folder/my-webdoc/图床/qgyh/20190624_163726.png)
 
 上图中，选择 `Manually select features`，然后根据提示依次输入：
 
-![](../../图床/qgyh/20190624_164305.png)
+![](D:/html5_folder/my-webdoc/图床/qgyh/20190624_164305.png)
 
 -  project name：**要求小写**。
 
@@ -281,13 +281,13 @@ $ vue create vuedemo2
 
 选择 eslint 的配置：
 
-![](../../图床/qgyh/20190624_165001.png)
+![](D:/html5_folder/my-webdoc/图床/qgyh/20190624_165001.png)
 
 然后让这个空的项目就可以在浏览器上跑起来。
 
 ## vue 项目结构分析
 
-![](../../图床/qgyh/20180501_2100.png)
+![](D:/html5_folder/my-webdoc/图床/qgyh/20180501_2100.png)
 
 - buid：打包配置的文件夹
 

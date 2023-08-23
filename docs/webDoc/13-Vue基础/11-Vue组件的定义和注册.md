@@ -76,7 +76,7 @@ publish: true
 
 运行结果如下：
 
-![](../../图床/qgyh/20180422_2230.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180422_2230.png)
 
 代码截图如下：
 
@@ -113,7 +113,7 @@ Vue.component('myComponent', myAccount); //第一个参数是组件的名称（�
 
 结果如下：（并非预期的效果）
 
-![](../../图床/qgyh/20180422_2232.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180422_2232.png)
 
 ### 写法二
 
@@ -170,7 +170,7 @@ Vue.component('myComponent', myAccount); //第一个参数是组件的名称（�
 
 结果如下：（并非预期的效果）
 
-![](../../图床/qgyh/20180422_2232-1670929351303.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180422_2232-1670929351303.png)
 
 
 ### 写法三【荐】
@@ -225,7 +225,7 @@ Vue.component('myComponent', myAccount); //第一个参数是组件的名称（�
 
 代码截图如下：
 
-![](../../图床/qgyh/20180422_2256.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180422_2256.png)
 
 写法三其实和方法二差不多，无非是把绿框部分的内容，单独放在了`<template>`标签中而已，这样有利于 html 标签的书写。
 
@@ -276,7 +276,7 @@ Vue.component('myComponent', myAccount); //第一个参数是组件的名称（�
 
 运行效果：
 
-![](../../图床/qgyh/20180617_1809.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180617_1809.png)
 
 【荐】当然，我们还可以把**模板的定义**存放在`<template>`标签中，这样的话，模板里的html标签就可以出现智能提示和高亮，避免出错。如下：
 
@@ -496,7 +496,7 @@ Vue.component('myComponent', myAccount); //第一个参数是组件的名称（�
 运行效果如下：
 
 
-![](../../图床/qgyh/20180617_1925.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180617_1925.gif)
 
 
 上面的例子中，将组件`<counter>`调用了两次，由于`dataObj`是**全局对象**，导致两个组件实例都可以**共享**这个`dataObj`数据。于是，我们点击任何一个组件实例的按钮，都可以让`count`数据加1。
@@ -564,7 +564,7 @@ Vue.component('myComponent', myAccount); //第一个参数是组件的名称（�
 
 运行效果：
 
-![](../../图床/qgyh/20180617_1935.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180617_1935.gif)
 
 如上图所示，每当我们创建一个新的组件实例时，就会调用data函数，data函数里会return一个**新开辟**的对象数据。这样做，就可以保证每个组件实例有**独立的数据存储**。
 
@@ -626,7 +626,7 @@ Vue.component('myComponent', myAccount); //第一个参数是组件的名称（�
 
 运行效果如下：
 
-![](../../图床/qgyh/20180617_1957.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180617_1957.gif)
 
 
 ### 使用Vue提供的`<component>`标签实现组件切换
@@ -800,7 +800,7 @@ Vue.component('myComponent', myAccount); //第一个参数是组件的名称（�
 
 效果：
 
-![](../../图床/qgyh/20180617_1957-1670929394155.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180617_1957-1670929394155.gif)
 
 
 ## 多个组件切换时，通过mode属性添加过渡的动画
@@ -871,13 +871,13 @@ Vue.component('myComponent', myAccount); //第一个参数是组件的名称（�
 运行效果：
 
 
-![](../../图床/qgyh/20180618_2240.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180618_2240.gif)
 
 
 如上方代码所示，多个组件切换时，如果要设置动画，可以用`<transition>`把组件包裹起来。需要注意的是，我给`<transition>`标签里添加了`mode="out-in"`这种模式，它表示第一个组件消失之后，第二个组件才会出现。如果没有这个mode属性，效果如下：（第一个组件准备消失的时候，第二个组件马上就准备出现，这不是我们想要的效果）
 
 
-![](../../图床/qgyh/20180618_2245.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180618_2245.gif)
 
 
 

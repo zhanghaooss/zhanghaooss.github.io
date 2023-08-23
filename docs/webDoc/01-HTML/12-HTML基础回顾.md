@@ -130,7 +130,7 @@ div 是最常见的元素，大多数场景下，都可以用 div（实在不行
 
 按照内容分类：
 
-![](../../图床/qgyh/20191003_1946.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20191003_1946.png)
 
 图片来源：<https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content>
 

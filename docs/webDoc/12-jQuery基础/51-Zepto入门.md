@@ -54,11 +54,11 @@ zepto是轻量级的JavaScript库，专门为移动端定制的框架。
 
 我们去官网下载 Zepto的开发版本`zepto.js`：
 
-![](../../图床/qgyh/20180414_2210.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180414_2210.png)
 
 官网里，还有这样一张图：
 
-![](../../图床/qgyh/20180414_2215.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180414_2215.png)
 
 上图的意思是：
 
@@ -172,7 +172,7 @@ zepto是轻量级的JavaScript库，专门为移动端定制的框架。
 
 打印结果：
 
-![](../../图床/qgyh/20180416_1145.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180416_1145.png)
 
 2、`append()`举例：
 

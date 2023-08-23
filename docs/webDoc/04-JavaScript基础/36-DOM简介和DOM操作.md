@@ -45,7 +45,7 @@ html文件-->js的document对象-->显示到页面
 
 DOM的数据结构如下：
 
-![](../../图床/qgyh/20180126_2105.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180126_2105.png)
 
 上图可知，**在HTML当中，一切都是节点**（非常重要）。节点的分类，在上一段中，已经讲了。
 
@@ -103,13 +103,13 @@ document.getElementsByClassName("hehe")[0];  //取数组中的第一个元素
 
 DOM的节点并不是孤立的，因此可以通过DOM节点之间的相对关系对它们进行访问。如下：
 
-![](../../图床/qgyh/20180126_2140.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180126_2140.png)
 
 ==节点的访问关系，是以**属性**的方式存在的。==
 
 JS中的**父子兄**访问关系：
 
-![](../../图床/qgyh/20180126_2145.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180126_2145.png)
 
 ==这里我们要重点知道**parentNode**和**children**这两个属性的用法。下面分别介绍。==
 
@@ -288,13 +288,13 @@ JS中的**父子兄**访问关系：
 - 在参考节点前插入一个新的节点。
 - 如果参考节点为null，那么他将在父节点里面的最后插入一个子节点。
 
-![](../../图床/qgyh/20180127_1257.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180127_1257.png)
 
 我们可以看到，li标签确实被插入到了box1标签的里面，和box2并列了。
 
 方式2的举例：
 
-![](../../图床/qgyh/20180127_1302.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180127_1302.png)
 
 我们可以看到，b1标签被插入到了box1标签的里面，和a1标签并列，在a1标签的前面。
 
@@ -318,7 +318,7 @@ JS中的**父子兄**访问关系：
 上方结构中，子盒子box12是在父亲box11里的，子盒子box22是在父亲box21里面的。现在，如果我调用方法`box11.appendChild(box22)`，**最后产生的结果是：box22会跑到box11中**（也就是说，box22不在box21里面了）。这是一个很神奇的事情：
 
 
-![](../../图床/qgyh/20180129_2125.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180129_2125.png)
 
 ### 删除节点
 
@@ -549,11 +549,11 @@ div.setAttribute('bbb', 'qianguyihao');
 
 如果我们想获取innerHTML和innerText里的内容，看看会如何：（innerHTML会获取到标签本身，而innerText则不会）
 
-![](../../图床/qgyh/20180127_1652.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180127_1652.png)
 
 **修改内容举例：**（innerHTML会修改标签本身，而innerText则不会）
 
-![](../../图床/qgyh/20180127_1657.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180127_1657.png)
 
 ### nodeType属性
 
@@ -603,7 +603,7 @@ div.setAttribute('bbb', 'qianguyihao');
 
 打印结果如下：
 
-![](../../图床/qgyh/20180128_1935.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180128_1935.png)
 
 既然这三个都是节点，如果我想获取它们的nodeType、nodeName、nodeValue，代码如下：
 
@@ -634,7 +634,7 @@ div.setAttribute('bbb', 'qianguyihao');
 
 打印结果如下：
 
-![](../../图床/qgyh/20180128_1939.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180128_1939.png)
 
 ## 文档的加载
 

@@ -67,11 +67,11 @@ aaa/../bbb/1.jpg
 上方代码的意思是说，当前 html 页面有一个并列的文件夹`images`，在文件夹`images`中存放了一张图片`1.jpg`
 效果：
 
-![Paste_Image.png](../../图床/qgyh/20151001_19.jpg)
+![Paste_Image.png]( D:/html5_folder/my-webdoc/图床/qgyh/20151001_19.jpg)
 
 <font color=red>$</font>相对路径的面试题。现有如下文件层级图：
 
-![](../../图床/qgyh/20170630_1133.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20170630_1133.png)
 
 问题：如果想在 index.html 中插入 1.png，那么对应的 img 语句是？
 
@@ -82,7 +82,7 @@ aaa/../bbb/1.jpg
 答案：
 
 ```html
-<img src="../../photo/1.png" />
+<img src=" D:/html5_folder/my-webdoc/photo/1.png" />
 ```
 
 ### 写法二：图片的绝对路径
@@ -133,7 +133,7 @@ width 和 height，在 HTML5 中的单位是 CSS 像素，在 HTML 4 中既可�
 
 `Alt`属性效果演示：
 
-![Paste_Image.png](../../图床/qgyh/2015-10-01-cnblogs_html_21.png)
+![Paste_Image.png]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-01-cnblogs_html_21.png)
 
 如上图所示：当图片 src 不可用的时候，显示文字。这样做，至少能让用户知道，这个图片大概是什么内容。
 
@@ -153,7 +153,7 @@ title 元素的值一般作为提示条(tooltip)呈现给用户，在光标于�
 
 效果：
 
-![Paste_Image.png](../../图床/qgyh/2015-10-01-cnblogs_html_20.png)
+![Paste_Image.png]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-01-cnblogs_html_20.png)
 
 ### align 属性
 
@@ -165,23 +165,23 @@ title 元素的值一般作为提示条(tooltip)呈现给用户，在光标于�
 
 1、`align=""`，图片和文字底端对齐。即默认情况下的显示效果：
 
-![](../../图床/qgyh/2015-10-02-cnblogs_html_19.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_19.png)
 
 2、`align="center"`：图片和文字水平方向上居中对齐。显示效果：
 
-![](../../图床/qgyh/2015-10-02-cnblogs_html_21.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_21.png)
 
 3、`align="top"`：图片与文字顶端对齐。显示效果：
 
-![](../../图床/qgyh/2015-10-02-cnblogs_html_22.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_22.png)
 
 4、`align="left"`：图片在文字的左边。显示效果：
 
-![](../../图床/qgyh/2015-10-02-cnblogs_html_23.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_23.png)
 
 5、`align="right"`：图片在文字的右边。显示效果：
 
-![](../../图床/qgyh/2015-10-02-cnblogs_html_24.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_24.png)
 
 ### 其他已废弃的属性
 

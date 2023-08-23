@@ -199,7 +199,7 @@ var jsonStr = JSON.stringify(Obj);
 
 演示效果：
 
-![](../../图床/qgyh/20180228_1740.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180228_1740.gif)
 
 
 ## Ajax 传输 XML

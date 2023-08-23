@@ -408,15 +408,15 @@ visibility:hidden; 就是隐藏，但是位置没释放，好比 opacity:0; 不�
 
 #### 1.background-clip：border-box
 
-border-box 是默认的显示状态，如图所示，border 和 padding 下都被背景颜色所填充 ![border-box](../../vue_workspace/文档/图床/e5f2da58cd5f4b50bd112104dbc9dd28.png)
+border-box 是默认的显示状态，如图所示，border 和 padding 下都被背景颜色所填充 ![border-box]( D:/html5_folder/my-webdoc/vue_workspace/文档/图床/e5f2da58cd5f4b50bd112104dbc9dd28.png)
 
 #### 2.background-clip：padding-box
 
-padding-box 控制背景延伸至 padding 外沿。如图，border 下没有背景颜色 ![在这里插入图片描述](../../vue_workspace/文档/图床/4432f8d20f18439c8ce9ed460b853c6f.png)
+padding-box 控制背景延伸至 padding 外沿。如图，border 下没有背景颜色 ![在这里插入图片描述]( D:/html5_folder/my-webdoc/vue_workspace/文档/图床/4432f8d20f18439c8ce9ed460b853c6f.png)
 
 #### 3.background-clip：content-box
 
-content-box 控制背景被裁剪至内容区外沿。如图，padding 和 border 下都没有背景颜色。 ![在这里插入图片描述](../../vue_workspace/文档/图床/b18d91069a8f4d0a95abe6e408614b88.png)
+content-box 控制背景被裁剪至内容区外沿。如图，padding 和 border 下都没有背景颜色。 ![在这里插入图片描述]( D:/html5_folder/my-webdoc/vue_workspace/文档/图床/b18d91069a8f4d0a95abe6e408614b88.png)
 
 ### CSS 常见的伪类和伪元素有哪些，他们的区别？
 

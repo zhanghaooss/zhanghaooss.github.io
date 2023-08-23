@@ -63,15 +63,15 @@ Web 标准不是某一个标准，而是由 W3C 组织和其他标准化组织�
 
 HTML 相当于人的身体组织结构：
 
-![](../../图床/qgyh/20200322_1250.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20200322_1250.png)
 
 CSS 相当于人的衣服和打扮：
 
-![](../../图床/qgyh/20200322_1251.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20200322_1251.png)
 
 JS 相当于人的行为：
 
-![](../../图床/qgyh/20200322_2220.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20200322_2220.gif)
 
 ---
 

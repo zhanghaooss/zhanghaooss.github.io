@@ -25,7 +25,7 @@ Node.js 在解决这两个问题时，用到的就是模块化开发。
 
 效果如下：
 
-![](../../图床/qgyh/20200409_1934.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20200409_1934.png)
 
 ### Node.js 中的模块化开发
 
@@ -33,7 +33,7 @@ Node.js 规定，一个 JS 文件就是一个模块，模块内部定义的变�
 
 模块内部可以使用 `exports` 对象进行成员导出， 使用 `require` 方法导入其他模块。效果如下：
 
-![](../../图床/qgyh/20200409_1932.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20200409_1932.png)
 
 ## ES6模块化的基本语法
 
@@ -275,7 +275,7 @@ babel src -d build      //build目录会自动生成
 
 转化成ES5之后，我们发现，如果直接在 index.html 中加载`build`目录下的ES5文件，也是会报错的，因为浏览器不认识`main.js`里的`require`关键字：
 
-![](../../图床/qgyh/20180414_1410.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180414_1410.png)
 
 
 于是，我们还要进行一次转换。
@@ -293,7 +293,7 @@ dist/main.js就是我们需要引入到 index.html 里的文件。
 
 运行效果：
 
-![](../../图床/qgyh/20180414_1615.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180414_1615.png)
 
 
 工程文件：[2018-04-13-ES6Demo.rar](https://github.com/qianguyihao/web-resource/blob/main/project/2018-04-13-ES6Demo.rar)

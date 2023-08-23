@@ -205,7 +205,7 @@ Vue种组件的通信方式:
    
    <script>
    //引入eventBus
-   import {eventBus} from '../../main.js'
+   import {eventBus} from ' D:/html5_folder/my-webdoc/main.js'
        export default {
            data() {
                return {
@@ -239,7 +239,7 @@ Vue种组件的通信方式:
    
    <script>
     //引入eventBus
-   import {eventBus} from '../../main.js'
+   import {eventBus} from ' D:/html5_folder/my-webdoc/main.js'
        export default {
            data() {
                return {

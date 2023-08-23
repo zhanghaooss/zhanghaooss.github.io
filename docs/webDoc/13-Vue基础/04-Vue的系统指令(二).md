@@ -287,7 +287,7 @@ publish: true
 
 演示效果如下：
 
-![](../../图床/qgyh/20180509_1058.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180509_1058.png)
 
 ### 写法二：在数组中使用三元表达式
 
@@ -472,7 +472,7 @@ publish: true
 
 效果：
 
-![](../../图床/qgyh/20180329_1713.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180329_1713.png)
 
 为了实现上面的效果，如果我用`v-for`进行赋值，代码就简洁很多了：
 
@@ -530,7 +530,7 @@ publish: true
 
 效果如下：
 
-![](../../图床/qgyh/20180329_1856.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180329_1856.png)
 
 ### 方式二：对象数组的遍历
 
@@ -578,7 +578,7 @@ publish: true
 
 效果如下：
 
-![](../../图床/qgyh/20180509_1500.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180509_1500.png)
 
 ### 方式三：对象的遍历
 
@@ -620,7 +620,7 @@ publish: true
 
 效果如下：
 
-![](../../图床/qgyh/20180329_1850.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180329_1850.png)
 
 ### 方式四：遍历数字
 
@@ -636,7 +636,7 @@ publish: true
 
 效果如下：
 
-![](../../图床/qgyh/20180509_1505.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180509_1505.png)
 
 ### v-for中key的使用注意事项
 
@@ -758,7 +758,7 @@ key的类型只能是：string/number，而且要通过 v-bind 来指定。
 
 效果如下：
 
-![](../../图床/qgyh/20180329_1920.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180329_1920.gif)
 
 ## v-show：设置元素的显示和隐藏（在元素上添加/移除`style="display:none"`属性）
 
@@ -805,7 +805,7 @@ key的类型只能是：string/number，而且要通过 v-bind 来指定。
 
 效果如下：
 
-![](../../图床/qgyh/20180329_2040.gif)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180329_2040.gif)
 
 ### v-if和v-show的区别
 

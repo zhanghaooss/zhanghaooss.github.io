@@ -268,7 +268,7 @@ for (var i = 0; i < str.length; i++) {
 
 打印结果：
 
-![](../../图床/qgyh/20180202_1401.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_1401.png)
 
 上面这个例子一般不用。一般打印数组和 json 的时候用索引，打印 String 不建议用索引。
 
@@ -553,7 +553,7 @@ console.log(str.replace(/\s+/, ''));
 
 打印结果：
 
-![](../../图床/qgyh/20200607_2132.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20200607_2132.png)
 
 ## 大小写转换
 
@@ -600,7 +600,7 @@ console.log(str.link('http://www.baidu.com'));
 console.log(str.bold());
 ```
 
-![](../../图床/qgyh/20180202_1536.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_1536.png)
 
 ## 字符串练习
 
@@ -660,4 +660,4 @@ for (var i = 0; i < str2.length; i++) {
 
 打印结果：
 
-![](../../图床/qgyh/20180202_1540.png)
+![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_1540.png)
