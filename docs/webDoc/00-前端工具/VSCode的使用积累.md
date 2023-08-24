@@ -62,7 +62,7 @@ live-server
 
 在本地开启 Node 服务器：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180611_2230.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180611_2230.png)
 
 然后在浏览器的地址栏输入`http://localhost/` + 文件的相对路径，就可以通过服务器的形式打开这个文件。
 
@@ -72,7 +72,7 @@ live-server
 
 复制文件的相对路径：（相对于根路径而言）
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180611_2235.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180611_2235.png)
 
 ### Auto Rename Tag
 

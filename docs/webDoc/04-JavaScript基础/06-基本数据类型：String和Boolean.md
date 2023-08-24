@@ -409,7 +409,7 @@ console.log(html); // 打印结果也会换行
 
 打印结果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200825_2016.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200825_2016.png)
 
 ### 模板字符串中可以调用函数
 
@@ -441,7 +441,7 @@ document.body.innerHTML = myTemplate();
 
 效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200607_2118.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200607_2118.png)
 
 ## 布尔值：Boolean
 

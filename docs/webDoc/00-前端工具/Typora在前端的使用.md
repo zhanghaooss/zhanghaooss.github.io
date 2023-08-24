@@ -8,7 +8,7 @@ title: Typora --markdown编辑器 实时预览
 
 破解激活：
 
-<img src=" D:/html5_folder/my-webdoc/图床/image-20230322215801859.png" alt="image-20230322215801859" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/image-20230322215801859.png" alt="image-20230322215801859" style="zoom:67%;" />
 
 ## 快捷键
 

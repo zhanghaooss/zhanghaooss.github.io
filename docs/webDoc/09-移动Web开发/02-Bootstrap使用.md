@@ -4,15 +4,15 @@ title: 02-Bootstrap使用
 
 - 下载生产文件，目前版本 v5
 
-![1675654806323]( D:/html5_folder/my-webdoc/图床/1675654806323.png)
+![1675654806323](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675654806323.png)
 
 - 配置模板
 
-![1675655024029]( D:/html5_folder/my-webdoc/图床/1675655024029.png)
+![1675655024029](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675655024029.png)
 
 - 基本目录
 
-![1675655182193]( D:/html5_folder/my-webdoc/图床/1675655182193.png)
+![1675655182193](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675655182193.png)
 
 - 使用参考文档<https://v5.bootcss.com/docs/getting-started/introduction/>
 
@@ -22,13 +22,13 @@ title: 02-Bootstrap使用
 
 overview：概述
 
-![20230206165500]( D:/html5_folder/my-webdoc/图床/20230206165500.png)
+![20230206165500](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20230206165500.png)
 
 base class ：基类
 
 aria-\*的标签属性是一些注释
 
-![1675676618495]( D:/html5_folder/my-webdoc/图床/1675676618495.png)
+![1675676618495](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675676618495.png)
 
 ## 断点 breakpoints
 
@@ -38,7 +38,7 @@ BOOT 为我们设置了 5+1 个断点，写好了媒体查询，我们可以直�
 
 全局 CSS 样式在[官网](https://v3.bootcss.com/css/)有介绍：
 
-![]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/qgyh/20180225_1710.png)
+![]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/qgyh/20180225_1710.png)
 
 **如果需要哪个样式，直接根据文档的指引，在相应的元素里加指定的类名即可。**
 
@@ -48,7 +48,7 @@ BOOT 为我们设置了 5+1 个断点，写好了媒体查询，我们可以直�
 
 截图如下：
 
-![]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/qgyh/20180225_1720.png)
+![]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/qgyh/20180225_1720.png)
 
 **作用**：用于定义一个固定宽度且居中的版心。只不过，这个版心的宽度具有**响应式**的效果。
 
@@ -75,7 +75,7 @@ boot 运用`.container` 响应式的版心
 - container-fluid 是变宽容器
 - .container-{breakpoint}用的较少，指定类
 
-![1675669443408]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/1675669443408.png)
+![1675669443408]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675669443408.png)
 
 解释一下例如`sm`档:576~768 之间匹配 540px 的版心宽度
 
@@ -145,7 +145,7 @@ gutter 天沟这个词是直译过来的，指的是容器左右两侧的内间�
 
 栅格参数如下：
 
-![]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/qgyh/20180225_1732.png)
+![]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/qgyh/20180225_1732.png)
 
 我们尤其要记住各个屏幕的尺寸和**类前缀**。
 
@@ -322,17 +322,17 @@ JS属性:data-bs-parent="#最上层父元素的id(sfq)"
 
 我们现在需要关注的不是组件怎么用，而是里面有哪些组件，避免**重复造轮子**：别人已经做得很好了，不需要我们再重复。
 
-![1675908847775]( D:/html5_folder/my-webdoc/图床/1675908847775.png)
+![1675908847775](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675908847775.png)
 
 ### JS 组件
 
 JS 组件在[官网](https://v5.bootcss.com/javascript/)有介绍：
 
-![]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/qgyh/20180225_1750.png)
+![]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/qgyh/20180225_1750.png)
 
 这里面包含了很多带交互的组件。比如轮播图：
 
-![]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/qgyh/20180225_1841.png)
+![]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/qgyh/20180225_1841.png)
 
 还是那句话：**如果需要哪个样式，直接根据文档的指引，在相应的元素里加指定的类名即可。**
 
@@ -380,7 +380,7 @@ bottom-{number} 对于底部的位移位置,数值支持 0 50 100 分别指 0% 5
 
 start-{number} 对于左侧的位移位置,数值支持 0 50 100 分别指 0% 50% 100%
 
-end-{number} 对于右侧的位移位置,数值支持 0 50 100 分别指 0% 50% 100% ![1675912726608]( D:/html5_folder/my-webdoc/图床/1675912726608.png)
+end-{number} 对于右侧的位移位置,数值支持 0 50 100 分别指 0% 50% 100% ![1675912726608](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675912726608.png)
 
 ```html
 <div class="position-relative">
@@ -421,7 +421,7 @@ https://v5.bootcss.com/docs/layout/grid/
 
 父子布局，父元素包裹子元素，父元素使用.row 行，子元素是父元素的列，使用.col-{\*} 一行分为 12 份，最多可以容纳 12 列，每个列所占的份数为.col-1 在栅格布局中可以调整每个列所占的份额，如：一行 4 列
 
-![1675912772022]( D:/html5_folder/my-webdoc/图床/1675912772022.png)
+![1675912772022](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675912772022.png)
 
 ```html
 <div class="row">

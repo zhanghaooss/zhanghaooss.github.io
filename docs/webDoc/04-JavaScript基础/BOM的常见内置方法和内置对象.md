@@ -28,7 +28,7 @@ BOM：Browser Object Model，浏览器对象模型。
 
 **BOM的结构图：**
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180201_2052.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180201_2052.png)
 
 从上图也可以看出：
 
@@ -252,7 +252,7 @@ window.navigator 的一些属性可以获取客户端的一些信息。
 
 效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180201_2140.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180201_2140.png)
 
 
 

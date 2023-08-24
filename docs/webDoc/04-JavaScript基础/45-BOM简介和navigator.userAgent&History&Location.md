@@ -82,7 +82,7 @@ userAgent 的值是一个字符串，简称 **UA**，这个字符串中包含了
 
 比如说，我们在电脑浏览器上，按 F12，然后在控制台输入`navigator.userAgent`，如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180425_1656.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180425_1656.png)
 
 上图显示，MacOS 上的 Chrome 浏览器的 userAgent 是：
 
@@ -92,17 +92,17 @@ userAgent 的值是一个字符串，简称 **UA**，这个字符串中包含了
 
 window 系统的 Chrome 浏览器的 userAgent 是：
 
-![image-20230322171530459]( D:/html5_folder/my-webdoc/图床/image-20230322171530459.png)
+![image-20230322171530459](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/image-20230322171530459.png)
 
 我们还可以在电脑浏览器的控制台里可以添加很多设备，通过这种方式，可以模拟移动端浏览器的场景，非常有用，请务必掌握。操作如下：
 
 （1）需要点击 edit，手动添加：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20191127_1903.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191127_1903.png)
 
 （2）添加时，根据 User agent 来识别不同的浏览器：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20191127_1918.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191127_1918.png)
 
 ### 不同浏览器的 userAgent
 
@@ -190,7 +190,7 @@ history.go( -2 ); // 向后跳转两个页面
 
 备注：浏览器的前进按钮、后退按钮，在这个位置：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180201_2146.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180201_2146.png)
 
 ## Location 对象
 

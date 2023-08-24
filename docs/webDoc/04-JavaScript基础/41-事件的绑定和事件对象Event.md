@@ -210,7 +210,7 @@ element.attachEvent('onclick', function () {});
 
 （1）普通浏览器的写法是 `event`。比如：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180203_1735.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180203_1735.png)
 
 （2）ie 678 的写法是 `window.event`。此时，事件对象 event 是作为 window 对象的属性保存的。
 
@@ -257,7 +257,7 @@ event = event || window.event; // 兼容性写法
 
 event 有很多属性，比如：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180203_1739.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180203_1739.png)
 
 由于 pageX 和 pageY 的兼容性不好，我们可以这样做：
 
@@ -396,7 +396,7 @@ event 有很多属性，比如：
 
 实现效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180203_1828.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180203_1828.gif)
 
 ### 举例 3：商品放大镜
 
@@ -595,4 +595,4 @@ function scroll() {
 
 效果演示：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180203_1920.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180203_1920.gif)

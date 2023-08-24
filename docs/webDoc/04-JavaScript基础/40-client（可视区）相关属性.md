@@ -160,6 +160,6 @@ window.onresize = function () {
 
 显示效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180203_2155.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180203_2155.png)
 
 上图中，不管我如何改变浏览器的窗口大小，title 栏显示的值永远都是我的显示器分辨率：1920\*1080。

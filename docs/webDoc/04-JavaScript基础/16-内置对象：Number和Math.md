@@ -193,7 +193,7 @@ Math 的中文是“数学”，pow 是“幂”。
 
 **举例 1：**
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180117_1730.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180117_1730.png)
 
 代码实现：
 
@@ -204,7 +204,7 @@ Math 的中文是“数学”，pow 是“幂”。
 
 **举例 2：**
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180117_1740.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180117_1740.png)
 
 代码实现：
 
@@ -248,4 +248,4 @@ console.log(decodeURIComponent(str)); //对url进行编码后，再解码，还�
 
 打印结果：
 
-![](http://img.smyhvae.com/20180202_1432.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_1432.png)

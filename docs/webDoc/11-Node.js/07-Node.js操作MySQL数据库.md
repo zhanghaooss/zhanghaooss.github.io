@@ -328,7 +328,7 @@ connection.query(strSql7, ['许嵩', '34'], (err, result) => {
 
 首先 key 和数据库字段要一一对应,
 
-![1678172323859]( D:/html5_folder/my-webdoc/图床/1678172323859.png)
+![1678172323859](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678172323859.png)
 
 ```js
 
@@ -356,11 +356,11 @@ connection.query(strSql7, ['许嵩', '34'], (err, result) => {
 
 ## sql 注入
 
-![1678160933424]( D:/html5_folder/my-webdoc/图床/1678160933424.png)
+![1678160933424](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678160933424.png)
 
 在用户提供值的位置，破坏了原来的 SQL 命令，加入新的条件或 SQL 命令。
 
-![1678161086174]( D:/html5_folder/my-webdoc/图床/1678161086174.png)
+![1678161086174](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678161086174.png)
 
 防注入：对用户的值进行过滤，然后再拼接 sql 语句
 
@@ -391,4 +391,4 @@ pool.query(
 
 不使用数据库响应前端页面可以用 json 文件响应
 
-![1678417953950]( D:/html5_folder/my-webdoc/图床/1678417953950.png)
+![1678417953950](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678417953950.png)

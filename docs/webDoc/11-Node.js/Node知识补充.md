@@ -15,7 +15,7 @@ desc:'线程机制'
 6. 给出HTTP响应
 7. 渲染页面给用户
 
-![WEB请求]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/3F7A9CFEA58A1EE91E0FD1EF00B6CE09.png)
+![WEB请求]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/3F7A9CFEA58A1EE91E0FD1EF00B6CE09.png)
 
 思考：我们在网页中输入aj，点击搜索，过了2s后，对应的商品信息显示出来了，那在这2s内发生了什么？
 
@@ -29,7 +29,7 @@ desc:'线程机制'
 
    > cmd中可以通过 `ping www.jd.com`回应ip
 
-   ![1677806323737]( D:/html5_folder/my-webdoc/图床/1677806323737.png)
+   ![1677806323737](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677806323737.png)
 
 3. DNS服务器会根据域名转换成IP地址相应给客户端
 
@@ -41,9 +41,9 @@ desc:'线程机制'
 
 7. 客户端浏览器渲染页面展示给用户看
 
-![1678430210487]( D:/html5_folder/my-webdoc/图床/1678430210487.png)
+![1678430210487](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678430210487.png)
 
-![1678430235548]( D:/html5_folder/my-webdoc/图床/1678430235548.png)
+![1678430235548](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678430235548.png)
 
 ## URL对象
 
@@ -80,7 +80,7 @@ console.log(`班级名称：${cx.get('cid')}课程名称：${cx.get('cname')}`);
 
 使用模块化来管理项目，便于维护和代码的复用；
 
-![20230228170357]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/20230228170357.png)
+![20230228170357]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20230228170357.png)
 
 ```js
 console.log('我是子模块');
@@ -124,11 +124,11 @@ console.log(__filename); //绝对路径+模块名称
 
 目录模块引入，自动识别`index.js`，
 
-![1677637409337]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/1677637409337.png)
+![1677637409337]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677637409337.png)
 
 如果目录下要引用别的模块（非index) 目录下新建一个`package.json`说明书文件
 
-![1677638292856](D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/1677638292856.png)
+![1677638292856](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677638292856.png)
 
 ## http模块
 
@@ -138,11 +138,11 @@ HTTP:超文本传输协议，是客户端和WEB服务器之间的通信协议;
 
 WEB服务器：为客户端提供资源的服务器
 
-![1677744209962]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/1677744209962.png)
+![1677744209962]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677744209962.png)
 
 **1.通用头信息**
 
-![1677746031389]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/1677746031389.png)
+![1677746031389]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677746031389.png)
 
 请求资源：url
 
@@ -174,7 +174,7 @@ Location:设置要跳转的URL,通常配合状态码302使用
 
 ==关闭防火墙==
 
-![1677747221922]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/1677747221922.png)
+![1677747221922]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677747221922.png)
 
 有些电脑不需要关闭
 
@@ -242,7 +242,7 @@ app.listen(3000);
 
 ### 路由
 
-![1677847446300]( D:/html5_folder/my-webdoc/图床/1677847446300.png)
+![1677847446300](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677847446300.png)
 
 用来处理特定的请求，就是设置客户端请求和服务器端响应之间的对应关系
 
@@ -302,11 +302,11 @@ app.post('/xxx',(req,res)=>{
 
 
 
-![1677850340608]( D:/html5_folder/my-webdoc/图床/1677850340608.png)
+![1677850340608](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677850340608.png)
 
 个别浏览器在这个位置
 
-![1677850760785]( D:/html5_folder/my-webdoc/图床/1677850760785.png)
+![1677850760785](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677850760785.png)
 
 params传参，需要设置参数名
 
@@ -521,11 +521,11 @@ console.log('结束');
 
 执行结果
 
-![1677726412158]( D:/html5_folder/my-webdoc/图床/1677726412158.png)
+![1677726412158](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677726412158.png)
 
 **异步方法**：在一个独立的线程执行，不会阻止主线程后续代码的执行；通过回调函数获取结果，等待主线程执行完毕再执行回调函数
 
-![img]( D:/html5_folder/my-webdoc/图床/live-parent_3526782_16777262146298-1677726572094.jpeg)
+![img](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/live-parent_3526782_16777262146298-1677726572094.jpeg)
 
 ```js
 //方法二：异步API
@@ -542,7 +542,7 @@ console.log('结束');
 
 结果
 
-![1677726477581]( D:/html5_folder/my-webdoc/图床/1677726477581.png)
+![1677726477581](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677726477581.png)
 
 ### 2.清空写入文件
 
@@ -592,11 +592,11 @@ fs.appendFile('4.txt', 'wooooooooooo!!!!!!!!!!', (err) => {
 
 可以设置换行`\n`,在编辑器打开
 
-![1677728796599]( D:/html5_folder/my-webdoc/图床/1677728796599.png)
+![1677728796599](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677728796599.png)
 
 随机写入的问题
 
-![1677737618994]( D:/html5_folder/my-webdoc/图床/1677737618994.png)
+![1677737618994](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677737618994.png)
 
 ### 4.读取文件
 
@@ -661,7 +661,7 @@ rs.on('data', (c) => {
 
 运行效果
 
-![1677742258143]( D:/html5_folder/my-webdoc/图床/1677742258143.png)
+![1677742258143](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677742258143.png)
 
 ### nodejs事件监听
 
@@ -709,7 +709,7 @@ app.on('request', (req, res) => {
 
 脚本模式&交互模式
 
-![1677564688431]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/1677564688431.png)
+![1677564688431]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677564688431.png)
 
 单线程运行逻辑 (线程：和cpu核数，性能有关)
 
@@ -761,7 +761,7 @@ warn()//输出警告
 error()//输出错误
 ```
 
-![1677569403071]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/1677569403071.png)
+![1677569403071]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1677569403071.png)
 
 计算代码执行时间
 
@@ -795,7 +795,7 @@ process.kill()//结束指定编号的进程，进程id作为参数
 
 一个node项目可能有多个node进程
 
-![20230228160722]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/20230228160722.png)
+![20230228160722]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20230228160722.png)
 
 ### Buffer对象
 
@@ -807,7 +807,7 @@ var buf = Buffer.alloc(5, 'abcde');
 console.log(buf); //16进制
 ```
 
-![20230228163751]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/20230228163751.png)
+![20230228163751]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20230228163751.png)
 
 ```js
 //将一组buffer数据转为字符串
@@ -857,7 +857,7 @@ xampp需要手动启动数据库
 引入第三方模块文件都放在node_modules文件夹里，如express mysql....   关于模块，下面会讲到
 ```
 
-![1671502767315]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/1671502767315.png)
+![1671502767315]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1671502767315.png)
 
 **4.创建public文件夹**
 
@@ -1021,7 +1021,7 @@ router.get('/login', (req, res) => {
 
 练习：
 
-![1671442829584]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/1671442829584.png)
+![1671442829584]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1671442829584.png)
 
 ### 路由器
 
@@ -1096,7 +1096,7 @@ const express = require('express'); //node_modules文件夹下的第三方模块
 
 ### 完整的url
 
-![6B159121C096E27ECD496E7E25896E36]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/6B159121C096E27ECD496E7E25896E36.png)
+![6B159121C096E27ECD496E7E25896E36]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/6B159121C096E27ECD496E7E25896E36.png)
 
 * **url**:   **统一资源标识符**，互联网上的任何资源都有对应的网址，例如：网页、图片、视频、音频。。。通过url来获取这些资源
 
@@ -1241,7 +1241,7 @@ Node.js下每一个路由都会产生一个对应的接口
 
 添加版本号前缀v1在路由前
 
-![1678332924870]( D:/html5_folder/my-webdoc/图床/1678332924870.png)
+![1678332924870](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678332924870.png)
 
 ### 3.请求方式
 
@@ -1255,7 +1255,7 @@ Node.js下每一个路由都会产生一个对应的接口
 
 写每一个接口前都要注释
 
-![1678331876196]( D:/html5_folder/my-webdoc/图床/1678331876196.png)
+![1678331876196](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678331876196.png)
 
 ### 4.传递参数
 
@@ -1279,7 +1279,7 @@ Node.js下每一个路由都会产生一个对应的接口
 
 生成全局变量
 
-![1678332030701]( D:/html5_folder/my-webdoc/图床/1678332030701.png)
+![1678332030701](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678332030701.png)
 
 > 案例：查询分页列表
 >
@@ -1334,11 +1334,11 @@ Node.js下每一个路由都会产生一个对应的接口
 
 ### 生成接口文档
 
-![1678327082286](D:/html5_folder/my-webdoc/图床/1678327082286.png)
+![1678327082286](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678327082286.png)
 
 打开外网连接
 
-![1678328020206]( D:/html5_folder/my-webdoc/%E5%9B%BE%E5%BA%8A/1678328020206.png)
+![1678328020206]( https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678328020206.png)
 
 
 
@@ -1367,7 +1367,7 @@ npm install
 
 查看package.json下的这条
 
-![1678329715762]( D:/html5_folder/my-webdoc/图床/1678329715762.png)
+![1678329715762](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678329715762.png)
 
 ```shell
 npm start
@@ -1379,13 +1379,13 @@ npm start
 node ./bin/www
 ```
 
-![1678329872031]( D:/html5_folder/my-webdoc/图床/1678329872031.png)
+![1678329872031](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678329872031.png)
 
 启动后 服务器占用端口3000，可以在`www`文件里修改
 
-![1678330190632]( D:/html5_folder/my-webdoc/图床/1678330190632.png)
+![1678330190632](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678330190632.png)
 
-![1678329925001]( D:/html5_folder/my-webdoc/图床/1678329925001.png)
+![1678329925001](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678329925001.png)
 
 去除模板引擎，较老
 
@@ -1467,9 +1467,9 @@ http://pm2.io/
 pm2 start 项目的启动文件 --name 自定义名称
 ```
 
-![1678352770454]( D:/html5_folder/my-webdoc/图床/1678352770454.png)
+![1678352770454](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678352770454.png)
 
-![1678352859457]( D:/html5_folder/my-webdoc/图床/1678352859457.png)
+![1678352859457](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678352859457.png)
 
 到这儿就可以挂后台了，可以关掉x
 
@@ -1485,7 +1485,7 @@ $ pm2 list
 $ pm2 stop [进程名]|[进程id]
 ```
 
-![1678354244248]( D:/html5_folder/my-webdoc/图床/1678354244248.png)
+![1678354244248](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678354244248.png)
 
 重启进程
 
@@ -1608,7 +1608,7 @@ xhr.send('uname=admin&pwd=123456')
 
 
 
-![1678775680300]( D:/html5_folder/my-webdoc/图床/1678775680300.png)
+![1678775680300](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678775680300.png)
 
 封装
 
@@ -1699,7 +1699,7 @@ console.log(str2);
 
 结果
 
-![1678696571074]( D:/html5_folder/my-webdoc/图床/1678696571074.png)
+![1678696571074](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1678696571074.png)
 
 ## 回调函数原理
 

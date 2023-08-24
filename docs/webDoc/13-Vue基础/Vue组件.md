@@ -93,7 +93,7 @@
 
 显示效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180423_1029.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180423_1029.png)
 
 
 ### 在 Vue 根实例中定义子组件
@@ -235,7 +235,7 @@
 
 上方代码中，我想把父组件里 number 的数值传递给子组件，直接这样写，是看不到效果的：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180424_1520.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180424_1520.png)
 
 **1、父组件传值给子组件**：
 
@@ -283,7 +283,7 @@
 
 在`<counter>`标签中，要注意`:number`里的冒号。加上冒号，那么引号里的内容就是表达式（期望的结果）；否则，引号的内容只是字符串：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180424_1530.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180424_1530.png)
 
 **2、子组件获取了父组件的数据后，进行求和操作**：
 
@@ -608,7 +608,7 @@ img.png
 
 - 在父函数`myMethod()`中，通过`this.$refs.xxx`获取组件的引用。我们看一下最后两行代码在控制台的输出便知：（组件里有 number 属性）
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180424_1455.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180424_1455.png)
 
 
 

@@ -237,7 +237,7 @@ grid-row-end: 2; // 2为下边框从在二根结束
 复制代码
 ```
 
-![例子1]( D:/html5_folder/my-webdoc/图床/51f5a6a40a0e46f2bf1fa7ebc350a5d2_tplv-k3u1fbpfcp-zoom-in-crop-mark_4536_0_0_0.image) 上述四个项目属性值既可以为数字也可以为网格线名
+![例子1](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/51f5a6a40a0e46f2bf1fa7ebc350a5d2_tplv-k3u1fbpfcp-zoom-in-crop-mark_4536_0_0_0.image) 上述四个项目属性值既可以为数字也可以为网格线名
 
 ```css
 //如上图所示，1号项目就是从第二根垂直网格线开始第四根结束

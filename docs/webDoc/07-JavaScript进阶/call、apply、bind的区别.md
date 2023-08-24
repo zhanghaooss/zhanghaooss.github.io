@@ -116,7 +116,7 @@ bind()传参的方式与 call()相同。==不是数组==
 </script>
 ```
 
-![image-20230321102607600]( D:/html5_folder/my-webdoc/图床/image-20230321102607600.png)
+![image-20230321102607600](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/image-20230321102607600.png)
 
 参考链接：
 

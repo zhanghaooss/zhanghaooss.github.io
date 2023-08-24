@@ -346,7 +346,7 @@ app.js
 
 其他的参数，一路回车即可。效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180410_1425.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180410_1425.png)
 
 于是，根目录下会自动生成`package.json`这个文件。点进去看一下：
 
@@ -374,11 +374,11 @@ app.js
 
 安装成功后，根目录下会自动生成相应的文件：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180410_1450.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180410_1450.png)
 
 需要说明的是，我的 node 版本是 v8.10.0（v8 以上），对应的 npm 版本是 v5.6.0，版本比较高，因此，当我输入完`npm install uniq`之后，`package.json`中就会自动添加`uniq`包的依赖：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180410_1855.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180410_1855.png)
 
 如果有些童鞋的 npm 版本较低，就需要手动去添加依赖；另一种方式是，可以使用`npm install uniq --save`命令，这个多出来的`--save`就可以自动添加依赖。
 

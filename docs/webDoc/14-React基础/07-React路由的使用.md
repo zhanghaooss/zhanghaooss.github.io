@@ -3,13 +3,9 @@ title: 07-React路由的使用
 publish: true
 ---
 
-<ArticleTopAd></ArticleTopAd>
+## React 路由的使用
 
-
-
-## React路由的使用
-
-使用React路由之前，我们需要先安装 `react-router-dom`这个包。比如：
+使用 React 路由之前，我们需要先安装 `react-router-dom`这个包。比如：
 
 ```
 yarn add react-router-dom
@@ -22,21 +18,18 @@ yarn add react-router-dom
 ```html
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-
-<body>
-  <!-- 容器，通过 React 渲染得到的 虚拟DOM，会呈现到这个位置 -->
-  <div id="app"></div>
-</body>
-
+	<body>
+		<!-- 容器，通过 React 渲染得到的 虚拟DOM，会呈现到这个位置 -->
+		<div id="app"></div>
+	</body>
 </html>
-
 ```
 
 （2）main.js：
@@ -44,14 +37,13 @@ yarn add react-router-dom
 ```javascript
 // JS打包入口文件
 // 1. 导入包
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import App from "./App.jsx";
+import App from './App.jsx';
 
 // 使用 render 函数渲染 虚拟DOM
-ReactDOM.render(<App />, document.getElementById("app"));
-
+ReactDOM.render(<App />, document.getElementById('app'));
 ```
 
 （3）app.jsx:
@@ -184,14 +176,13 @@ export default class About extends React.Component {
 
 这是因为：默认情况下，路由中的匹配规则，是**模糊匹配**的。如果 路由可以部分匹配成功，就会展示这个路由对应的组件。
 
-如果想让路由规则，进行**精确匹配**，可以为Route添加 `exact` 属性。比如下面这种写法，因为是开启了精准匹配，所以是匹配不到的：（无法匹配）
+如果想让路由规则，进行**精确匹配**，可以为 Route 添加 `exact` 属性。比如下面这种写法，因为是开启了精准匹配，所以是匹配不到的：（无法匹配）
 
 ```html
 <Link to="/movie/top250/20">电影</Link>
 
 <Route path="/movie/" component={Movie} exact/>
 ```
-
 
 另外，如果要匹配参数，可以在匹配规则中，使用 `:` 修饰符，表示这个位置匹配到的是参数。举例如下：（匹配正常）
 
@@ -201,22 +192,19 @@ export default class About extends React.Component {
 <Route path="/movie/:type/:id" component={Movie} exact/>
 ```
 
-
 ### 获取路由参数
 
 继续修改上面的代码。如果我想在 Movie 组件中显示路由中的参数，怎么做呢？
 
 我们可以通过 `props.match.params`获取路由中的参数。举例做法如下：
 
-app.jsx中的匹配规则如下：
-
+app.jsx 中的匹配规则如下：
 
 ```html
 <Link to="/movie/top100/5">电影</Link>&nbsp;&nbsp;
 
 <Route path="/movie/:type/:id" component={Movie} exact/>
 ```
-
 
 Moivie 组件的写法如下：
 
@@ -250,9 +238,4 @@ export default class Movie extends React.Component {
 
 20190214_1030.png
 
-
 工程文件：[2019-02-14-ReactDemo.zip](https://github.com/qianguyihao/web-resource/blob/main/project/2019-02-14-ReactDemo.zip)
-
-
-
-

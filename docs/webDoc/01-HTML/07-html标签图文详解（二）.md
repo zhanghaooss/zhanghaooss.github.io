@@ -38,7 +38,7 @@ des:"工作中的技巧用下划线
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_01.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_01.png)
 
 注意：
 
@@ -51,11 +51,11 @@ des:"工作中的技巧用下划线
 - `type="属性值"`。属性值可以选： `disc`(实心原点，默认)，`square`(实心方点)，`circle`(空心圆)。
   效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_02_1.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_02_1.png)
 
 <u>不光是`<ul>`标签有`type`属性，`<ul>`里面的`<li>`标签也有`type`属性（虽然说这种写法很少见）</u>。效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_03.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_03.png)
 
 注意：<u>项目符号可以是图片，需要通过 CSS 设置`<li>`标记的背景图片来实现</u>(CSS 中讲)。
 
@@ -84,7 +84,7 @@ des:"工作中的技巧用下划线
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-01-cnblogs_html_40.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-01-cnblogs_html_40.png)
 
 **css 属性**：
 
@@ -96,11 +96,11 @@ list-style-position: inside; /* 给 ul 设置这个属性后，将小圆点包�
 
 场景 1、导航条：
 
-![20211031_1617]( D:/html5_folder/my-webdoc/图床/qgyh/20211031_1617.png)
+![20211031_1617](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211031_1617.png)
 
 场景 2、li 里面放置的内容可能很多：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20170704_1719.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20170704_1719.png)
 
 声明：ul 的儿子，只能是 li。但是 li 是一个容器级标签，**li 里面什么都能放，甚至可以再放一个 ul**。
 
@@ -120,7 +120,7 @@ list-style-position: inside; /* 给 ul 设置这个属性后，将小圆点包�
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_04.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_04.png)
 
 **属性：**
 
@@ -155,7 +155,7 @@ list-style-position: inside; /* 给 ul 设置这个属性后，将小圆点包�
 ```
 
 效果如下：
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_07.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_07.png)
 
 和无序列表一样，有序列表也是可以嵌套的哦，这里就不举类似的例子了。
 
@@ -203,7 +203,7 @@ ol 这个东西用的不多，如果想表达顺序，大家一般也用 ul。�
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_09.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_09.png)
 
 上图可以看出，定义列表表达的语义是两层：
 
@@ -248,7 +248,7 @@ ol 这个东西用的不多，如果想表达顺序，大家一般也用 ul。�
 
 真实案例：（京东最下方）
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20170704_1727.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20170704_1727.png)
 
 上图中的结构如下：
 
@@ -278,7 +278,7 @@ ol 这个东西用的不多，如果想表达顺序，大家一般也用 ul。�
 
 京东商品分类如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20170704_1729.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20170704_1729.png)
 
 <u>dt、dd 都是容器级标签，想放什么都可以。所以，现在就应该更加清晰的知道：用什么标签，不是根据样子来决定，而是语义（语义本质上是结构）</u>。
 
@@ -332,7 +332,7 @@ ol 这个东西用的不多，如果想表达顺序，大家一般也用 ul。�
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_10.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_10.png)
 
 上图中的表格好像没看到边框呀，不急，接下来看看`<table>`标签的属性。
 
@@ -358,7 +358,7 @@ ol 这个东西用的不多，如果想表达顺序，大家一般也用 ul。�
 
 单元格带边框的效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_11.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_11.png)
 
 备注：表格中很细表格边线的制作，CSS 的写法：
 
@@ -401,11 +401,11 @@ style="border-collapse:collapse;"
 
 效果举例：（横向合并）
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_13.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_13.png)
 
 效果举例：（纵向合并）
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_15.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_15.png)
 
 ### `<th>`：加粗的单元格。相当于`<td>` + `<b>`
 
@@ -416,7 +416,7 @@ style="border-collapse:collapse;"
 - 属性：`align`，表示标题相对于表格的位置。属性取值可以是：left、center、right、top、bottom
   效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_16.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_16.png)
 
 ### 表格的`<thead>`标签、`<tbody>`标签、`<tfoot>`标签
 
@@ -462,7 +462,7 @@ style="border-collapse:collapse;"
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_17.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_17.png)
 
 ## 框架标签
 
@@ -495,11 +495,11 @@ style="border-collapse:collapse;"
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_26.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_26.png)
 
 上图中，如果删掉页面 right.html，显示效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_27.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_27.png)
 
 ### `<frame>`：框架
 
@@ -527,11 +527,11 @@ style="border-collapse:collapse;"
 
 举例：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_28.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_28.png)
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_gif3.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_gif3.gif)
 
 ## 内嵌框架`<iframe>`
 
@@ -549,7 +549,7 @@ style="border-collapse:collapse;"
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_29.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_29.png)
 
 内嵌框架举例：（<u>在内嵌页面中切换显示不同的压面</u>）
 
@@ -566,7 +566,7 @@ style="border-collapse:collapse;"
 ```
 
 效果演示：
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_GIF.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_GIF.gif)
 
 ## 表单标签
 
@@ -652,7 +652,7 @@ POST 方式：
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_33.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_33.png)
 
 注意，<u>多个单选框的 input 标签中，name 的属性值可以相同，但是 **id 的属性值必须是唯一的**</u>。我们知道，html 的标签中，id 的属性值是唯一的。
 
@@ -673,7 +673,7 @@ POST 方式：
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_35.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_35.png)
 
 ### `<select>`：下拉列表标签
 
@@ -725,7 +725,7 @@ select 标签和 ul、ol、dl 一样，都是组标签。
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_32.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_32.png)
 
 ### `<textarea>`标签：多行文本输入框
 
@@ -753,7 +753,7 @@ text 就是“文本”，area 就是“区域”。
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_34.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_34.png)
 
 上图的红框部分表示，我在文本区域进行了换行，所以显示的效果也出现了空白。
 
@@ -791,7 +791,7 @@ text 就是“文本”，area 就是“区域”。
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20151002_36.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20151002_36.png)
 
 ### `<label>`标签
 
@@ -879,11 +879,11 @@ Flash 格式的视频兼容性非常好，Flash 格式的文件很小。
 
 IE 8 中的运行效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_37.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_37.png)
 
 google 浏览器中的运行效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_38.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_38.png)
 
 注：在 HTML5 中新增了`<video>`标签播放视频。
 
@@ -935,7 +935,7 @@ google 浏览器中的运行效果：
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/2015-10-02-cnblogs_html_04.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/2015-10-02-cnblogs_html_04.gif)
 
 ## html 废弃标签介绍
 

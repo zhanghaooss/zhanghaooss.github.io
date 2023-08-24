@@ -45,11 +45,11 @@ ctrl+f查询网页内容
 
 ### Bootstrap 库的下载
 
-![1675654806323]( D:/html5_folder/my-webdoc/图床/1675654806323.png)
+![1675654806323](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675654806323.png)
 
 下载解压后是这个样子
 
-![1675751535042]( D:/html5_folder/my-webdoc/图床/1675751535042.png)
+![1675751535042](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675751535042.png)
 
 PS：`dist`表示编译之后的文件，这在库文件中是很常见的。
 
@@ -59,7 +59,7 @@ PS：`dist`表示编译之后的文件，这在库文件中是很常见的。
 
 ### Bootstrap 基础模板的介绍
 
-![1675655024029]( D:/html5_folder/my-webdoc/图床/1675655024029.png)
+![1675655024029](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675655024029.png)
 
 其完整版代码 copy 如下：
 
@@ -158,11 +158,11 @@ PS：如果设置了不允许用户缩放，那么最小缩放和最大缩放就
   └─ /index.html ················· 入口文件
 ```
 
-![1675753416724]( D:/html5_folder/my-webdoc/图床/1675753416724.png)
+![1675753416724](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675753416724.png)
 
 * 基本目录
 
-![1675655182193]( D:/html5_folder/my-webdoc/图床/1675655182193.png)
+![1675655182193](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/1675655182193.png)
 
 ### 2、下载并引入 Bootstrap 库文件
 

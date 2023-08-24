@@ -11,13 +11,13 @@ CSS3 中的 flex 属性，在布局方面做了非常大的改进，使得我们
 
 我们先来看看下面这个最简单的布局：
 
-![](http://img.smyhvae.com/20191009_1555.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191009_1555.png)
 
 上面这张图中的布局是我们都熟悉的：默认文档流中，在一个父容器里放置多个块级的子元素，那么，这些子元素会默认从上往下排列。
 
 在此基础之上，如果我给父容器仅仅加一个 `display: flex`属性，此时，这些子元素的布局会摇身一变：
 
-![](http://img.smyhvae.com/20191009_1600.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191009_1600.png)
 
 没错，子元素们会**在水平方向上，从左至右排列**，就是这么神奇。到此为止，你已经掌握了关于 flex 的一半的知识。
 
@@ -33,7 +33,7 @@ flex 唯一的缺点就在于，它不支持低版本的 IE 浏览器。
 
 ### flex 的兼容性问题
 
-![20221227170225]( D:/html5_folder/my-webdoc//图床/20221227170225.png)
+![20221227170225](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20221227170225.png)
 
 上图中可以看到， flex 布局不支持 IE9 及以下的版本；IE10 及以上也只是部分支持。如果你的页面不需要处理 IE 浏览器的兼容性问题，则可以放心大胆地使用 flex 布局。
 
@@ -53,7 +53,7 @@ flex 唯一的缺点就在于，它不支持低版本的 IE 浏览器。
 
 在此，我们引入主轴和侧轴的概念。
 
-![]( D:/html5_folder/my-webdoc/图床/20191009_1701.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191009_1701.png)
 
 如上图所示：
 
@@ -575,7 +575,7 @@ PS：主轴和侧轴并不是固定不变的，可以通过 `flex-direction` 更
 
 可视化的截图如下：（请点开链接，查看大图）
 
-<http://img.smyhvae.com/20190821_2101.png>![CSS Flexbox 可视化]( D:/html5_folder/my-webdoc/图床/CSS Flexbox 可视化-1677114307445.png)
+<http://img.smyhvae.com/20190821_2101.png>![CSS Flexbox 可视化](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/CSS Flexbox 可视化-1677114307445.png)
 
 相关文章：
 

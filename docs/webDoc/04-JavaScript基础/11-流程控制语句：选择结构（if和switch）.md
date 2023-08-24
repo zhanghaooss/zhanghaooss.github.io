@@ -49,7 +49,7 @@ a = 2
 
 按照代码的先后顺序，依次执行。结构图如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20181227_1200.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20181227_1200.png)
 
 ## if 语句
 
@@ -172,7 +172,7 @@ if (BMI > 32) {
 编写JS程序，用户输入自己的汽油编号，然后输入自己加多少升，弹出价格。
 ```
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180117_2232.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180117_2232.png)
 
 代码实现如下：
 
@@ -234,7 +234,7 @@ switch(表达式) {
 
 流程图如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190815_1501.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190815_1501.png)
 
 执行流程如下：
 

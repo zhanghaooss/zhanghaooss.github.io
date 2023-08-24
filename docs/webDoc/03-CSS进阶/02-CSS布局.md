@@ -1,5 +1,6 @@
 ---
 title: 02-CSS布局
+
 ---
 
 ## 前言
@@ -38,7 +39,7 @@ title: 02-CSS布局
 
 唯一的缺点是兼容性问题：
 
-![](http://img.smyhvae.com/20191005_1200.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191005_1200.png)
 
 上图中可以看到， flex 布局不支持 IE9 及以下的版本。如果你的页面不需要处理 IE 浏览器的兼容性问题，则可以放心大胆地使用 flex 布局。
 
@@ -68,7 +69,7 @@ inline-block 可以根据内容自动改变宽高，也可以使用 text-align:c
 
 在此基础之上，如果给`div1`增加`float: left`属性后，效果如下：
 
-![](http://img.smyhvae.com/20191005_2037.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191005_2037.png)
 
 上图中，可以看到，`div1`设置为浮动后，会脱离文档流，不会对`div2`的布局造成影响；但是`div1`不会脱离文本流，它会影响`div2`中文字的排列。
 
@@ -90,7 +91,7 @@ inline-block 可以根据内容自动改变宽高，也可以使用 text-align:c
 
 在上方代码的基础之上，增加 `div2`的宽度之后，会发现，`div2`掉下来了：
 
-![](http://img.smyhvae.com/20191005_2135.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191005_2135.png)
 
 **2、对兄弟元素的影响**：
 

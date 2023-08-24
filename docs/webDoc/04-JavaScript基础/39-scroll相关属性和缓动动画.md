@@ -8,7 +8,7 @@ title: 39-scroll相关属性和缓动动画
 
 当我们用鼠标滚轮，滚动网页的时候，会触发 window.onscroll() 方法。效果如下：（注意看控制台的打印结果）
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_2258.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_2258.gif)
 
 如果你需要做滚动监听，可以使用这个方法。
 
@@ -65,11 +65,11 @@ title: 39-scroll相关属性和缓动动画
 
 打印结果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180203_1235.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180203_1235.png)
 
 chrome中的结果
 
-![image-20230322113221762]( D:/html5_folder/my-webdoc/图床/image-20230322113221762.png)
+![image-20230322113221762](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/image-20230322113221762.png)
 
 ### 2、scrollTop 和 scrollLeft
 
@@ -334,7 +334,7 @@ function scroll() {  // 开始封装自己的scrollTop
 
 实现效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180203_1619.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180203_1619.gif)
 
 这个效果可以用 position:sticky;top:0;实现
 
@@ -400,19 +400,19 @@ function scroll() {  // 开始封装自己的scrollTop
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_2046.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_2046.gif)
 
 ### 缓慢动画的封装（解决四舍五入的问题）
 
 我们发现一个问题，上图中的盒子最终并没有到达400px的位置，而是只到了396.04px就停住了：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_2140.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_2140.png)
 
 原因是：JS在取整的运算时，进行了四舍五入。
 
 我们把打印396.04px这个left值打印出来看看：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_2150.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_2150.png)
 
 我么发现，通过`div.style.left`获取的值是精确的，通过`div.offsetLeft`获取的left值会进行四舍五入。
 
@@ -488,7 +488,7 @@ function scroll() {  // 开始封装自己的scrollTop
 
 实现效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_2239.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_2239.gif)
 
 ##  window.scrollTo()方法举例：返回到顶部小火箭
 
@@ -675,7 +675,7 @@ function scroll() {  // 开始封装自己的scrollTop
 
 实现效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180203_1710.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180203_1710.gif)
 
 获取滚动条滚动距离`pageXOffset`，`pageYOffset`;
 

@@ -75,7 +75,7 @@ console.log(str.lastIndexOf('a'));
 
 打印结果：
 
-![](http://img.smyhvae.com/20180202_1420.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_1420.png)
 
 举例 2：（查找字符串）
 
@@ -268,7 +268,7 @@ for (var i = 0; i < str.length; i++) {
 
 打印结果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_1401.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_1401.png)
 
 上面这个例子一般不用。一般打印数组和 json 的时候用索引，打印 String 不建议用索引。
 
@@ -476,7 +476,7 @@ console.log(str3.split('许')); // 同上
 
 打印结果：（都是数组）
 
-![](http://img.smyhvae.com/20200611_2050.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200611_2050.png)
 
 ## replace()替换字符片段
 
@@ -553,7 +553,7 @@ console.log(str.replace(/\s+/, ''));
 
 打印结果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200607_2132.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200607_2132.png)
 
 ## 大小写转换
 
@@ -600,7 +600,7 @@ console.log(str.link('http://www.baidu.com'));
 console.log(str.bold());
 ```
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_1536.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_1536.png)
 
 ## 字符串练习
 
@@ -660,4 +660,4 @@ for (var i = 0; i < str2.length; i++) {
 
 打印结果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_1540.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_1540.png)

@@ -16,7 +16,7 @@ des:'拖拽元素，绑定事件，历史，地理定位api 全屏'
 
 ## 拖拽
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180223_2130.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180223_2130.gif)
 
 如上图所示，我们可以拖拽博客园网站里的图片和超链接。
 
@@ -100,7 +100,7 @@ des:'拖拽元素，绑定事件，历史，地理定位api 全屏'
 
 打印结果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180223_2213.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180223_2213.png)
 
 ### 2、目标元素
 
@@ -428,7 +428,7 @@ des:'拖拽元素，绑定事件，历史，地理定位api 全屏'
 
 对不同获取方式的优缺点进行了比较，浏览器会**自动以最优方式**去获取用户地理信息：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180224_2110.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180224_2110.png)
 
 ### 隐私
 
@@ -686,4 +686,4 @@ document.mozFullScreen;
 
 效果如下：
 
-![](http://img.smyhvae.com/20180224_2130.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180224_2130.gif)

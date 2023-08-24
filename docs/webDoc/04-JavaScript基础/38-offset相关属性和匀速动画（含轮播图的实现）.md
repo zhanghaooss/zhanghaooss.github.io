@@ -112,7 +112,7 @@ js 中有一套方便的**获取元素尺寸**的办法就是 offset 家族。of
 
 打印结果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_1725.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_1725.png)
 
 ### 3、offsetLeft 和 offsetTop
 
@@ -252,7 +252,7 @@ div.style.left = '100px';
 
 效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_1840.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_1840.gif)
 
 ## 匀速动画的封装：每间隔 30ms，移动盒子 10px【重要】
 
@@ -350,7 +350,7 @@ div.style.left = '100px';
 
 实现的效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_1910.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_1910.gif)
 
 上方代码中的方法封装，可以作为一个模板步骤，要记住。其实，这个封装的方法，写成下面这样，会更严谨，更容易理解：（将 if 语句进行了改进）
 
@@ -641,7 +641,7 @@ function animate(ele, target) {
 
 实现效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180202_2020.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180202_2020.gif)
 
 温馨提示：动图太大，可以把<http://img.smyhvae.com/20180202_2020.gif>单独在浏览器中打开。
 

@@ -12,7 +12,7 @@ VS Code 软件实在是太酷、太好用了，越来越多的新生代互联网
 
 前端男神**尤雨溪**大大这样评价 VS Code：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200619_0133.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200619_0133.png)
 
 有一点你可能会感到惊讶：VS Code 这款软件本身，是用 JavaScript 语言编写的（具体请自行查阅基于 JS 的 PC 客户端开发框架 `Electron`）。Jeff Atwood 在 2007 年提出了著名的 Atwood 定律：
 
@@ -92,17 +92,17 @@ VS Code 流行起来之后，使用 Sublime Text、Atom 这类编辑器软件的
 
 VS Code 的安装很简单，直接去官网下载安装包，然后双击安装即可。
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190313_1750_3.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190313_1750_3.png)
 
 上图中，直接点击 download，一键下载安装即可。
 
 VS Code 支持以下平台：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20210930_1930.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20210930_1930.png)
 
 安装完成后的界面如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211011_1703.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211011_1703.png)
 
 VS Code 被分为以下五个区域：
 
@@ -244,17 +244,17 @@ VS Code 用得熟不熟，首先就看你是否会用快捷键。以下列出的
 
 当然，你也可以选择菜单栏「偏好设置 --> 键盘快捷方式」，进入快捷键的设置：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190329_2120.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190329_2120.png)
 
 ### 11、快捷键列表
 
 你可以点击 VS Code 左下角的齿轮按钮，效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190418_1738.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190418_1738.png)
 
 上图中，在展开的菜单中选择「键盘快捷方式」，就可以查看和修改所有的快捷键列表了：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190418_1739_2.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190418_1739_2.png)
 
 ### 快捷键参考表（官方）
 
@@ -270,7 +270,7 @@ VS Code 官网提供了 PDF 版本的键盘快捷键参考表，转需：
 
 Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Shift+P`），可以打开快速命令面板。效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190329_1750_2.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190329_1750_2.png)
 
 命令面板的作用是**希望解放开发者的鼠标，让一些操作和配置可以直接通过键盘进行**。如果让开发者记住所有的配置项在菜单的哪个位置是不现实的，而且有些命令并不在菜单中。
 
@@ -290,7 +290,7 @@ Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Sh
 
 在命令面板输入“字体”，可以进行字体的设置，效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190329_2110.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190329_2110.png)
 
 当然，你也可以在菜单栏，选择「首选项-设置-常用设置」，在这个设置项里修改字体大小。
 
@@ -302,13 +302,13 @@ Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Sh
 
 选中文本后，在命令面板中输入`transfrom`，就可以修改文本的大小写了。
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190414_1751.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190414_1751.png)
 
 ### 5、使用命令行启动 VS Code
 
 （1）输入快捷键「Cmd + Shift + P 」，选择`install code command`：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20191103_1327.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191103_1327.png)
 
 （2）使用命令行：
 
@@ -321,7 +321,7 @@ Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Sh
 
 输入快捷键「Cmd + Shift + P 」打开命令面板，然后输入并执行 `Configure Language Specific Settings`即可。
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1039.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1039.png)
 
 ## 四、私人订制：VS Code 的常见配置
 
@@ -331,13 +331,13 @@ Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Sh
 
 **方式 1**：Mac 用户选择菜单栏「Code--> 首选项-->设置」，即可打开配置项：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20210930_2009.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20210930_2009.png)
 
 **方式 2**：点击软件右下角的设置图标：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20210930_2016.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20210930_2016.png)
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1017.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1017.png)
 
 如上图所示，VS Code 提供两种不同范围的设置：
 
@@ -356,11 +356,11 @@ Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Sh
 
 选择菜单栏「Code --> 首选项 --> 颜色主题」：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20210930_2017.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20210930_2017.png)
 
 在弹出的对话框中，挑选你一个你喜欢的的颜色主题吧，或者安装其他颜色的主题：
 
-![20211013_1018]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_1018.png)
+![20211013_1018](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_1018.png)
 
 或者在设置项里搜索`Workbench: Color Theme`，进行修改。
 
@@ -368,11 +368,11 @@ Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Sh
 
 选择菜单栏「Code --> 首选项 --> 文件图标主题」：
 
-![20211013_1015]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_1015.png)
+![20211013_1015](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_1015.png)
 
 在弹出的对话框中，挑选你一个你喜欢的的主题吧，或者安装其他的主题：
 
-![20211013_1019]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_1019.png)
+![20211013_1019](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_1019.png)
 
 或者在设置项里搜索`Workbench: Icon Theme`，进行修改。
 
@@ -380,13 +380,13 @@ Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Sh
 
 打开 VS Code 的设置项，选择「用户设置 -> 工作台 -> 导航路径」，如下图所示：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20191108_1550.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191108_1550.png)
 
 上图中，将红框部分打钩即可。
 
 设置成功后，我们就可以查看到当前文件的「层级结构」，非常方便。如下图所示：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190415_2009.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190415_2009.png)
 
 有了这个面包屑导航，我们可以点击它，在任意目录、任意文件之间随意跳转。使用频繁非常高。
 
@@ -394,7 +394,7 @@ Mac 用户按住快捷键 `Cmd+Shift+P` （Windows 用户按住快捷键`Ctrl+Sh
 
 VS Code 默认显示代码的行号。你可以在设置项里搜索 `editor.lineNumbers`修改设置，配置项如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190417_2140.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190417_2140.png)
 
 我建议保留这个设置项，无需修改。
 
@@ -404,7 +404,7 @@ VS Code 默认显示代码的行号。你可以在设置项里搜索 `editor.lin
 
 VS Code 会在代码的右侧，默认显示缩略图。你可以在设置项里搜索 `editor.minimap` 进行设置，配置项如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1507.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1507.png)
 
 上面这张图，你仔细琢磨下会发现，中文翻译十分精准。
 
@@ -431,7 +431,7 @@ VS Code 会在代码的右侧，默认显示缩略图。你可以在设置项里
 
 改完代码后，默认不会自动保存。你可以在设置项里搜索`files.autoSave`，修改参数值为`afterDelay` ，即可自动保存。如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_2000.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_2000.png)
 
 files.autoSave 的参数值有以下几种：
 
@@ -448,13 +448,13 @@ files.autoSave 的参数值有以下几种：
 
 当 VS Code 退出后，它可以记住未保存的文件。如果你希望达到这种效果，那么，你需要先将设置项`files.hotExit`的值改为 `onExitAndWindowClose`。这个配置项要不要改，看你个人需要。比如我自己平时设置的值是`onExit`。
 
-![20211012_2014]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_2014.png)
+![20211012_2014](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_2014.png)
 
 ### 8、保存代码后，是否立即格式化
 
 保存代码后，默认**不会立即**进行代码的格式化。你可以在设置项里搜索`editor.formatOnSave`查看该配置项：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190417_2213.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190417_2213.png)
 
 我觉得这个配置项保持默认就好，不用打钩。
 
@@ -462,13 +462,13 @@ files.autoSave 的参数值有以下几种：
 
 在设置项里搜索 `editor.formatOnPaste`，将设置项改为`true`：
 
-![20211012_1049]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1049.png)
+![20211012_1049](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1049.png)
 
 ### 10、设置字体大小
 
 在设置项里搜索`fontSize`，然后根据需要设置各种模块的字体大小：
 
-![20211012_1053]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1053.png)
+![20211012_1053](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1053.png)
 
 ### 11、空格 or 制表符
 
@@ -478,29 +478,29 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 
 - **editor.detectIndentation**：自动检测（默认开启）。建议把这个配置项修改为 false，截图如下：
 
-![20211012_1139]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1139.png)
+![20211012_1139](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1139.png)
 
 这样做，是为了取消系统的自动缩进，建议自己手动格式化比较好。 参考链接：https://www.yisu.com/zixun/327399.html
 
 - **editor.insertSpaces**：按 Tab 键时插入空格（默认值为 true）。截图如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190417_2207.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190417_2207.png)
 
 - **editor.tabSize**：一个制表符默认等于四个空格。截图如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190417_2209.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190417_2209.png)
 
 （2）状态栏也会显示当前的缩进值。点击状态栏，可以直接修改 tabSize 缩进值：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211009_1610.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211009_1610.png)
 
 （3）另外，我们还可以安装 prettier 插件，设置代码在格式化时默认缩进值。prettier 是做代码格式化的最常见工具。
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211009_1637.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211009_1637.png)
 
 （4）去掉每一行末尾的空格。在设置项里搜索`空格`或者`"files.trimTrailingWhitespace"`，将值设置为 true：
 
-![20211012_1231]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1231.png)
+![20211012_1231](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1231.png)
 
 一般来说，每一行代码末尾的空格是多余的，所以建议去掉。
 
@@ -510,11 +510,11 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 
 在配置项里搜索`editor.renderWhitespace`，修改为`all`：
 
-![20211012_1150]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1150.png)
+![20211012_1150](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1150.png)
 
 修改之后，代码里的空格、缩进的展示效果如下：
 
-![20211012_1258]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1258.png)
+![20211012_1258](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1258.png)
 
 看到了没？哪里有空格、哪里是缩进，全都一目了然。
 
@@ -524,7 +524,7 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 
 如果你想修改默认的文件类型，可以在设置项里搜索`files.defaultLanguage`，设置项如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190417_2221.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190417_2221.png)
 
 上图中的红框部分，填入你期望的默认文件类型。我填的是`html`类型，你也可以填写成 `javascript` 或者 `markdown`，或者其他的语言类型。
 
@@ -532,7 +532,7 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 
 当我们在 VS Code 中删除文件时，默认会弹出确认框。如果你想修改设置，可以在设置项里搜索`xplorer.confirmDelete`。截图如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190418_1758.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190418_1758.png)
 
 我建议这个设置项保持默认的打钩就好，不用修改。删除文件前的弹窗提示，也是为了安全考虑，万一手贱不小心删了呢？
 
@@ -540,7 +540,7 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 
 通过 `window.openFoldersInNewWindow`（默认值为 off）和`window.openFilesInNewWindow`（默认值为 default），可以配置在打开文件夹、打开文件时，是否开启一个新的窗口。我个人建议，把这两个配置项都设置为 on，避免旧的窗口被覆盖：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1700.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1700.png)
 
 补充知识—— `window.restoreWindows`可以用来配置 如何恢复之前的会话窗口。涉及到的场景是：你把 VS Code 关闭了，然后又打开了，是否要展示之前打开过的文件、文件夹？参数值有以下几种：
 
@@ -549,7 +549,7 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 - all（建议配置）：恢复上一次会话中的所有窗口。
 - folders：恢复上一次会话中包含文件夹的窗口。
 
-![20211012_1704]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1704.png)
+![20211012_1704](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1704.png)
 
 > 接下来，我们来讲一些更高级的操作。
 
@@ -561,7 +561,7 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 
 **方式 1**：输入`!`，然后按下`enter`键，即可生成 html 骨架。如下图：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20210623-2115.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20210623-2115.gif)
 
 **方式 2**：输入`html:5`，然后按住 `Tab`键，即可生成 html 骨架。
 
@@ -588,7 +588,7 @@ VS Code 会根据你所打开的文件来决定该使用空格还是制表。也
 
 Mac 用户按住快捷键 `Cmd + \`， Windows 用户按住快捷键`Ctrl + \`，即可同时打开多个编辑器窗口，进行并排编辑。效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200619_0030.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200619_0030.gif)
 
 按快捷键「Cmd + 1 」切换到左边的窗口，按快捷键「Cmd + 2 」切换到右边的窗口，以此类推。随时随地，想切就切。
 
@@ -606,13 +606,13 @@ Mac 用户按住快捷键 `Cmd + \`， Windows 用户按住快捷键`Ctrl + \`�
 - 点击编辑器右上角的 `Split Editor`按钮。
 - 选择菜单栏「查看--> 编辑器布局」，然后选择你具体想要的布局，如下图所示：
 
-![20211012_1451]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1451.png)
+![20211012_1451](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1451.png)
 
 - 通过拖拽，把当前文件移动到任意一侧。
 
 补充知识：通过配置项`worbench.editor.OpenSideBySideDirection`可以控制编辑器在并排打开时出现的默认位置（默认值为 right，你也可以根据需要改为 down）。如下图所示：
 
-![20211012_1455]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1455.png)
+![20211012_1455](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1455.png)
 
 ### 3、从终端 code 命令启动 VS Code（Mac 电脑）
 
@@ -687,13 +687,13 @@ source ~/.bash_profile
 
 另外，你可能会注意到，搜索框里有很多按钮，每个按钮都对应着不同的功能，如下图所示：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190415_2052.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190415_2052.png)
 
 上图中，你可以通过「Tab」键和「Shift + Tab」键在输入框和替换框之间进行切换。
 
 「在选定内容中查找」这个功能还是比较实用的。你也可以在设置项里搜索 `editor.find.autoFindInSelection`，勾选该设置项后，那么，当你选中指定内容后，然后按住「Cmd + F」，就可以**自动**只在这些内容里进行查找。该设置项如下图所示：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20191108_1655.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191108_1655.png)
 
 ### 5、全局搜索
 
@@ -701,13 +701,13 @@ source ~/.bash_profile
 
 - Cmd + Shift + F（Win 用户是 Ctrl + Shift +F）：在全局的文件夹中进行搜索。效果如下：
 
-![20211012_1548]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1548.png)
+![20211012_1548](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1548.png)
 
 上图中，你可以点击**红框**部分，展开更多的配置项。然后点击**红圈**部分，进行过滤搜索。注意，第二个红圈那里会经常用到，它可以在搜索时过滤掉 `.git`、`.node_modules`等忽略文件。
 
 上图中，我们还可以点击“在编辑器中打开”，在一个单独的文件中聚合展示搜索结果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1609.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1609.png)
 
 ### 6、文件名/文件夹的搜索
 
@@ -719,7 +719,7 @@ source ~/.bash_profile
 >
 > 另外，右上角会看到一个过滤器，点击下图中的红圈部分，则只显示匹配的文件和文件夹。
 
-![20211012_1616]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1616.png)
+![20211012_1616](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1616.png)
 
 当然，这招也有一点不足：不能搜中文。
 
@@ -727,19 +727,19 @@ source ~/.bash_profile
 
 如下图所示，大纲视图可以展示当前代码的方法结构、文件的目录结构：
 
-![20211012_1628]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1628.png)
+![20211012_1628](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1628.png)
 
-![20211012_1636]( D:/html5_folder/my-webdoc/图床/qgyh/20211012_1636.png)
+![20211012_1636](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211012_1636.png)
 
 ### 8、文件对比
 
 VS Code 默认支持**对比两个文件的内容**。选中两个文件，然后右键选择「将已选项进行比较」即可，效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190329_1756.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190329_1756.png)
 
 VS Code 自带的对比功能并不够强大，我们可以安装插件`compareit`，进行更丰富的对比。比如说，安装完插件`compareit`之后，我们可以将「当前文件」与「剪切板」里的内容进行对比：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190329_1757.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190329_1757.png)
 
 如果你安装了 GitLens 插件，还可以将两个 git 分支的代码进行比对，非常完美。
 
@@ -790,7 +790,7 @@ VS Code 软件自带了终端，但我个人认为不是很好用，而且 VS Co
 
 VS Code 自带了 Git 版本管理的功能，如下图所示：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190418_1850.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190418_1850.png)
 
 上图中，我们可以在这里进行常见的 git 命令操作。如果你还不熟悉 **Git 版本管理**，可以先去补补课。
 
@@ -798,15 +798,15 @@ VS Code 自带了 Git 版本管理的功能，如下图所示：
 
 我们先来看看 diff 代码的效果：
 
-![20211013_1411]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_1411.png)
+![20211013_1411](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_1411.png)
 
 上图中，点击右上角的`...`，然后点击`内联视图`，则可以换一种视图 diff 代码：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_1415.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_1415.png)
 
 **Git 状态栏**：
 
-![20211013_1421]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_1421.png)
+![20211013_1421](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_1421.png)
 
 在 VS Code 的左下角会显示 Git 状态栏。如果当前代码仓库配置了远程仓库，那么“同步更改”会显示以下信息：
 
@@ -845,11 +845,11 @@ f### 11、创建多层子文件夹
 
 我们可以在新建文件夹的时候，如果直接输入`aa/bb/cc`，比如：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190418_2022.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190418_2022.png)
 
 那么，就可以创建多层子文件夹，效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190418_2023.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190418_2023.png)
 
 ### 15、`.vscode` 文件夹的作用
 
@@ -871,7 +871,7 @@ VS Code 自带 markdown 语法高亮。也就是说，如果你是用 markdown �
 
 写完 md 文件之后，你可以点击右上角的按钮进行预览，如下图所示：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190418_1907.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190418_1907.png)
 
 我一般是安装「Markdown Preview Github Styling」插件，以 GitHub 风格预览 Markdown 样式。样式十分简洁美观。
 
@@ -918,7 +918,7 @@ VS Code 默认支持 Emmet。更多 Emmet 语法规则，可以自行查阅。
 
 这款字体很漂亮，很适合用来写代码：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200516_1633-2.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200516_1633-2.png)
 
 安装步骤如下：
 
@@ -945,7 +945,7 @@ VS Code 默认对 JavaScript、TypeScript、JSON、HTML、CSS、SCSS、Less 这 
 
 在 VS Code 插件职场中，下图是最受欢迎的 8 种[编程语言插件](https://marketplace.visualstudio.com/search?target=VSCode&category=Programming%20Languages&sortBy=Installs)：
 
-![20211013_1120]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_1120.png)
+![20211013_1120](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_1120.png)
 
 智能提示的功能很强大， 包括函数介绍、代码自动补全等等。
 
@@ -955,7 +955,7 @@ VS Code **内置**了对 Node.js 运行时的调试支持，可以直接调试 J
 
 在 VS Code 插件市场中，下图是最受欢迎的几种调试插件：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_1650.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_1650.png)
 
 ### 23、文件传输：sftp
 
@@ -1049,7 +1049,7 @@ VS Code 有一个很强大的功能就是支持插件扩展，让你的编辑器
 
 ### 安装插件
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20191108_1553_2.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20191108_1553_2.png)
 
 上图中，点击红框部分，即可在顶部输入框里，查找你想要的插件名，然后进行安装。
 
@@ -1067,7 +1067,7 @@ VS Code 有一个很强大的功能就是支持插件扩展，让你的编辑器
 
 ### 插件的类型
 
-![20211013_1757_2]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_1757_2.png)
+![20211013_1757_2](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_1757_2.png)
 
 插件市场的首页有四个模块，可以作为重要的信息来源：
 
@@ -1076,9 +1076,9 @@ VS Code 有一个很强大的功能就是支持插件扩展，让你的编辑器
 - Most Popular：按总安装量排序的插件。
 - Recently Added：最新发布的插件。
 
-![20211013_1758]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_1758.png)
+![20211013_1758](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_1758.png)
 
-![20211013_1955]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_1955.png)
+![20211013_1955](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_1955.png)
 
 插件市场至少有 17 种类型的插件：（按照数量排序）
 
@@ -1107,11 +1107,11 @@ VS Code 有一个很强大的功能就是支持插件扩展，让你的编辑器
 
 1）点击插件视图右上角的`...`按钮，可以展示不同状态的插件：
 
-![20211013_2011]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_2011.png)
+![20211013_2011](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_2011.png)
 
 2）在搜索框输入字符`@`，会展示出不同类型的过滤器：
 
-![20211013_2015]( D:/html5_folder/my-webdoc/图床/qgyh/20211013_2015.png)
+![20211013_2015](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211013_2015.png)
 
 **常见的过滤器如下**：
 
@@ -1163,11 +1163,11 @@ GitLens 在 Git 管理上有很多强大的功能，比如：
 
 打开你的 Git 仓库，未安装 GitLens 时是这样的：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211009_1400.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211009_1400.png)
 
 安装了 GitLens 之后是这样的：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211009_1430.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211009_1430.png)
 
 上图中，红框部分就是 GitLens 的功能，诸君可以自由发挥。
 
@@ -1181,7 +1181,7 @@ GitLens 在 Git 管理上有很多强大的功能，比如：
 
 维护文件的本地历史记录。代码意外丢失时，有时可以救命。
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200618_2246.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200618_2246.png)
 
 ### 3、代码智能提示插件
 
@@ -1251,7 +1251,7 @@ vscode-icons 会根据文件的后缀名来显示不同的图标，让你更直�
 
 安装完成后，效果如下图所示：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190418_1958.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190418_1958.png)
 
 #### TODO Highlight
 
@@ -1331,7 +1331,7 @@ Prettier 是一个代码格式化工具，**只关注格式化，但不具备校
 
 生成的效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200619_1403.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200619_1403.png)
 
 其他同类插件：`CodeSnap`。我们也可以通过 <https://carbon.now.sh/>这个网站生成代码图片
 
@@ -1361,7 +1361,7 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 以 GitHub 风格预览 Markdown 样式，十分简洁优雅。就像下面这样，左侧书写 Markdown 文本，右侧预览 Markdown 的渲染效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200618_2025.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200618_2025.png)
 
 #### Markdown Preview Enhanced
 
@@ -1397,7 +1397,7 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 统计在 VS Code 里写代码的时间。统计效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200618_2300.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200618_2300.png)
 
 #### Code Time
 
@@ -1435,7 +1435,7 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 `node_modules`模块里面的文件夹和模块实在是太多了，根本不好找。好在安装 `Search node_modules` 这个插件后，输入快捷键「Cmd + Shift + P」，然后输入 `node_modules`，在弹出的选项中选择 `Search node_modules`，即可搜索 node_modules 里的模块。
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200618_2100.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200618_2100.png)
 
 #### RemoteHub
 
@@ -1443,7 +1443,7 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 `RemoteHub`插件的作用是：可以在本地查看 GitHub 网站上的代码，而不需要将代码下载到本地。
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190418_1937.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190418_1937.png)
 
 这个插件目前使用的人还不多，赶紧安装起来尝尝鲜吧。
 
@@ -1455,11 +1455,11 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 打开插件管理，搜索“live share”，安装。安装后重启 VS Code，在左侧会多出一个按钮：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190418_2012.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190418_2012.png)
 
 上图中，点击红框部分，登录后就可以分享你的工作空间了。
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20190418_2005.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20190418_2005.png)
 
 #### Import Cost
 
@@ -1505,29 +1505,29 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 （1）在菜单栏选择「 Code --> 首选项 --> 打开设置同步」：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211008_1713.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211008_1713.png)
 
 （2）选择需要同步的配置：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211008_1716.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211008_1716.png)
 
 （3）通过 Microsoft 或者 GitHub 账号登录。 上图中，点击“登录并打开”，然后弹出如下界面：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211008_1717.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211008_1717.png)
 
 上图中，使用 微软账号或者 GitHub 账号登录：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211008_1718.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211008_1718.png)
 
 （4）同步完成后，菜单栏会显示“首先项同步已打开”，最左侧也会多出一个同步图标，如下图所示：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211008_1720.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211008_1720.png)
 
 2、**管理同步**：
 
 （1）点击菜单栏「Code --> 首选项 --> 设置同步已打开」，会弹出如下界面，进行相应的同步管理即可：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20211008_1736.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20211008_1736.png)
 
 （2）换另外一个电脑时，登录相同的账号，即可完成同步。
 
@@ -1557,11 +1557,11 @@ CSS Peek 对 Vue 没有支持，该插件提供了对 Vue 文件的支持。
 
 （3）登录之后，插件的界面上，会自动出现之前的同步记录：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200521_1530.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200521_1530.png)
 
 上图中，我们点击最新的那条记录，就可将云端的最新配置同步到本地：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20200521_1550.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20200521_1550.png)
 
 如果你远程的配置没有成功同步到本地，那可能是网络的问题，此时，可以使用快捷键 「Command + Shift + P」，在弹出的命令框中输入 sync，并选择「下载配置」，多试几次。
 

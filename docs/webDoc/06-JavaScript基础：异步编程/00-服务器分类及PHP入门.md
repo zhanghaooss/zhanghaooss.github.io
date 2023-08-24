@@ -3,16 +3,11 @@ title: 00-服务器分类及PHP入门
 publish: true
 ---
 
-<ArticleTopAd></ArticleTopAd>
+## C/S 架构和 B/S 架构
 
+### C/S 架构
 
-
-
-## C/S架构和B/S架构
-
-### C/S架构
-
-是Client/Server这两个单词的首字母，指的是客户端，服务器。
+是 Client/Server 这两个单词的首字母，指的是客户端，服务器。
 
 优点:
 
@@ -26,16 +21,11 @@ publish: true
 
 - 不同设备访问：如果使用其他的电脑，没有安装客户端的话就无法登陆软件。
 
+### B/S 架构
 
+是 Browser/Server 的这两个单词的首字母。指的是浏览器、服务器，是 WEB 兴起之后的一种架构。
 
-
-
-
-### B/S架构
-
-是Browser/Server的这两个单词的首字母。指的是浏览器、服务器，是WEB兴起之后的一种架构。
-
-现在所有的网站都是B/S架构，较为常见的例子有百度、知乎、网易云音乐Web等等，只需要通过浏览器即可使用.
+现在所有的网站都是 B/S 架构，较为常见的例子有百度、知乎、网易云音乐 Web 等等，只需要通过浏览器即可使用.
 
 优点：
 
@@ -47,8 +37,7 @@ publish: true
 
 - 性能较低：相比于客户端应用性能较低,但是随着硬件性能的提升,这个差距在缩小。
 
-- 浏览器兼容：处理低版本的浏览器显示问题一直是前端开发人员头痛的问题之一。移动设备兼容性较好，ie6已经越来越少人用了。
-
+- 浏览器兼容：处理低版本的浏览器显示问题一直是前端开发人员头痛的问题之一。移动设备兼容性较好，ie6 已经越来越少人用了。
 
 ## 服务器分类
 
@@ -66,8 +55,6 @@ publish: true
 
 ### 服务器类型
 
-
-
 按类型分：
 
 - 文件服务器
@@ -77,7 +64,6 @@ publish: true
 - 邮件服务器
 
 - Web 服务器等
-
 
 按软件分：
 
@@ -91,13 +77,11 @@ publish: true
 
 - Node 服务器等
 
-
 按操作系统分：
 
-- Linux服务器
+- Linux 服务器
 
-- Windows服务器等
-
+- Windows 服务器等
 
 ### 服务器软件
 
@@ -105,16 +89,15 @@ publish: true
 
 常见的服务器软件有：
 
-- 文件服务器：Server-U、FileZilla、VsFTP等；
+- 文件服务器：Server-U、FileZilla、VsFTP 等；
 
-- 数据库服务器：Oracle、MySQL、PostgreSQL、MSSQL等；
+- 数据库服务器：Oracle、MySQL、PostgreSQL、MSSQL 等；
 
-- 邮件服务器：Postfix、Sendmail等；
+- 邮件服务器：Postfix、Sendmail 等；
 
-- HTTP 服务器：Apache（免费、开源）、Nginx、IIS（微软的.net服务器）、Tomcat（java编程的服务器）、NodeJS 等。
+- HTTP 服务器：Apache（免费、开源）、Nginx、IIS（微软的.net 服务器）、Tomcat（java 编程的服务器）、NodeJS 等。
 
-
-## 使用 WampServer 搭建 HTTP服务
+## 使用 WampServer 搭建 HTTP 服务
 
 ### 集成环境的分类
 
@@ -122,16 +105,15 @@ publish: true
 
 - WAMP：windows + Apache + Mysql + PHP。
 
-- XAMPP：WAMP 是针对windows的，而 XAMPP 可以安装在Linux、Windows、MacOS、Solaris这些操作系统上面。
+- XAMPP：WAMP 是针对 windows 的，而 XAMPP 可以安装在 Linux、Windows、MacOS、Solaris 这些操作系统上面。
 
-在windows平台下，如果想要一步到位安装好这些软件，可是使用软件 **WampServer**。
+在 windows 平台下，如果想要一步到位安装好这些软件，可是使用软件 **WampServer**。
 
 ### WampServer 的安装
 
 去 WampServer 的[官网](http://www.wampserver.com/en/)下载软件。
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180227_1936.png)
-
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180227_1936.png)
 
 安装完成后进行安装。
 
@@ -139,47 +121,41 @@ publish: true
 
 打开浏览器输入 `127.0.0.1` 查看显示的内容，如果是第一次安装，默认显示的应该是如下图片：
 
-
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180227_2203.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180227_2203.png)
 
 127.0.0.1 是回送地址，指本地机，一般用来测试使用，如果想要让其他电脑也能够访问，需要进行如下配置：
 
 （1）关闭防火墙：
 
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180227_2207.gif)
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180227_2207.gif)
-
-（2）修改httpd.conf文件：
+（2）修改 httpd.conf 文件：
 
 因为 Apache 的配置默认不允许外部访问，我们需要修改配置。
 
-打开文件`c:\wamp\bin\apache\Apache2.2.21\conf\httpd.conf`，通过搜索功能找到`onlineoffline tag - don't remove`这句话，在第234行的 `Allow from 127.0.0.1`的下面，加一行：`Allow from all`。
+打开文件`c:\wamp\bin\apache\Apache2.2.21\conf\httpd.conf`，通过搜索功能找到`onlineoffline tag - don't remove`这句话，在第 234 行的 `Allow from 127.0.0.1`的下面，加一行：`Allow from all`。
 
-然后将第192行的`Deny from all`改为`Allow from all`。
-
+然后将第 192 行的`Deny from all`改为`Allow from all`。
 
 保存，然后重启 wamp 即可。
-
 
 ### 配置网站根目录
 
 网站的根目录默认是在`D:\wamp\www`。如果想修改这个根目录，可以这样改：
 
-打开 Apache的配置文件 `D:\wamp\bin\apache\Apache2.2.21\conf\http.conf`，如果是初次安装，找到178行的`DocumentRoot "d:/wamp/www/"`，以及205行的`<Directory "d:/wamp/www/">`，改这两个位置的路径即可。我们可以通过搜索关键字`documentRoot`来定位。
-
-
+打开 Apache 的配置文件 `D:\wamp\bin\apache\Apache2.2.21\conf\http.conf`，如果是初次安装，找到 178 行的`DocumentRoot "d:/wamp/www/"`，以及 205 行的`<Directory "d:/wamp/www/">`，改这两个位置的路径即可。我们可以通过搜索关键字`documentRoot`来定位。
 
 ## 静态网站和动态网站
 
 静态网站：
 
-- 访问的是实实在在保存在服务器上的文件。静态资源包括：html页面、css文件、js文件、图片等。
+- 访问的是实实在在保存在服务器上的文件。静态资源包括：html 页面、css 文件、js 文件、图片等。
 
-- 当内容、图片、界面需要更新时，直接修改.html文件。
+- 当内容、图片、界面需要更新时，直接修改.html 文件。
 
 动态网站：
 
-- 当用户访问网站时，根据`某些逻辑`,动态生成对应的`HTML、CSS、JS`代码给用户（这也就是web服务器开发的本质）。
+- 当用户访问网站时，根据`某些逻辑`,动态生成对应的`HTML、CSS、JS`代码给用户（这也就是 web 服务器开发的本质）。
 
 - 通过某种手段，当有新的消息时，**自动**的完成网站的更新。
 
@@ -187,26 +163,25 @@ publish: true
 
 由于静态网站在维护的局限性，所以产生了动态网站。
 
-实现动态网站的技术：php/jsp/.net/python等。
+实现动态网站的技术：php/jsp/.net/python 等。
 
-动态网站的原理：浏览器请求动态网站的页面（比如*.php），php拼接数据并动态生成html页面，然后将新生成的页面返回给浏览器
+动态网站的原理：浏览器请求动态网站的页面（比如\*.php），php 拼接数据并动态生成 html 页面，然后将新生成的页面返回给浏览器
 
 php 之所以被称为最好的语言，是因为：基本上，我们能够想到的功能，它都帮助我们封装成了方法。十分方便。
 
+## PHP 的常见语法
 
-## PHP的常见语法
-
-**PHP代码执行方式**：
+**PHP 代码执行方式**：
 
 - 在服务器端执行，然后返回给用户结果。如果直接使用浏览器打开，就会解析为文本。
 
-- 意思是说，需要浏览器通过 http请求，才能够执行php页面。
+- 意思是说，需要浏览器通过 http 请求，才能够执行 php 页面。
 
-这里只列举常用的PHP语法，更为详细的语法教程可以查阅 [api 文档](http://www.w3school.com.cn/php/index.asp)。
+这里只列举常用的 PHP 语法，更为详细的语法教程可以查阅 [api 文档](http://www.w3school.com.cn/php/index.asp)。
 
 ### 第一段 php 代码
 
-将 WampServer 跑起来，在D:\wamp\www下新建一个`1.php`文件，代码如下：
+将 WampServer 跑起来，在 D:\wamp\www 下新建一个`1.php`文件，代码如下：
 
 1.php：
 
@@ -216,15 +191,13 @@ php 之所以被称为最好的语言，是因为：基本上，我们能够想�
 ?>
 ```
 
-
 在浏览器中输入`http://127.0.0.1/2018-02-28/1.php`，效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180228_0910.png)
-
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180228_0910.png)
 
 **代码的编写位置**：
 
-上方代码中，注意php语言的格式，第一行和第三行的格式中，没有空格。代码的编写位置在`<?php 代码写在这里?>`。
+上方代码中，注意 php 语言的格式，第一行和第三行的格式中，没有空格。代码的编写位置在`<?php 代码写在这里?>`。
 
 ### 注释
 
@@ -238,7 +211,6 @@ php 注释的写法跟 js 一致。
 	*/
 ?>
 ```
-
 
 ### 变量
 
@@ -255,7 +227,7 @@ php 注释的写法跟 js 一致。
 
 ### 数据类型
 
-PHP支持的数据类型包括：
+PHP 支持的数据类型包括：
 
 - 字符串
 
@@ -271,13 +243,11 @@ PHP支持的数据类型包括：
 
 - NULLL
 
-
 定义字符串时需要注意：
 
 - 单引号`` ：内部的内容只是作为字符串。
 
-- 双引号"" ：如果内部是PHP的变量,那么会将该变量的值解析。如果内部是html代码，也会解析成html。
-
+- 双引号"" ：如果内部是 PHP 的变量,那么会将该变量的值解析。如果内部是 html 代码，也会解析成 html。
 
 说白了，单引号里的内容，一定是字符串。双引号里的内容，可能会进行解析。
 
@@ -286,7 +256,6 @@ PHP支持的数据类型包括：
 ```
 
 上面这个语句，就被会解析成按钮。
-
 
 ```
 	// 字符串
@@ -318,7 +287,6 @@ PHP支持的数据类型包括：
 ```
 
 上方代码中注意，php 中字符串拼接的方式是 `.`。要注意哦。
-
 
 ### 运算符
 
@@ -386,7 +354,7 @@ PHP 中的运算符跟 JavaScript 中的基本一致，用法也基本一致。
 
 ### 类和对象
 
-PHP中允许使用对象这种**自定义**的数据类型。必须先声明，实例化之后才能够使用。
+PHP 中允许使用对象这种**自定义**的数据类型。必须先声明，实例化之后才能够使用。
 
 定义最基础的类：
 
@@ -403,7 +371,6 @@ PHP中允许使用对象这种**自定义**的数据类型。必须先声明，�
 	// 对象属性赋值
 	$fox->name = '小狐狸';
 ```
-
 
 带构造函数的类：
 
@@ -427,8 +394,6 @@ PHP中允许使用对象这种**自定义**的数据类型。必须先声明，�
     $foxName = $fox->Name();
 ```
 
-
-
 ### 内容输出
 
 - `echo`：输出字符串。
@@ -436,11 +401,6 @@ PHP中允许使用对象这种**自定义**的数据类型。必须先声明，�
 - `print_r()`：输出复杂数据类型。比如数组、对象。
 
 - `var_dump()`：输出详细信息。
-
-
-
-
-
 
 ```php
 	$arr =array(1,2,'123');
@@ -475,7 +435,6 @@ for 循环：
 
 ```
 
-
 foreach 循环：
 
 ```php
@@ -492,7 +451,6 @@ foreach 循环：
 
 输出结果：
 
-
 ```bash
 	red
 	green
@@ -500,15 +458,13 @@ foreach 循环：
 	yellow
 ```
 
+## php 中的 header()函数
 
-## php中的header()函数
+浏览器访问 http 服务器，接收到响应时，会根据响应**报文头**的内容进行一些具体的操作。在 php 中，我们可以根据 **header** 来设置这些内容。
 
-浏览器访问http服务器，接收到响应时，会根据响应**报文头**的内容进行一些具体的操作。在php中，我们可以根据 **header** 来设置这些内容。
+**header()函数的作用**：用来向客户端(浏览器)发送报头。直接写在 php 代码的第一行就行。
 
-
-**header()函数的作用**：用来向客户端(浏览器)发送报头。直接写在php代码的第一行就行。
-
-下面列举几个常见的 header函数。
+下面列举几个常见的 header 函数。
 
 （1）设置编码格式：
 
@@ -531,51 +487,43 @@ foreach 循环：
 	header('location:http://www.baidu.com');
 ```
 
-
 设置页面刷新的间隔：
-
 
 ```php
 	header('refresh:3; url=http://www.xiaomi.com');
 ```
 
-
-## php中的 get 请求和 post 请求
+## php 中的 get 请求和 post 请求
 
 ### get 请求
 
 可以通过`$_GET`对象来获取。
 
-**举例**：下面是一个简单的表单代码，通过 get 请求将数据提交到01.php。
-
+**举例**：下面是一个简单的表单代码，通过 get 请求将数据提交到 01.php。
 
 （1）index.html:
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<!-- 通过 get 请求，将表单提交到 php 页面中 -->
-<form action="01.php" method="get">
-    <label for="">姓名：
-        <input type="text" name="userName"></label>
-    <br/>
-    <label for="">邮箱：
-        <input type="text" name="userEmail"></label>
-    <br/>
-    <input type="submit" name="">
-</form>
-
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Title</title>
+	</head>
+	<body>
+		<!-- 通过 get 请求，将表单提交到 php 页面中 -->
+		<form action="01.php" method="get">
+			<label for="">姓名： <input type="text" name="userName" /></label>
+			<br />
+			<label for="">邮箱： <input type="text" name="userEmail" /></label>
+			<br />
+			<input type="submit" name="" />
+		</form>
+	</body>
 </html>
 ```
 
 （2）01.php：
-
 
 ```php
 <?php
@@ -587,40 +535,37 @@ foreach 循环：
  ?>
 ```
 
-上方代码可以看出，`$_GET`是关系型数组，可以通过 **$_GET[`key`]**获取值。这里的 key 是 form 标签中表单元素的 name 属性的值。
+上方代码可以看出，`$_GET`是关系型数组，可以通过 **$\_GET[`key`]**获取值。这里的 key 是 form 标签中表单元素的 name 属性的值。
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180228_1140.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180228_1140.gif)
 
 ### post 请求
 
 可以通过`$_POST`对象来获取。
 
-**举例**：下面是一个简单的表单代码，通过 post 请求将数据提交到02.php。
+**举例**：下面是一个简单的表单代码，通过 post 请求将数据提交到 02.php。
 
 （1）index.html：
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<!-- 通过 post 请求，将表单提交到 php 页面中 -->
-<form action="02.php" method="post" >
-  <label for="">姓名：
-      <input type="text" name= "userName"></label>
-      <br/>
-  <label for="">邮箱：
-      <input type="text" name= "userEmail"></label>
-      <br/>
-      <input type="submit" name="">
-</form>
-
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Title</title>
+	</head>
+	<body>
+		<!-- 通过 post 请求，将表单提交到 php 页面中 -->
+		<form action="02.php" method="post">
+			<label for="">姓名： <input type="text" name="userName" /></label>
+			<br />
+			<label for="">邮箱： <input type="text" name="userEmail" /></label>
+			<br />
+			<input type="submit" name="" />
+		</form>
+	</body>
 </html>
 ```
 
@@ -636,21 +581,21 @@ foreach 循环：
  ?>
 ```
 
-上方代码可以看出，`$_POST`是关系型数组，可以通过 **$_POST[`key`]**获取值。这里的 key 是 form 标签中表单元素的 name 属性的值。
+上方代码可以看出，`$_POST`是关系型数组，可以通过 **$\_POST[`key`]**获取值。这里的 key 是 form 标签中表单元素的 name 属性的值。
 
 效果演示：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180228_1145.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180228_1145.gif)
 
-实际开发中，可能不会单独写一个php文件，常见的做法是：在 html 文件中嵌入 php 的代码。
+实际开发中，可能不会单独写一个 php 文件，常见的做法是：在 html 文件中嵌入 php 的代码。
 
 比如说，原本 html 中有个 li 标签是存放用户名的：
 
 ```html
-	<li>smyhvae</li>
+<li>smyhvae</li>
 ```
 
-嵌入 php后，用户名就变成了动态获取的：
+嵌入 php 后，用户名就变成了动态获取的：
 
 ```php
 	<li><?php
@@ -662,9 +607,9 @@ foreach 循环：
 
 ### 文件上传 `$_FILES`
 
-上传文件时，需要在html代码中进行如下设置：
+上传文件时，需要在 html 代码中进行如下设置：
 
-（1）在html表单中，设置`enctype="multipart/form-data"`。该值是必须的。
+（1）在 html 表单中，设置`enctype="multipart/form-data"`。该值是必须的。
 
 （2）只能用 post 方式获取。
 
@@ -673,13 +618,11 @@ foreach 循环：
 （1）index.html:
 
 ```html
-  <form action="03-fileUpdate.php" method="post" enctype="multipart/form-data">
-	  <label for="">照片:
-	      <input type="file" name = "picture" multiple=""></label>
-	  <br/>
-	  <input type="submit" name="">
-  </form>
-
+<form action="03-fileUpdate.php" method="post" enctype="multipart/form-data">
+	<label for="">照片: <input type="file" name="picture" multiple="" /></label>
+	<br />
+	<input type="submit" name="" />
+</form>
 ```
 
 （2）在 php 文件中打印 file 的具体内容：
@@ -693,7 +636,7 @@ foreach 循环：
 
 演示效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180228_php_post_file.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180228_php_post_file.gif)
 
 上方现象可以看出：
 
@@ -701,7 +644,7 @@ foreach 循环：
 
 - 在`wamp/tmp`目录下面出现了一个`.tmp`文件。
 
-- .tmp文件一会就被自动删除了。
+- .tmp 文件一会就被自动删除了。
 
 - 服务器返回的内容中有文件的名字`[name] => computer.png`，以及上传文件保存的位置`D:\wamp\tmp\php3D70.tmp`。服务器返回的内容如下：
 
@@ -732,18 +675,15 @@ foreach 循环：
   	</form>
 ```
 
-
-（2）PHP代码：
+（2）PHP 代码：
 
 暂略。
 
-
 ### WampServer 中修改上传文件的大小
 
-（1）打开 WampServer的文件`php.ini`：
+（1）打开 WampServer 的文件`php.ini`：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180228_1454.png)
-
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180228_1454.png)
 
 （2）修改`php.ini`中的如下内容：
 
@@ -755,9 +695,7 @@ foreach 循环：
 	post_max_size = 32M;       设置 通过Post提交的最多数据
 ```
 
-
 考虑网络传输快慢：这里修改一些参数：
-
 
 ```php
 	max_execution_time = 30000      ; 脚本最长的执行时间 单位为秒
@@ -771,16 +709,15 @@ foreach 循环：
 
 客户端发出的请求，主要由三个组成部分：请求行、请求头、请求主体。如下图所示：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180228_1505.jpg)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180228_1505.jpg)
 
 **1、请求行：**
 
 - 请求方法：GET or POST
 
-- 请求URL
+- 请求 URL
 
-- HTTP协议版本
-
+- HTTP 协议版本
 
 **2、请求头：**
 
@@ -821,28 +758,23 @@ Referer：包含一个URL，用户从该URL代表的页面出发访问当前请�
 
 指的是提交给服务器的数据。
 
-需要注意的是，如果是往服务器提交数据，需要在请求头中设置`Content-Type: application/x-www-form-urlencoded`(在ajax中需要手动设置)。
+需要注意的是，如果是往服务器提交数据，需要在请求头中设置`Content-Type: application/x-www-form-urlencoded`(在 ajax 中需要手动设置)。
 
 ### 响应
 
 响应报文是服务器返回给客户端的。组成部分有响应行、响应头、响应主体。
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180228_1510.jpg)
-
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180228_1510.jpg)
 
 **1、状态行：**
 
-HTTP响应行：主要是设置响应状态等信息。
-
-
+HTTP 响应行：主要是设置响应状态等信息。
 
 **2、响应头：**
 
 Cookie、缓存等信息就是在响应头的属性中设置的。
 
 常见的响应头如下：
-
-
 
 ```bash
 Cache-Control
@@ -874,10 +806,9 @@ Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1
 
 ```
 
+**3、HTTP 响应体：**
 
-**3、HTTP响应体：**
-
-如果请求的是HTML页面，那么返回的就是HTML代码。如果是JS就是JS代码。
+如果请求的是 HTML 页面，那么返回的就是 HTML 代码。如果是 JS 就是 JS 代码。
 
 ### 抓包工具
 

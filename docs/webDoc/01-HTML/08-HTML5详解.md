@@ -76,11 +76,11 @@ HTML5 定义了一系列新元素，如新语义标签、智能表单、多媒�
 
 ### HTML5 新增的内容
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180206_1540.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180206_1540.png)
 
-![](http://img.smyhvae.com/20180206_1545.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180206_1545.png)
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180206_1541.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180206_1541.png)
 
 ## 语义化的标签
 
@@ -102,11 +102,11 @@ HTML5 定义了一系列新元素，如新语义标签、智能表单、多媒�
 
 我们常见的 css+div 布局是：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180206_1546.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180206_1546.png)
 
 在 html5 中，我们可以这样写：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180206_1550.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180206_1550.png)
 
 传统的做法中，我们通过增加类名如`class="header"`、`class="footer"`，使 HTML 页面具有语义性，但是不具有通用性。
 
@@ -325,7 +325,7 @@ PS:我们在测试 IE 浏览器的兼容的时候，可以使用软件 ietest，
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180206_1845.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180206_1845.gif)
 
 上图可以看出，数据列表可以自动提示。
 
@@ -559,7 +559,7 @@ keygen 元素是密钥对生成器（key-pair generator）。当提交表单时�
 
 效果：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180206_1920.gif)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180206_1920.gif)
 
 ## 多媒体
 
@@ -579,7 +579,7 @@ HTML5 通过`<audio>`标签来解决音频播放的问题。
 
 效果如下：
 
-![]( D:/html5_folder/my-webdoc/图床/qgyh/20180206_1958.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180206_1958.png)
 
 <u>我们可以通过附加属性，来更友好地控制音频的播放</u>，如：
 
@@ -595,7 +595,7 @@ HTML5 通过`<audio>`标签来解决音频播放的问题。
 
 由于版权等原因，不同的浏览器可支持播放的格式是不一样的：
 
-![](http://img.smyhvae.com/20180206_1945.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180206_1945.png)
 
 为了做到多浏览器支持，可以采取以下兼容性写法：
 
@@ -639,7 +639,7 @@ HTML5 通过`<video>`标签来解决视频播放的问题。
 
 由于版权等原因，不同的浏览器可支持播放的格式是不一样的：
 
-![](http://img.smyhvae.com/20180206_2025.png)
+![](https://raw.githubusercontent.com/zhanghaooss/clouding/master/img/20180206_2025.png)
 
 兼容性写法：
 
