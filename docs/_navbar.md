@@ -7,8 +7,6 @@
   * [stackoverflow](https://stackoverflow.com/)
 * [资源推荐](webDoc/17-前端综合/前端资源推荐)
 
-<!--2023/8/24之后-->
-
 * 新增技术
 
   * [linux](webDoc/2023+/linux上传作品)
