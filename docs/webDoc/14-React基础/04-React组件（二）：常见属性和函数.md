@@ -1,5 +1,4 @@
----
-title: 04-React组件（二）：常见属性和函数
+ : 04-React组件（二）：常见属性和函数
 publish: true
 ---
 

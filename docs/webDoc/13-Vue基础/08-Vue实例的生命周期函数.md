@@ -1,5 +1,4 @@
----
-title: 08-Vue实例的生命周期函数
+ : 08-Vue实例的生命周期函数
 publish: true
 ---
 

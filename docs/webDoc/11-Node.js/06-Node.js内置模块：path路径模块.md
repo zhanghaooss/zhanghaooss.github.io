@@ -1,5 +1,4 @@
----
-title: 06-Node.js内置模块：path路径模块
+ : 06-Node.js内置模块：path路径模块
 publish: true
 ---
 

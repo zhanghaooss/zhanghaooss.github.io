@@ -1,5 +1,4 @@
----
-title: 02-Vue的系统指令
+ : 02-Vue的系统指令
 publish: true
 ---
 

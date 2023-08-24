@@ -1,12 +1,3 @@
----
-title: 06-HTML标签：图片标签
-date:2022/12/2
-outline:"img"
-des:"面试题加个`<font color=red>$</font>` 红色的$符号；
-工作中小tip 加下划线
-"
----
-
 ## img 标签介绍
 
 ### 介绍

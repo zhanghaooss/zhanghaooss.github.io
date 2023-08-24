@@ -1,5 +1,4 @@
----
-title: 07-DOM操作练习：innerHTML的方式创建元素
+ : 07-DOM操作练习：innerHTML的方式创建元素
 publish: true
 ---
 

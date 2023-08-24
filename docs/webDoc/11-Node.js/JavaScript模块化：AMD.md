@@ -1,5 +1,4 @@
----
-title: JavaScript模块化：AMD
+ : JavaScript模块化：AMD
 publish: true
 ---
 

@@ -1,5 +1,4 @@
----
-title: 31- JavaScript Class类详解
+ : 31- JavaScript Class类详解
 date:2023/2/24
 ---
 

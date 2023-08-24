@@ -1,5 +1,4 @@
----
-title: 10-Vue动画
+ : 10-Vue动画
 publish: true
 ---
 

@@ -1,5 +1,4 @@
----
-title: 01-VS Code的使用
+01-VS Code的使用
 ---
 
 ## 前言

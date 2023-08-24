@@ -1,5 +1,4 @@
----
-title: 16-内置对象：Number和Math
+ : 16-内置对象：Number和Math
 重点：随机数 
 ---
 

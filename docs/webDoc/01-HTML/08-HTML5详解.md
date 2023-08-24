@@ -1,9 +1,3 @@
----
-title: 08-HTML5详解
-date:2022/12/5-12/8
-outline:"h5语义标签，兼容处理 新增表单标签元素属性事件，video,audio,dom操作，tab切换"
----
-
 ## HTML5 的介绍
 
 ### Web 技术发展时间线

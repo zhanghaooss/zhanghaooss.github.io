@@ -1,5 +1,4 @@
----
-title: 07-Promise的一些题目
+ : 07-Promise的一些题目
 publish: true
 ---
 

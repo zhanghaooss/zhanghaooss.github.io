@@ -1,5 +1,4 @@
----
-title: 13-Vue-router路由
+ : 13-Vue-router路由
 publish: true
 ---
 

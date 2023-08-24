@@ -1,5 +1,4 @@
----
-title: 06-call、apply、bind的区别
+ : 06-call、apply、bind的区别
 desc:函数触发的三种方案
 ---
 

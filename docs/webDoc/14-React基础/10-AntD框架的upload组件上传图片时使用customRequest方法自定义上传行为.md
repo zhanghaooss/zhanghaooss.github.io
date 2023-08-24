@@ -1,5 +1,4 @@
----
-title: 10-AntD框架的upload组件上传图片时使用customRequest方法自定义上传行为
+ : 10-AntD框架的upload组件上传图片时使用customRequest方法自定义上传行为
 publish: true
 ---
 

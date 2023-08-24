@@ -1,5 +1,4 @@
----
-title: 05-Promise入门详解
+ : 05-Promise入门详解
 ---
 
 ## 为什么需要 Promise？

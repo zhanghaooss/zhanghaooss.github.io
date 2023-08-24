@@ -1,5 +1,4 @@
----
-title: 11-Vue组件的定义和注册
+ : 11-Vue组件的定义和注册
 publish: true
 ---
 

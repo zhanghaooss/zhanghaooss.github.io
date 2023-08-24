@@ -1,5 +1,4 @@
----
-title: chrome浏览器
+chrome浏览器
 ---
 
 ## 控制台的使用

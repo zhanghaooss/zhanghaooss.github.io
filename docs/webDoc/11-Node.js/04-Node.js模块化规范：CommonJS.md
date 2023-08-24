@@ -1,5 +1,4 @@
----
-title: 04-Node.js模块化规范：CommonJS
+ : 04-Node.js模块化规范：CommonJS
 publish: true
 ---
 

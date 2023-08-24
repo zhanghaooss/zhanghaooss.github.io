@@ -1,10 +1,3 @@
----
-title: 01-认识Web和Web标准
-author:yubei
-date：2022/11/28
-outline:"W3C,Web标准"
----
-
 ## Web、网页、浏览器
 
 ### Web

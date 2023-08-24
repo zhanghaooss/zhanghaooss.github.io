@@ -1,5 +1,4 @@
----
-title: 07-Promise的静态方法
+ : 07-Promise的静态方法
 publish: true
 ---
 

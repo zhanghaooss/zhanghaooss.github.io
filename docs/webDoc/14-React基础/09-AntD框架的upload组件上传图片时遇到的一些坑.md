@@ -1,5 +1,4 @@
----
-title: 09-AntD框架的upload组件上传图片时遇到的一些坑
+ : 09-AntD框架的upload组件上传图片时遇到的一些坑
 publish: true
 ---
 

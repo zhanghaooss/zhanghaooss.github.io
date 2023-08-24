@@ -1,5 +1,4 @@
----
-title: Typora --markdown编辑器 实时预览
+Typora --markdown编辑器 实时预览
 ---
 
 ## 软件介绍

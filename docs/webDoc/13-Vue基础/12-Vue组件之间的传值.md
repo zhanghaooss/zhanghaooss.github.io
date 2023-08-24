@@ -1,5 +1,4 @@
----
-title: 12-Vue组件之间的传值
+ : 12-Vue组件之间的传值
 publish: true
 ---
 

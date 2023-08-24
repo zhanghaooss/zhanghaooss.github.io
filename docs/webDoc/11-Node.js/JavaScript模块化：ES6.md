@@ -1,5 +1,4 @@
----
-title: JavaScript模块化：ES6
+ : JavaScript模块化：ES6
 publish: true
 ---
 

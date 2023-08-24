@@ -1,5 +1,4 @@
----
-title: 06-Promise的链式调用
+ : 06-Promise的链式调用
 ---
 
 ## Promise 的链式调用：处理多次 Ajax 请求【重要】

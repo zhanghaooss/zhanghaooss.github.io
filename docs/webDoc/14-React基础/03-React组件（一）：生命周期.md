@@ -1,5 +1,4 @@
----
-title: 03-React组件（一）：生命周期
+ : 03-React组件（一）：生命周期
 publish: true
 ---
 

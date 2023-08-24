@@ -1,5 +1,4 @@
----
-title: 02-开始写JavaScript：hello world
+ : 02-开始写JavaScript：hello world
 date:12/14
 ---
 

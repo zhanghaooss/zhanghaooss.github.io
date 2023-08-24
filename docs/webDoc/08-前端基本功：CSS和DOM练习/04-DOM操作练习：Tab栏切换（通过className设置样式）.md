@@ -1,5 +1,4 @@
----
-title: 04-DOM操作练习：Tab栏切换（通过className设置样式）
+ : 04-DOM操作练习：Tab栏切换（通过className设置样式）
 publish: true
 ---
 

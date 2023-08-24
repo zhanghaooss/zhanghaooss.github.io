@@ -1,5 +1,4 @@
----
-title: JavaScript模块化：CMD
+ : JavaScript模块化：CMD
 publish: true
 ---
 

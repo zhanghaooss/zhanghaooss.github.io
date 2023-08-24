@@ -1,5 +1,4 @@
----
-title: 11-流程控制语句：选择结构（if和switch）
+ : 11-流程控制语句：选择结构（if和switch）
 date:12/17
 desc:'学了Promise之后回来看=>  用 return 代替 if else；
 条件表达式可以为普通变量，null,undefined,' ',0,NaN都是false，其余的都是true；

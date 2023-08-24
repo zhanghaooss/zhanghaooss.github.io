@@ -1,5 +1,4 @@
----
-title: 04-ES6：变量 let、const 和块级作用域
+ : 04-ES6：变量 let、const 和块级作用域
 ---
 
 ## ES6 的变量声明

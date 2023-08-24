@@ -1,5 +1,4 @@
----
-title: 37-通过style对象获取和设置行内样式
+ : 37-通过style对象获取和设置行内样式
 publish: true
 ---
 

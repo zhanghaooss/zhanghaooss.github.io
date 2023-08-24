@@ -1,5 +1,4 @@
----
-title：mysql workbench的使用
+ ：mysql workbench的使用
 author:yubei
 ---
 

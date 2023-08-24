@@ -1,5 +1,4 @@
----
-title: 05-Vue的举例：列表功能
+ : 05-Vue的举例：列表功能
 publish: true
 ---
 

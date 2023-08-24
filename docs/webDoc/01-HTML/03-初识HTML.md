@@ -1,9 +1,3 @@
----
-title: 03-初识HTML
-date:2022/11/29
-outline:'html详解，html配置字段'
----
-
 ## 编辑器相关
 
 前端开发的编辑器软件，我首先推荐 VS Code，其次推荐 Sublime Text。
